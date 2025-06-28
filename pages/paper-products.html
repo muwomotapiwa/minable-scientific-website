@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Paper Products - Minable Scientific</title>
+    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <h2>MINABLE SCIENTIFIC</h2>
+                <span class="nav-tagline">Laboratory Excellence</span>
+            </div>
+            
+            <ul class="nav-menu" id="nav-menu">
+                <li class="nav-item">
+                    <a href="../index.html" class="nav-link">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a href="../index.html#about" class="nav-link">About</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a href="#products" class="nav-link">Products <i class="fas fa-chevron-down"></i></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="glassware.html">Glassware</a></li>
+                        <li><a href="apparatus.html">Apparatus</a></li>
+                        <li><a href="chemicals.html">Chemicals</a></li>
+                        <li><a href="diagnostics.html">Diagnostics</a></li>
+                        <li><a href="filtration.html">Filtration</a></li>
+                        <li><a href="lovibond.html">Lovibond</a></li>
+                        <li><a href="spilpak.html">Spilpak</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item">
+                    <a href="../index.html#services" class="nav-link">Services</a>
+                </li>
+                <li class="nav-item">
+                    <a href="../index.html#industries" class="nav-link">Industries</a>
+                </li>
+                <li class="nav-item">
+                    <a href="../index.html#contact" class="nav-link">Contact</a>
+                </li>
+                <li class="nav-item">
+                    <a href="../index.html#quote" class="nav-link btn-quote">Request Quote</a>
+                </li>
+            </ul>
+            
+            <div class="hamburger" id="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </div>
+    </nav>
+
+    <main>
+        <section class="page-header">
+            <div class="container">
+                <div class="breadcrumb">
+                    <a href="../index.html">Home</a>
+                    <i class="fas fa-chevron-right"></i>
+                    <a href="../index.html#products">Products</a>
+                    <i class="fas fa-chevron-right"></i>
+                    <span>Paper Products</span>
+                </div>
+                <h1 class="page-title">Paper Products</h1>
+                <p class="page-description">Innovative and eco-friendly paper solutions for hygiene and spill management.</p>
+            </div>
+        </section>
+
+        <section class="product-filters">
+            <div class="container">
+                <div class="filter-bar">
+                    <div class="search-box">
+                        <i class="fas fa-search"></i>
+                        <input type="text" id="product-search" placeholder="Search products...">
+                    </div>
+                    <div class="filter-options">
+                        <select id="category-filter">
+                            <option value="all">All Categories</option>
+                            <option value="paper-towels">Paper Towels</option>
+                            <option value="dispenser">Dispenser</option>
+                            <option value="pos-stand">POS Display Stand</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="products-grid">
+            <div class="container">
+                <div class="products-container" id="products-container">
+                    <!-- 70M Paper -->
+                    <div class="product-card" data-category="paper-towels">
+                        <div class="product-image">
+                            <img src="https://via.placeholder.com/350x200?text=70M+Paper+Towel" alt="70M Paper Towel">
+                            <div class="product-overlay">
+                                <button class="btn btn-primary" onclick="showProductDetails(\'70m-paper\')">Details</button>
+                            </div>
+                        </div>
+                        <div class="product-info">
+                            <h3 class="product-name">70M Paper Towel</h3>
+                            <p class="product-description">A highly absorbent 2-ply paper towel utilizing DESL technology for superior strength and absorbency.</p>                            <div class="product-specs">
+                                <span class="spec-tag">70 meters</span>
+                                <span class="spec-tag">2 Ply</span>
+                                <span class="spec-tag">Perforated</span>
+                                <span class="spec-tag">Eco Friendly</span>
+                            </div>
+                            <div class="product-actions">
+                                <button class="btn btn-secondary" onclick="addToQuote('Spilpak 70M Paper', 'spilpak-70m-paper')">Add to Quote</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 100M Paper (Unperforated) -->
+                    <div class="product-card" data-category="paper-towels">
+                        <div class="product-image">
+                            <img src="https://via.placeholder.com/350x200?text=100M+Paper+Towel" alt="100M Paper Towel">
+                            <div class="product-overlay">
+                                <button class="btn btn-primary" onclick="showProductDetails(\'100m-paper\')">Details</button>
+                            </div>
+                        </div>
+                        <div class="product-info">
+                            <h3 class="product-name">100M Paper Towel (Unperforated)</h3>
+                            <p class="product-description">A highly absorbent 2-ply paper towel that gives the user full paper length control.</p>                           <div class="product-specs">
+                                <span class="spec-tag">100 meters</span>
+                                <span class="spec-tag">2 Ply</span>
+                                <span class="spec-tag">Unperforated</span>
+                                <span class="spec-tag">Eco Friendly</span>
+                            </div>
+                            <div class="product-actions">
+                                <button class="btn btn-secondary" onclick="addToQuote('Spilpak New 100M Paper', 'spilpak-100m-paper')">Add to Quote</button>
+                            </div>
+                        </div>
+                    <                    <!-- Dispenser -->
+                    <div class="product-card" data-category="dispenser">
+                        <div class="product-image">
+                            <img src="https://via.placeholder.com/350x200?text=Paper+Towel+Dispenser" alt="Paper Towel Dispenser">
+                            <div class="product-overlay">
+                                <button class="btn btn-primary" onclick="showProductDetails(\'dispenser\')">Details</button>
+                            </div>
+                        </div>
+                        <div class="product-info">
+                            <h3 class="product-name">Paper Towel Dispenser</h3>
+                            <p class="product-description">A durable, easy-to-use, and affordable wall-mounted dispenser specifically designed for paper towels. It is ideal for hygiene-sensitive environments.</p>                        <span class="spec-tag">Wall-mounted</span>
+                                <span class="spec-tag">Durable</span>
+                                <span class="spec-tag">Hygienic</span>
+                                <span class="spec-tag">Impact Resistant</span>
+                            </div>
+                            <div class="product-actions">
+                                <button class="btn btn-secondary" onclick="addToQuote('Spilpak Dispenser', 'spilpak-dispenser')">Add to Quote</button>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Point of Sale Display Stand -->
+                    <div class="product-card" data-category="pos-stand">
+                        <div class="product-image">
+                            <img src="https://via.placeholder.com/350x200?text=POS+Display+Stand" alt="Point of Sale Display Stand">
+                            <div class="product-overlay">
+                                <button class="btn btn-primary" onclick="showProductDetails(\'pos-stand\')">Details</button>
+                            </div>
+                        </div>
+                        <div class="product-info">
+                            <h3 class="product-name">Point of Sale Display Stand</h3>
+                            <p class="product-description">A fully stocked point of sale display stand provided with the purchase.</p>                            <div class="product-specs">
+                                <span class="spec-tag">Includes Sample</span>
+                                <span class="spec-tag">Backup Stock</span>
+                                <span class="spec-tag">Promotional</span>
+                            </div>
+                            <div class="product-actions">
+                                <button class="btn btn-secondary" onclick="addToQuote('Spilpak POS Display Stand', 'spilpak-pos-stand')">Add to Quote</button>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="no-results" id="no-results" style="display: none;">
+                    <div class="no-results-content">
+                        <i class="fas fa-exclamation-circle"></i>
+                        <h3>No products found matching your criteria.</h3>
+                        <p>Please try adjusting your search or filters.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Quote Cart (common to all product pages) -->
+    <div class="quote-cart" id="quote-cart">
+        <div class="cart-header" id="cart-header">
+            <h3><i class="fas fa-shopping-cart"></i> Quote Cart (<span id="cart-count">0</span>)</h3>
+            <button class="cart-toggle" id="cart-toggle"><i class="fas fa-chevron-up"></i></button>
+        </div>
+        <div class="cart-content" id="cart-content">
+            <div class="cart-items" id="cart-items">
+                <!-- Cart items will be dynamically added here -->
+                <p class="empty-cart" id="empty-cart">Your quote cart is empty.</p>
+            </div>
+            <div class="cart-actions">
+                <button class="btn btn-outline" id="clear-cart">Clear Cart</button>
+                <button class="btn btn-primary" id="request-quote">Request Quote</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Product Details Modal (common to all product pages) -->
+    <div class="modal-overlay" id="product-details-modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2 id="modal-product-name">Product Name</h2>
+                <button class="modal-close" id="modal-close"><i class="fas fa-times"></i></button>
+            </div>
+            <div class="modal-body">
+                <div class="product-details-content">
+                    <p id="modal-product-description"></p>
+                    <div class="details-grid">
+                        <div class="detail-section">
+                            <h4>Features</h4>
+                            <ul id="modal-product-features"></ul>
+                        </div>
+                        <div class="detail-section">
+                            <h4>Specifications</h4>
+                            <ul id="modal-product-specs"></ul>
+                        </div>
+                    </div>
+                    <div class="detail-section" id="modal-product-applications-section" style="display: none;">
+                        <h4>Applications</h4>
+                        <ul id="modal-product-applications"></ul>
+                    </div>
+                    <div class="detail-section" id="modal-product-certifications-section" style="display: none;">
+                        <h4>Certifications</h4>
+                        <ul id="modal-product-certifications"></ul>
+                    </div>
+                    <div class="detail-section" id="modal-product-includes-section" style="display: none;">
+                        <h4>Includes</h4>
+                        <ul id="modal-product-includes"></ul>
+                    </div>
+                    <div class="detail-section" id="modal-product-promotion-section" style="display: none;">
+                        <h4>Promotion</h4>
+                        <p id="modal-product-promotion"></p>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button class="btn btn-primary" id="modal-add-to-quote">Add to Quote</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="../js/products.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const p                {
+                    id: \'70m-paper\',
+                    name: \'70M Paper Towel\',
+                    description: \'A highly absorbent 2-ply paper towel. It utilizes DESL technology, making it one of the strongest and most absorbent paper towels and wiping solutions available. It has been a tried and trusted choice for professionals in the South African away-from-home market for over 10 years.\',
+                    features: [
+                        \'2 Ply Super Absorbent Paper\',
+                        \'Eco Friendly\',
+                        \'Perforated\',
+                        \'Hygienic\',
+                        \'One paper towel is equivalent to 6 standard towels.\'
+                    ],
+                    specs: [
+                        \'70 meters\',
+                        \'Sheet Size: 215mm x 350mm\',
+                        \'Perforated\',
+                        \'Laminated\',
+                        \'Embossed Paper\'
+                    ],
+                    certifications: [
+                        \'FSC certification ensures it conforms to internationally recognized environmental standards.\'
+                    ],
+                    category: \'paper-towels\'
+                },: \'100m-paper\',
+                    name: \'100M Paper Towel (Unperforated)\',
+                    description: \'A highly absorbent 2-ply paper towel that gives the user full paper length control.\',
+                    features: [
+                        \'2 Ply Super Absorbent Paper\',
+                        \'Eco Friendly\',
+                        \'Unperforated\',
+                        \'Hygienic\',
+                        \'The new 100m paper towel is equivalent to nine standard paper towels.\'
+                    ],
+                    specs: [
+                        \'100 meters\',
+                        \'Sheet Size: 215mm x 350mm\',
+                        \'Unperforated\',
+                        \'Laminated\',
+                        \'Embossed Paper\'
+                    ],
+                    certifications: [
+                        \'FSC certified.\'
+                    ],
+                    category                {
+                    id: \'dispenser\',
+                    name: \'Paper Towel Dispenser\',
+                    description: \'A durable, easy-to-use, and affordable wall-mounted dispenser specifically designed for paper towels. It is ideal for hygiene-sensitive environments.\',
+                    features: [
+                        \'Easy to Load\',
+                        \'Easy to Use\',
+                        \'Cost Effective\',
+                        \'Hygienic\',
+                        \'Impact Resistant\',
+                        \'Versatile Installation (can be wall-mounted or used as a counter-top unit).\'
+                    ],
+                    applications: [
+                        \'Suitable for high-traffic environments, workshops, production, restaurants, kitchens, and food preparation areas.\'
+                    ],
+                    category: \'dispenser\'
+                       {
+                    id: \'pos-stand\',
+                    name: \'Point of Sale Display Stand\',
+                    description: \'A fully stocked point of sale display stand provided with the purchase.\',
+                    includes: [
+                        \'A sample dispenser and backup stock.\'
+                    ],
+                    promotion: \'During a promotion, the first 10 customers who purchase 2 rolls of paper receive 10 free dispensers.\',
+                    category: \'pos-stand\'
+                }      ];
+
+            renderProducts(productsData);
+            setupSearchAndFilters(productsData);
+            setupQuoteCart();
+        });
+    </script>
+</body>
+</html>
+

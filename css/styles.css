@@ -1773,6 +1773,8 @@ section {
     }
 }
 
+
+
 /* Team Section Styles */
 .team-list {
     list-style: none;
@@ -1791,9 +1793,9 @@ section {
 }
 
 .team-member-photo {
-    width: 200px;
-    height: 200px;
-    border-radius: 30%; /* Makes the image circular */
+    width: 80px;
+    height: 80px;
+    border-radius: 50%; /* Makes the image circular */
     object-fit: cover; /* Ensures the image covers the area without distortion */
     border: 3px solid var(--primary-blue); /* A subtle border */
     box-shadow: var(--shadow-small);
@@ -1810,3 +1812,4 @@ section {
         font-size: 1rem;
     }
 }
+
