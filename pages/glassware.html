@@ -3,7 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Glassware - Minable Scientific</title>
+    <title>Laboratory Glassware - Minable Scientific</title>
+    <meta name="description" content="High-quality laboratory glassware including beakers, flasks, pipettes, and measuring cylinders for scientific applications.">
     <link rel="stylesheet" href="../css/styles.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -15,8 +16,10 @@
     <nav class="navbar" id="navbar">
         <div class="nav-container">
             <div class="nav-logo">
-                <h2>MINABLE SCIENTIFIC</h2>
-                <span class="nav-tagline">Laboratory Excellence</span>
+                <a href="../index.html" style="text-decoration: none; color: inherit;">
+                    <h2>MINABLE SCIENTIFIC</h2>
+                    <span class="nav-tagline">Laboratory Excellence</span>
+                </a>
             </div>
             
             <ul class="nav-menu" id="nav-menu">
@@ -27,22 +30,17 @@
                     <a href="../index.html#about" class="nav-link">About</a>
                 </li>
                 <li class="nav-item dropdown">
-                    <a href="#products" class="nav-link">Products <i class="fas fa-chevron-down"></i></a>
+                    <a href="../index.html#products" class="nav-link">Products <i class="fas fa-chevron-down"></i></a>
                     <ul class="dropdown-menu">
                         <li><a href="glassware.html">Glassware</a></li>
                         <li><a href="apparatus.html">Apparatus</a></li>
                         <li><a href="chemicals.html">Chemicals</a></li>
                         <li><a href="diagnostics.html">Diagnostics</a></li>
                         <li><a href="filtration.html">Filtration</a></li>
-                        <li><a href="lovibond.html">Lovibond</a></li>
-                        <li><a href="paper-products.html">Paper Products</a></li>
                     </ul>
                 </li>
                 <li class="nav-item">
                     <a href="../index.html#services" class="nav-link">Services</a>
-                </li>
-                <li class="nav-item">
-                    <a href="../index.html#industries" class="nav-link">Industries</a>
                 </li>
                 <li class="nav-item">
                     <a href="../index.html#contact" class="nav-link">Contact</a>
@@ -60,151 +58,339 @@
         </div>
     </nav>
 
-    <main>
-        <section class="page-header">
-            <div class="container">
-                <div class="breadcrumb">
-                    <a href="../index.html">Home</a>
-                    <i class="fas fa-chevron-right"></i>
-                    <a href="../index.html#products">Products</a>
-                    <i class="fas fa-chevron-right"></i>
-                    <span>Glassware</span>
-                </div>
-                <h1 class="page-title">Laboratory Glassware</h1>
-                <p class="page-description">High-quality glassware for all your laboratory needs.</p>
+    <!-- Page Header -->
+    <section class="page-header">
+        <div class="container">
+            <div class="breadcrumb">
+                <a href="../index.html">Home</a>
+                <i class="fas fa-chevron-right"></i>
+                <a href="../index.html#products">Products</a>
+                <i class="fas fa-chevron-right"></i>
+                <span>Laboratory Glassware</span>
             </div>
-        </section>
-
-        <section class="product-filters">
-            <div class="container">
-                <div class="filter-bar">
-                    <div class="search-box">
-                        <i class="fas fa-search"></i>
-                        <input type="text" id="product-search" placeholder="Search products...">
-                    </div>
-                    <div class="filter-options">
-                        <select id="category-filter">
-                            <option value="all">All Categories</option>
-                            <option value="beakers">Beakers</option>
-                            <option value="flasks">Flasks</option>
-                            <option value="pipettes">Pipettes</option>
-                        </select>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section class="products-grid">
-            <div class="container">
-                <div class="products-container" id="products-container">
-                    <!-- Products will be dynamically loaded here by JavaScript -->
-                </div>
-                <div class="no-results" id="no-results" style="display: none;">
-                    <div class="no-results-content">
-                        <i class="fas fa-exclamation-circle"></i>
-                        <h3>No products found matching your criteria.</h3>
-                        <p>Please try adjusting your search or filters.</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-    </main>
-
-    <!-- Quote Cart (common to all product pages) -->
-    <div class="quote-cart" id="quote-cart">
-        <div class="cart-header" id="cart-header">
-            <h3><i class="fas fa-shopping-cart"></i> Quote Cart (<span id="cart-count">0</span>)</h3>
-            <button class="cart-toggle" id="cart-toggle"><i class="fas fa-chevron-up"></i></button>
+            <h1 class="page-title">Laboratory Glassware</h1>
+            <p class="page-description">
+                Premium quality laboratory glassware for precise measurements and scientific experiments
+            </p>
         </div>
-        <div class="cart-content" id="cart-content">
-            <div class="cart-items" id="cart-items">
-                <!-- Cart items will be dynamically added here -->
-                <p class="empty-cart" id="empty-cart">Your quote cart is empty.</p>
+    </section>
+
+    <!-- Product Filters -->
+    <section class="product-filters">
+        <div class="container">
+            <div class="filter-bar">
+                <div class="search-box">
+                    <i class="fas fa-search"></i>
+                    <input type="text" placeholder="Search products..." id="productSearch">
+                </div>
+                
+                <div class="filter-options">
+                    <select id="volumeFilter">
+                        <option value="">All Volumes</option>
+                        <option value="50ml">50ml</option>
+                        <option value="100ml">100ml</option>
+                        <option value="250ml">250ml</option>
+                        <option value="500ml">500ml</option>
+                        <option value="1000ml">1000ml</option>
+                        <option value="2000ml">2000ml</option>
+                    </select>
+                    
+                    <select id="materialFilter">
+                        <option value="">All Materials</option>
+                        <option value="glass">Glass</option>
+                        <option value="plastic">Plastic</option>
+                    </select>
+                    
+                    <select id="typeFilter">
+                        <option value="">All Types</option>
+                        <option value="beaker">Beakers</option>
+                        <option value="flask">Flasks</option>
+                        <option value="cylinder">Measuring Cylinders</option>
+                        <option value="pipette">Pipettes</option>
+                        <option value="burette">Burettes</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Products Grid -->
+    <section class="products-grid">
+        <div class="container">
+            <div class="products-container" id="productsContainer">
+                <!-- Beakers -->
+                <div class="product-card" data-type="beaker" data-volume="50ml" data-material="glass">
+                    <div class="product-image">
+                        <img src="../images/laboratory-glassware.jpg" alt="50ml Glass Beaker">
+                        <div class="product-overlay">
+                            <button class="btn btn-primary quick-quote" data-product="50ml Glass Beaker">
+                                <i class="fas fa-calculator"></i>
+                                Quick Quote
+                            </button>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <h3 class="product-name">50ml Glass Beaker</h3>
+                        <p class="product-description">High-quality borosilicate glass beaker with spout for easy pouring</p>
+                        <div class="product-specs">
+                            <span class="spec-tag">50ml</span>
+                            <span class="spec-tag">Glass</span>
+                            <span class="spec-tag">Graduated</span>
+                        </div>
+                        <div class="product-actions">
+                            <button class="btn btn-secondary product-details" data-product="50ml Glass Beaker">
+                                <i class="fas fa-info-circle"></i>
+                                Details
+                            </button>
+                            <button class="btn btn-primary add-to-quote" data-product="50ml Glass Beaker">
+                                <i class="fas fa-plus"></i>
+                                Add to Quote
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="product-card" data-type="beaker" data-volume="100ml" data-material="glass">
+                    <div class="product-image">
+                        <img src="../images/laboratory-glassware.jpg" alt="100ml Glass Beaker">
+                        <div class="product-overlay">
+                            <button class="btn btn-primary quick-quote" data-product="100ml Glass Beaker">
+                                <i class="fas fa-calculator"></i>
+                                Quick Quote
+                            </button>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <h3 class="product-name">100ml Glass Beaker</h3>
+                        <p class="product-description">Precision-made glass beaker ideal for mixing and measuring liquids</p>
+                        <div class="product-specs">
+                            <span class="spec-tag">100ml</span>
+                            <span class="spec-tag">Glass</span>
+                            <span class="spec-tag">Graduated</span>
+                        </div>
+                        <div class="product-actions">
+                            <button class="btn btn-secondary product-details" data-product="100ml Glass Beaker">
+                                <i class="fas fa-info-circle"></i>
+                                Details
+                            </button>
+                            <button class="btn btn-primary add-to-quote" data-product="100ml Glass Beaker">
+                                <i class="fas fa-plus"></i>
+                                Add to Quote
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Flasks -->
+                <div class="product-card" data-type="flask" data-volume="250ml" data-material="glass">
+                    <div class="product-image">
+                        <img src="../images/laboratory-glassware.jpg" alt="250ml Erlenmeyer Flask">
+                        <div class="product-overlay">
+                            <button class="btn btn-primary quick-quote" data-product="250ml Erlenmeyer Flask">
+                                <i class="fas fa-calculator"></i>
+                                Quick Quote
+                            </button>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <h3 class="product-name">250ml Erlenmeyer Flask</h3>
+                        <p class="product-description">Conical flask with narrow neck, perfect for mixing and heating solutions</p>
+                        <div class="product-specs">
+                            <span class="spec-tag">250ml</span>
+                            <span class="spec-tag">Glass</span>
+                            <span class="spec-tag">Conical</span>
+                        </div>
+                        <div class="product-actions">
+                            <button class="btn btn-secondary product-details" data-product="250ml Erlenmeyer Flask">
+                                <i class="fas fa-info-circle"></i>
+                                Details
+                            </button>
+                            <button class="btn btn-primary add-to-quote" data-product="250ml Erlenmeyer Flask">
+                                <i class="fas fa-plus"></i>
+                                Add to Quote
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Measuring Cylinders -->
+                <div class="product-card" data-type="cylinder" data-volume="100ml" data-material="glass">
+                    <div class="product-image">
+                        <img src="../images/laboratory-glassware.jpg" alt="100ml Measuring Cylinder">
+                        <div class="product-overlay">
+                            <button class="btn btn-primary quick-quote" data-product="100ml Measuring Cylinder">
+                                <i class="fas fa-calculator"></i>
+                                Quick Quote
+                            </button>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <h3 class="product-name">100ml Measuring Cylinder</h3>
+                        <p class="product-description">Precision graduated cylinder for accurate volume measurements</p>
+                        <div class="product-specs">
+                            <span class="spec-tag">100ml</span>
+                            <span class="spec-tag">Glass</span>
+                            <span class="spec-tag">Graduated</span>
+                        </div>
+                        <div class="product-actions">
+                            <button class="btn btn-secondary product-details" data-product="100ml Measuring Cylinder">
+                                <i class="fas fa-info-circle"></i>
+                                Details
+                            </button>
+                            <button class="btn btn-primary add-to-quote" data-product="100ml Measuring Cylinder">
+                                <i class="fas fa-plus"></i>
+                                Add to Quote
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Burettes -->
+                <div class="product-card" data-type="burette" data-volume="50ml" data-material="glass">
+                    <div class="product-image">
+                        <img src="../images/laboratory-glassware.jpg" alt="50ml Burette Rotaflow">
+                        <div class="product-overlay">
+                            <button class="btn btn-primary quick-quote" data-product="50ml Burette Rotaflow">
+                                <i class="fas fa-calculator"></i>
+                                Quick Quote
+                            </button>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <h3 class="product-name">50ml Burette Rotaflow</h3>
+                        <p class="product-description">Precision burette with rotaflow stopcock for accurate titrations</p>
+                        <div class="product-specs">
+                            <span class="spec-tag">50ml</span>
+                            <span class="spec-tag">Glass</span>
+                            <span class="spec-tag">Rotaflow</span>
+                        </div>
+                        <div class="product-actions">
+                            <button class="btn btn-secondary product-details" data-product="50ml Burette Rotaflow">
+                                <i class="fas fa-info-circle"></i>
+                                Details
+                            </button>
+                            <button class="btn btn-primary add-to-quote" data-product="50ml Burette Rotaflow">
+                                <i class="fas fa-plus"></i>
+                                Add to Quote
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Plastic alternatives -->
+                <div class="product-card" data-type="cylinder" data-volume="250ml" data-material="plastic">
+                    <div class="product-image">
+                        <img src="../images/laboratory-glassware.jpg" alt="250ml Plastic Measuring Cylinder">
+                        <div class="product-overlay">
+                            <button class="btn btn-primary quick-quote" data-product="250ml Plastic Measuring Cylinder">
+                                <i class="fas fa-calculator"></i>
+                                Quick Quote
+                            </button>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <h3 class="product-name">250ml Plastic Measuring Cylinder</h3>
+                        <p class="product-description">Durable plastic measuring cylinder, ideal for educational use</p>
+                        <div class="product-specs">
+                            <span class="spec-tag">250ml</span>
+                            <span class="spec-tag">Plastic</span>
+                            <span class="spec-tag">Graduated</span>
+                        </div>
+                        <div class="product-actions">
+                            <button class="btn btn-secondary product-details" data-product="250ml Plastic Measuring Cylinder">
+                                <i class="fas fa-info-circle"></i>
+                                Details
+                            </button>
+                            <button class="btn btn-primary add-to-quote" data-product="250ml Plastic Measuring Cylinder">
+                                <i class="fas fa-plus"></i>
+                                Add to Quote
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Quote Cart -->
+    <div class="quote-cart" id="quoteCart">
+        <div class="cart-header">
+            <h3><i class="fas fa-shopping-cart"></i> Quote Cart</h3>
+            <button class="cart-toggle" id="cartToggle">
+                <i class="fas fa-chevron-up"></i>
+            </button>
+        </div>
+        <div class="cart-content" id="cartContent">
+            <div class="cart-items" id="cartItems">
+                <p class="empty-cart">No items in quote cart</p>
             </div>
             <div class="cart-actions">
-                <button class="btn btn-outline" id="clear-cart">Clear Cart</button>
-                <button class="btn btn-primary" id="request-quote">Request Quote</button>
+                <button class="btn btn-secondary" id="clearCart">
+                    <i class="fas fa-trash"></i>
+                    Clear Cart
+                </button>
+                <button class="btn btn-primary" id="requestQuote">
+                    <i class="fas fa-paper-plane"></i>
+                    Request Quote
+                </button>
             </div>
         </div>
     </div>
 
-    <!-- Product Details Modal (common to all product pages) -->
-    <div class="modal-overlay" id="product-details-modal">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h2 id="modal-product-name">Product Name</h2>
-                <button class="modal-close" id="modal-close"><i class="fas fa-times"></i></button>
-            </div>
-            <div class="modal-body">
-                <div class="product-details-content">
-                    <p id="modal-product-description"></p>
-                    <div class="details-grid">
-                        <div class="detail-section">
-                            <h4>Features</h4>
-                            <ul id="modal-product-features"></ul>
-                        </div>
-                        <div class="detail-section">
-                            <h4>Specifications</h4>
-                            <ul id="modal-product-specs"></ul>
-                        </div>
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <div class="footer-logo">
+                        <h3>MINABLE SCIENTIFIC</h3>
+                        <p>Laboratory Excellence</p>
                     </div>
-                    <div class="detail-section" id="modal-product-applications-section" style="display: none;">
-                        <h4>Applications</h4>
-                        <ul id="modal-product-applications"></ul>
-                    </div>
-                    <div class="detail-section" id="modal-product-certifications-section" style="display: none;">
-                        <h4>Certifications</h4>
-                        <ul id="modal-product-certifications"></ul>
-                    </div>
-                    <div class="detail-section" id="modal-product-includes-section" style="display: none;">
-                        <h4>Includes</h4>
-                        <ul id="modal-product-includes"></ul>
-                    </div>
-                    <div class="detail-section" id="modal-product-promotion-section" style="display: none;">
-                        <h4>Promotion</h4>
-                        <p id="modal-product-promotion"></p>
+                    <p class="footer-description">
+                        Your trusted partner for laboratory equipment, chemicals, and consumables.
+                    </p>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul class="footer-links">
+                        <li><a href="../index.html">Home</a></li>
+                        <li><a href="../index.html#about">About Us</a></li>
+                        <li><a href="../index.html#products">Products</a></li>
+                        <li><a href="../index.html#contact">Contact</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Product Categories</h4>
+                    <ul class="footer-links">
+                        <li><a href="glassware.html">Laboratory Glassware</a></li>
+                        <li><a href="chemicals.html">Chemicals & Reagents</a></li>
+                        <li><a href="diagnostics.html">Diagnostic Equipment</a></li>
+                        <li><a href="filtration.html">Filtration Products</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Contact Info</h4>
+                    <div class="footer-contact">
+                        <p><i class="fas fa-map-marker-alt"></i> Bulawayo, Zimbabwe</p>
+                        <p><i class="fas fa-phone"></i> 09-883033</p>
+                        <p><i class="fas fa-envelope"></i> info@minablescientific.co.zw</p>
                     </div>
                 </div>
             </div>
-            <div class="modal-footer">
-                <button class="btn btn-primary" id="modal-add-to-quote">Add to Quote</button>
+            
+            <div class="footer-bottom">
+                <div class="footer-copyright">
+                    <p>&copy; 2024 Minable Scientific. All rights reserved.</p>
+                </div>
             </div>
         </div>
-    </div>
+    </footer>
 
+    <script src="../js/main.js"></script>
     <script src="../js/products.js"></script>
-    <script>
-        document.addEventListener(\'DOMContentLoaded\', () => {
-            const productsData = [
-                {
-                    id: \'beaker-50ml\',
-                    name: \'Beaker, 50ml\',
-                    description: \'High-quality borosilicate glass beaker with clear graduations.\',
-                    image: \'https://via.placeholder.com/350x200?text=50ml+Beaker\',
-                    features: [\'Borosilicate Glass\', \'Clear Graduations\', \'Heat Resistant\'],
-                    specs: [\'Volume: 50ml\', \'Material: Borosilicate Glass\'],
-                    category: \'beakers\'
-                },
-                {
-                    id: \'erlenmeyer-flask-250ml\',
-                    name: \'Erlenmeyer Flask, 250ml\',
-                    description: \'Conical flask for mixing and heating solutions.\',
-                    image: \'https://via.placeholder.com/350x200?text=250ml+Erlenmeyer+Flask\',
-                    features: [\'Borosilicate Glass\', \'Conical Shape\', \'Heat Resistant\'],
-                    specs: [\'Volume: 250ml\', \'Material: Borosilicate Glass\'],
-                    category: \'flasks\'
-                }
-            ];
-
-            renderProducts(productsData);
-            setupSearchAndFilters(productsData);
-            setupQuoteCart();
-        });
-
-        // Helper function to escape single quotes for onclick attributes
-        function escapeHtml(text) {
-            var map = {
-                \'\\\': \'\\\\\\\
-
-(Content truncated due to size limit. Use line ranges to read in chunks)
+</body>
+</html>
 
