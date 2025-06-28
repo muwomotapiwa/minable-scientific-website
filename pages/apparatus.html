@@ -173,14 +173,50 @@
     </div>
 
     <script src="../js/products.js"></script>
+    <script src="../js/apparatus-products.js"></script>
     <script>
-        document.addEventListener(\'DOMContentLoaded\', () => {
-            const productsData = [
-                {
-                    id: \'microscope-compound\',
-                    name: \'Compound Microscope\',
-                    description: \'High-resolution compound microscope for detailed observation of biological samples.\',
-                    image: \'https://via.placeholder.com/350x200?text=Compound+Microscope\',
-                    features: [\'Binocular Head\
-(Content truncated due to size limit. Use line ranges to read in chunks)
+function renderApparatusProducts(products) {
+    const container = document.getElementById("products-container");
+    const noResults = document.getElementById("no-results");
+
+    if (!container || !Array.isArray(products)) return;
+
+    container.innerHTML = products
+    .map(
+        (product) => `
+    <div class="product-card">
+        <img src="${product.image}" alt="${product.name}" style="width:100%; border-radius:12px;">
+        <div class="product-info" style="padding:1rem;">
+        <h3 class="product-name">${product.name}</h3>
+        <p class="product-description">${product.description}</p>
+        <button class="btn btn-primary add-to-quote" data-product="${product.name}">Add to Quote</button>
+        </div>
+    </div>
+    `
+    )
+    .join("");
+
+    if (noResults) noResults.style.display = products.length === 0 ? "block" : "none";
+
+    // ✅ Rebind quote cart buttons
+    bindQuoteCartButtons();
+}
+
+function bindQuoteCartButtons() {
+    document.querySelectorAll(".add-to-quote").forEach(button => {
+        button.addEventListener("click", function () {
+            const productName = this.dataset.product;
+            if (typeof addToCart === "function") {
+                addToCart(productName);
+            } else {
+                console.warn("addToCart function not found.");
+            }
+        });
+    });
+}
+
+document.addEventListener("DOMContentLoaded", () => {
+    renderApparatusProducts(apparatusProducts);
+});
+</script>
 
