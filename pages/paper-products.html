@@ -1,0 +1,487 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Paper Products - Minable Scientific</title>
+    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <h2>MINABLE SCIENTIFIC</h2>
+                <span class="nav-tagline">Laboratory Excellence</span>
+            </div>
+            
+            <ul class="nav-menu" id="nav-menu">
+                <li class="nav-item">
+                    <a href="../index.html" class="nav-link">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a href="../index.html#about" class="nav-link">About</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a href="#products" class="nav-link">Products <i class="fas fa-chevron-down"></i></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="glassware.html">Glassware</a></li>
+                        <li><a href="apparatus.html">Apparatus</a></li>
+                        <li><a href="chemicals.html">Chemicals</a></li>
+                        <li><a href="diagnostics.html">Diagnostics</a></li>
+                        <li><a href="filtration.html">Filtration</a></li>
+                        <li><a href="lovibond.html">Lovibond</a></li>
+                        <li><a href="paper-products.html">Paper Products</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item">
+                    <a href="../index.html#services" class="nav-link">Services</a>
+                </li>
+                <li class="nav-item">
+                    <a href="../index.html#industries" class="nav-link">Industries</a>
+                </li>
+                <li class="nav-item">
+                    <a href="../index.html#contact" class="nav-link">Contact</a>
+                </li>
+                <li class="nav-item">
+                    <a href="../index.html#quote" class="nav-link btn-quote">Request Quote</a>
+                </li>
+            </ul>
+            
+            <div class="hamburger" id="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </div>
+    </nav>
+
+    <main>
+        <section class="page-header">
+            <div class="container">
+                <div class="breadcrumb">
+                    <a href="../index.html">Home</a>
+                    <i class="fas fa-chevron-right"></i>
+                    <a href="../index.html#products">Products</a>
+                    <i class="fas fa-chevron-right"></i>
+                    <span>Paper Products</span>
+                </div>
+                <h1 class="page-title">Paper Products</h1>
+                <p class="page-description">Innovative and eco-friendly paper solutions for hygiene and spill management.</p>
+            </div>
+        </section>
+
+        <section class="product-filters">
+            <div class="container">
+                <div class="filter-bar">
+                    <div class="search-box">
+                        <i class="fas fa-search"></i>
+                        <input type="text" id="product-search" placeholder="Search products...">
+                    </div>
+                    <div class="filter-options">
+                        <select id="category-filter">
+                            <option value="all">All Categories</option>
+                            <option value="paper-towels">Paper Towels</option>
+                            <option value="dispenser">Dispenser</option>
+                            <option value="pos-stand">POS Display Stand</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="products-grid">
+            <div class="container">
+                <div class="products-container" id="products-container">
+                    <!-- Products will be dynamically loaded here by JavaScript -->
+                </div>
+                <div class="no-results" id="no-results" style="display: none;">
+                    <div class="no-results-content">
+                        <i class="fas fa-exclamation-circle"></i>
+                        <h3>No products found matching your criteria.</h3>
+                        <p>Please try adjusting your search or filters.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Quote Cart (common to all product pages) -->
+    <div class="quote-cart" id="quote-cart">
+        <div class="cart-header" id="cart-header">
+            <h3><i class="fas fa-shopping-cart"></i> Quote Cart (<span id="cart-count">0</span>)</h3>
+            <button class="cart-toggle" id="cart-toggle"><i class="fas fa-chevron-up"></i></button>
+        </div>
+        <div class="cart-content" id="cart-content">
+            <div class="cart-items" id="cart-items">
+                <!-- Cart items will be dynamically added here -->
+                <p class="empty-cart" id="empty-cart">Your quote cart is empty.</p>
+            </div>
+            <div class="cart-actions">
+                <button class="btn btn-outline" id="clear-cart">Clear Cart</button>
+                <button class="btn btn-primary" id="request-quote">Request Quote</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Product Details Modal (common to all product pages) -->
+    <div class="modal-overlay" id="product-details-modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2 id="modal-product-name">Product Name</h2>
+                <button class="modal-close" id="modal-close"><i class="fas fa-times"></i></button>
+            </div>
+            <div class="modal-body">
+                <div class="product-details-content">
+                    <p id="modal-product-description"></p>
+                    <div class="details-grid">
+                        <div class="detail-section">
+                            <h4>Features</h4>
+                            <ul id="modal-product-features"></ul>
+                        </div>
+                        <div class="detail-section">
+                            <h4>Specifications</h4>
+                            <ul id="modal-product-specs"></ul>
+                        </div>
+                    </div>
+                    <div class="detail-section" id="modal-product-applications-section" style="display: none;">
+                        <h4>Applications</h4>
+                        <ul id="modal-product-applications"></ul>
+                    </div>
+                    <div class="detail-section" id="modal-product-certifications-section" style="display: none;">
+                        <h4>Certifications</h4>
+                        <ul id="modal-product-certifications"></ul>
+                    </div>
+                    <div class="detail-section" id="modal-product-includes-section" style="display: none;">
+                        <h4>Includes</h4>
+                        <ul id="modal-product-includes"></ul>
+                    </div>
+                    <div class="detail-section" id="modal-product-promotion-section" style="display: none;">
+                        <h4>Promotion</h4>
+                        <p id="modal-product-promotion"></p>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button class="btn btn-primary" id="modal-add-to-quote">Add to Quote</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="../js/products.js"></script>
+    <script>
+        document.addEventListener(\'DOMContentLoaded\', () => {
+            const productsData = [
+                {
+                    id: \'70m-paper\',
+                    name: \'70M Paper Towel\',
+                    description: \'A highly absorbent 2-ply paper towel. It utilizes DESL technology, making it one of the strongest and most absorbent paper towels and wiping solutions available. It has been a tried and trusted choice for professionals in the South African away-from-home market for over 10 years.\',
+                    image: \'https://via.placeholder.com/350x200?text=70M+Paper+Towel\',
+                    features: [
+                        \'2 Ply Super Absorbent Paper\',
+                        \'Eco Friendly\',
+                        \'Perforated\',
+                        \'Hygienic\',
+                        \'One paper towel is equivalent to 6 standard towels.\'
+                    ],
+                    specs: [
+                        \'70 meters\',
+                        \'Sheet Size: 215mm x 350mm\',
+                        \'Perforated\',
+                        \'Laminated\',
+                        \'Embossed Paper\'
+                    ],
+                    certifications: [
+                        \'FSC certification ensures it conforms to internationally recognized environmental standards.\'
+                    ],
+                    category: \'paper-towels\'
+                },
+                {
+                    id: \'100m-paper\',
+                    name: \'100M Paper Towel (Unperforated)\',
+                    description: \'A highly absorbent 2-ply paper towel that gives the user full paper length control.\',
+                    image: \'https://via.placeholder.com/350x200?text=100M+Paper+Towel\',
+                    features: [
+                        \'2 Ply Super Absorbent Paper\',
+                        \'Eco Friendly\',
+                        \'Unperforated\',
+                        \'Hygienic\',
+                        \'The new 100m paper towel is equivalent to nine standard paper towels.\'
+                    ],
+                    specs: [
+                        \'100 meters\',
+                        \'Sheet Size: 215mm x 350mm\',
+                        \'Unperforated\',
+                        \'Laminated\',
+                        \'Embossed Paper\'
+                    ],
+                    certifications: [
+                        \'FSC certified.\'
+                    ],
+                    category: \'paper-towels\'
+                },
+                {
+                    id: \'dispenser\',
+                    name: \'Paper Towel Dispenser\',
+                    description: \'A durable, easy-to-use, and affordable wall-mounted dispenser specifically designed for paper towels. It is ideal for hygiene-sensitive environments.\',
+                    image: \'https://via.placeholder.com/350x200?text=Paper+Towel+Dispenser\',
+                    features: [
+                        \'Easy to Load\',
+                        \'Easy to Use\',
+                        \'Cost Effective\',
+                        \'Hygienic\',
+                        \'Impact Resistant\',
+                        \'Versatile Installation (can be wall-mounted or used as a counter-top unit).\'
+                    ],
+                    applications: [
+                        \'Suitable for high-traffic environments, workshops, production, restaurants, kitchens, and food preparation areas.\'
+                    ],
+                    category: \'dispenser\'
+                },
+                {
+                    id: \'pos-stand\',
+                    name: \'Point of Sale Display Stand\',
+                    description: \'A fully stocked point of sale display stand provided with the purchase.\',
+                    image: \'https://via.placeholder.com/350x200?text=POS+Display+Stand\',
+                    includes: [
+                        \'A sample dispenser and backup stock.\'
+                    ],
+                    promotion: \'During a promotion, the first 10 customers who purchase 2 rolls of paper receive 10 free dispensers.\',
+                    category: \'pos-stand\'
+                }
+            ];
+
+            // Function to render products dynamically
+            function renderProducts(products) {
+                const productsContainer = document.getElementById(\'products-container\');
+                productsContainer.innerHTML = \'\'; // Clear existing products
+
+                if (products.length === 0) {
+                    document.getElementById(\'no-results\').style.display = \'block\';
+                    return;
+                }
+                document.getElementById(\'no-results\').style.display = \'none\';
+
+                products.forEach(product => {
+                    const productCard = document.createElement(\'div\');
+                    productCard.classList.add(\'product-card\');
+                    productCard.setAttribute(\'data-category\', product.category);
+
+                    productCard.innerHTML = `
+                        <div class="product-image">
+                            <img src="${product.image}" alt="${product.name}">
+                            <div class="product-overlay">
+                                <button class="btn btn-primary" onclick="showProductDetails(\'${product.id}\')">Details</button>
+                            </div>
+                        </div>
+                        <div class="product-info">
+                            <h3 class="product-name">${product.name}</h3>
+                            <p class="product-description">${product.description}</p>
+                            <div class="product-actions">
+                                <button class="btn btn-secondary" onclick="addToQuote(\'${escapeHtml(product.name)}\', \'${product.id}\')">Add to Quote</button>
+                            </div>
+                        </div>
+                    `;
+                    productsContainer.appendChild(productCard);
+                });
+            }
+
+            // Function to set up search and filters
+            function setupSearchAndFilters(products) {
+                const searchInput = document.getElementById(\'product-search\');
+                const categoryFilter = document.getElementById(\'category-filter\');
+
+                searchInput.addEventListener(\'input\', () => filterAndSearchProducts(products));
+                categoryFilter.addEventListener(\'change\', () => filterAndSearchProducts(products));
+            }
+
+            function filterAndSearchProducts(products) {
+                const searchTerm = document.getElementById(\'product-search\').value.toLowerCase();
+                const selectedCategory = document.getElementById(\'category-filter\').value;
+
+                const filteredProducts = products.filter(product => {
+                    const matchesSearch = product.name.toLowerCase().includes(searchTerm) ||
+                                          product.description.toLowerCase().includes(searchTerm);
+                    const matchesCategory = selectedCategory === \'all\' || product.category === selectedCategory;
+                    return matchesSearch && matchesCategory;
+                });
+                renderProducts(filteredProducts);
+            }
+
+            // Function to set up quote cart (simplified for this page)
+            function setupQuoteCart() {
+                const quoteCart = document.getElementById(\'quote-cart\');
+                const cartToggle = document.getElementById(\'cart-toggle\');
+                const cartContent = document.getElementById(\'cart-content\');
+                const cartCountSpan = document.getElementById(\'cart-count\');
+                const cartItemsContainer = document.getElementById(\'cart-items\');
+                const emptyCartMessage = document.getElementById(\'empty-cart\');
+                const clearCartBtn = document.getElementById(\'clear-cart\');
+                const requestQuoteBtn = document.getElementById(\'request-quote\');
+
+                let cart = JSON.parse(localStorage.getItem(\'quoteCart\')) || [];
+
+                function updateCartDisplay() {
+                    cartCountSpan.textContent = cart.length;
+                    cartItemsContainer.innerHTML = \'\';
+                    if (cart.length === 0) {
+                        emptyCartMessage.style.display = \'block\';
+                    } else {
+                        emptyCartMessage.style.display = \'none\';
+                        cart.forEach(item => {
+                            const cartItemDiv = document.createElement(\'div\');
+                            cartItemDiv.classList.add(\'cart-item\');
+                            cartItemDiv.innerHTML = `
+                                <span>${item.name} (Qty: ${item.quantity})</span>
+                                <button class="remove-item" data-id="${item.id}">X</button>
+                            `;
+                            cartItemsContainer.appendChild(cartItemDiv);
+                        });
+                    }
+                }
+
+                function saveCart() {
+                    localStorage.setItem(\'quoteCart\', JSON.stringify(cart));
+                }
+
+                window.addToQuote = (productName, productId) => {
+                    const existingItem = cart.find(item => item.id === productId);
+                    if (existingItem) {
+                        existingItem.quantity++;
+                    } else {
+                        cart.push({ id: productId, name: productName, quantity: 1 });
+                    }
+                    saveCart();
+                    updateCartDisplay();
+                    alert(`${productName} added to quote!`);
+                };
+
+                cartItemsContainer.addEventListener(\'click\', (e) => {
+                    if (e.target.classList.contains(\'remove-item\')) {
+                        const itemId = e.target.dataset.id;
+                        cart = cart.filter(item => item.id !== itemId);
+                        saveCart();
+                        updateCartDisplay();
+                    }
+                });
+
+                clearCartBtn.addEventListener(\'click\', () => {
+                    cart = [];
+                    saveCart();
+                    updateCartDisplay();
+                    alert(\'Quote cart cleared!\');
+                });
+
+                requestQuoteBtn.addEventListener(\'click\', () => {
+                    if (cart.length === 0) {
+                        alert(\'Your quote cart is empty. Please add items before requesting a quote.\');
+                        return;
+                    }
+                    const quoteDetails = cart.map(item => `${item.name} (Qty: ${item.quantity})`).join(\'\n\');
+                    alert(`Requesting quote for:\n${quoteDetails}\n\n(This would typically send an email or open a contact form)`);
+                    // In a real application, you would send this data to a backend or a dedicated contact form
+                });
+
+                cartToggle.addEventListener(\'click\', () => {
+                    cartContent.classList.toggle(\'show\');
+                    quoteCart.classList.toggle(\'expanded\');
+                    cartToggle.querySelector(\'i\').classList.toggle(\'fa-chevron-up\');
+                    cartToggle.querySelector(\'i\').classList.toggle(\'fa-chevron-down\');
+                });
+
+                updateCartDisplay();
+            }
+
+            // Function to show product details in a modal
+            window.showProductDetails = (productId) => {
+                const product = productsData.find(p => p.id === productId);
+                if (!product) return;
+
+                document.getElementById(\'modal-product-name\').textContent = product.name;
+                document.getElementById(\'modal-product-description\').textContent = product.description;
+
+                const featuresList = document.getElementById(\'modal-product-features\');
+                featuresList.innerHTML = product.features ? product.features.map(f => `<li>${f}</li>`).join(\'\') : \'No features listed.\';
+
+                const specsList = document.getElementById(\'modal-product-specs\');
+                specsList.innerHTML = product.specs ? product.specs.map(s => `<li>${s}</li>`).join(\'\') : \'No specifications listed.\';
+
+                // Handle optional sections
+                const applicationsSection = document.getElementById(\'modal-product-applications-section\');
+                const applicationsList = document.getElementById(\'modal-product-applications\');
+                if (product.applications && product.applications.length > 0) {
+                    applicationsList.innerHTML = product.applications.map(a => `<li>${a}</li>`).join(\'\');
+                    applicationsSection.style.display = \'block\';
+                } else {
+                    applicationsSection.style.display = \'none\';
+                }
+
+                const certificationsSection = document.getElementById(\'modal-product-certifications-section\');
+                const certificationsList = document.getElementById(\'modal-product-certifications\');
+                if (product.certifications && product.certifications.length > 0) {
+                    certificationsList.innerHTML = product.certifications.map(c => `<li>${c}</li>`).join(\'\');
+                    certificationsSection.style.display = \'block\';
+                } else {
+                    certificationsSection.style.display = \'none\';
+                }
+
+                const includesSection = document.getElementById(\'modal-product-includes-section\');
+                const includesList = document.getElementById(\'modal-product-includes\');
+                if (product.includes && product.includes.length > 0) {
+                    includesList.innerHTML = product.includes.map(i => `<li>${i}</li>`).join(\'\');
+                    includesSection.style.display = \'block\';
+                } else {
+                    includesSection.style.display = \'none\';
+                }
+
+                const promotionSection = document.getElementById(\'modal-product-promotion-section\');
+                const promotionText = document.getElementById(\'modal-product-promotion\');
+                if (product.promotion) {
+                    promotionText.textContent = product.promotion;
+                    promotionSection.style.display = \'block\';
+                } else {
+                    promotionSection.style.display = \'none\';
+                }
+
+                document.getElementById(\'modal-add-to-quote\').onclick = () => addToQuote(product.name, product.id);
+                document.getElementById(\'product-details-modal\').classList.add(\'show\');
+            };
+
+            document.getElementById(\'modal-close\').addEventListener(\'click\', () => {
+                document.getElementById(\'product-details-modal\').classList.remove(\'show\');
+            });
+
+            // Close modal if clicked outside
+            document.getElementById(\'product-details-modal\').addEventListener(\'click\', (e) => {
+                if (e.target.id === \'product-details-modal\') {
+                    document.getElementById(\'product-details-modal\').classList.remove(\'show\');
+                }
+            });
+
+            // Helper function to escape single quotes for onclick attributes
+            function escapeHtml(text) {
+                var map = {
+                    \'&\': \'&amp;\',
+                    \'<\': \'&lt;\',
+                    \'>\': \'&gt;\',
+                    \'"\': \'&quot;\',
+                    \'\': \'&#039;\'
+                };
+                return text.replace(/[&<>"\\]/g, function(m) {
+                    return map[m];
+                });
+            }
+
+            renderProducts(productsData);
+            setupSearchAndFilters(productsData);
+            setupQuoteCart();
+        });
+    </script>
+</body>
+</html>
+
+
