@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Glassware - Minable Scientific</title>
+    <title>Diagnostics - Minable Scientific</title>
     <link rel="stylesheet" href="../css/styles.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -68,10 +68,10 @@
                     <i class="fas fa-chevron-right"></i>
                     <a href="../index.html#products">Products</a>
                     <i class="fas fa-chevron-right"></i>
-                    <span>Glassware</span>
+                    <span>Diagnostics</span>
                 </div>
-                <h1 class="page-title">Laboratory Glassware</h1>
-                <p class="page-description">High-quality glassware for all your laboratory needs.</p>
+                <h1 class="page-title">Diagnostic Equipment</h1>
+                <p class="page-description">Medical diagnostic reagents and equipment for healthcare and clinical laboratories.</p>
             </div>
         </section>
 
@@ -85,9 +85,9 @@
                     <div class="filter-options">
                         <select id="category-filter">
                             <option value="all">All Categories</option>
-                            <option value="beakers">Beakers</option>
-                            <option value="flasks">Flasks</option>
-                            <option value="pipettes">Pipettes</option>
+                            <option value="reagents">Clinical Reagents</option>
+                            <option value="kits">Test Kits</option>
+                            <option value="instruments">Diagnostic Instruments</option>
                         </select>
                     </div>
                 </div>
@@ -177,22 +177,22 @@
         document.addEventListener(\'DOMContentLoaded\', () => {
             const productsData = [
                 {
-                    id: \'beaker-50ml\',
-                    name: \'Beaker, 50ml\',
-                    description: \'High-quality borosilicate glass beaker with clear graduations.\',
-                    image: \'https://via.placeholder.com/350x200?text=50ml+Beaker\',
-                    features: [\'Borosilicate Glass\', \'Clear Graduations\', \'Heat Resistant\'],
-                    specs: [\'Volume: 50ml\', \'Material: Borosilicate Glass\'],
-                    category: \'beakers\'
+                    id: \'blood-glucose-meter\',
+                    name: \'Blood Glucose Meter\',
+                    description: \'Compact and accurate device for monitoring blood glucose levels.\',
+                    image: \'https://via.placeholder.com/350x200?text=Blood+Glucose+Meter\',
+                    features: [\'Fast Results\', \'Small Blood Sample\', \'Memory Function\'],
+                    specs: [\'Measurement Range: 20-600 mg/dL\', \'Sample Size: 0.5 \u00b5L\', \'Test Time: 5 seconds\'],
+                    category: \'instruments\'
                 },
                 {
-                    id: \'erlenmeyer-flask-250ml\',
-                    name: \'Erlenmeyer Flask, 250ml\',
-                    description: \'Conical flask for mixing and heating solutions.\',
-                    image: \'https://via.placeholder.com/350x200?text=250ml+Erlenmeyer+Flask\',
-                    features: [\'Borosilicate Glass\', \'Conical Shape\', \'Heat Resistant\'],
-                    specs: [\'Volume: 250ml\', \'Material: Borosilicate Glass\'],
-                    category: \'flasks\'
+                    id: \'urine-test-strips\',
+                    name: \'Urine Test Strips\',
+                    description: \'Multi-parameter test strips for rapid urinalysis.\',
+                    image: \'https://via.placeholder.com/350x200?text=Urine+Test+Strips\',
+                    features: [\'Rapid Results\', \'Multiple Parameters\', \'Easy to Use\'],
+                    specs: [\'Parameters: Glucose, Protein, pH, Ketones\', \'Strips per bottle: 100\'],
+                    category: \'reagents\'
                 }
             ];
 
@@ -204,7 +204,14 @@
         // Helper function to escape single quotes for onclick attributes
         function escapeHtml(text) {
             var map = {
-                \'\\\': \'\\\\\\\
+                \'\\\': \'\\\\\\\'
+            };
+            return text.replace(/[\\\]/g, function(m) {
+                return map[m];
+            });
+        }
+    </script>
+</body>
+</html>
 
-(Content truncated due to size limit. Use line ranges to read in chunks)
 
