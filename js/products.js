@@ -9,105 +9,87 @@ document.addEventListener('DOMContentLoaded', function() {
 
 // Product filtering and search
 function initProductFilters() {
-    const searchInput = document.getElementById('productSearch');
-    const volumeFilter = document.getElementById('volumeFilter');
-    const materialFilter = document.getElementById('materialFilter');
-    const typeFilter = document.getElementById('typeFilter');
-    const productsContainer = document.getElementById('productsContainer');
-
+    const searchInput = document.getElementById('productSearch') || document.getElementById('product-search');
+    const productsContainer = document.getElementById('productsContainer') || document.getElementById('products-container');
     if (!productsContainer) return;
 
-    // Search functionality
-    if (searchInput) {
-        searchInput.addEventListener('input', debounce(function() {
-            filterProducts();
-        }, 300));
-    }
+    const productCards = productsContainer.querySelectorAll('.product-card');
 
-    // Filter functionality
-    [volumeFilter, materialFilter, typeFilter].forEach(filter => {
-        if (filter) {
-            filter.addEventListener('change', filterProducts);
-        }
-    });
+    const filters = {
+        category: document.getElementById('categoryFilter') || document.getElementById('category-filter'),
+        application: document.getElementById('applicationFilter') || document.getElementById('application-filter'),
+        feature: document.getElementById('featureFilter') || document.getElementById('feature-filter'),
+        certification: document.getElementById('certificationFilter') || document.getElementById('certification-filter'),
+        volume: document.getElementById('volumeFilter'),
+        material: document.getElementById('materialFilter'),
+        type: document.getElementById('typeFilter'),
+    };
 
-    function filterProducts() {
-        const searchTerm = searchInput ? searchInput.value.toLowerCase() : '';
-        const volumeValue = volumeFilter ? volumeFilter.value : '';
-        const materialValue = materialFilter ? materialFilter.value : '';
-        const typeValue = typeFilter ? typeFilter.value : '';
-
-        const productCards = productsContainer.querySelectorAll('.product-card');
+    const filterProducts = () => {
+        const searchTerm = searchInput?.value.toLowerCase() || '';
         let visibleCount = 0;
 
         productCards.forEach(card => {
-            const productName = card.querySelector('.product-name').textContent.toLowerCase();
-            const productDescription = card.querySelector('.product-description').textContent.toLowerCase();
-            const cardVolume = card.dataset.volume || '';
-            const cardMaterial = card.dataset.material || '';
-            const cardType = card.dataset.type || '';
+            const name = card.querySelector('.product-name')?.textContent.toLowerCase() || '';
+            const description = card.querySelector('.product-description')?.textContent.toLowerCase() || '';
+            const matchesSearch = !searchTerm || name.includes(searchTerm) || description.includes(searchTerm);
 
-            const matchesSearch = !searchTerm || 
-                productName.includes(searchTerm) || 
-                productDescription.includes(searchTerm);
-            
-            const matchesVolume = !volumeValue || cardVolume === volumeValue;
-            const matchesMaterial = !materialValue || cardMaterial === materialValue;
-            const matchesType = !typeValue || cardType === typeValue;
+            const matchesFilters = Object.entries(filters).every(([key, element]) => {
+                if (!element || !element.value || element.value === '' || element.value === 'all') return true;
+                const attr = card.dataset[key] || '';
+                return attr.toLowerCase().includes(element.value.toLowerCase());
+            });
 
-            const shouldShow = matchesSearch && matchesVolume && matchesMaterial && matchesType;
-
-            if (shouldShow) {
-                card.style.display = 'block';
-                card.classList.add('fade-in');
-                visibleCount++;
-            } else {
-                card.style.display = 'none';
-                card.classList.remove('fade-in');
-            }
+            const shouldShow = matchesSearch && matchesFilters;
+            card.style.display = shouldShow ? 'block' : 'none';
+            card.classList.toggle('fade-in', shouldShow);
+            if (shouldShow) visibleCount++;
         });
 
-        // Show/hide no results message
         updateNoResultsMessage(visibleCount);
-    }
+    };
+
+    if (searchInput) searchInput.addEventListener('input', debounce(filterProducts, 300));
+    Object.values(filters).forEach(filter => {
+        if (filter) filter.addEventListener('change', filterProducts);
+    });
+
+    window.clearAllFilters = () => {
+        if (searchInput) searchInput.value = '';
+        Object.values(filters).forEach(filter => {
+            if (filter) filter.value = '';
+        });
+        filterProducts();
+    };
 
     function updateNoResultsMessage(count) {
         let noResultsMsg = document.querySelector('.no-results');
-        
         if (count === 0) {
             if (!noResultsMsg) {
                 noResultsMsg = document.createElement('div');
                 noResultsMsg.className = 'no-results';
                 noResultsMsg.innerHTML = `
-                    <div class="no-results-content">
-                        <i class="fas fa-search"></i>
-                        <h3>No products found</h3>
-                        <p>Try adjusting your search criteria or filters</p>
-                        <button class="btn btn-primary" onclick="clearAllFilters()">
-                            <i class="fas fa-refresh"></i>
-                            Clear Filters
-                        </button>
-                    </div>
-                `;
+                  <div class="no-results-content">
+                      <i class="fas fa-search"></i>
+                      <h3>No products found</h3>
+                      <p>Try adjusting your search criteria or filters</p>
+                      <button class="btn btn-primary" onclick="clearAllFilters()">
+                          <i class="fas fa-refresh"></i>
+                          Clear Filters
+                      </button>
+                  </div>`;
                 productsContainer.appendChild(noResultsMsg);
             }
             noResultsMsg.style.display = 'block';
         } else {
-            if (noResultsMsg) {
-                noResultsMsg.style.display = 'none';
-            }
+            if (noResultsMsg) noResultsMsg.style.display = 'none';
         }
     }
 
-    // Clear all filters function
-    window.clearAllFilters = function() {
-        if (searchInput) searchInput.value = '';
-        if (volumeFilter) volumeFilter.value = '';
-        if (materialFilter) materialFilter.value = '';
-        if (typeFilter) typeFilter.value = '';
-        filterProducts();
-    };
+    filterProducts();
 }
+
+
 
 // Quote cart functionality
 function initQuoteCart() {

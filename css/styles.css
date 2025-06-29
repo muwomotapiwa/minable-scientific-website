@@ -799,24 +799,24 @@ section {
     display: block;
     margin-bottom: 0.5rem;
     font-weight: 500;
-    color: var(--black);
+    color: var(--white);
 }
 
 .form-group input,
 .form-group textarea {
     width: 100%;
     padding: 12px 16px;
-    border: 1px solid rgba(23, 60, 203, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.3);
     border-radius: var(--radius-small);
-    background: rgba(9, 9, 9, 0.1);
-    color: var(--black);
+    background: rgba(255, 255, 255, 0.1);
+    color: var(--white);
     font-family: var(--font-primary);
     transition: border-color var(--transition-medium);
 }
 
 .form-group input::placeholder,
 .form-group textarea::placeholder {
-    color: rgba(8, 8, 8, 0.7);
+    color: rgba(255, 255, 255, 0.7);
 }
 
 .form-group input:focus,
@@ -1793,8 +1793,8 @@ section {
 }
 
 .team-member-photo {
-    width: 180px;
-    height: 180px;
+    width: 80px;
+    height: 80px;
     border-radius: 50%; /* Makes the image circular */
     object-fit: cover; /* Ensures the image covers the area without distortion */
     border: 3px solid var(--primary-blue); /* A subtle border */

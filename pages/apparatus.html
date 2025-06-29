@@ -1,222 +1,1228 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Apparatus - Minable Scientific</title>
-    <link rel="stylesheet" href="../css/styles.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Laboratory Apparatus - Minable Scientific</title>
+  <meta name="description" content="Explore our full range of precision laboratory apparatus, including microscopes, heating equipment, and safety gear.">
+  <link rel="stylesheet" href="../css/styles.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
-    <!-- Navigation -->
-    <nav class="navbar" id="navbar">
-        <div class="nav-container">
-            <div class="nav-logo">
-                <h2>MINABLE SCIENTIFIC</h2>
-                <span class="nav-tagline">Laboratory Excellence</span>
-            </div>
-            
-            <ul class="nav-menu" id="nav-menu">
-                <li class="nav-item">
-                    <a href="../index.html" class="nav-link">Home</a>
-                </li>
-                <li class="nav-item">
-                    <a href="../index.html#about" class="nav-link">About</a>
-                </li>
-                <li class="nav-item dropdown">
-                    <a href="#products" class="nav-link">Products <i class="fas fa-chevron-down"></i></a>
-                    <ul class="dropdown-menu">
-                        <li><a href="glassware.html">Glassware</a></li>
-                        <li><a href="apparatus.html">Apparatus</a></li>
-                        <li><a href="chemicals.html">Chemicals</a></li>
-                        <li><a href="diagnostics.html">Diagnostics</a></li>
-                        <li><a href="filtration.html">Filtration</a></li>
-                        <li><a href="lovibond.html">Lovibond</a></li>
-                        <li><a href="paper-products.html">Paper Products</a></li>
-                    </ul>
-                </li>
-                <li class="nav-item">
-                    <a href="../index.html#services" class="nav-link">Services</a>
-                </li>
-                <li class="nav-item">
-                    <a href="../index.html#industries" class="nav-link">Industries</a>
-                </li>
-                <li class="nav-item">
-                    <a href="../index.html#contact" class="nav-link">Contact</a>
-                </li>
-                <li class="nav-item">
-                    <a href="../index.html#quote" class="nav-link btn-quote">Request Quote</a>
-                </li>
-            </ul>
-            
-            <div class="hamburger" id="hamburger">
-                <span class="bar"></span>
-                <span class="bar"></span>
-                <span class="bar"></span>
-            </div>
-        </div>
-    </nav>
-
-    <main>
-        <section class="page-header">
-            <div class="container">
-                <div class="breadcrumb">
-                    <a href="../index.html">Home</a>
-                    <i class="fas fa-chevron-right"></i>
-                    <a href="../index.html#products">Products</a>
-                    <i class="fas fa-chevron-right"></i>
-                    <span>Apparatus</span>
-                </div>
-                <h1 class="page-title">Laboratory Apparatus</h1>
-                <p class="page-description">Essential equipment and instruments for precise scientific measurements and experiments.</p>
-            </div>
-        </section>
-
-        <section class="product-filters">
-            <div class="container">
-                <div class="filter-bar">
-                    <div class="search-box">
-                        <i class="fas fa-search"></i>
-                        <input type="text" id="product-search" placeholder="Search products...">
-                    </div>
-                    <div class="filter-options">
-                        <select id="category-filter">
-                            <option value="all">All Categories</option>
-                            <option value="microscopes">Microscopes</option>
-                            <option value="heating">Heating Equipment</option>
-                            <option value="stands">Stands & Clamps</option>
-                        </select>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section class="products-grid">
-            <div class="container">
-                <div class="products-container" id="products-container">
-                    <!-- Products will be dynamically loaded here by JavaScript -->
-                </div>
-                <div class="no-results" id="no-results" style="display: none;">
-                    <div class="no-results-content">
-                        <i class="fas fa-exclamation-circle"></i>
-                        <h3>No products found matching your criteria.</h3>
-                        <p>Please try adjusting your search or filters.</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-    </main>
-
-    <!-- Quote Cart (common to all product pages) -->
-    <div class="quote-cart" id="quote-cart">
-        <div class="cart-header" id="cart-header">
-            <h3><i class="fas fa-shopping-cart"></i> Quote Cart (<span id="cart-count">0</span>)</h3>
-            <button class="cart-toggle" id="cart-toggle"><i class="fas fa-chevron-up"></i></button>
-        </div>
-        <div class="cart-content" id="cart-content">
-            <div class="cart-items" id="cart-items">
-                <!-- Cart items will be dynamically added here -->
-                <p class="empty-cart" id="empty-cart">Your quote cart is empty.</p>
-            </div>
-            <div class="cart-actions">
-                <button class="btn btn-outline" id="clear-cart">Clear Cart</button>
-                <button class="btn btn-primary" id="request-quote">Request Quote</button>
-            </div>
-        </div>
+  <!-- NAVIGATION -->
+  <nav class="navbar" id="navbar">
+    <div class="nav-container">
+      <div class="nav-logo">
+        <a href="../index.html" style="text-decoration: none; color: inherit;">
+          <h2>MINABLE SCIENTIFIC</h2>
+          <span class="nav-tagline">Laboratory Excellence</span>
+        </a>
+      </div>
+      <ul class="nav-menu" id="nav-menu">
+        <li class="nav-item"><a href="../index.html" class="nav-link">Home</a></li>
+        <li class="nav-item"><a href="../index.html#about" class="nav-link">About</a></li>
+        <li class="nav-item dropdown">
+          <a href="../index.html#products" class="nav-link">Products <i class="fas fa-chevron-down"></i></a>
+          <ul class="dropdown-menu">
+            <li><a href="glassware.html">Glassware</a></li>
+            <li><a href="apparatus.html">Apparatus</a></li>
+            <li><a href="chemicals.html">Chemicals</a></li>
+            <li><a href="diagnostics.html">Diagnostics</a></li>
+            <li><a href="filtration.html">Filtration</a></li>
+          </ul>
+        </li>
+        <li class="nav-item"><a href="../index.html#services" class="nav-link">Services</a></li>
+        <li class="nav-item"><a href="../index.html#contact" class="nav-link">Contact</a></li>
+        <li class="nav-item"><a href="../index.html#quote" class="nav-link btn-quote">Request Quote</a></li>
+      </ul>
+      <div class="hamburger" id="hamburger">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+      </div>
     </div>
+  </nav>
 
-    <!-- Product Details Modal (common to all product pages) -->
-    <div class="modal-overlay" id="product-details-modal">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h2 id="modal-product-name">Product Name</h2>
-                <button class="modal-close" id="modal-close"><i class="fas fa-times"></i></button>
-            </div>
-            <div class="modal-body">
-                <div class="product-details-content">
-                    <p id="modal-product-description"></p>
-                    <div class="details-grid">
-                        <div class="detail-section">
-                            <h4>Features</h4>
-                            <ul id="modal-product-features"></ul>
-                        </div>
-                        <div class="detail-section">
-                            <h4>Specifications</h4>
-                            <ul id="modal-product-specs"></ul>
-                        </div>
-                    </div>
-                    <div class="detail-section" id="modal-product-applications-section" style="display: none;">
-                        <h4>Applications</h4>
-                        <ul id="modal-product-applications"></ul>
-                    </div>
-                    <div class="detail-section" id="modal-product-certifications-section" style="display: none;">
-                        <h4>Certifications</h4>
-                        <ul id="modal-product-certifications"></ul>
-                    </div>
-                    <div class="detail-section" id="modal-product-includes-section" style="display: none;">
-                        <h4>Includes</h4>
-                        <ul id="modal-product-includes"></ul>
-                    </div>
-                    <div class="detail-section" id="modal-product-promotion-section" style="display: none;">
-                        <h4>Promotion</h4>
-                        <p id="modal-product-promotion"></p>
-                    </div>
-                </div>
-            </div>
-            <div class="modal-footer">
-                <button class="btn btn-primary" id="modal-add-to-quote">Add to Quote</button>
-            </div>
-        </div>
+  <!-- HEADER -->
+  <section class="page-header">
+    <div class="container">
+      <div class="breadcrumb">
+        <a href="../index.html">Home</a>
+        <i class="fas fa-chevron-right"></i>
+        <a href="../index.html#products">Products</a>
+        <i class="fas fa-chevron-right"></i>
+        <span>Laboratory Apparatus</span>
+      </div>
+      <h1 class="page-title">Laboratory Apparatus</h1>
+      <p class="page-description">Explore our full range of precision laboratory apparatus, including microscopes, heating equipment, and safety gear.</p>
     </div>
+  </section>
 
-    <script src="../js/products.js"></script>
-    <script src="../js/apparatus-products.js"></script>
-    <script>
-function renderApparatusProducts(products) {
-    const container = document.getElementById("products-container");
-    const noResults = document.getElementById("no-results");
-
-    if (!container || !Array.isArray(products)) return;
-
-    container.innerHTML = products
-    .map(
-        (product) => `
-    <div class="product-card">
-        <img src="${product.image}" alt="${product.name}" style="width:100%; border-radius:12px;">
-        <div class="product-info" style="padding:1rem;">
-        <h3 class="product-name">${product.name}</h3>
-        <p class="product-description">${product.description}</p>
-        <button class="btn btn-primary add-to-quote" data-product="${product.name}">Add to Quote</button>
+  <!-- FILTERS -->
+  <section class="product-filters">
+    <div class="container">
+      <div class="filter-bar">
+        <div class="search-box">
+          <i class="fas fa-search"></i>
+          <input type="text" placeholder="Search apparatus..." id="productSearch">
         </div>
+        <div class="filter-options">
+          <select id="categoryFilter">
+            <option value="">All Categories</option>
+            <option value="microscopes">Microscopes</option>
+            <option value="heating">Heating</option>
+            <option value="stands">Stands</option>
+            <option value="separation-equipment">Separation Equipment</option>
+            <option value="measurement-instruments">Measurement Instruments</option>
+            <option value="safety-equipment">Safety Equipment</option>
+          </select>
+          <select id="applicationFilter">
+            <option value="">All Applications</option>
+            <option value="weighing">Weighing</option>
+            <option value="cell-culture">Cell Culture</option>
+            <option value="ph-testing">pH Testing</option>
+            <option value="sample-preparation">Sample Preparation</option>
+          </select>
+          <select id="featureFilter">
+            <option value="">All Features</option>
+            <option value="led">LED Illumination</option>
+            <option value="digital">Digital Display</option>
+            <option value="safety">Safety Features</option>
+          </select>
+          <select id="certificationFilter">
+            <option value="">All Certifications</option>
+            <option value="ce">CE Certified</option>
+            <option value="iso">ISO Certified</option>
+            <option value="oiml">OIML Certified</option>
+          </select>
+        </div>
+      </div>
     </div>
-    `
-    )
-    .join("");
+  </section>
 
-    if (noResults) noResults.style.display = products.length === 0 ? "block" : "none";
+  <!-- PRODUCTS -->
+  <section class="products-grid">
+    <div class="container">
+      <div class="products-container" id="productsContainer">
+        <!-- Compound Microscope -->
+        <div class="product-card" data-category="microscopes" data-application="cell-culture" data-feature="led" data-certification="ce">
+          <div class="product-image">
+            <img src="https://via.placeholder.com/350x200?text=Compound+Microscope" alt="Compound Microscope">
+            <div class="product-overlay">
+              <button class="btn btn-primary quick-quote" data-product="Compound Microscope"><i class="fas fa-calculator"></i> Quick Quote</button>
+            </div>
+          </div>
+          <div class="product-info">
+            <h3 class="product-name">Compound Microscope</h3>
+            <p class="product-description">High-resolution compound microscope for detailed observation of biological samples.</p>
+            <div class="product-specs">
+              <span class="spec-tag">Binocular Head</span>
+              <span class="spec-tag">LED Illumination</span>
+              <span class="spec-tag">CE Certified</span>
+            </div>
+            <div class="product-actions">
+              <button class="btn btn-secondary product-details" data-product="Compound Microscope"><i class="fas fa-info-circle"></i> Details</button>
+              <button class="btn btn-primary add-to-quote" data-product="Compound Microscope"><i class="fas fa-plus"></i> Add to Quote</button>
+            </div>
+          </div>
+        </div>
 
-    // ✅ Rebind quote cart buttons
-    bindQuoteCartButtons();
-}
+        <!-- Digital Microscope -->
+        <div class="product-card" data-category="microscopes" data-application="documentation" data-feature="digital" data-certification="">
+          <div class="product-image">
+            <img src="https://via.placeholder.com/350x200?text=Digital+Microscope" alt="Digital Microscope">
+            <div class="product-overlay">
+              <button class="btn btn-primary quick-quote" data-product="Digital Microscope"><i class="fas fa-calculator"></i> Quick Quote</button>
+            </div>
+          </div>
+          <div class="product-info">
+            <h3 class="product-name">Digital Microscope</h3>
+            <p class="product-description">Modern microscope with camera and USB connectivity for digital analysis.</p>
+            <div class="product-specs">
+              <span class="spec-tag">Built-in Camera</span>
+              <span class="spec-tag">USB Interface</span>
+              <span class="spec-tag">LCD Screen</span>
+            </div>
+            <div class="product-actions">
+              <button class="btn btn-secondary product-details" data-product="Digital Microscope"><i class="fas fa-info-circle"></i> Details</button>
+              <button class="btn btn-primary add-to-quote" data-product="Digital Microscope"><i class="fas fa-plus"></i> Add to Quote</button>
+            </div>
+          </div>
+        </div>
 
-function bindQuoteCartButtons() {
-    document.querySelectorAll(".add-to-quote").forEach(button => {
-        button.addEventListener("click", function () {
-            const productName = this.dataset.product;
-            if (typeof addToCart === "function") {
-                addToCart(productName);
-            } else {
-                console.warn("addToCart function not found.");
-            }
-        });
-    });
-}
+        <!-- Bunsen Burner -->
+        <div class="product-card" data-category="heating" data-application="heating" data-feature="safety" data-certification="">
+          <div class="product-image">
+            <img src="https://via.placeholder.com/350x200?text=Bunsen+Burner" alt="Bunsen Burner">
+            <div class="product-overlay">
+              <button class="btn btn-primary quick-quote" data-product="Bunsen Burner"><i class="fas fa-calculator"></i> Quick Quote</button>
+            </div>
+          </div>
+          <div class="product-info">
+            <h3 class="product-name">Bunsen Burner</h3>
+            <p class="product-description">Reliable heating equipment for flame-based experiments.</p>
+            <div class="product-specs">
+              <span class="spec-tag">Adjustable Flame</span>
+              <span class="spec-tag">Safety Base</span>
+            </div>
+            <div class="product-actions">
+              <button class="btn btn-secondary product-details" data-product="Bunsen Burner"><i class="fas fa-info-circle"></i> Details</button>
+              <button class="btn btn-primary add-to-quote" data-product="Bunsen Burner"><i class="fas fa-plus"></i> Add to Quote</button>
+            </div>
+          </div>
+        </div>
 
-document.addEventListener("DOMContentLoaded", () => {
-    renderApparatusProducts(apparatusProducts);
-});
-</script>
+        <!-- Hotplate Magnetic Stirrer -->
+        <div class="product-card" data-category="heating" data-application="sample-preparation" data-feature="digital" data-certification="">
+          <div class="product-image">
+            <img src="https://via.placeholder.com/350x200?text=Hotplate+Stirrer" alt="Hotplate Magnetic Stirrer">
+            <div class="product-overlay">
+              <button class="btn btn-primary quick-quote" data-product="Hotplate Magnetic Stirrer"><i class="fas fa-calculator"></i> Quick Quote</button>
+            </div>
+          </div>
+          <div class="product-info">
+            <h3 class="product-name">Hotplate Magnetic Stirrer</h3>
+            <p class="product-description">Dual-purpose hotplate with magnetic stirrer for controlled heating and mixing.</p>
+            <div class="product-specs">
+              <span class="spec-tag">Adjustable Temperature</span>
+              <span class="spec-tag">Stirring Control</span>
+            </div>
+            <div class="product-actions">
+              <button class="btn btn-secondary product-details" data-product="Hotplate Magnetic Stirrer"><i class="fas fa-info-circle"></i> Details</button>
+              <button class="btn btn-primary add-to-quote" data-product="Hotplate Magnetic Stirrer"><i class="fas fa-plus"></i> Add to Quote</button>
+            </div>
+          </div>
+        </div>
 
+        
+    <div class="product-card" data-category="stands" data-application="support-setup" data-feature="adjustable" data-certification="">
+      <div class="product-image">
+        <img src="https://via.placeholder.com/350x200?text=Retort+Stand" alt="Retort Stand with Clamp">
+        <div class="product-overlay">
+          <button class="btn btn-primary quick-quote" data-product="Retort Stand with Clamp"><i class="fas fa-calculator"></i> Quick Quote</button>
+        </div>
+      </div>
+      <div class="product-info">
+        <h3 class="product-name">Retort Stand with Clamp</h3>
+        <p class="product-description">Sturdy stand and clamp for holding lab apparatus during experiments.</p>
+        <div class="product-specs">
+          <span class="spec-tag">Heavy Base</span><span class="spec-tag">Adjustable Clamp</span>
+        </div>
+        <div class="product-actions">
+          <button class="btn btn-secondary product-details" data-product="Retort Stand with Clamp"><i class="fas fa-info-circle"></i> Details</button>
+          <button class="btn btn-primary add-to-quote" data-product="Retort Stand with Clamp"><i class="fas fa-plus"></i> Add to Quote</button>
+        </div>
+      </div>
+    </div>
+    
+
+    <div class="product-card" data-category="stands" data-application="holding-flasks" data-feature="durable" data-certification="">
+      <div class="product-image">
+        <img src="https://via.placeholder.com/350x200?text=Ring+Stand+Set" alt="Ring Stand Set">
+        <div class="product-overlay">
+          <button class="btn btn-primary quick-quote" data-product="Ring Stand Set"><i class="fas fa-calculator"></i> Quick Quote</button>
+        </div>
+      </div>
+      <div class="product-info">
+        <h3 class="product-name">Ring Stand Set</h3>
+        <p class="product-description">Complete ring stand kit for lab setups with various accessories.</p>
+        <div class="product-specs">
+          <span class="spec-tag">Multi-use Accessories</span><span class="spec-tag">Durable Construction</span>
+        </div>
+        <div class="product-actions">
+          <button class="btn btn-secondary product-details" data-product="Ring Stand Set"><i class="fas fa-info-circle"></i> Details</button>
+          <button class="btn btn-primary add-to-quote" data-product="Ring Stand Set"><i class="fas fa-plus"></i> Add to Quote</button>
+        </div>
+      </div>
+    </div>
+    
+
+    <div class="product-card" data-category="separation-equipment" data-application="dna-extraction" data-feature="digital" data-certification="iso">
+      <div class="product-image">
+        <img src="https://via.placeholder.com/350x200?text=Benchtop+Centrifuge" alt="Centrifuge - Benchtop">
+        <div class="product-overlay">
+          <button class="btn btn-primary quick-quote" data-product="Centrifuge - Benchtop"><i class="fas fa-calculator"></i> Quick Quote</button>
+        </div>
+      </div>
+      <div class="product-info">
+        <h3 class="product-name">Centrifuge - Benchtop</h3>
+        <p class="product-description">Compact benchtop centrifuge for separating components of liquid mixtures.</p>
+        <div class="product-specs">
+          <span class="spec-tag">Digital Display</span><span class="spec-tag">Safety Lid Lock</span><span class="spec-tag">Variable Speed</span>
+        </div>
+        <div class="product-actions">
+          <button class="btn btn-secondary product-details" data-product="Centrifuge - Benchtop"><i class="fas fa-info-circle"></i> Details</button>
+          <button class="btn btn-primary add-to-quote" data-product="Centrifuge - Benchtop"><i class="fas fa-plus"></i> Add to Quote</button>
+        </div>
+      </div>
+    </div>
+    
+
+    <div class="product-card" data-category="measurement-instruments" data-application="ph-testing" data-feature="digital" data-certification="">
+      <div class="product-image">
+        <img src="https://via.placeholder.com/350x200?text=Portable+pH+Meter" alt="pH Meter - Portable">
+        <div class="product-overlay">
+          <button class="btn btn-primary quick-quote" data-product="pH Meter - Portable"><i class="fas fa-calculator"></i> Quick Quote</button>
+        </div>
+      </div>
+      <div class="product-info">
+        <h3 class="product-name">pH Meter - Portable</h3>
+        <p class="product-description">Handheld digital pH meter for quick and accurate pH measurements in the field or lab.</p>
+        <div class="product-specs">
+          <span class="spec-tag">Backlit LCD</span><span class="spec-tag">ATC</span><span class="spec-tag">One-touch Calibration</span>
+        </div>
+        <div class="product-actions">
+          <button class="btn btn-secondary product-details" data-product="pH Meter - Portable"><i class="fas fa-info-circle"></i> Details</button>
+          <button class="btn btn-primary add-to-quote" data-product="pH Meter - Portable"><i class="fas fa-plus"></i> Add to Quote</button>
+        </div>
+      </div>
+    </div>
+    
+
+    <div class="product-card" data-category="measurement-instruments" data-application="weighing" data-feature="digital" data-certification="oiml">
+      <div class="product-image">
+        <img src="https://via.placeholder.com/350x200?text=Analytical+Balance" alt="Analytical Balance">
+        <div class="product-overlay">
+          <button class="btn btn-primary quick-quote" data-product="Analytical Balance"><i class="fas fa-calculator"></i> Quick Quote</button>
+        </div>
+      </div>
+      <div class="product-info">
+        <h3 class="product-name">Analytical Balance</h3>
+        <p class="product-description">High-precision analytical balance for accurate mass measurements up to four decimal places.</p>
+        <div class="product-specs">
+          <span class="spec-tag">Draft Shield</span><span class="spec-tag">Auto-Calibration</span><span class="spec-tag">CE Certified</span>
+        </div>
+        <div class="product-actions">
+          <button class="btn btn-secondary product-details" data-product="Analytical Balance"><i class="fas fa-info-circle"></i> Details</button>
+          <button class="btn btn-primary add-to-quote" data-product="Analytical Balance"><i class="fas fa-plus"></i> Add to Quote</button>
+        </div>
+      </div>
+    </div>
+    
+
+    <div class="product-card" data-category="safety-equipment" data-application="sample-preparation" data-feature="safety" data-certification="">
+      <div class="product-image">
+        <img src="https://via.placeholder.com/350x200?text=Benchtop+Fume+Hood" alt="Fume Hood - Benchtop">
+        <div class="product-overlay">
+          <button class="btn btn-primary quick-quote" data-product="Fume Hood - Benchtop"><i class="fas fa-calculator"></i> Quick Quote</button>
+        </div>
+      </div>
+      <div class="product-info">
+        <h3 class="product-name">Fume Hood - Benchtop</h3>
+        <p class="product-description">Compact benchtop fume hood for safe handling of hazardous chemicals and fumes.</p>
+        <div class="product-specs">
+          <span class="spec-tag">Built-in Fan</span><span class="spec-tag">Transparent Sash</span><span class="spec-tag">Chemical Resistant</span>
+        </div>
+        <div class="product-actions">
+          <button class="btn btn-secondary product-details" data-product="Fume Hood - Benchtop"><i class="fas fa-info-circle"></i> Details</button>
+          <button class="btn btn-primary add-to-quote" data-product="Fume Hood - Benchtop"><i class="fas fa-plus"></i> Add to Quote</button>
+        </div>
+      </div>
+    </div>
+    
+
+    <div class="product-card" data-category="cleaning-sterilization" data-application="cleaning" data-feature="digital" data-certification="">
+      <div class="product-image">
+        <img src="https://via.placeholder.com/350x200?text=Ultrasonic+Cleaner" alt="Ultrasonic Cleaner">
+        <div class="product-overlay">
+          <button class="btn btn-primary quick-quote" data-product="Ultrasonic Cleaner"><i class="fas fa-calculator"></i> Quick Quote</button>
+        </div>
+      </div>
+      <div class="product-info">
+        <h3 class="product-name">Ultrasonic Cleaner</h3>
+        <p class="product-description">Ultrasonic cleaner for efficient and gentle cleaning of lab instruments and glassware.</p>
+        <div class="product-specs">
+          <span class="spec-tag">Digital Timer</span><span class="spec-tag">Stainless Steel Tank</span><span class="spec-tag">Degas Function</span>
+        </div>
+        <div class="product-actions">
+          <button class="btn btn-secondary product-details" data-product="Ultrasonic Cleaner"><i class="fas fa-info-circle"></i> Details</button>
+          <button class="btn btn-primary add-to-quote" data-product="Ultrasonic Cleaner"><i class="fas fa-plus"></i> Add to Quote</button>
+        </div>
+      </div>
+    </div>
+    
+
+    <div class="product-card" data-category="heating" data-application="incubation" data-feature="digital" data-certification="">
+      <div class="product-image">
+        <img src="https://via.placeholder.com/350x200?text=Digital+Water+Bath" alt="Water Bath - Digital">
+        <div class="product-overlay">
+          <button class="btn btn-primary quick-quote" data-product="Water Bath - Digital"><i class="fas fa-calculator"></i> Quick Quote</button>
+        </div>
+      </div>
+      <div class="product-info">
+        <h3 class="product-name">Water Bath - Digital</h3>
+        <p class="product-description">Digital water bath for precise temperature control of samples in various lab applications.</p>
+        <div class="product-specs">
+          <span class="spec-tag">Digital Display</span><span class="spec-tag">Over-temp Protection</span>
+        </div>
+        <div class="product-actions">
+          <button class="btn btn-secondary product-details" data-product="Water Bath - Digital"><i class="fas fa-info-circle"></i> Details</button>
+          <button class="btn btn-primary add-to-quote" data-product="Water Bath - Digital"><i class="fas fa-plus"></i> Add to Quote</button>
+        </div>
+      </div>
+    </div>
+    
+
+    <div class="product-card" data-category="heating" data-application="ashing" data-feature="safety" data-certification="ce">
+      <div class="product-image">
+        <img src="https://via.placeholder.com/350x200?text=Muffle+Furnace" alt="Muffle Furnace">
+        <div class="product-overlay">
+          <button class="btn btn-primary quick-quote" data-product="Muffle Furnace"><i class="fas fa-calculator"></i> Quick Quote</button>
+        </div>
+      </div>
+      <div class="product-info">
+        <h3 class="product-name">Muffle Furnace</h3>
+        <p class="product-description">High-temperature muffle furnace for ashing, heat treating, and materials testing.</p>
+        <div class="product-specs">
+          <span class="spec-tag">Overheat Alarm</span><span class="spec-tag">Ceramic Insulation</span><span class="spec-tag">CE Certified</span>
+        </div>
+        <div class="product-actions">
+          <button class="btn btn-secondary product-details" data-product="Muffle Furnace"><i class="fas fa-info-circle"></i> Details</button>
+          <button class="btn btn-primary add-to-quote" data-product="Muffle Furnace"><i class="fas fa-plus"></i> Add to Quote</button>
+        </div>
+      </div>
+    </div>
+    
+
+    <div class="product-card" data-category="heating" data-application="titrations" data-feature="digital" data-certification="">
+      <div class="product-image">
+        <img src="https://via.placeholder.com/350x200?text=Stirring+Hotplate+Probe" alt="Stirring Hotplate with External Probe">
+        <div class="product-overlay">
+          <button class="btn btn-primary quick-quote" data-product="Stirring Hotplate with External Probe"><i class="fas fa-calculator"></i> Quick Quote</button>
+        </div>
+      </div>
+      <div class="product-info">
+        <h3 class="product-name">Stirring Hotplate with External Probe</h3>
+        <p class="product-description">Advanced stirring hotplate with an external temperature probe for accurate sample temperature control.</p>
+        <div class="product-specs">
+          <span class="spec-tag">PT1000 Probe</span><span class="spec-tag">Ceramic Plate</span><span class="spec-tag">Stirring Control</span>
+        </div>
+        <div class="product-actions">
+          <button class="btn btn-secondary product-details" data-product="Stirring Hotplate with External Probe"><i class="fas fa-info-circle"></i> Details</button>
+          <button class="btn btn-primary add-to-quote" data-product="Stirring Hotplate with External Probe"><i class="fas fa-plus"></i> Add to Quote</button>
+        </div>
+      </div>
+    </div>
+    
+
+    <div class="product-card" data-category="incubation-growth" data-application="cell-culture" data-feature="digital" data-certification="">
+      <div class="product-image">
+        <img src="https://via.placeholder.com/350x200?text=Shaking+Incubator" alt="Shaking Incubator">
+        <div class="product-overlay">
+          <button class="btn btn-primary quick-quote" data-product="Shaking Incubator"><i class="fas fa-calculator"></i> Quick Quote</button>
+        </div>
+      </div>
+      <div class="product-info">
+        <h3 class="product-name">Shaking Incubator</h3>
+        <p class="product-description">Incubator with shaking function for cell culture, fermentation, and hybridization.</p>
+        <div class="product-specs">
+          <span class="spec-tag">Orbital Shaking</span><span class="spec-tag">Digital Control</span><span class="spec-tag">Transparent Lid</span>
+        </div>
+        <div class="product-actions">
+          <button class="btn btn-secondary product-details" data-product="Shaking Incubator"><i class="fas fa-info-circle"></i> Details</button>
+          <button class="btn btn-primary add-to-quote" data-product="Shaking Incubator"><i class="fas fa-plus"></i> Add to Quote</button>
+        </div>
+      </div>
+    </div>
+    
+    <!-- Product 16: Autoclave - Benchtop -->
+<div class="product-card" data-category="cleaning-sterilization" data-application="sterilization" data-feature="safety" data-certification="ce">
+  <div class="product-image">
+    <img src="https://via.placeholder.com/350x200?text=Benchtop+Autoclave" alt="Autoclave - Benchtop">
+    <div class="product-overlay">
+      <button class="btn btn-primary quick-quote" data-product="Autoclave - Benchtop"><i class="fas fa-calculator"></i> Quick Quote</button>
+    </div>
+  </div>
+  <div class="product-info">
+    <h3 class="product-name">Autoclave - Benchtop</h3>
+    <p class="product-description">Benchtop autoclave for steam sterilization of lab instruments and media.</p>
+    <div class="product-specs">
+      <span class="spec-tag">Automatic Operation</span>
+      <span class="spec-tag">Safety Valve</span>
+      <span class="spec-tag">CE Certified</span>
+    </div>
+    <div class="product-actions">
+      <button class="btn btn-secondary product-details" data-product="Autoclave - Benchtop"><i class="fas fa-info-circle"></i> Details</button>
+      <button class="btn btn-primary add-to-quote" data-product="Autoclave - Benchtop"><i class="fas fa-plus"></i> Add to Quote</button>
+    </div>
+  </div>
+</div>
+
+<!-- Product 17: Pipette Aid - Electronic -->
+<div class="product-card" data-category="liquid-handling" data-application="reagent-dispensing" data-feature="digital" data-certification="">
+  <div class="product-image">
+    <img src="https://via.placeholder.com/350x200?text=Electronic+Pipette+Aid" alt="Pipette Aid - Electronic">
+    <div class="product-overlay">
+      <button class="btn btn-primary quick-quote" data-product="Pipette Aid - Electronic"><i class="fas fa-calculator"></i> Quick Quote</button>
+    </div>
+  </div>
+  <div class="product-info">
+    <h3 class="product-name">Pipette Aid - Electronic</h3>
+    <p class="product-description">Electronic pipette aid for comfortable and precise aspiration and dispensing of liquids.</p>
+    <div class="product-specs">
+      <span class="spec-tag">Rechargeable</span>
+      <span class="spec-tag">Variable Speed</span>
+    </div>
+    <div class="product-actions">
+      <button class="btn btn-secondary product-details" data-product="Pipette Aid - Electronic"><i class="fas fa-info-circle"></i> Details</button>
+      <button class="btn btn-primary add-to-quote" data-product="Pipette Aid - Electronic"><i class="fas fa-plus"></i> Add to Quote</button>
+    </div>
+  </div>
+</div>
+
+<!-- Product 18: Peristaltic Pump -->
+<div class="product-card" data-category="liquid-handling" data-application="dosing" data-feature="" data-certification="">
+  <div class="product-image">
+    <img src="https://via.placeholder.com/350x200?text=Peristaltic+Pump" alt="Peristaltic Pump">
+    <div class="product-overlay">
+      <button class="btn btn-primary quick-quote" data-product="Peristaltic Pump"><i class="fas fa-calculator"></i> Quick Quote</button>
+    </div>
+  </div>
+  <div class="product-info">
+    <h3 class="product-name">Peristaltic Pump</h3>
+    <p class="product-description">Peristaltic pump for controlled and precise fluid transfer in various laboratory applications.</p>
+    <div class="product-specs">
+      <span class="spec-tag">Flow Rate Control</span>
+      <span class="spec-tag">Easy Tube Loading</span>
+    </div>
+    <div class="product-actions">
+      <button class="btn btn-secondary product-details" data-product="Peristaltic Pump"><i class="fas fa-info-circle"></i> Details</button>
+      <button class="btn btn-primary add-to-quote" data-product="Peristaltic Pump"><i class="fas fa-plus"></i> Add to Quote</button>
+    </div>
+  </div>
+</div>
+
+<!-- Product 19: Vortex Mixer -->
+<div class="product-card" data-category="mixing" data-application="sample-preparation" data-feature="safety" data-certification="">
+  <div class="product-image">
+    <img src="https://via.placeholder.com/350x200?text=Vortex+Mixer" alt="Vortex Mixer">
+    <div class="product-overlay">
+      <button class="btn btn-primary quick-quote" data-product="Vortex Mixer"><i class="fas fa-calculator"></i> Quick Quote</button>
+    </div>
+  </div>
+  <div class="product-info">
+    <h3 class="product-name">Vortex Mixer</h3>
+    <p class="product-description">High-speed vortex mixer for rapid and thorough mixing of samples in tubes and vials.</p>
+    <div class="product-specs">
+      <span class="spec-tag">Variable Speed</span>
+      <span class="spec-tag">Stable Base</span>
+    </div>
+    <div class="product-actions">
+      <button class="btn btn-secondary product-details" data-product="Vortex Mixer"><i class="fas fa-info-circle"></i> Details</button>
+      <button class="btn btn-primary add-to-quote" data-product="Vortex Mixer"><i class="fas fa-plus"></i> Add to Quote</button>
+    </div>
+  </div>
+</div>
+
+<!-- Product 20: Microplate Reader -->
+<div class="product-card" data-category="analytical-equipment" data-application="elisa" data-feature="digital" data-certification="">
+  <div class="product-image">
+    <img src="https://via.placeholder.com/350x200?text=Microplate+Reader" alt="Microplate Reader">
+    <div class="product-overlay">
+      <button class="btn btn-primary quick-quote" data-product="Microplate Reader"><i class="fas fa-calculator"></i> Quick Quote</button>
+    </div>
+  </div>
+  <div class="product-info">
+    <h3 class="product-name">Microplate Reader</h3>
+    <p class="product-description">Automated microplate reader for absorbance-based assays in 96-well plates.</p>
+    <div class="product-specs">
+      <span class="spec-tag">PC Software</span>
+      <span class="spec-tag">Kinetic Reading</span>
+    </div>
+    <div class="product-actions">
+      <button class="btn btn-secondary product-details" data-product="Microplate Reader"><i class="fas fa-info-circle"></i> Details</button>
+      <button class="btn btn-primary add-to-quote" data-product="Microplate Reader"><i class="fas fa-plus"></i> Add to Quote</button>
+    </div>
+  </div>
+</div>
+
+<!-- Product 21: Drying Oven - Forced Air -->
+<div class="product-card" data-category="heating" data-application="drying" data-feature="digital" data-certification="ce">
+  <div class="product-image">
+    <img src="https://via.placeholder.com/350x200?text=Drying+Oven+Forced+Air" alt="Drying Oven - Forced Air">
+    <div class="product-overlay">
+      <button class="btn btn-primary quick-quote" data-product="Drying Oven - Forced Air"><i class="fas fa-calculator"></i> Quick Quote</button>
+    </div>
+  </div>
+  <div class="product-info">
+    <h3 class="product-name">Drying Oven - Forced Air</h3>
+    <p class="product-description">Forced air drying oven for rapid and uniform drying, curing, and sterilization.</p>
+    <div class="product-specs">
+      <span class="spec-tag">Digital Control</span>
+      <span class="spec-tag">CE Marked</span>
+    </div>
+    <div class="product-actions">
+      <button class="btn btn-secondary product-details" data-product="Drying Oven - Forced Air"><i class="fas fa-info-circle"></i> Details</button>
+      <button class="btn btn-primary add-to-quote" data-product="Drying Oven - Forced Air"><i class="fas fa-plus"></i> Add to Quote</button>
+    </div>
+  </div>
+</div>
+
+
+<!-- Magnetic Stirrer - Mini -->
+<div class="product-card" data-category="mixing" data-application="" data-feature="" data-certification="">
+  <div class="product-image">
+    <img src="https://via.placeholder.com/350x200?text=Mini+Magnetic+Stirrer" alt="Magnetic Stirrer - Mini">
+    <div class="product-overlay">
+      <button class="btn btn-primary quick-quote" data-product="Magnetic Stirrer - Mini"><i class="fas fa-calculator"></i> Quick Quote</button>
+    </div>
+  </div>
+  <div class="product-info">
+    <h3 class="product-name">Magnetic Stirrer - Mini</h3>
+    <p class="product-description">Compact mini magnetic stirrer for small volume mixing applications.</p>
+    <div class="product-specs">
+      <span class="spec-tag">Fixed speed</span>
+<span class="spec-tag">Small footprint</span>
+<span class="spec-tag">Strong magnetic coupling</span>
+    </div>
+    <div class="product-actions">
+      <button class="btn btn-secondary product-details" data-product="Magnetic Stirrer - Mini"><i class="fas fa-info-circle"></i> Details</button>
+      <button class="btn btn-primary add-to-quote" data-product="Magnetic Stirrer - Mini"><i class="fas fa-plus"></i> Add to Quote</button>
+    </div>
+  </div>
+</div>
+
+
+<!-- Test Tube Rack - Autoclavable -->
+<div class="product-card" data-category="labware-accessories" data-application="" data-feature="" data-certification="">
+  <div class="product-image">
+    <img src="https://via.placeholder.com/350x200?text=Autoclavable+Test+Tube+Rack" alt="Test Tube Rack - Autoclavable">
+    <div class="product-overlay">
+      <button class="btn btn-primary quick-quote" data-product="Test Tube Rack - Autoclavable"><i class="fas fa-calculator"></i> Quick Quote</button>
+    </div>
+  </div>
+  <div class="product-info">
+    <h3 class="product-name">Test Tube Rack - Autoclavable</h3>
+    <p class="product-description">Autoclavable test tube rack for organizing and sterilizing multiple test tubes.</p>
+    <div class="product-specs">
+      <span class="spec-tag">Stackable design</span>
+<span class="spec-tag">Alphanumeric indexing</span>
+<span class="spec-tag">Chemical resistant</span>
+    </div>
+    <div class="product-actions">
+      <button class="btn btn-secondary product-details" data-product="Test Tube Rack - Autoclavable"><i class="fas fa-info-circle"></i> Details</button>
+      <button class="btn btn-primary add-to-quote" data-product="Test Tube Rack - Autoclavable"><i class="fas fa-plus"></i> Add to Quote</button>
+    </div>
+  </div>
+</div>
+
+
+<!-- Digital Thermometer with Probe -->
+<div class="product-card" data-category="measurement-instruments" data-application="" data-feature="" data-certification="">
+  <div class="product-image">
+    <img src="https://via.placeholder.com/350x200?text=Digital+Thermometer+Probe" alt="Digital Thermometer with Probe">
+    <div class="product-overlay">
+      <button class="btn btn-primary quick-quote" data-product="Digital Thermometer with Probe"><i class="fas fa-calculator"></i> Quick Quote</button>
+    </div>
+  </div>
+  <div class="product-info">
+    <h3 class="product-name">Digital Thermometer with Probe</h3>
+    <p class="product-description">Digital thermometer with an external probe for accurate temperature measurement of liquids and solids.</p>
+    <div class="product-specs">
+      <span class="spec-tag">Large LCD display</span>
+<span class="spec-tag">Min/Max function</span>
+<span class="spec-tag">Waterproof probe</span>
+    </div>
+    <div class="product-actions">
+      <button class="btn btn-secondary product-details" data-product="Digital Thermometer with Probe"><i class="fas fa-info-circle"></i> Details</button>
+      <button class="btn btn-primary add-to-quote" data-product="Digital Thermometer with Probe"><i class="fas fa-plus"></i> Add to Quote</button>
+    </div>
+  </div>
+</div>
+
+
+<!-- Safety Goggles - Anti-Fog -->
+<div class="product-card" data-category="safety-equipment" data-application="" data-feature="" data-certification="">
+  <div class="product-image">
+    <img src="https://via.placeholder.com/350x200?text=Safety+Goggles" alt="Safety Goggles - Anti-Fog">
+    <div class="product-overlay">
+      <button class="btn btn-primary quick-quote" data-product="Safety Goggles - Anti-Fog"><i class="fas fa-calculator"></i> Quick Quote</button>
+    </div>
+  </div>
+  <div class="product-info">
+    <h3 class="product-name">Safety Goggles - Anti-Fog</h3>
+    <p class="product-description">Anti-fog safety goggles for eye protection against splashes and impacts in the lab.</p>
+    <div class="product-specs">
+      <span class="spec-tag">Adjustable strap</span>
+<span class="spec-tag">Wide vision</span>
+<span class="spec-tag">Scratch resistant lens</span>
+    </div>
+    <div class="product-actions">
+      <button class="btn btn-secondary product-details" data-product="Safety Goggles - Anti-Fog"><i class="fas fa-info-circle"></i> Details</button>
+      <button class="btn btn-primary add-to-quote" data-product="Safety Goggles - Anti-Fog"><i class="fas fa-plus"></i> Add to Quote</button>
+    </div>
+  </div>
+</div>
+
+
+<!-- Wash Bottle - LDPE -->
+<div class="product-card" data-category="labware-accessories" data-application="" data-feature="" data-certification="">
+  <div class="product-image">
+    <img src="https://via.placeholder.com/350x200?text=Wash+Bottle" alt="Wash Bottle - LDPE">
+    <div class="product-overlay">
+      <button class="btn btn-primary quick-quote" data-product="Wash Bottle - LDPE"><i class="fas fa-calculator"></i> Quick Quote</button>
+    </div>
+  </div>
+  <div class="product-info">
+    <h3 class="product-name">Wash Bottle - LDPE</h3>
+    <p class="product-description">Low-density polyethylene (LDPE) wash bottle for dispensing distilled water or other solutions.</p>
+    <div class="product-specs">
+      <span class="spec-tag">Flexible body</span>
+<span class="spec-tag">Spout cap</span>
+<span class="spec-tag">Leak-proof design</span>
+    </div>
+    <div class="product-actions">
+      <button class="btn btn-secondary product-details" data-product="Wash Bottle - LDPE"><i class="fas fa-info-circle"></i> Details</button>
+      <button class="btn btn-primary add-to-quote" data-product="Wash Bottle - LDPE"><i class="fas fa-plus"></i> Add to Quote</button>
+    </div>
+  </div>
+</div>
+
+
+<!-- Micropipette - Variable Volume -->
+<div class="product-card" data-category="liquid-handling" data-application="" data-feature="" data-certification="">
+  <div class="product-image">
+    <img src="https://via.placeholder.com/350x200?text=Variable+Micropipette" alt="Micropipette - Variable Volume">
+    <div class="product-overlay">
+      <button class="btn btn-primary quick-quote" data-product="Micropipette - Variable Volume"><i class="fas fa-calculator"></i> Quick Quote</button>
+    </div>
+  </div>
+  <div class="product-info">
+    <h3 class="product-name">Micropipette - Variable Volume</h3>
+    <p class="product-description">Precision variable volume micropipette for accurate dispensing of small liquid volumes.</p>
+    <div class="product-specs">
+      <span class="spec-tag">Adjustable volume</span>
+<span class="spec-tag">Ergonomic design</span>
+<span class="spec-tag">Tip ejector</span>
+    </div>
+    <div class="product-actions">
+      <button class="btn btn-secondary product-details" data-product="Micropipette - Variable Volume"><i class="fas fa-info-circle"></i> Details</button>
+      <button class="btn btn-primary add-to-quote" data-product="Micropipette - Variable Volume"><i class="fas fa-plus"></i> Add to Quote</button>
+    </div>
+  </div>
+</div>
+
+
+<!-- Heating Mantle - Spherical Flask -->
+<div class="product-card" data-category="heating" data-application="" data-feature="" data-certification="">
+  <div class="product-image">
+    <img src="https://via.placeholder.com/350x200?text=Heating+Mantle" alt="Heating Mantle - Spherical Flask">
+    <div class="product-overlay">
+      <button class="btn btn-primary quick-quote" data-product="Heating Mantle - Spherical Flask"><i class="fas fa-calculator"></i> Quick Quote</button>
+    </div>
+  </div>
+  <div class="product-info">
+    <h3 class="product-name">Heating Mantle - Spherical Flask</h3>
+    <p class="product-description">Heating mantle designed for precise and uniform heating of round-bottom flasks.</p>
+    <div class="product-specs">
+      <span class="spec-tag">Built-in temperature controller</span>
+<span class="spec-tag">Insulated heating element</span>
+<span class="spec-tag">Support rod clamp</span>
+    </div>
+    <div class="product-actions">
+      <button class="btn btn-secondary product-details" data-product="Heating Mantle - Spherical Flask"><i class="fas fa-info-circle"></i> Details</button>
+      <button class="btn btn-primary add-to-quote" data-product="Heating Mantle - Spherical Flask"><i class="fas fa-plus"></i> Add to Quote</button>
+    </div>
+  </div>
+</div>
+
+
+<!-- Stir Bar Retriever -->
+<div class="product-card" data-category="mixing" data-application="" data-feature="" data-certification="">
+  <div class="product-image">
+    <img src="https://via.placeholder.com/350x200?text=Stir+Bar+Retriever" alt="Stir Bar Retriever">
+    <div class="product-overlay">
+      <button class="btn btn-primary quick-quote" data-product="Stir Bar Retriever"><i class="fas fa-calculator"></i> Quick Quote</button>
+    </div>
+  </div>
+  <div class="product-info">
+    <h3 class="product-name">Stir Bar Retriever</h3>
+    <p class="product-description">Magnetic stir bar retriever with a long handle for safely removing stir bars from vessels.</p>
+    <div class="product-specs">
+      <span class="spec-tag">Strong magnet</span>
+<span class="spec-tag">PTFE coating</span>
+<span class="spec-tag">Long reach</span>
+    </div>
+    <div class="product-actions">
+      <button class="btn btn-secondary product-details" data-product="Stir Bar Retriever"><i class="fas fa-info-circle"></i> Details</button>
+      <button class="btn btn-primary add-to-quote" data-product="Stir Bar Retriever"><i class="fas fa-plus"></i> Add to Quote</button>
+    </div>
+  </div>
+</div>
+
+
+<!-- Spatula - Stainless Steel -->
+<div class="product-card" data-category="labware-accessories" data-application="" data-feature="" data-certification="">
+  <div class="product-image">
+    <img src="https://via.placeholder.com/350x200?text=Stainless+Steel+Spatula" alt="Spatula - Stainless Steel">
+    <div class="product-overlay">
+      <button class="btn btn-primary quick-quote" data-product="Spatula - Stainless Steel"><i class="fas fa-calculator"></i> Quick Quote</button>
+    </div>
+  </div>
+  <div class="product-info">
+    <h3 class="product-name">Spatula - Stainless Steel</h3>
+    <p class="product-description">Durable stainless steel lab spatula for transferring solid chemicals and powders.</p>
+    <div class="product-specs">
+      <span class="spec-tag">Double-ended</span>
+<span class="spec-tag">Corrosion resistant</span>
+<span class="spec-tag">Easy to clean</span>
+    </div>
+    <div class="product-actions">
+      <button class="btn btn-secondary product-details" data-product="Spatula - Stainless Steel"><i class="fas fa-info-circle"></i> Details</button>
+      <button class="btn btn-primary add-to-quote" data-product="Spatula - Stainless Steel"><i class="fas fa-plus"></i> Add to Quote</button>
+    </div>
+  </div>
+</div>
+
+
+<!-- Desiccator - Vacuum -->
+<div class="product-card" data-category="storage" data-application="" data-feature="" data-certification="">
+  <div class="product-image">
+    <img src="https://via.placeholder.com/350x200?text=Vacuum+Desiccator" alt="Desiccator - Vacuum">
+    <div class="product-overlay">
+      <button class="btn btn-primary quick-quote" data-product="Desiccator - Vacuum"><i class="fas fa-calculator"></i> Quick Quote</button>
+    </div>
+  </div>
+  <div class="product-info">
+    <h3 class="product-name">Desiccator - Vacuum</h3>
+    <p class="product-description">Vacuum desiccator for storing moisture-sensitive materials under vacuum conditions.</p>
+    <div class="product-specs">
+      <span class="spec-tag">Vacuum gauge</span>
+<span class="spec-tag">Stopcock</span>
+<span class="spec-tag">Airtight seal</span>
+    </div>
+    <div class="product-actions">
+      <button class="btn btn-secondary product-details" data-product="Desiccator - Vacuum"><i class="fas fa-info-circle"></i> Details</button>
+      <button class="btn btn-primary add-to-quote" data-product="Desiccator - Vacuum"><i class="fas fa-plus"></i> Add to Quote</button>
+    </div>
+  </div>
+</div>
+
+
+<!-- Mortar and Pestle - Porcelain -->
+<div class="product-card" data-category="grinding-crushing" data-application="" data-feature="" data-certification="">
+  <div class="product-image">
+    <img src="https://via.placeholder.com/350x200?text=Mortar+Pestle" alt="Mortar and Pestle - Porcelain">
+    <div class="product-overlay">
+      <button class="btn btn-primary quick-quote" data-product="Mortar and Pestle - Porcelain"><i class="fas fa-calculator"></i> Quick Quote</button>
+    </div>
+  </div>
+  <div class="product-info">
+    <h3 class="product-name">Mortar and Pestle - Porcelain</h3>
+    <p class="product-description">Porcelain mortar and pestle set for grinding and crushing solid substances.</p>
+    <div class="product-specs">
+      <span class="spec-tag">Unglazed grinding surface</span>
+<span class="spec-tag">Durable porcelain</span>
+<span class="spec-tag">Ergonomic pestle</span>
+    </div>
+    <div class="product-actions">
+      <button class="btn btn-secondary product-details" data-product="Mortar and Pestle - Porcelain"><i class="fas fa-info-circle"></i> Details</button>
+      <button class="btn btn-primary add-to-quote" data-product="Mortar and Pestle - Porcelain"><i class="fas fa-plus"></i> Add to Quote</button>
+    </div>
+  </div>
+</div>
+
+
+<!-- Hot Air Oven - Sterilizer -->
+<div class="product-card" data-category="cleaning-sterilization" data-application="" data-feature="" data-certification="">
+  <div class="product-image">
+    <img src="https://via.placeholder.com/350x200?text=Hot+Air+Sterilizer" alt="Hot Air Oven - Sterilizer">
+    <div class="product-overlay">
+      <button class="btn btn-primary quick-quote" data-product="Hot Air Oven - Sterilizer"><i class="fas fa-calculator"></i> Quick Quote</button>
+    </div>
+  </div>
+  <div class="product-info">
+    <h3 class="product-name">Hot Air Oven - Sterilizer</h3>
+    <p class="product-description">Hot air oven specifically designed for dry heat sterilization of laboratory instruments and glassware.</p>
+    <div class="product-specs">
+      <span class="spec-tag">Digital temperature controller</span>
+<span class="spec-tag">Timer function</span>
+<span class="spec-tag">Forced convection</span>
+    </div>
+    <div class="product-actions">
+      <button class="btn btn-secondary product-details" data-product="Hot Air Oven - Sterilizer"><i class="fas fa-info-circle"></i> Details</button>
+      <button class="btn btn-primary add-to-quote" data-product="Hot Air Oven - Sterilizer"><i class="fas fa-plus"></i> Add to Quote</button>
+    </div>
+  </div>
+</div>
+
+
+<!-- Stop Watch - Digital -->
+<div class="product-card" data-category="measurement-instruments" data-application="" data-feature="" data-certification="">
+  <div class="product-image">
+    <img src="https://via.placeholder.com/350x200?text=Digital+Stopwatch" alt="Stop Watch - Digital">
+    <div class="product-overlay">
+      <button class="btn btn-primary quick-quote" data-product="Stop Watch - Digital"><i class="fas fa-calculator"></i> Quick Quote</button>
+    </div>
+  </div>
+  <div class="product-info">
+    <h3 class="product-name">Stop Watch - Digital</h3>
+    <p class="product-description">Digital stop watch for precise timing of experiments and reactions.</p>
+    <div class="product-specs">
+      <span class="spec-tag">Lap/split time function</span>
+<span class="spec-tag">Large display</span>
+<span class="spec-tag">Alarm function</span>
+    </div>
+    <div class="product-actions">
+      <button class="btn btn-secondary product-details" data-product="Stop Watch - Digital"><i class="fas fa-info-circle"></i> Details</button>
+      <button class="btn btn-primary add-to-quote" data-product="Stop Watch - Digital"><i class="fas fa-plus"></i> Add to Quote</button>
+    </div>
+  </div>
+</div>
+
+
+<!-- Crucible Tongs -->
+<div class="product-card" data-category="labware-accessories" data-application="" data-feature="" data-certification="">
+  <div class="product-image">
+    <img src="https://via.placeholder.com/350x200?text=Crucible+Tongs" alt="Crucible Tongs">
+    <div class="product-overlay">
+      <button class="btn btn-primary quick-quote" data-product="Crucible Tongs"><i class="fas fa-calculator"></i> Quick Quote</button>
+    </div>
+  </div>
+  <div class="product-info">
+    <h3 class="product-name">Crucible Tongs</h3>
+    <p class="product-description">Heavy-duty crucible tongs for safely handling hot crucibles and other labware.</p>
+    <div class="product-specs">
+      <span class="spec-tag">Stainless steel construction</span>
+<span class="spec-tag">Secure grip</span>
+<span class="spec-tag">Heat resistant handles</span>
+    </div>
+    <div class="product-actions">
+      <button class="btn btn-secondary product-details" data-product="Crucible Tongs"><i class="fas fa-info-circle"></i> Details</button>
+      <button class="btn btn-primary add-to-quote" data-product="Crucible Tongs"><i class="fas fa-plus"></i> Add to Quote</button>
+    </div>
+  </div>
+</div>
+
+<!-- Melting Point Apparatus -->
+<div class="product-card" data-category="analytical-equipment" data-application="" data-feature="" data-certification="">
+  <div class="product-image">
+    <img src="https://via.placeholder.com/350x200?text=Melting+Point+Apparatus" alt="Melting Point Apparatus">
+    <div class="product-overlay">
+      <button class="btn btn-primary quick-quote" data-product="Melting Point Apparatus"><i class="fas fa-calculator"></i> Quick Quote</button>
+    </div>
+  </div>
+  <div class="product-info">
+    <h3 class="product-name">Melting Point Apparatus</h3>
+    <p class="product-description">Digital melting point apparatus for precise determination of melting points of solid substances.</p>
+    <div class="product-specs">
+      <span class="spec-tag">Digital temperature display</span>
+<span class="spec-tag">Capillary holder</span>
+<span class="spec-tag">Fast heating</span>
+    </div>
+    <div class="product-actions">
+      <button class="btn btn-secondary product-details" data-product="Melting Point Apparatus"><i class="fas fa-info-circle"></i> Details</button>
+      <button class="btn btn-primary add-to-quote" data-product="Melting Point Apparatus"><i class="fas fa-plus"></i> Add to Quote</button>
+    </div>
+  </div>
+</div>
+
+<!-- Water Distiller - Automatic -->
+<div class="product-card" data-category="water-purification" data-application="" data-feature="" data-certification="">
+  <div class="product-image">
+    <img src="https://via.placeholder.com/350x200?text=Water+Distiller" alt="Water Distiller - Automatic">
+    <div class="product-overlay">
+      <button class="btn btn-primary quick-quote" data-product="Water Distiller - Automatic"><i class="fas fa-calculator"></i> Quick Quote</button>
+    </div>
+  </div>
+  <div class="product-info">
+    <h3 class="product-name">Water Distiller - Automatic</h3>
+    <p class="product-description">Automatic water distiller for producing high-purity distilled water for laboratory use.</p>
+    <div class="product-specs">
+      <span class="spec-tag">Automatic shut-off</span>
+<span class="spec-tag">Stainless steel interior</span>
+<span class="spec-tag">Fast distillation rate</span>
+    </div>
+    <div class="product-actions">
+      <button class="btn btn-secondary product-details" data-product="Water Distiller - Automatic"><i class="fas fa-info-circle"></i> Details</button>
+      <button class="btn btn-primary add-to-quote" data-product="Water Distiller - Automatic"><i class="fas fa-plus"></i> Add to Quote</button>
+    </div>
+  </div>
+</div>
+
+<!-- Shaking Water Bath -->
+<div class="product-card" data-category="heating" data-application="" data-feature="" data-certification="">
+  <div class="product-image">
+    <img src="https://via.placeholder.com/350x200?text=Shaking+Water+Bath" alt="Shaking Water Bath">
+    <div class="product-overlay">
+      <button class="btn btn-primary quick-quote" data-product="Shaking Water Bath"><i class="fas fa-calculator"></i> Quick Quote</button>
+    </div>
+  </div>
+  <div class="product-info">
+    <h3 class="product-name">Shaking Water Bath</h3>
+    <p class="product-description">Water bath with integrated shaking mechanism for precise temperature control and agitation of samples.</p>
+    <div class="product-specs">
+      <span class="spec-tag">Digital display</span>
+<span class="spec-tag">Orbital or reciprocating motion</span>
+<span class="spec-tag">Safety thermostat</span>
+    </div>
+    <div class="product-actions">
+      <button class="btn btn-secondary product-details" data-product="Shaking Water Bath"><i class="fas fa-info-circle"></i> Details</button>
+      <button class="btn btn-primary add-to-quote" data-product="Shaking Water Bath"><i class="fas fa-plus"></i> Add to Quote</button>
+    </div>
+  </div>
+</div>
+
+<!-- pH Electrode - Combination -->
+<div class="product-card" data-category="measurement-instruments" data-application="" data-feature="" data-certification="">
+  <div class="product-image">
+    <img src="https://via.placeholder.com/350x200?text=pH+Electrode" alt="pH Electrode - Combination">
+    <div class="product-overlay">
+      <button class="btn btn-primary quick-quote" data-product="pH Electrode - Combination"><i class="fas fa-calculator"></i> Quick Quote</button>
+    </div>
+  </div>
+  <div class="product-info">
+    <h3 class="product-name">pH Electrode - Combination</h3>
+    <p class="product-description">Combination pH electrode for general purpose pH measurements.</p>
+    <div class="product-specs">
+      <span class="spec-tag">Gel-filled</span>
+<span class="spec-tag">BNC connector</span>
+<span class="spec-tag">Durable glass body</span>
+    </div>
+    <div class="product-actions">
+      <button class="btn btn-secondary product-details" data-product="pH Electrode - Combination"><i class="fas fa-info-circle"></i> Details</button>
+      <button class="btn btn-primary add-to-quote" data-product="pH Electrode - Combination"><i class="fas fa-plus"></i> Add to Quote</button>
+    </div>
+  </div>
+</div>
+
+<!-- Magnetic Stir Bar Assortment -->
+<div class="product-card" data-category="mixing" data-application="" data-feature="" data-certification="">
+  <div class="product-image">
+    <img src="https://via.placeholder.com/350x200?text=Stir+Bar+Assortment" alt="Magnetic Stir Bar Assortment">
+    <div class="product-overlay">
+      <button class="btn btn-primary quick-quote" data-product="Magnetic Stir Bar Assortment"><i class="fas fa-calculator"></i> Quick Quote</button>
+    </div>
+  </div>
+  <div class="product-info">
+    <h3 class="product-name">Magnetic Stir Bar Assortment</h3>
+    <p class="product-description">Assortment of PTFE-coated magnetic stir bars in various sizes for different stirring applications.</p>
+    <div class="product-specs">
+      <span class="spec-tag">Chemical resistant PTFE</span>
+<span class="spec-tag">Strong magnetic core</span>
+<span class="spec-tag">Easy to clean</span>
+    </div>
+    <div class="product-actions">
+      <button class="btn btn-secondary product-details" data-product="Magnetic Stir Bar Assortment"><i class="fas fa-info-circle"></i> Details</button>
+      <button class="btn btn-primary add-to-quote" data-product="Magnetic Stir Bar Assortment"><i class="fas fa-plus"></i> Add to Quote</button>
+    </div>
+  </div>
+</div>
+
+<!-- Burette - Class A -->
+<div class="product-card" data-category="liquid-handling" data-application="" data-feature="" data-certification="">
+  <div class="product-image">
+    <img src="https://via.placeholder.com/350x200?text=Class+A+Burette" alt="Burette - Class A">
+    <div class="product-overlay">
+      <button class="btn btn-primary quick-quote" data-product="Burette - Class A"><i class="fas fa-calculator"></i> Quick Quote</button>
+    </div>
+  </div>
+  <div class="product-info">
+    <h3 class="product-name">Burette - Class A</h3>
+    <p class="product-description">Class A burette with a stopcock for highly accurate volumetric dispensing in titrations.</p>
+    <div class="product-specs">
+      <span class="spec-tag">Precision bore</span>
+<span class="spec-tag">PTFE stopcock</span>
+<span class="spec-tag">Permanent markings</span>
+    </div>
+    <div class="product-actions">
+      <button class="btn btn-secondary product-details" data-product="Burette - Class A"><i class="fas fa-info-circle"></i> Details</button>
+      <button class="btn btn-primary add-to-quote" data-product="Burette - Class A"><i class="fas fa-plus"></i> Add to Quote</button>
+    </div>
+  </div>
+</div>
+
+<!-- Spatula - Spoon End -->
+<div class="product-card" data-category="labware-accessories" data-application="" data-feature="" data-certification="">
+  <div class="product-image">
+    <img src="https://via.placeholder.com/350x200?text=Spoon+Spatula" alt="Spatula - Spoon End">
+    <div class="product-overlay">
+      <button class="btn btn-primary quick-quote" data-product="Spatula - Spoon End"><i class="fas fa-calculator"></i> Quick Quote</button>
+    </div>
+  </div>
+  <div class="product-info">
+    <h3 class="product-name">Spatula - Spoon End</h3>
+    <p class="product-description">Stainless steel spatula with a spoon end for scooping and transferring granular materials.</p>
+    <div class="product-specs">
+      <span class="spec-tag">Flat blade on one end</span>
+<span class="spec-tag">Spoon on the other</span>
+<span class="spec-tag">Corrosion resistant</span>
+    </div>
+    <div class="product-actions">
+      <button class="btn btn-secondary product-details" data-product="Spatula - Spoon End"><i class="fas fa-info-circle"></i> Details</button>
+      <button class="btn btn-primary add-to-quote" data-product="Spatula - Spoon End"><i class="fas fa-plus"></i> Add to Quote</button>
+    </div>
+  </div>
+</div>
+
+<!-- Flask Clamp - 3 Prong -->
+<div class="product-card" data-category="stands" data-application="" data-feature="" data-certification="">
+  <div class="product-image">
+    <img src="https://via.placeholder.com/350x200?text=3+Prong+Flask+Clamp" alt="Flask Clamp - 3 Prong">
+    <div class="product-overlay">
+      <button class="btn btn-primary quick-quote" data-product="Flask Clamp - 3 Prong"><i class="fas fa-calculator"></i> Quick Quote</button>
+    </div>
+  </div>
+  <div class="product-info">
+    <h3 class="product-name">Flask Clamp - 3 Prong</h3>
+    <p class="product-description">Three-prong flask clamp with bosshead for securely holding various lab vessels on retort stands.</p>
+    <div class="product-specs">
+      <span class="spec-tag">Rubber-coated jaws</span>
+<span class="spec-tag">Adjustable angle</span>
+<span class="spec-tag">Integrated bosshead</span>
+    </div>
+    <div class="product-actions">
+      <button class="btn btn-secondary product-details" data-product="Flask Clamp - 3 Prong"><i class="fas fa-info-circle"></i> Details</button>
+      <button class="btn btn-primary add-to-quote" data-product="Flask Clamp - 3 Prong"><i class="fas fa-plus"></i> Add to Quote</button>
+    </div>
+  </div>
+</div>
+
+<!-- Hot Air Gun - Lab Use -->
+<div class="product-card" data-category="heating" data-application="" data-feature="" data-certification="">
+  <div class="product-image">
+    <img src="https://via.placeholder.com/350x200?text=Hot+Air+Gun" alt="Hot Air Gun - Lab Use">
+    <div class="product-overlay">
+      <button class="btn btn-primary quick-quote" data-product="Hot Air Gun - Lab Use"><i class="fas fa-calculator"></i> Quick Quote</button>
+    </div>
+  </div>
+  <div class="product-info">
+    <h3 class="product-name">Hot Air Gun - Lab Use</h3>
+    <p class="product-description">Adjustable hot air gun for drying, heating, and sterilizing small areas or instruments.</p>
+    <div class="product-specs">
+      <span class="spec-tag">Variable temperature and airflow</span>
+<span class="spec-tag">Overheat protection</span>
+<span class="spec-tag">Stand for hands-free use</span>
+    </div>
+    <div class="product-actions">
+      <button class="btn btn-secondary product-details" data-product="Hot Air Gun - Lab Use"><i class="fas fa-info-circle"></i> Details</button>
+      <button class="btn btn-primary add-to-quote" data-product="Hot Air Gun - Lab Use"><i class="fas fa-plus"></i> Add to Quote</button>
+    </div>
+  </div>
+</div>
+
+<!-- Distilling Apparatus - Complete Set -->
+<div class="product-card" data-category="separation-equipment" data-application="" data-feature="" data-certification="">
+  <div class="product-image">
+    <img src="https://via.placeholder.com/350x200?text=Distilling+Apparatus" alt="Distilling Apparatus - Complete Set">
+    <div class="product-overlay">
+      <button class="btn btn-primary quick-quote" data-product="Distilling Apparatus - Complete Set"><i class="fas fa-calculator"></i> Quick Quote</button>
+    </div>
+  </div>
+  <div class="product-info">
+    <h3 class="product-name">Distilling Apparatus - Complete Set</h3>
+    <p class="product-description">Complete glassware distilling apparatus set for separating liquids by distillation.</p>
+    <div class="product-specs">
+      <span class="spec-tag">Standard taper joints</span>
+<span class="spec-tag">Borosilicate glass</span>
+<span class="spec-tag">Complete setup</span>
+    </div>
+    <div class="product-actions">
+      <button class="btn btn-secondary product-details" data-product="Distilling Apparatus - Complete Set"><i class="fas fa-info-circle"></i> Details</button>
+      <button class="btn btn-primary add-to-quote" data-product="Distilling Apparatus - Complete Set"><i class="fas fa-plus"></i> Add to Quote</button>
+    </div>
+  </div>
+</div>
+
+<!-- Syringe Pump -->
+<div class="product-card" data-category="liquid-handling" data-application="" data-feature="" data-certification="">
+  <div class="product-image">
+    <img src="https://via.placeholder.com/350x200?text=Syringe+Pump" alt="Syringe Pump">
+    <div class="product-overlay">
+      <button class="btn btn-primary quick-quote" data-product="Syringe Pump"><i class="fas fa-calculator"></i> Quick Quote</button>
+    </div>
+  </div>
+  <div class="product-info">
+    <h3 class="product-name">Syringe Pump</h3>
+    <p class="product-description">Precision syringe pump for accurate and controlled dispensing of small fluid volumes at constant rates.</p>
+    <div class="product-specs">
+      <span class="spec-tag">Digital control</span>
+<span class="spec-tag">Multiple syringe sizes compatibility</span>
+<span class="spec-tag">Infusion and withdrawal modes</span>
+    </div>
+    <div class="product-actions">
+      <button class="btn btn-secondary product-details" data-product="Syringe Pump"><i class="fas fa-info-circle"></i> Details</button>
+      <button class="btn btn-primary add-to-quote" data-product="Syringe Pump"><i class="fas fa-plus"></i> Add to Quote</button>
+    </div>
+  </div>
+</div>
+
+
+      </div>
+    </div>
+  </section>
+
+  <!-- QUOTE CART -->
+  <div class="quote-cart" id="quoteCart">
+    <div class="cart-header">
+      <h3><i class="fas fa-shopping-cart"></i> Quote Cart</h3>
+      <button class="cart-toggle" id="cartToggle">
+        <i class="fas fa-chevron-up"></i>
+      </button>
+    </div>
+    <div class="cart-content" id="cartContent">
+      <div class="cart-items" id="cartItems">
+        <p class="empty-cart">No items in quote cart</p>
+      </div>
+      <div class="cart-actions">
+        <button class="btn btn-secondary" id="clearCart"><i class="fas fa-trash"></i> Clear Cart</button>
+        <button class="btn btn-primary" id="requestQuote"><i class="fas fa-paper-plane"></i> Request Quote</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-section">
+          <div class="footer-logo">
+            <h3>MINABLE SCIENTIFIC</h3>
+            <p>Laboratory Excellence</p>
+          </div>
+          <p class="footer-description">Your trusted partner for laboratory equipment, chemicals, and consumables.</p>
+        </div>
+        <div class="footer-section">
+          <h4>Quick Links</h4>
+          <ul class="footer-links">
+            <li><a href="../index.html">Home</a></li>
+            <li><a href="../index.html#about">About Us</a></li>
+            <li><a href="../index.html#products">Products</a></li>
+            <li><a href="../index.html#contact">Contact</a></li>
+          </ul>
+        </div>
+        <div class="footer-section">
+          <h4>Product Categories</h4>
+          <ul class="footer-links">
+            <li><a href="glassware.html">Laboratory Glassware</a></li>
+            <li><a href="chemicals.html">Chemicals & Reagents</a></li>
+            <li><a href="apparatus.html">Laboratory Apparatus</a></li>
+            <li><a href="diagnostics.html">Diagnostic Equipment</a></li>
+            <li><a href="filtration.html">Filtration Products</a></li>
+          </ul>
+        </div>
+        <div class="footer-section">
+          <h4>Contact Info</h4>
+          <div class="footer-contact">
+            <p><i class="fas fa-map-marker-alt"></i> Bulawayo, Zimbabwe</p>
+            <p><i class="fas fa-phone"></i> 09-883033</p>
+            <p><i class="fas fa-envelope"></i> info@minablescientific.co.zw</p>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <div class="footer-copyright">
+          <p>&copy; 2024 Minable Scientific. All rights reserved.</p>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- SCRIPTS -->
+  <script src="../js/main.js"></script>
+  <script src="../js/products.js"></script>
+</body>
+</html>

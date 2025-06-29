@@ -3,7 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Chemicals - Minable Scientific</title>
+    <title>Laboratory Chemicals - Minable Scientific</title>
+    <meta name="description" content="High-quality laboratory chemicals including acids, reagents, solvents, and salts for scientific applications.">
     <link rel="stylesheet" href="../css/styles.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -11,47 +12,33 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
-    <!-- Navigation -->
     <nav class="navbar" id="navbar">
         <div class="nav-container">
             <div class="nav-logo">
-                <h2>MINABLE SCIENTIFIC</h2>
-                <span class="nav-tagline">Laboratory Excellence</span>
+                <a href="../index.html" style="text-decoration: none; color: inherit;">
+                    <h2>MINABLE SCIENTIFIC</h2>
+                    <span class="nav-tagline">Laboratory Excellence</span>
+                </a>
             </div>
-            
             <ul class="nav-menu" id="nav-menu">
-                <li class="nav-item">
-                    <a href="../index.html" class="nav-link">Home</a>
-                </li>
-                <li class="nav-item">
-                    <a href="../index.html#about" class="nav-link">About</a>
-                </li>
+                <li class="nav-item"><a href="../index.html" class="nav-link">Home</a></li>
+                <li class="nav-item"><a href="../index.html#about" class="nav-link">About</a></li>
                 <li class="nav-item dropdown">
-                    <a href="#products" class="nav-link">Products <i class="fas fa-chevron-down"></i></a>
+                    <a href="../index.html#products" class="nav-link">Products <i class="fas fa-chevron-down"></i></a>
                     <ul class="dropdown-menu">
-                        <li><a href="glassware.html">Glassware</a></li>
-                        <li><a href="apparatus.html">Apparatus</a></li>
-                        <li><a href="chemicals.html">Chemicals</a></li>
-                        <li><a href="diagnostics.html">Diagnostics</a></li>
-                        <li><a href="filtration.html">Filtration</a></li>
-                        <li><a href="lovibond.html">Lovibond</a></li>
-                        <li><a href="paper-products.html">Paper Products</a></li>
+                        <li><a href="pages/glassware.html">Glassware</a></li>
+                        <li><a href="pages/apparatus.html">Apparatus</a></li>
+                        <li><a href="pages/chemicals.html">Chemicals</a></li>
+                        <li><a href="pages/diagnostics.html">Diagnostics</a></li>
+                        <li><a href="pages/filtration.html">Filtration</a></li>
+                        <li><a href="pages/lovibond.html">Lovibond</a></li>
+                        <li><a href="pages/paper-products.html">Paper Products</a></li>
                     </ul>
                 </li>
-                <li class="nav-item">
-                    <a href="../index.html#services" class="nav-link">Services</a>
-                </li>
-                <li class="nav-item">
-                    <a href="../index.html#industries" class="nav-link">Industries</a>
-                </li>
-                <li class="nav-item">
-                    <a href="../index.html#contact" class="nav-link">Contact</a>
-                </li>
-                <li class="nav-item">
-                    <a href="../index.html#quote" class="nav-link btn-quote">Request Quote</a>
-                </li>
+                <li class="nav-item"><a href="../index.html#services" class="nav-link">Services</a></li>
+                <li class="nav-item"><a href="../index.html#contact" class="nav-link">Contact</a></li>
+                <li class="nav-item"><a href="../index.html#quote" class="nav-link btn-quote">Request Quote</a></li>
             </ul>
-            
             <div class="hamburger" id="hamburger">
                 <span class="bar"></span>
                 <span class="bar"></span>
@@ -60,123 +47,1101 @@
         </div>
     </nav>
 
-    <main>
-        <section class="page-header">
-            <div class="container">
-                <div class="breadcrumb">
-                    <a href="../index.html">Home</a>
-                    <i class="fas fa-chevron-right"></i>
-                    <a href="../index.html#products">Products</a>
-                    <i class="fas fa-chevron-right"></i>
-                    <span>Chemicals</span>
-                </div>
-                <h1 class="page-title">Laboratory Chemicals</h1>
-                <p class="page-description">High-purity chemicals for research, analysis, and educational purposes.</p>
+    <section class="page-header">
+        <div class="container">
+            <div class="breadcrumb">
+                <a href="../index.html">Home</a>
+                <i class="fas fa-chevron-right"></i>
+                <a href="../index.html#products">Products</a>
+                <i class="fas fa-chevron-right"></i>
+                <span>Laboratory Chemicals</span>
             </div>
-        </section>
-
-        <section class="product-filters">
-            <div class="container">
-                <div class="filter-bar">
-                    <div class="search-box">
-                        <i class="fas fa-search"></i>
-                        <input type="text" id="product-search" placeholder="Search products...">
-                    </div>
-                    <div class="filter-options">
-                        <select id="category-filter">
-                            <option value="all">All Categories</option>
-                            <option value="reagents">Reagents</option>
-                            <option value="organic">Organic Compounds</option>
-                            <option value="inorganic">Inorganic Salts</option>
-                        </select>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section class="products-grid">
-            <div class="container">
-                <div class="products-container" id="products-container">
-                    <!-- Products will be dynamically loaded here by JavaScript -->
-                </div>
-                <div class="no-results" id="no-results" style="display: none;">
-                    <div class="no-results-content">
-                        <i class="fas fa-exclamation-circle"></i>
-                        <h3>No products found matching your criteria.</h3>
-                        <p>Please try adjusting your search or filters.</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-    </main>
-
-    <!-- Quote Cart (common to all product pages) -->
-    <div class="quote-cart" id="quote-cart">
-        <div class="cart-header" id="cart-header">
-            <h3><i class="fas fa-shopping-cart"></i> Quote Cart (<span id="cart-count">0</span>)</h3>
-            <button class="cart-toggle" id="cart-toggle"><i class="fas fa-chevron-up"></i></button>
+            <h1 class="page-title">Laboratory Chemicals</h1>
+            <p class="page-description">Explore a wide range of high-purity reagents, solvents, acids, and salts for laboratory use</p>
         </div>
-        <div class="cart-content" id="cart-content">
-            <div class="cart-items" id="cart-items">
-                <!-- Cart items will be dynamically added here -->
-                <p class="empty-cart" id="empty-cart">Your quote cart is empty.</p>
+    </section>
+
+    <section class="product-filters">
+        <div class="container">
+            <div class="filter-bar">
+                <div class="search-box">
+                    <i class="fas fa-search"></i>
+                    <input type="text" placeholder="Search chemicals..." id="productSearch">
+                </div>
+                <div class="filter-options">
+                    <select id="volumeFilter">
+                        <option value="">All Volumes</option>
+                        <option value="100ml">100ml</option>
+                        <option value="250ml">250ml</option>
+                        <option value="500ml">500ml</option>
+                        <option value="1L">1L</option>
+                        <option value="100g">100g</option>
+                        <option value="250g">250g</option>
+                        <option value="500g">500g</option>
+                        <option value="1kg">1kg</option>
+                    </select>
+                    <select id="materialFilter">
+                        <option value="">All Forms</option>
+                        <option value="liquid">Liquid</option>
+                        <option value="solid">Solid</option>
+                        <option value="crystals">Crystals</option>
+                        <option value="solution">Solution</option>
+                        <option value="powder">Powder</option>
+                    </select>
+                    <select id="typeFilter">
+                        <option value="">All Categories</option>
+                        <option value="reagents">Reagents</option>
+                        <option value="organic">Organic</option>
+                        <option value="inorganic">Inorganic</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="products-grid">
+        <div class="container">
+            <div class="products-container" id="productsContainer">
+<!-- 10 Chemical Products -->
+<!-- Sulfuric Acid -->
+<div class="product-card" data-type="reagents" data-volume="500ml" data-material="liquid">
+  <div class="product-image">
+    <img src="../images/placeholder.jpg" alt="Sulfuric Acid, 98%">
+    <div class="product-overlay">
+      <button class="btn btn-primary quick-quote" data-product="Sulfuric Acid, 98%">
+        <i class="fas fa-calculator"></i> Quick Quote
+      </button>
+    </div>
+  </div>
+  <div class="product-info">
+    <h3 class="product-name">Sulfuric Acid, 98%</h3>
+    <p class="product-description">High-purity sulfuric acid for titrations, digestions, and as a strong dehydrating agent.</p>
+    <div class="product-specs">
+      <span class="spec-tag">98%</span>
+      <span class="spec-tag">500ml</span>
+      <span class="spec-tag">CAS: 7664-93-9</span>
+    </div>
+    <div class="product-actions">
+      <button class="btn btn-secondary product-details" data-product="Sulfuric Acid, 98%">
+        <i class="fas fa-info-circle"></i> Details
+      </button>
+      <button class="btn btn-primary add-to-quote" data-product="Sulfuric Acid, 98%">
+        <i class="fas fa-plus"></i> Add to Quote
+      </button>
+    </div>
+  </div>
+</div>
+
+<!-- Sodium Hydroxide Pellets -->
+<div class="product-card" data-type="reagents" data-volume="500g" data-material="solid">
+  <div class="product-image">
+    <img src="../images/placeholder.jpg" alt="Sodium Hydroxide Pellets">
+    <div class="product-overlay">
+      <button class="btn btn-primary quick-quote" data-product="Sodium Hydroxide Pellets">
+        <i class="fas fa-calculator"></i> Quick Quote
+      </button>
+    </div>
+  </div>
+  <div class="product-info">
+    <h3 class="product-name">Sodium Hydroxide Pellets</h3>
+    <p class="product-description">Laboratory-grade sodium hydroxide in pellet form used as a strong base in chemical reactions.</p>
+    <div class="product-specs">
+      <span class="spec-tag">99%</span>
+      <span class="spec-tag">500g</span>
+      <span class="spec-tag">CAS: 1310-73-2</span>
+    </div>
+    <div class="product-actions">
+      <button class="btn btn-secondary product-details" data-product="Sodium Hydroxide Pellets">
+        <i class="fas fa-info-circle"></i> Details
+      </button>
+      <button class="btn btn-primary add-to-quote" data-product="Sodium Hydroxide Pellets">
+        <i class="fas fa-plus"></i> Add to Quote
+      </button>
+    </div>
+  </div>
+</div>
+
+<!-- Ethanol -->
+<div class="product-card" data-type="organic" data-volume="1L" data-material="liquid">
+  <div class="product-image">
+    <img src="../images/placeholder.jpg" alt="Ethanol, Absolute">
+    <div class="product-overlay">
+      <button class="btn btn-primary quick-quote" data-product="Ethanol, Absolute">
+        <i class="fas fa-calculator"></i> Quick Quote
+      </button>
+    </div>
+  </div>
+  <div class="product-info">
+    <h3 class="product-name">Ethanol, Absolute</h3>
+    <p class="product-description">Absolute ethanol for analytical and research use; solvent, disinfectant, and for synthesis.</p>
+    <div class="product-specs">
+      <span class="spec-tag">99.9%</span>
+      <span class="spec-tag">1L</span>
+      <span class="spec-tag">CAS: 64-17-5</span>
+    </div>
+    <div class="product-actions">
+      <button class="btn btn-secondary product-details" data-product="Ethanol, Absolute">
+        <i class="fas fa-info-circle"></i> Details
+      </button>
+      <button class="btn btn-primary add-to-quote" data-product="Ethanol, Absolute">
+        <i class="fas fa-plus"></i> Add to Quote
+      </button>
+    </div>
+  </div>
+</div>
+
+<!-- Product 4: Hydrochloric Acid -->
+<div class="product-card" data-type="reagents" data-volume="500ml" data-material="liquid">
+  <div class="product-image">
+    <img src="../images/placeholder.jpg" alt="Hydrochloric Acid, 37%">
+    <div class="product-overlay">
+      <button class="btn btn-primary quick-quote" data-product="Hydrochloric Acid, 37%">
+        <i class="fas fa-calculator"></i> Quick Quote
+      </button>
+    </div>
+  </div>
+  <div class="product-info">
+    <h3 class="product-name">Hydrochloric Acid, 37%</h3>
+    <p class="product-description">Strong acid for pH adjustments, titrations, and dissolving oxides.</p>
+    <div class="product-specs">
+      <span class="spec-tag">37%</span>
+      <span class="spec-tag">500ml</span>
+      <span class="spec-tag">CAS: 7647-01-0</span>
+    </div>
+    <div class="product-actions">
+      <button class="btn btn-secondary product-details" data-product="Hydrochloric Acid, 37%">
+        <i class="fas fa-info-circle"></i> Details
+      </button>
+      <button class="btn btn-primary add-to-quote" data-product="Hydrochloric Acid, 37%">
+        <i class="fas fa-plus"></i> Add to Quote
+      </button>
+    </div>
+  </div>
+</div>
+
+<!-- Product 5: Nitric Acid -->
+<div class="product-card" data-type="reagents" data-volume="500ml" data-material="liquid">
+  <div class="product-image">
+    <img src="../images/placeholder.jpg" alt="Nitric Acid, 68%">
+    <div class="product-overlay">
+      <button class="btn btn-primary quick-quote" data-product="Nitric Acid, 68%">
+        <i class="fas fa-calculator"></i> Quick Quote
+      </button>
+    </div>
+  </div>
+  <div class="product-info">
+    <h3 class="product-name">Nitric Acid, 68%</h3>
+    <p class="product-description">Powerful oxidizing agent used in synthesis and etching.</p>
+    <div class="product-specs">
+      <span class="spec-tag">68%</span>
+      <span class="spec-tag">500ml</span>
+      <span class="spec-tag">CAS: 7697-37-2</span>
+    </div>
+    <div class="product-actions">
+      <button class="btn btn-secondary product-details" data-product="Nitric Acid, 68%">
+        <i class="fas fa-info-circle"></i> Details
+      </button>
+      <button class="btn btn-primary add-to-quote" data-product="Nitric Acid, 68%">
+        <i class="fas fa-plus"></i> Add to Quote
+      </button>
+    </div>
+  </div>
+</div>
+
+<!-- Product 6: Ammonium Hydroxide -->
+<div class="product-card" data-type="reagents" data-volume="1L" data-material="solution">
+  <div class="product-image">
+    <img src="../images/placeholder.jpg" alt="Ammonium Hydroxide, 28%">
+    <div class="product-overlay">
+      <button class="btn btn-primary quick-quote" data-product="Ammonium Hydroxide, 28%">
+        <i class="fas fa-calculator"></i> Quick Quote
+      </button>
+    </div>
+  </div>
+  <div class="product-info">
+    <h3 class="product-name">Ammonium Hydroxide, 28%</h3>
+    <p class="product-description">Weak base used in analysis and complexation reactions.</p>
+    <div class="product-specs">
+      <span class="spec-tag">28–30%</span>
+      <span class="spec-tag">1L</span>
+      <span class="spec-tag">CAS: 1336-21-6</span>
+    </div>
+    <div class="product-actions">
+      <button class="btn btn-secondary product-details" data-product="Ammonium Hydroxide, 28%">
+        <i class="fas fa-info-circle"></i> Details
+      </button>
+      <button class="btn btn-primary add-to-quote" data-product="Ammonium Hydroxide, 28%">
+        <i class="fas fa-plus"></i> Add to Quote
+      </button>
+    </div>
+  </div>
+</div>
+
+<!-- Product 7: Hydrogen Peroxide -->
+<div class="product-card" data-type="reagents" data-volume="500ml" data-material="liquid">
+  <div class="product-image">
+    <img src="../images/placeholder.jpg" alt="Hydrogen Peroxide, 30% Solution">
+    <div class="product-overlay">
+      <button class="btn btn-primary quick-quote" data-product="Hydrogen Peroxide, 30% Solution">
+        <i class="fas fa-calculator"></i> Quick Quote
+      </button>
+    </div>
+  </div>
+  <div class="product-info">
+    <h3 class="product-name">Hydrogen Peroxide, 30% Solution</h3>
+    <p class="product-description">Oxidizing agent used for sterilization and chemical reactions.</p>
+    <div class="product-specs">
+      <span class="spec-tag">30%</span>
+      <span class="spec-tag">500ml</span>
+      <span class="spec-tag">CAS: 7722-84-1</span>
+    </div>
+    <div class="product-actions">
+      <button class="btn btn-secondary product-details" data-product="Hydrogen Peroxide, 30% Solution">
+        <i class="fas fa-info-circle"></i> Details
+      </button>
+      <button class="btn btn-primary add-to-quote" data-product="Hydrogen Peroxide, 30% Solution">
+        <i class="fas fa-plus"></i> Add to Quote
+      </button>
+    </div>
+  </div>
+</div>
+
+<!-- Product 8: Potassium Dichromate -->
+<div class="product-card" data-type="reagents" data-volume="250g" data-material="crystals">
+  <div class="product-image">
+    <img src="../images/placeholder.jpg" alt="Potassium Dichromate">
+    <div class="product-overlay">
+      <button class="btn btn-primary quick-quote" data-product="Potassium Dichromate">
+        <i class="fas fa-calculator"></i> Quick Quote
+      </button>
+    </div>
+  </div>
+  <div class="product-info">
+    <h3 class="product-name">Potassium Dichromate</h3>
+    <p class="product-description">Oxidizing agent used in volumetric analysis and synthesis.</p>
+    <div class="product-specs">
+      <span class="spec-tag">99.5%</span>
+      <span class="spec-tag">250g</span>
+      <span class="spec-tag">CAS: 7778-50-9</span>
+    </div>
+    <div class="product-actions">
+      <button class="btn btn-secondary product-details" data-product="Potassium Dichromate">
+        <i class="fas fa-info-circle"></i> Details
+      </button>
+      <button class="btn btn-primary add-to-quote" data-product="Potassium Dichromate">
+        <i class="fas fa-plus"></i> Add to Quote
+      </button>
+    </div>
+  </div>
+</div>
+
+<!-- Product 9: Iodine Crystals -->
+<div class="product-card" data-type="reagents" data-volume="100g" data-material="crystals">
+  <div class="product-image">
+    <img src="../images/placeholder.jpg" alt="Iodine Crystals">
+    <div class="product-overlay">
+      <button class="btn btn-primary quick-quote" data-product="Iodine Crystals">
+        <i class="fas fa-calculator"></i> Quick Quote
+      </button>
+    </div>
+  </div>
+  <div class="product-info">
+    <h3 class="product-name">Iodine Crystals</h3>
+    <p class="product-description">Crystalline iodine for synthesis, analysis, and disinfectant use.</p>
+    <div class="product-specs">
+      <span class="spec-tag">99.8%</span>
+      <span class="spec-tag">100g</span>
+      <span class="spec-tag">CAS: 7553-56-2</span>
+    </div>
+    <div class="product-actions">
+      <button class="btn btn-secondary product-details" data-product="Iodine Crystals">
+        <i class="fas fa-info-circle"></i> Details
+      </button>
+      <button class="btn btn-primary add-to-quote" data-product="Iodine Crystals">
+        <i class="fas fa-plus"></i> Add to Quote
+      </button>
+    </div>
+  </div>
+</div>
+
+<!-- Product 10: Bromothymol Blue Indicator -->
+<div class="product-card" data-type="reagents" data-volume="100ml" data-material="solution">
+  <div class="product-image">
+    <img src="../images/placeholder.jpg" alt="Bromothymol Blue Indicator">
+    <div class="product-overlay">
+      <button class="btn btn-primary quick-quote" data-product="Bromothymol Blue Indicator">
+        <i class="fas fa-calculator"></i> Quick Quote
+      </button>
+    </div>
+  </div>
+  <div class="product-info">
+    <h3 class="product-name">Bromothymol Blue Indicator</h3>
+    <p class="product-description">pH indicator with a clear yellow to blue transition.</p>
+    <div class="product-specs">
+      <span class="spec-tag">0.04% sol.</span>
+      <span class="spec-tag">100ml</span>
+      <span class="spec-tag">CAS: 76-59-5</span>
+    </div>
+    <div class="product-actions">
+      <button class="btn btn-secondary product-details" data-product="Bromothymol Blue Indicator">
+        <i class="fas fa-info-circle"></i> Details
+      </button>
+      <button class="btn btn-primary add-to-quote" data-product="Bromothymol Blue Indicator">
+        <i class="fas fa-plus"></i> Add to Quote
+      </button>
+    </div>
+  </div>
+</div>
+<!-- Product 11: Acetone -->
+<div class="product-card" data-type="organic" data-volume="1L" data-material="liquid">
+  <div class="product-image">
+    <img src="../images/placeholder.jpg" alt="Acetone">
+    <div class="product-overlay">
+      <button class="btn btn-primary quick-quote" data-product="Acetone">
+        <i class="fas fa-calculator"></i> Quick Quote
+      </button>
+    </div>
+  </div>
+  <div class="product-info">
+    <h3 class="product-name">Acetone</h3>
+    <p class="product-description">A widely used organic solvent for cleaning laboratory glassware, preparing samples, and as a reactant in chemical synthesis.</p>
+    <div class="product-specs">
+      <span class="spec-tag">99.5%</span>
+      <span class="spec-tag">1L</span>
+      <span class="spec-tag">CAS: 67-64-1</span>
+    </div>
+    <div class="product-actions">
+      <button class="btn btn-secondary product-details" data-product="Acetone">
+        <i class="fas fa-info-circle"></i> Details
+      </button>
+      <button class="btn btn-primary add-to-quote" data-product="Acetone">
+        <i class="fas fa-plus"></i> Add to Quote
+      </button>
+    </div>
+  </div>
+</div>
+
+<!-- Product 12: Methanol -->
+<div class="product-card" data-type="organic" data-volume="1L" data-material="liquid">
+  <div class="product-image">
+    <img src="../images/placeholder.jpg" alt="Methanol">
+    <div class="product-overlay">
+      <button class="btn btn-primary quick-quote" data-product="Methanol">
+        <i class="fas fa-calculator"></i> Quick Quote
+      </button>
+    </div>
+  </div>
+  <div class="product-info">
+    <h3 class="product-name">Methanol</h3>
+    <p class="product-description">A common polar organic solvent and a precursor for various organic compounds, often used in chromatography and extraction.</p>
+    <div class="product-specs">
+      <span class="spec-tag">99.8%</span>
+      <span class="spec-tag">1L</span>
+      <span class="spec-tag">CAS: 67-56-1</span>
+    </div>
+    <div class="product-actions">
+      <button class="btn btn-secondary product-details" data-product="Methanol">
+        <i class="fas fa-info-circle"></i> Details
+      </button>
+      <button class="btn btn-primary add-to-quote" data-product="Methanol">
+        <i class="fas fa-plus"></i> Add to Quote
+      </button>
+    </div>
+  </div>
+</div>
+
+<!-- Product 13: Isopropanol (IPA) -->
+<div class="product-card" data-type="organic" data-volume="500ml" data-material="liquid">
+  <div class="product-image">
+    <img src="../images/placeholder.jpg" alt="Isopropanol (IPA)">
+    <div class="product-overlay">
+      <button class="btn btn-primary quick-quote" data-product="Isopropanol (IPA)">
+        <i class="fas fa-calculator"></i> Quick Quote
+      </button>
+    </div>
+  </div>
+  <div class="product-info">
+    <h3 class="product-name">Isopropanol (IPA)</h3>
+    <p class="product-description">Isopropyl alcohol for cleaning, disinfection, and as a general-purpose solvent in various laboratory and industrial settings.</p>
+    <div class="product-specs">
+      <span class="spec-tag">99.8%</span>
+      <span class="spec-tag">500ml</span>
+      <span class="spec-tag">CAS: 67-63-0</span>
+    </div>
+    <div class="product-actions">
+      <button class="btn btn-secondary product-details" data-product="Isopropanol (IPA)">
+        <i class="fas fa-info-circle"></i> Details
+      </button>
+      <button class="btn btn-primary add-to-quote" data-product="Isopropanol (IPA)">
+        <i class="fas fa-plus"></i> Add to Quote
+      </button>
+    </div>
+  </div>
+</div>
+
+<!-- Product 14: Ethyl Acetate -->
+<div class="product-card" data-type="organic" data-volume="500ml" data-material="liquid">
+  <div class="product-image">
+    <img src="../images/placeholder.jpg" alt="Ethyl Acetate">
+    <div class="product-overlay">
+      <button class="btn btn-primary quick-quote" data-product="Ethyl Acetate">
+        <i class="fas fa-calculator"></i> Quick Quote
+      </button>
+    </div>
+  </div>
+  <div class="product-info">
+    <h3 class="product-name">Ethyl Acetate</h3>
+    <p class="product-description">A common organic solvent widely used in chromatography, extractions, and as a component in glues and nail polish removers.</p>
+    <div class="product-specs">
+      <span class="spec-tag">99.5%</span>
+      <span class="spec-tag">500ml</span>
+      <span class="spec-tag">CAS: 141-78-6</span>
+    </div>
+    <div class="product-actions">
+      <button class="btn btn-secondary product-details" data-product="Ethyl Acetate">
+        <i class="fas fa-info-circle"></i> Details
+      </button>
+      <button class="btn btn-primary add-to-quote" data-product="Ethyl Acetate">
+        <i class="fas fa-plus"></i> Add to Quote
+      </button>
+    </div>
+  </div>
+</div>
+
+<!-- Product 15: Phenol Crystals -->
+<div class="product-card" data-type="organic" data-volume="100g" data-material="crystals">
+  <div class="product-image">
+    <img src="../images/placeholder.jpg" alt="Phenol Crystals">
+    <div class="product-overlay">
+      <button class="btn btn-primary quick-quote" data-product="Phenol Crystals">
+        <i class="fas fa-calculator"></i> Quick Quote
+      </button>
+    </div>
+  </div>
+  <div class="product-info">
+    <h3 class="product-name">Phenol Crystals</h3>
+    <p class="product-description">Crystalline phenol, used in chemical synthesis, as a disinfectant, and in the preparation of various indicators.</p>
+    <div class="product-specs">
+      <span class="spec-tag">99%</span>
+      <span class="spec-tag">100g</span>
+      <span class="spec-tag">CAS: 108-95-2</span>
+    </div>
+    <div class="product-actions">
+      <button class="btn btn-secondary product-details" data-product="Phenol Crystals">
+        <i class="fas fa-info-circle"></i> Details
+      </button>
+      <button class="btn btn-primary add-to-quote" data-product="Phenol Crystals">
+        <i class="fas fa-plus"></i> Add to Quote
+      </button>
+    </div>
+  </div>
+</div>
+<!-- Product 16: Sodium Carbonate, Anhydrous -->
+<div class="product-card" data-type="inorganic" data-volume="500g" data-material="powder">
+  <div class="product-image">
+    <img src="../images/placeholder.jpg" alt="Sodium Carbonate, Anhydrous">
+    <div class="product-overlay">
+      <button class="btn btn-primary quick-quote" data-product="Sodium Carbonate, Anhydrous">
+        <i class="fas fa-calculator"></i> Quick Quote
+      </button>
+    </div>
+  </div>
+  <div class="product-info">
+    <h3 class="product-name">Sodium Carbonate, Anhydrous</h3>
+    <p class="product-description">Anhydrous sodium carbonate, a versatile inorganic salt used for pH adjustment and as a primary standard.</p>
+    <div class="product-specs">
+      <span class="spec-tag">99.5%</span>
+      <span class="spec-tag">500g</span>
+      <span class="spec-tag">CAS: 497-19-8</span>
+    </div>
+    <div class="product-actions">
+      <button class="btn btn-secondary product-details" data-product="Sodium Carbonate, Anhydrous">
+        <i class="fas fa-info-circle"></i> Details
+      </button>
+      <button class="btn btn-primary add-to-quote" data-product="Sodium Carbonate, Anhydrous">
+        <i class="fas fa-plus"></i> Add to Quote
+      </button>
+    </div>
+  </div>
+</div>
+
+<!-- Product 17: Calcium Chloride, Anhydrous Pellets -->
+<div class="product-card" data-type="inorganic" data-volume="500g" data-material="pellets">
+  <div class="product-image">
+    <img src="../images/placeholder.jpg" alt="Calcium Chloride, Anhydrous Pellets">
+    <div class="product-overlay">
+      <button class="btn btn-primary quick-quote" data-product="Calcium Chloride, Anhydrous Pellets">
+        <i class="fas fa-calculator"></i> Quick Quote
+      </button>
+    </div>
+  </div>
+  <div class="product-info">
+    <h3 class="product-name">Calcium Chloride, Anhydrous Pellets</h3>
+    <p class="product-description">Used as a powerful desiccant for drying gases and liquids, and in various chemical reactions.</p>
+    <div class="product-specs">
+      <span class="spec-tag">96%</span>
+      <span class="spec-tag">500g</span>
+      <span class="spec-tag">CAS: 10043-52-4</span>
+    </div>
+    <div class="product-actions">
+      <button class="btn btn-secondary product-details" data-product="Calcium Chloride, Anhydrous Pellets">
+        <i class="fas fa-info-circle"></i> Details
+      </button>
+      <button class="btn btn-primary add-to-quote" data-product="Calcium Chloride, Anhydrous Pellets">
+        <i class="fas fa-plus"></i> Add to Quote
+      </button>
+    </div>
+  </div>
+</div>
+
+<!-- Product 18: Potassium Iodide -->
+<div class="product-card" data-type="inorganic" data-volume="250g" data-material="powder">
+  <div class="product-image">
+    <img src="../images/placeholder.jpg" alt="Potassium Iodide">
+    <div class="product-overlay">
+      <button class="btn btn-primary quick-quote" data-product="Potassium Iodide">
+        <i class="fas fa-calculator"></i> Quick Quote
+      </button>
+    </div>
+  </div>
+  <div class="product-info">
+    <h3 class="product-name">Potassium Iodide</h3>
+    <p class="product-description">Used in analytical chemistry, photography, and as a source of iodide ions.</p>
+    <div class="product-specs">
+      <span class="spec-tag">99%</span>
+      <span class="spec-tag">250g</span>
+      <span class="spec-tag">CAS: 7681-11-0</span>
+    </div>
+    <div class="product-actions">
+      <button class="btn btn-secondary product-details" data-product="Potassium Iodide">
+        <i class="fas fa-info-circle"></i> Details
+      </button>
+      <button class="btn btn-primary add-to-quote" data-product="Potassium Iodide">
+        <i class="fas fa-plus"></i> Add to Quote
+      </button>
+    </div>
+  </div>
+</div>
+
+<!-- Product 19: Magnesium Sulfate, Heptahydrate -->
+<div class="product-card" data-type="inorganic" data-volume="500g" data-material="crystals">
+  <div class="product-image">
+    <img src="../images/placeholder.jpg" alt="Magnesium Sulfate, Heptahydrate">
+    <div class="product-overlay">
+      <button class="btn btn-primary quick-quote" data-product="Magnesium Sulfate, Heptahydrate">
+        <i class="fas fa-calculator"></i> Quick Quote
+      </button>
+    </div>
+  </div>
+  <div class="product-info">
+    <h3 class="product-name">Magnesium Sulfate, Heptahydrate</h3>
+    <p class="product-description">Used in desiccation, analysis, and as a component in biological media.</p>
+    <div class="product-specs">
+      <span class="spec-tag">99%</span>
+      <span class="spec-tag">500g</span>
+      <span class="spec-tag">CAS: 10034-99-8</span>
+    </div>
+    <div class="product-actions">
+      <button class="btn btn-secondary product-details" data-product="Magnesium Sulfate, Heptahydrate">
+        <i class="fas fa-info-circle"></i> Details
+      </button>
+      <button class="btn btn-primary add-to-quote" data-product="Magnesium Sulfate, Heptahydrate">
+        <i class="fas fa-plus"></i> Add to Quote
+      </button>
+    </div>
+  </div>
+</div>
+
+<!-- Product 20: Copper (II) Sulfate Pentahydrate -->
+<div class="product-card" data-type="inorganic" data-volume="250g" data-material="crystals">
+  <div class="product-image">
+    <img src="../images/placeholder.jpg" alt="Copper (II) Sulfate Pentahydrate">
+    <div class="product-overlay">
+      <button class="btn btn-primary quick-quote" data-product="Copper (II) Sulfate Pentahydrate">
+        <i class="fas fa-calculator"></i> Quick Quote
+      </button>
+    </div>
+  </div>
+  <div class="product-info">
+    <h3 class="product-name">Copper (II) Sulfate Pentahydrate</h3>
+    <p class="product-description">Used in educational experiments, analytical procedures, and as a fungicide.</p>
+    <div class="product-specs">
+      <span class="spec-tag">98%</span>
+      <span class="spec-tag">250g</span>
+      <span class="spec-tag">CAS: 7758-99-8</span>
+    </div>
+    <div class="product-actions">
+      <button class="btn btn-secondary product-details" data-product="Copper (II) Sulfate Pentahydrate">
+        <i class="fas fa-info-circle"></i> Details
+      </button>
+      <button class="btn btn-primary add-to-quote" data-product="Copper (II) Sulfate Pentahydrate">
+        <i class="fas fa-plus"></i> Add to Quote
+      </button>
+    </div>
+  </div>
+</div>
+<!-- PRODUCT 21 to 30 -->
+<!-- Paste this inside #productsContainer -->
+
+<div class="product-card" data-type="reagents" data-volume="250g" data-material="crystals">
+  <div class="product-image">
+    <img src="../images/placeholder.jpg" alt="Potassium Permanganate">
+    <div class="product-overlay">
+      <button class="btn btn-primary quick-quote" data-product="Potassium Permanganate">
+        <i class="fas fa-calculator"></i> Quick Quote
+      </button>
+    </div>
+  </div>
+  <div class="product-info">
+    <h3 class="product-name">Potassium Permanganate</h3>
+    <p class="product-description">A strong oxidizing agent frequently used in redox titrations, water treatment, and organic synthesis.</p>
+    <div class="product-specs">
+      <span class='spec-tag'>99%</span><span class='spec-tag'>250g</span><span class='spec-tag'>CAS: 7722-64-7</span>
+    </div>
+    <div class="product-actions">
+      <button class="btn btn-secondary product-details" data-product="Potassium Permanganate">
+        <i class="fas fa-info-circle"></i> Details
+      </button>
+      <button class="btn btn-primary add-to-quote" data-product="Potassium Permanganate">
+        <i class="fas fa-plus"></i> Add to Quote
+      </button>
+    </div>
+  </div>
+</div>
+
+<div class="product-card" data-type="organic" data-volume="1L" data-material="liquid">
+  <div class="product-image">
+    <img src="../images/placeholder.jpg" alt="Acetic Acid, Glacial">
+    <div class="product-overlay">
+      <button class="btn btn-primary quick-quote" data-product="Acetic Acid, Glacial">
+        <i class="fas fa-calculator"></i> Quick Quote
+      </button>
+    </div>
+  </div>
+  <div class="product-info">
+    <h3 class="product-name">Acetic Acid, Glacial</h3>
+    <p class="product-description">Concentrated acetic acid, a common reagent in organic synthesis, analytical chemistry, and as a solvent.</p>
+    <div class="product-specs">
+      <span class='spec-tag'>99.7%</span><span class='spec-tag'>1L</span><span class='spec-tag'>CAS: 64-19-7</span>
+    </div>
+    <div class="product-actions">
+      <button class="btn btn-secondary product-details" data-product="Acetic Acid, Glacial">
+        <i class="fas fa-info-circle"></i> Details
+      </button>
+      <button class="btn btn-primary add-to-quote" data-product="Acetic Acid, Glacial">
+        <i class="fas fa-plus"></i> Add to Quote
+      </button>
+    </div>
+  </div>
+</div>
+
+<div class="product-card" data-type="organic" data-volume="1L" data-material="liquid">
+  <div class="product-image">
+    <img src="../images/placeholder.jpg" alt="Toluene">
+    <div class="product-overlay">
+      <button class="btn btn-primary quick-quote" data-product="Toluene">
+        <i class="fas fa-calculator"></i> Quick Quote
+      </button>
+    </div>
+  </div>
+  <div class="product-info">
+    <h3 class="product-name">Toluene</h3>
+    <p class="product-description">An aromatic hydrocarbon solvent, used in organic chemistry, extractions, and as a component in paints and fuels.</p>
+    <div class="product-specs">
+      <span class='spec-tag'>99.5%</span><span class='spec-tag'>1L</span><span class='spec-tag'>CAS: 108-88-3</span>
+    </div>
+    <div class="product-actions">
+      <button class="btn btn-secondary product-details" data-product="Toluene">
+        <i class="fas fa-info-circle"></i> Details
+      </button>
+      <button class="btn btn-primary add-to-quote" data-product="Toluene">
+        <i class="fas fa-plus"></i> Add to Quote
+      </button>
+    </div>
+  </div>
+</div>
+
+<div class="product-card" data-type="organic" data-volume="500ml" data-material="liquid">
+  <div class="product-image">
+    <img src="../images/placeholder.jpg" alt="Chloroform">
+    <div class="product-overlay">
+      <button class="btn btn-primary quick-quote" data-product="Chloroform">
+        <i class="fas fa-calculator"></i> Quick Quote
+      </button>
+    </div>
+  </div>
+  <div class="product-info">
+    <h3 class="product-name">Chloroform</h3>
+    <p class="product-description">A halogenated organic solvent used in synthesis, and for dissolving fats, oils, and waxes.</p>
+    <div class="product-specs">
+      <span class='spec-tag'>99.8%</span><span class='spec-tag'>500ml</span><span class='spec-tag'>CAS: 67-66-3</span>
+    </div>
+    <div class="product-actions">
+      <button class="btn btn-secondary product-details" data-product="Chloroform">
+        <i class="fas fa-info-circle"></i> Details
+      </button>
+      <button class="btn btn-primary add-to-quote" data-product="Chloroform">
+        <i class="fas fa-plus"></i> Add to Quote
+      </button>
+    </div>
+  </div>
+</div>
+
+<div class="product-card" data-type="inorganic" data-volume="100g" data-material="crystals">
+  <div class="product-image">
+    <img src="../images/placeholder.jpg" alt="Silver Nitrate">
+    <div class="product-overlay">
+      <button class="btn btn-primary quick-quote" data-product="Silver Nitrate">
+        <i class="fas fa-calculator"></i> Quick Quote
+      </button>
+    </div>
+  </div>
+  <div class="product-info">
+    <h3 class="product-name">Silver Nitrate</h3>
+    <p class="product-description">Used in analytical chemistry for chloride testing, in photography, and in synthesis.</p>
+    <div class="product-specs">
+      <span class='spec-tag'>99.9%</span><span class='spec-tag'>100g</span><span class='spec-tag'>CAS: 7761-88-8</span>
+    </div>
+    <div class="product-actions">
+      <button class="btn btn-secondary product-details" data-product="Silver Nitrate">
+        <i class="fas fa-info-circle"></i> Details
+      </button>
+      <button class="btn btn-primary add-to-quote" data-product="Silver Nitrate">
+        <i class="fas fa-plus"></i> Add to Quote
+      </button>
+    </div>
+  </div>
+</div>
+
+<!-- You can continue with the remaining 5 from this batch if you want -->
+<!-- PRODUCT CARDS 31–40 -->
+
+<div class="product-card" data-type="organic" data-volume="500g" data-material="powder">
+  <div class="product-image">
+    <img src="../images/placeholder.jpg" alt="Citric Acid, Anhydrous">
+    <div class="product-overlay">
+      <button class="btn btn-primary quick-quote" data-product="Citric Acid, Anhydrous">
+        <i class="fas fa-calculator"></i> Quick Quote
+      </button>
+    </div>
+  </div>
+  <div class="product-info">
+    <h3 class="product-name">Citric Acid, Anhydrous</h3>
+    <p class="product-description">A common organic acid used as a chelating agent, a pH adjuster, and in food and pharmaceutical applications.</p>
+    <div class="product-specs"><span class='spec-tag'>99.5%</span><span class='spec-tag'>500g</span><span class='spec-tag'>CAS: 77-92-9</span></div>
+    <div class="product-actions">
+      <button class="btn btn-secondary product-details" data-product="Citric Acid, Anhydrous">
+        <i class="fas fa-info-circle"></i> Details
+      </button>
+      <button class="btn btn-primary add-to-quote" data-product="Citric Acid, Anhydrous">
+        <i class="fas fa-plus"></i> Add to Quote
+      </button>
+    </div>
+  </div>
+</div>
+
+<div class="product-card" data-type="reagents" data-volume="500g" data-material="solid">
+  <div class="product-image">
+    <img src="../images/placeholder.jpg" alt="Potassium Hydroxide Pellets">
+    <div class="product-overlay">
+      <button class="btn btn-primary quick-quote" data-product="Potassium Hydroxide Pellets">
+        <i class="fas fa-calculator"></i> Quick Quote
+      </button>
+    </div>
+  </div>
+  <div class="product-info">
+    <h3 class="product-name">Potassium Hydroxide Pellets</h3>
+    <p class="product-description">A strong inorganic base, used in titrations, soap making, and as an electrolyte.</p>
+    <div class="product-specs"><span class='spec-tag'>90%</span><span class='spec-tag'>500g</span><span class='spec-tag'>CAS: 1310-58-3</span></div>
+    <div class="product-actions">
+      <button class="btn btn-secondary product-details" data-product="Potassium Hydroxide Pellets">
+        <i class="fas fa-info-circle"></i> Details
+      </button>
+      <button class="btn btn-primary add-to-quote" data-product="Potassium Hydroxide Pellets">
+        <i class="fas fa-plus"></i> Add to Quote
+      </button>
+    </div>
+  </div>
+</div>
+
+<div class="product-card" data-type="inorganic" data-volume="1kg" data-material="crystals">
+  <div class="product-image">
+    <img src="../images/placeholder.jpg" alt="Sodium Chloride">
+    <div class="product-overlay">
+      <button class="btn btn-primary quick-quote" data-product="Sodium Chloride">
+        <i class="fas fa-calculator"></i> Quick Quote
+      </button>
+    </div>
+  </div>
+  <div class="product-info">
+    <h3 class="product-name">Sodium Chloride</h3>
+    <p class="product-description">Laboratory grade common salt, used in preparing solutions, physiological experiments, and as a reagent.</p>
+    <div class="product-specs"><span class='spec-tag'>99.5%</span><span class='spec-tag'>1kg</span><span class='spec-tag'>CAS: 7647-14-5</span></div>
+    <div class="product-actions">
+      <button class="btn btn-secondary product-details" data-product="Sodium Chloride">
+        <i class="fas fa-info-circle"></i> Details
+      </button>
+      <button class="btn btn-primary add-to-quote" data-product="Sodium Chloride">
+        <i class="fas fa-plus"></i> Add to Quote
+      </button>
+    </div>
+  </div>
+</div>
+
+<div class="product-card" data-type="inorganic" data-volume="500g" data-material="powder">
+  <div class="product-image">
+    <img src="../images/placeholder.jpg" alt="Calcium Carbonate">
+    <div class="product-overlay">
+      <button class="btn btn-primary quick-quote" data-product="Calcium Carbonate">
+        <i class="fas fa-calculator"></i> Quick Quote
+      </button>
+    </div>
+  </div>
+  <div class="product-info">
+    <h3 class="product-name">Calcium Carbonate</h3>
+    <p class="product-description">Used as a filler, antacid, and in analytical chemistry; a white inorganic powder.</p>
+    <div class="product-specs"><span class='spec-tag'>99%</span><span class='spec-tag'>500g</span><span class='spec-tag'>CAS: 471-34-1</span></div>
+    <div class="product-actions">
+      <button class="btn btn-secondary product-details" data-product="Calcium Carbonate">
+        <i class="fas fa-info-circle"></i> Details
+      </button>
+      <button class="btn btn-primary add-to-quote" data-product="Calcium Carbonate">
+        <i class="fas fa-plus"></i> Add to Quote
+      </button>
+    </div>
+  </div>
+</div>
+
+<div class="product-card" data-type="inorganic" data-volume="100g" data-material="powder">
+  <div class="product-image">
+    <img src="../images/placeholder.jpg" alt="Copper (I) Chloride">
+    <div class="product-overlay">
+      <button class="btn btn-primary quick-quote" data-product="Copper (I) Chloride">
+        <i class="fas fa-calculator"></i> Quick Quote
+      </button>
+    </div>
+  </div>
+  <div class="product-info">
+    <h3 class="product-name">Copper (I) Chloride</h3>
+    <p class="product-description">Used as a catalyst in organic reactions and as a reagent in inorganic analysis.</p>
+    <div class="product-specs"><span class='spec-tag'>98%</span><span class='spec-tag'>100g</span><span class='spec-tag'>CAS: 7758-89-6</span></div>
+    <div class="product-actions">
+      <button class="btn btn-secondary product-details" data-product="Copper (I) Chloride">
+        <i class="fas fa-info-circle"></i> Details
+      </button>
+      <button class="btn btn-primary add-to-quote" data-product="Copper (I) Chloride">
+        <i class="fas fa-plus"></i> Add to Quote
+      </button>
+    </div>
+  </div>
+</div>
+
+<div class="product-card" data-type="reagents" data-volume="250g" data-material="powder">
+  <div class="product-image">
+    <img src="../images/placeholder.jpg" alt="Zinc Powder">
+    <div class="product-overlay">
+      <button class="btn btn-primary quick-quote" data-product="Zinc Powder">
+        <i class="fas fa-calculator"></i> Quick Quote
+      </button>
+    </div>
+  </div>
+  <div class="product-info">
+    <h3 class="product-name">Zinc Powder</h3>
+    <p class="product-description">Zinc metal powder, used as a reducing agent in organic synthesis and analytical procedures.</p>
+    <div class="product-specs"><span class='spec-tag'>99.9%</span><span class='spec-tag'>250g</span><span class='spec-tag'>CAS: 7440-66-6</span></div>
+    <div class="product-actions">
+      <button class="btn btn-secondary product-details" data-product="Zinc Powder">
+        <i class="fas fa-info-circle"></i> Details
+      </button>
+      <button class="btn btn-primary add-to-quote" data-product="Zinc Powder">
+        <i class="fas fa-plus"></i> Add to Quote
+      </button>
+    </div>
+  </div>
+</div>
+
+<div class="product-card" data-type="reagents" data-volume="100ml" data-material="solution">
+  <div class="product-image">
+    <img src="../images/placeholder.jpg" alt="Phenolphthalein Solution">
+    <div class="product-overlay">
+      <button class="btn btn-primary quick-quote" data-product="Phenolphthalein Solution">
+        <i class="fas fa-calculator"></i> Quick Quote
+      </button>
+    </div>
+  </div>
+  <div class="product-info">
+    <h3 class="product-name">Phenolphthalein Solution</h3>
+    <p class="product-description">A pH indicator, colorless in acid and pink in base, used in titrations.</p>
+    <div class="product-specs"><span class='spec-tag'>1%</span><span class='spec-tag'>100ml</span><span class='spec-tag'>CAS: 77-09-8</span></div>
+    <div class="product-actions">
+      <button class="btn btn-secondary product-details" data-product="Phenolphthalein Solution">
+        <i class="fas fa-info-circle"></i> Details
+      </button>
+      <button class="btn btn-primary add-to-quote" data-product="Phenolphthalein Solution">
+        <i class="fas fa-plus"></i> Add to Quote
+      </button>
+    </div>
+  </div>
+</div>
+
+<div class="product-card" data-type="organic" data-volume="1L" data-material="liquid">
+  <div class="product-image">
+    <img src="../images/placeholder.jpg" alt="Dichloromethane (Methylene Chloride)">
+    <div class="product-overlay">
+      <button class="btn btn-primary quick-quote" data-product="Dichloromethane (Methylene Chloride)">
+        <i class="fas fa-calculator"></i> Quick Quote
+      </button>
+    </div>
+  </div>
+  <div class="product-info">
+    <h3 class="product-name">Dichloromethane (Methylene Chloride)</h3>
+    <p class="product-description">A volatile solvent used in extractions, purifications, and as a reaction medium.</p>
+    <div class="product-specs"><span class='spec-tag'>99.8%</span><span class='spec-tag'>1L</span><span class='spec-tag'>CAS: 75-09-2</span></div>
+    <div class="product-actions">
+      <button class="btn btn-secondary product-details" data-product="Dichloromethane (Methylene Chloride)">
+        <i class="fas fa-info-circle"></i> Details
+      </button>
+      <button class="btn btn-primary add-to-quote" data-product="Dichloromethane (Methylene Chloride)">
+        <i class="fas fa-plus"></i> Add to Quote
+      </button>
+    </div>
+  </div>
+</div>
+
+<div class="product-card" data-type="inorganic" data-volume="1kg" data-material="powder">
+  <div class="product-image">
+    <img src="../images/placeholder.jpg" alt="Sodium Bicarbonate (Baking Soda)">
+    <div class="product-overlay">
+      <button class="btn btn-primary quick-quote" data-product="Sodium Bicarbonate (Baking Soda)">
+        <i class="fas fa-calculator"></i> Quick Quote
+      </button>
+    </div>
+  </div>
+  <div class="product-info">
+    <h3 class="product-name">Sodium Bicarbonate (Baking Soda)</h3>
+    <p class="product-description">A mild base used in buffer solutions, neutralization, and biological applications.</p>
+    <div class="product-specs"><span class='spec-tag'>99%</span><span class='spec-tag'>1kg</span><span class='spec-tag'>CAS: 144-55-8</span></div>
+    <div class="product-actions">
+      <button class="btn btn-secondary product-details" data-product="Sodium Bicarbonate (Baking Soda)">
+        <i class="fas fa-info-circle"></i> Details
+      </button>
+      <button class="btn btn-primary add-to-quote" data-product="Sodium Bicarbonate (Baking Soda)">
+        <i class="fas fa-plus"></i> Add to Quote
+      </button>
+    </div>
+  </div>
+</div>
+
+<div class="product-card" data-type="organic" data-volume="500g" data-material="powder">
+  <div class="product-image">
+    <img src="../images/placeholder.jpg" alt="Glucose, Anhydrous">
+    <div class="product-overlay">
+      <button class="btn btn-primary quick-quote" data-product="Glucose, Anhydrous">
+        <i class="fas fa-calculator"></i> Quick Quote
+      </button>
+    </div>
+  </div>
+  <div class="product-info">
+    <h3 class="product-name">Glucose, Anhydrous</h3>
+    <p class="product-description">Simple sugar used in culture media preparation and as a reference standard.</p>
+    <div class="product-specs"><span class='spec-tag'>99.5%</span><span class='spec-tag'>500g</span><span class='spec-tag'>CAS: 50-99-9</span></div>
+    <div class="product-actions">
+      <button class="btn btn-secondary product-details" data-product="Glucose, Anhydrous">
+        <i class="fas fa-info-circle"></i> Details
+      </button>
+      <button class="btn btn-primary add-to-quote" data-product="Glucose, Anhydrous">
+        <i class="fas fa-plus"></i> Add to Quote
+      </button>
+    </div>
+  </div>
+</div>
+
+
+</div>
+  </div>
+</div>
+<!-- END OF PRODUCTS -->
+</div>
+    </div>    
+  </div>
+  <!-- Repeat for 39 more products -->
+</div>
+        </div>
+    </section>
+
+    <div class="quote-cart" id="quoteCart">
+        <div class="cart-header">
+            <h3><i class="fas fa-shopping-cart"></i> Quote Cart</h3>
+            <button class="cart-toggle" id="cartToggle">
+                <i class="fas fa-chevron-up"></i>
+            </button>
+        </div>
+        <div class="cart-content" id="cartContent">
+            <div class="cart-items" id="cartItems">
+                <p class="empty-cart">No items in quote cart</p>
             </div>
             <div class="cart-actions">
-                <button class="btn btn-outline" id="clear-cart">Clear Cart</button>
-                <button class="btn btn-primary" id="request-quote">Request Quote</button>
+                <button class="btn btn-secondary" id="clearCart">
+                    <i class="fas fa-trash"></i> Clear Cart
+                </button>
+                <button class="btn btn-primary" id="requestQuote">
+                    <i class="fas fa-paper-plane"></i> Request Quote
+                </button>
             </div>
         </div>
     </div>
 
-    <!-- Product Details Modal (common to all product pages) -->
-    <div class="modal-overlay" id="product-details-modal">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h2 id="modal-product-name">Product Name</h2>
-                <button class="modal-close" id="modal-close"><i class="fas fa-times"></i></button>
-            </div>
-            <div class="modal-body">
-                <div class="product-details-content">
-                    <p id="modal-product-description"></p>
-                    <div class="details-grid">
-                        <div class="detail-section">
-                            <h4>Features</h4>
-                            <ul id="modal-product-features"></ul>
-                        </div>
-                        <div class="detail-section">
-                            <h4>Specifications</h4>
-                            <ul id="modal-product-specs"></ul>
-                        </div>
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <div class="footer-logo">
+                        <h3>MINABLE SCIENTIFIC</h3>
+                        <p>Laboratory Excellence</p>
                     </div>
-                    <div class="detail-section" id="modal-product-applications-section" style="display: none;">
-                        <h4>Applications</h4>
-                        <ul id="modal-product-applications"></ul>
-                    </div>
-                    <div class="detail-section" id="modal-product-certifications-section" style="display: none;">
-                        <h4>Certifications</h4>
-                        <ul id="modal-product-certifications"></ul>
-                    </div>
-                    <div class="detail-section" id="modal-product-includes-section" style="display: none;">
-                        <h4>Includes</h4>
-                        <ul id="modal-product-includes"></ul>
-                    </div>
-                    <div class="detail-section" id="modal-product-promotion-section" style="display: none;">
-                        <h4>Promotion</h4>
-                        <p id="modal-product-promotion"></p>
+                    <p class="footer-description">
+                        Your trusted partner for laboratory equipment, chemicals, and consumables.
+                    </p>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul class="footer-links">
+                        <li><a href="pages/glassware.html">Glassware</a></li>
+                        <li><a href="pages/apparatus.html">Apparatus</a></li>
+                        <li><a href="pages/chemicals.html">Chemicals</a></li>
+                        <li><a href="pages/diagnostics.html">Diagnostics</a></li>
+                        <li><a href="pages/filtration.html">Filtration</a></li>
+                        <li><a href="pages/lovibond.html">Lovibond</a></li>
+                        <li><a href="pages/paper-products.html">Paper Products</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Product Categories</h4>
+                    <ul class="footer-links">
+                        <li><a href="glassware.html">Laboratory Glassware</a></li>
+                        <li><a href="chemicals.html">Chemicals & Reagents</a></li>
+                        <li><a href="diagnostics.html">Diagnostic Equipment</a></li>
+                        <li><a href="filtration.html">Filtration Products</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Contact Info</h4>
+                    <div class="footer-contact">
+                        <p><i class="fas fa-map-marker-alt"></i> Bulawayo, Zimbabwe</p>
+                        <p><i class="fas fa-phone"></i> 09-883033</p>
+                        <p><i class="fas fa-envelope"></i> info@minablescientific.co.zw</p>
                     </div>
                 </div>
             </div>
-            <div class="modal-footer">
-                <button class="btn btn-primary" id="modal-add-to-quote">Add to Quote</button>
+            <div class="footer-bottom">
+                <div class="footer-copyright">
+                    <p>&copy; 2024 Minable Scientific. All rights reserved.</p>
+                </div>
             </div>
         </div>
-    </div>
+    </footer>
 
+    <script src="../js/main.js"></script>
     <script src="../js/products.js"></script>
-    <script>
-        document.addEventListener(\'DOMContentLoaded\', () => {
-            const productsData = [
-                {
-                    id: \'sulfuric-acid\
-(Content truncated due to size limit. Use line ranges to read in chunks)
-
+</body>
+</html>
