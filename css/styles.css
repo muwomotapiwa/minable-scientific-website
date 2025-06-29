@@ -1793,9 +1793,9 @@ section {
 }
 
 .team-member-photo {
-    width: 80px;
-    height: 80px;
-    border-radius: 50%; /* Makes the image circular */
+    width: 180px;
+    height: 180px;
+    border-radius: 40%; /* Makes the image circular */
     object-fit: cover; /* Ensures the image covers the area without distortion */
     border: 3px solid var(--primary-blue); /* A subtle border */
     box-shadow: var(--shadow-small);
@@ -1804,8 +1804,8 @@ section {
 /* Responsive adjustments for smaller screens */
 @media (max-width: 768px) {
     .team-member-photo {
-        width: 60px;
-        height: 60px;
+        width: 90px;
+        height: 90px;
     }
 
     .team-list li {
