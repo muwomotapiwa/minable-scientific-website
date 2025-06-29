@@ -1,184 +1,1189 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Filtration - Minable Scientific</title>
-    <link rel="stylesheet" href="../css/styles.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Filtration Products - Minable Scientific</title>
+  <meta name="description" content="Explore filtration papers, membranes, and systems for laboratories at Minable Scientific.">
+  <link rel="stylesheet" href="../css/styles.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
-    <!-- Navigation -->
-    <nav class="navbar" id="navbar">
-        <div class="nav-container">
-            <div class="nav-logo">
-                <h2>MINABLE SCIENTIFIC</h2>
-                <span class="nav-tagline">Laboratory Excellence</span>
-            </div>
-            
-            <ul class="nav-menu" id="nav-menu">
-                <li class="nav-item">
-                    <a href="../index.html" class="nav-link">Home</a>
-                </li>
-                <li class="nav-item">
-                    <a href="../index.html#about" class="nav-link">About</a>
-                </li>
-                <li class="nav-item dropdown">
-                    <a href="#products" class="nav-link">Products <i class="fas fa-chevron-down"></i></a>
-                    <ul class="dropdown-menu">
-                        <li><a href="glassware.html">Glassware</a></li>
-                        <li><a href="apparatus.html">Apparatus</a></li>
-                        <li><a href="chemicals.html">Chemicals</a></li>
-                        <li><a href="diagnostics.html">Diagnostics</a></li>
-                        <li><a href="filtration.html">Filtration</a></li>
-                        <li><a href="lovibond.html">Lovibond</a></li>
-                        <li><a href="paper-products.html">Paper Products</a></li>
-                    </ul>
-                </li>
-                <li class="nav-item">
-                    <a href="../index.html#services" class="nav-link">Services</a>
-                </li>
-                <li class="nav-item">
-                    <a href="../index.html#industries" class="nav-link">Industries</a>
-                </li>
-                <li class="nav-item">
-                    <a href="../index.html#contact" class="nav-link">Contact</a>
-                </li>
-                <li class="nav-item">
-                    <a href="../index.html#quote" class="nav-link btn-quote">Request Quote</a>
-                </li>
-            </ul>
-            
-            <div class="hamburger" id="hamburger">
-                <span class="bar"></span>
-                <span class="bar"></span>
-                <span class="bar"></span>
-            </div>
-        </div>
-    </nav>
 
-    <main>
-        <section class="page-header">
-            <div class="container">
-                <div class="breadcrumb">
-                    <a href="../index.html">Home</a>
-                    <i class="fas fa-chevron-right"></i>
-                    <a href="../index.html#products">Products</a>
-                    <i class="fas fa-chevron-right"></i>
-                    <span>Filtration</span>
-                </div>
-                <h1 class="page-title">Filtration Products</h1>
-                <p class="page-description">Premium filtration solutions for various laboratory and industrial applications.</p>
-            </div>
-        </section>
-
-        <section class="product-filters">
-            <div class="container">
-                <div class="filter-bar">
-                    <div class="search-box">
-                        <i class="fas fa-search"></i>
-                        <input type="text" id="product-search" placeholder="Search products...">
-                    </div>
-                    <div class="filter-options">
-                        <select id="category-filter">
-                            <option value="all">All Categories</option>
-                            <option value="membranes">Membrane Filters</option>
-                            <option value="papers">Filter Papers</option>
-                            <option value="systems">Filtration Systems</option>
-                        </select>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section class="products-grid">
-            <div class="container">
-                <div class="products-container" id="products-container">
-                    <!-- Products will be dynamically loaded here by JavaScript -->
-                </div>
-                <div class="no-results" id="no-results" style="display: none;">
-                    <div class="no-results-content">
-                        <i class="fas fa-exclamation-circle"></i>
-                        <h3>No products found matching your criteria.</h3>
-                        <p>Please try adjusting your search or filters.</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-    </main>
-
-    <!-- Quote Cart (common to all product pages) -->
-    <div class="quote-cart" id="quote-cart">
-        <div class="cart-header" id="cart-header">
-            <h3><i class="fas fa-shopping-cart"></i> Quote Cart (<span id="cart-count">0</span>)</h3>
-            <button class="cart-toggle" id="cart-toggle"><i class="fas fa-chevron-up"></i></button>
-        </div>
-        <div class="cart-content" id="cart-content">
-            <div class="cart-items" id="cart-items">
-                <!-- Cart items will be dynamically added here -->
-                <p class="empty-cart" id="empty-cart">Your quote cart is empty.</p>
-            </div>
-            <div class="cart-actions">
-                <button class="btn btn-outline" id="clear-cart">Clear Cart</button>
-                <button class="btn btn-primary" id="request-quote">Request Quote</button>
-            </div>
-        </div>
+  <!-- Navbar -->
+  <nav class="navbar" id="navbar">
+    <div class="nav-container">
+      <div class="nav-logo">
+        <a href="../index.html">
+          <h2>MINABLE SCIENTIFIC</h2>
+          <span class="nav-tagline">Laboratory Excellence</span>
+        </a>
+      </div>
+      <ul class="nav-menu" id="nav-menu">
+        <li class="nav-item"><a href="../index.html" class="nav-link">Home</a></li>
+        <li class="nav-item"><a href="../index.html#about" class="nav-link">About</a></li>
+        <li class="nav-item dropdown">
+          <a href="../index.html#products" class="nav-link">Products <i class="fas fa-chevron-down"></i></a>
+          <ul class="dropdown-menu">
+            <li><a href="glassware.html">Glassware</a></li>
+            <li><a href="apparatus.html">Apparatus</a></li>
+            <li><a href="chemicals.html">Chemicals</a></li>
+            <li><a href="diagnostics.html">Diagnostics</a></li>
+            <li><a href="filtration.html">Filtration</a></li>
+            <li><a href="lovibond.html">Lovibond</a></li>
+            <li><a href="paper-products.html">Paper Products</a></li>
+          </ul>
+        </li>
+        <li class="nav-item"><a href="../index.html#services" class="nav-link">Services</a></li>
+        <li class="nav-item"><a href="../index.html#contact" class="nav-link">Contact</a></li>
+        <li class="nav-item"><a href="../index.html#quote" class="nav-link btn-quote">Request Quote</a></li>
+      </ul>
+      <div class="hamburger" id="hamburger">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+      </div>
     </div>
+  </nav>
 
-    <!-- Product Details Modal (common to all product pages) -->
-    <div class="modal-overlay" id="product-details-modal">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h2 id="modal-product-name">Product Name</h2>
-                <button class="modal-close" id="modal-close"><i class="fas fa-times"></i></button>
-            </div>
-            <div class="modal-body">
-                <div class="product-details-content">
-                    <p id="modal-product-description"></p>
-                    <div class="details-grid">
-                        <div class="detail-section">
-                            <h4>Features</h4>
-                            <ul id="modal-product-features"></ul>
-                        </div>
-                        <div class="detail-section">
-                            <h4>Specifications</h4>
-                            <ul id="modal-product-specs"></ul>
-                        </div>
-                    </div>
-                    <div class="detail-section" id="modal-product-applications-section" style="display: none;">
-                        <h4>Applications</h4>
-                        <ul id="modal-product-applications"></ul>
-                    </div>
-                    <div class="detail-section" id="modal-product-certifications-section" style="display: none;">
-                        <h4>Certifications</h4>
-                        <ul id="modal-product-certifications"></ul>
-                    </div>
-                    <div class="detail-section" id="modal-product-includes-section" style="display: none;">
-                        <h4>Includes</h4>
-                        <ul id="modal-product-includes"></ul>
-                    </div>
-                    <div class="detail-section" id="modal-product-promotion-section" style="display: none;">
-                        <h4>Promotion</h4>
-                        <p id="modal-product-promotion"></p>
-                    </div>
-                </div>
-            </div>
-            <div class="modal-footer">
-                <button class="btn btn-primary" id="modal-add-to-quote">Add to Quote</button>
-            </div>
-        </div>
+  <!-- Hero Section -->
+  <section class="page-header">
+    <div class="container">
+      <div class="breadcrumb">
+        <a href="../index.html">Home</a>
+        <i class="fas fa-chevron-right"></i>
+        <a href="../index.html#products">Products</a>
+        <i class="fas fa-chevron-right"></i>
+        <span>Filtration</span>
+      </div>
+      <h1 class="page-title">Filtration Products</h1>
+      <p class="page-description">Papers, membranes, and complete systems for laboratory filtration.</p>
     </div>
+  </section>
 
-    <script src="../js/products.js"></script>
-    <script>
-        document.addEventListener(\'DOMContentLoaded\', () => {
-            const productsData = [
-                {
-                    id: \'membrane-filter-0-22um\',
-                    name: \'Membrane Filter, 0.22µm\
-(Content truncated due to size limit. Use line ranges to read in chunks)
+  <!-- Filter Section -->
+  <section class="product-filters">
+    <div class="container">
+      <div class="filter-bar">
+        <div class="search-box">
+          <i class="fas fa-search"></i>
+          <input type="text" id="product-search" placeholder="Search products...">
+        </div>
+        <div class="filter-options">
+          <select id="category-filter">
+            <option value="all">All Categories</option>
+            <option value="papers">Filter Papers</option>
+            <option value="membranes">Membrane Filters</option>
+            <option value="systems">Filtration Systems</option>
+          </select>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Product Grid -->
+  <section class="products-grid">
+    <div class="container">
+      <div class="products-container" id="products-container">
+        <!-- Filtration products -->
+         <!-- Qualitative Filter Paper - Grade 1 -->
+<div class="product-card" data-category="papers">
+  <div class="product-image">
+    <img src="https://via.placeholder.com/350x200?text=Grade+1+Filter+Paper" alt="Qualitative Filter Paper - Grade 1"/>
+    <div class="product-overlay">
+      <button class="btn btn-primary quick-quote" data-product="Qualitative Filter Paper - Grade 1">
+        <i class="fas fa-calculator"></i> Quick Quote
+      </button>
+    </div>
+  </div>
+  <div class="product-info">
+    <h3 class="product-name">Qualitative Filter Paper - Grade 1</h3>
+    <p class="product-description">Standard-grade cellulose filter paper for general qualitative analysis.</p>
+    <div class="product-specs">
+      <span class="spec-tag">Diameter: 110mm</span>
+      <span class="spec-tag">Pore Size: 11µm</span>
+      <span class="spec-tag">100 sheets/pack</span>
+    </div>
+    <div class="product-actions">
+      <button class="btn btn-secondary product-details" data-product="Qualitative Filter Paper - Grade 1">
+        <i class="fas fa-info-circle"></i> Details
+      </button>
+      <button class="btn btn-primary add-to-quote" data-product="Qualitative Filter Paper - Grade 1">
+        <i class="fas fa-plus"></i> Add to Quote
+      </button>
+    </div>
+  </div>
+</div>
+
+<!-- Quantitative Filter Paper - Ashless -->
+<div class="product-card" data-category="papers">
+  <div class="product-image">
+    <img src="https://via.placeholder.com/350x200?text=Ashless+Filter+Paper" alt="Quantitative Filter Paper - Ashless"/>
+    <div class="product-overlay">
+      <button class="btn btn-primary quick-quote" data-product="Quantitative Filter Paper - Ashless">
+        <i class="fas fa-calculator"></i> Quick Quote
+      </button>
+    </div>
+  </div>
+  <div class="product-info">
+    <h3 class="product-name">Quantitative Filter Paper - Ashless</h3>
+    <p class="product-description">High-purity filter paper for gravimetric and quantitative analysis.</p>
+    <div class="product-specs">
+      <span class="spec-tag">Ash Content: &lt;0.007%</span>
+      <span class="spec-tag">Diameter: 125mm</span>
+      <span class="spec-tag">Pack of 100</span>
+    </div>
+    <div class="product-actions">
+      <button class="btn btn-secondary product-details" data-product="Quantitative Filter Paper - Ashless">
+        <i class="fas fa-info-circle"></i> Details
+      </button>
+      <button class="btn btn-primary add-to-quote" data-product="Quantitative Filter Paper - Ashless">
+        <i class="fas fa-plus"></i> Add to Quote
+      </button>
+    </div>
+  </div>
+</div>
+
+<!-- Glass Microfiber Filters -->
+<div class="product-card" data-category="papers">
+  <div class="product-image">
+    <img src="https://via.placeholder.com/350x200?text=Glass+Microfiber+Filters" alt="Glass Microfiber Filters"/>
+    <div class="product-overlay">
+      <button class="btn btn-primary quick-quote" data-product="Glass Microfiber Filters">
+        <i class="fas fa-calculator"></i> Quick Quote
+      </button>
+    </div>
+  </div>
+  <div class="product-info">
+    <h3 class="product-name">Glass Microfiber Filters</h3>
+    <p class="product-description">Binder-free borosilicate glass filters for fine particle retention.</p>
+    <div class="product-specs">
+      <span class="spec-tag">Pore Size: 1.2µm</span>
+      <span class="spec-tag">100mm dia</span>
+      <span class="spec-tag">Pack of 100</span>
+    </div>
+    <div class="product-actions">
+      <button class="btn btn-secondary product-details" data-product="Glass Microfiber Filters">
+        <i class="fas fa-info-circle"></i> Details
+      </button>
+      <button class="btn btn-primary add-to-quote" data-product="Glass Microfiber Filters">
+        <i class="fas fa-plus"></i> Add to Quote
+      </button>
+    </div>
+  </div>
+</div>
+
+<!-- Cellulose Nitrate Membrane -->
+<div class="product-card" data-category="membranes">
+  <div class="product-image">
+    <img src="https://via.placeholder.com/350x200?text=Cellulose+Nitrate+Membrane" alt="Cellulose Nitrate Membrane"/>
+    <div class="product-overlay">
+      <button class="btn btn-primary quick-quote" data-product="Cellulose Nitrate Membrane">
+        <i class="fas fa-calculator"></i> Quick Quote
+      </button>
+    </div>
+  </div>
+  <div class="product-info">
+    <h3 class="product-name">Cellulose Nitrate Membrane</h3>
+    <p class="product-description">Hydrophilic membrane filter ideal for microbiological applications.</p>
+    <div class="product-specs">
+      <span class="spec-tag">Pore: 0.45µm</span>
+      <span class="spec-tag">47mm diameter</span>
+      <span class="spec-tag">100 pcs</span>
+    </div>
+    <div class="product-actions">
+      <button class="btn btn-secondary product-details" data-product="Cellulose Nitrate Membrane">
+        <i class="fas fa-info-circle"></i> Details
+      </button>
+      <button class="btn btn-primary add-to-quote" data-product="Cellulose Nitrate Membrane">
+        <i class="fas fa-plus"></i> Add to Quote
+      </button>
+    </div>
+  </div>
+</div>
+
+<!-- Syringe Filter - PTFE -->
+<div class="product-card" data-category="membranes">
+  <div class="product-image">
+    <img src="https://via.placeholder.com/350x200?text=PTFE+Syringe+Filter" alt="Syringe Filter - PTFE"/>
+    <div class="product-overlay">
+      <button class="btn btn-primary quick-quote" data-product="Syringe Filter - PTFE">
+        <i class="fas fa-calculator"></i> Quick Quote
+      </button>
+    </div>
+  </div>
+  <div class="product-info">
+    <h3 class="product-name">Syringe Filter - PTFE</h3>
+    <p class="product-description">Hydrophobic syringe filters for aggressive solvents and chemicals.</p>
+    <div class="product-specs">
+      <span class="spec-tag">Pore: 0.22µm</span>
+      <span class="spec-tag">Diameter: 25mm</span>
+      <span class="spec-tag">Pack of 100</span>
+    </div>
+    <div class="product-actions">
+      <button class="btn btn-secondary product-details" data-product="Syringe Filter - PTFE">
+        <i class="fas fa-info-circle"></i> Details
+      </button>
+      <button class="btn btn-primary add-to-quote" data-product="Syringe Filter - PTFE">
+        <i class="fas fa-plus"></i> Add to Quote
+      </button>
+    </div>
+  </div>
+</div>
+
+<!-- Filtration Assembly - Glass -->
+<div class="product-card" data-category="systems">
+  <div class="product-image">
+    <img src="https://via.placeholder.com/350x200?text=Glass+Filtration+Assembly" alt="Filtration Assembly - Glass"/>
+    <div class="product-overlay">
+      <button class="btn btn-primary quick-quote" data-product="Filtration Assembly - Glass">
+        <i class="fas fa-calculator"></i> Quick Quote
+      </button>
+    </div>
+  </div>
+  <div class="product-info">
+    <h3 class="product-name">Filtration Assembly - Glass</h3>
+    <p class="product-description">Complete vacuum filtration set with funnel, base, and flask.</p>
+    <div class="product-specs">
+      <span class="spec-tag">Capacity: 500mL</span>
+      <span class="spec-tag">Material: Borosilicate Glass</span>
+      <span class="spec-tag">With Silicone Stopper</span>
+    </div>
+    <div class="product-actions">
+      <button class="btn btn-secondary product-details" data-product="Filtration Assembly - Glass">
+        <i class="fas fa-info-circle"></i> Details
+      </button>
+      <button class="btn btn-primary add-to-quote" data-product="Filtration Assembly - Glass">
+        <i class="fas fa-plus"></i> Add to Quote
+      </button>
+    </div>
+  </div>
+</div>
+
+<!-- Vacuum Pump - Oil-Free -->
+<div class="product-card" data-category="systems">
+  <div class="product-image">
+    <img src="https://via.placeholder.com/350x200?text=Vacuum+Pump" alt="Vacuum Pump - Oil-Free"/>
+    <div class="product-overlay">
+      <button class="btn btn-primary quick-quote" data-product="Vacuum Pump - Oil-Free">
+        <i class="fas fa-calculator"></i> Quick Quote
+      </button>
+    </div>
+  </div>
+  <div class="product-info">
+    <h3 class="product-name">Vacuum Pump - Oil-Free</h3>
+    <p class="product-description">Quiet, maintenance-free diaphragm pump ideal for lab filtration tasks.</p>
+    <div class="product-specs">
+      <span class="spec-tag">Max Flow: 20L/min</span>
+      <span class="spec-tag">Vacuum: &lt;100 mbar</span>
+      <span class="spec-tag">Oil-Free</span>
+    </div>
+    <div class="product-actions">
+      <button class="btn btn-secondary product-details" data-product="Vacuum Pump - Oil-Free">
+        <i class="fas fa-info-circle"></i> Details
+      </button>
+      <button class="btn btn-primary add-to-quote" data-product="Vacuum Pump - Oil-Free">
+        <i class="fas fa-plus"></i> Add to Quote
+      </button>
+    </div>
+  </div>
+</div>
+
+<!-- Nylon Membrane Filters -->
+<div class="product-card" data-category="membranes">
+  <div class="product-image">
+    <img src="https://via.placeholder.com/350x200?text=Nylon+Membrane" alt="Nylon Membrane Filters"/>
+    <div class="product-overlay">
+      <button class="btn btn-primary quick-quote" data-product="Nylon Membrane Filters">
+        <i class="fas fa-calculator"></i> Quick Quote
+      </button>
+    </div>
+  </div>
+  <div class="product-info">
+    <h3 class="product-name">Nylon Membrane Filters</h3>
+    <p class="product-description">Hydrophilic nylon membranes for aqueous and organic sample filtration.</p>
+    <div class="product-specs">
+      <span class="spec-tag">Pore: 0.22µm</span>
+      <span class="spec-tag">47mm diameter</span>
+      <span class="spec-tag">100 pcs</span>
+    </div>
+    <div class="product-actions">
+      <button class="btn btn-secondary product-details" data-product="Nylon Membrane Filters">
+        <i class="fas fa-info-circle"></i> Details
+      </button>
+      <button class="btn btn-primary add-to-quote" data-product="Nylon Membrane Filters">
+        <i class="fas fa-plus"></i> Add to Quote
+      </button>
+    </div>
+  </div>
+</div>
+
+<!-- Qualitative Filter Paper - Folded -->
+<div class="product-card" data-category="papers">
+  <div class="product-image">
+    <img src="https://via.placeholder.com/350x200?text=Folded+Filter+Paper" alt="Qualitative Filter Paper - Folded"/>
+    <div class="product-overlay">
+      <button class="btn btn-primary quick-quote" data-product="Qualitative Filter Paper - Folded">
+        <i class="fas fa-calculator"></i> Quick Quote
+      </button>
+    </div>
+  </div>
+  <div class="product-info">
+    <h3 class="product-name">Qualitative Filter Paper - Folded</h3>
+    <p class="product-description">Pre-folded filter paper for easy setup and faster filtration.</p>
+    <div class="product-specs">
+      <span class="spec-tag">Grade: 1</span>
+      <span class="spec-tag">Diameter: 90mm</span>
+      <span class="spec-tag">100 sheets</span>
+    </div>
+    <div class="product-actions">
+      <button class="btn btn-secondary product-details" data-product="Qualitative Filter Paper - Folded">
+        <i class="fas fa-info-circle"></i> Details
+      </button>
+      <button class="btn btn-primary add-to-quote" data-product="Qualitative Filter Paper - Folded">
+        <i class="fas fa-plus"></i> Add to Quote
+      </button>
+    </div>
+  </div>
+</div>
+
+<!-- Manifold Filtration System - 3 Branch -->
+<div class="product-card" data-category="systems">
+  <div class="product-image">
+    <img src="https://via.placeholder.com/350x200?text=3+Branch+Manifold" alt="Manifold Filtration System - 3 Branch"/>
+    <div class="product-overlay">
+      <button class="btn btn-primary quick-quote" data-product="Manifold Filtration System - 3 Branch">
+        <i class="fas fa-calculator"></i> Quick Quote
+      </button>
+    </div>
+  </div>
+  <div class="product-info">
+    <h3 class="product-name">Manifold Filtration System - 3 Branch</h3>
+    <p class="product-description">Stainless steel filtration manifold for simultaneous multi-sample filtration.</p>
+    <div class="product-specs">
+      <span class="spec-tag">Material: SS316</span>
+      <span class="spec-tag">3 Branch</span>
+      <span class="spec-tag">47mm funnels</span>
+    </div>
+    <div class="product-actions">
+      <button class="btn btn-secondary product-details" data-product="Manifold Filtration System - 3 Branch">
+        <i class="fas fa-info-circle"></i> Details
+      </button>
+      <button class="btn btn-primary add-to-quote" data-product="Manifold Filtration System - 3 Branch">
+        <i class="fas fa-plus"></i> Add to Quote
+      </button>
+    </div>
+  </div>
+</div>
+
+<!-- Vacuum Filtration Set - Polycarbonate -->
+<div class="product-card" data-category="systems">
+  <div class="product-image">
+    <img src="https://via.placeholder.com/350x200?text=Polycarbonate+Vac+Set" alt="Vacuum Filtration Set - Polycarbonate"/>
+    <div class="product-overlay">
+      <button class="btn btn-primary quick-quote" data-product="Vacuum Filtration Set - Polycarbonate">
+        <i class="fas fa-calculator"></i> Quick Quote
+      </button>
+    </div>
+  </div>
+  <div class="product-info">
+    <h3 class="product-name">Vacuum Filtration Set - Polycarbonate</h3>
+    <p class="product-description">Durable polycarbonate set for aqueous solution filtration.</p>
+    <div class="product-specs">
+      <span class="spec-tag">500mL funnel</span>
+      <span class="spec-tag">Membrane: 47mm</span>
+      <span class="spec-tag">Reusable</span>
+    </div>
+    <div class="product-actions">
+      <button class="btn btn-secondary product-details" data-product="Vacuum Filtration Set - Polycarbonate">
+        <i class="fas fa-info-circle"></i> Details
+      </button>
+      <button class="btn btn-primary add-to-quote" data-product="Vacuum Filtration Set - Polycarbonate">
+        <i class="fas fa-plus"></i> Add to Quote
+      </button>
+    </div>
+  </div>
+</div>
+
+<!-- Cellulose Acetate Membrane Filters -->
+<div class="product-card" data-category="membranes">
+  <div class="product-image">
+    <img src="https://via.placeholder.com/350x200?text=Cellulose+Acetate+Membrane" alt="Cellulose Acetate Membrane Filters"/>
+    <div class="product-overlay">
+      <button class="btn btn-primary quick-quote" data-product="Cellulose Acetate Membrane Filters">
+        <i class="fas fa-calculator"></i> Quick Quote
+      </button>
+    </div>
+  </div>
+  <div class="product-info">
+    <h3 class="product-name">Cellulose Acetate Membrane Filters</h3>
+    <p class="product-description">Low protein-binding membrane ideal for sterilization of media and buffers.</p>
+    <div class="product-specs">
+      <span class="spec-tag">Pore: 0.2µm</span>
+      <span class="spec-tag">Diameter: 47mm</span>
+      <span class="spec-tag">Pack of 100</span>
+    </div>
+    <div class="product-actions">
+      <button class="btn btn-secondary product-details" data-product="Cellulose Acetate Membrane Filters">
+        <i class="fas fa-info-circle"></i> Details
+      </button>
+      <button class="btn btn-primary add-to-quote" data-product="Cellulose Acetate Membrane Filters">
+        <i class="fas fa-plus"></i> Add to Quote
+      </button>
+    </div>
+  </div>
+</div>
+
+<!-- Buchner Funnel - Porcelain -->
+<div class="product-card" data-category="systems">
+  <div class="product-image">
+    <img src="https://via.placeholder.com/350x200?text=Buchner+Funnel" alt="Buchner Funnel - Porcelain"/>
+    <div class="product-overlay">
+      <button class="btn btn-primary quick-quote" data-product="Buchner Funnel - Porcelain">
+        <i class="fas fa-calculator"></i> Quick Quote
+      </button>
+    </div>
+  </div>
+  <div class="product-info">
+    <h3 class="product-name">Buchner Funnel - Porcelain</h3>
+    <p class="product-description">Chemical-resistant porcelain funnel for vacuum filtration with filter paper.</p>
+    <div class="product-specs">
+      <span class="spec-tag">Diameter: 90mm</span>
+      <span class="spec-tag">With perforated plate</span>
+      <span class="spec-tag">Autoclavable</span>
+    </div>
+    <div class="product-actions">
+      <button class="btn btn-secondary product-details" data-product="Buchner Funnel - Porcelain">
+        <i class="fas fa-info-circle"></i> Details
+      </button>
+      <button class="btn btn-primary add-to-quote" data-product="Buchner Funnel - Porcelain">
+        <i class="fas fa-plus"></i> Add to Quote
+      </button>
+    </div>
+  </div>
+</div>
+
+<!-- PVDF Syringe Filters -->
+<div class="product-card" data-category="membranes">
+  <div class="product-image">
+    <img src="https://via.placeholder.com/350x200?text=PVDF+Syringe+Filter" alt="PVDF Syringe Filters"/>
+    <div class="product-overlay">
+      <button class="btn btn-primary quick-quote" data-product="PVDF Syringe Filters">
+        <i class="fas fa-calculator"></i> Quick Quote
+      </button>
+    </div>
+  </div>
+  <div class="product-info">
+    <h3 class="product-name">PVDF Syringe Filters</h3>
+    <p class="product-description">Hydrophilic PVDF filters for low protein binding and high flow rates.</p>
+    <div class="product-specs">
+      <span class="spec-tag">0.22µm pore</span>
+      <span class="spec-tag">Diameter: 13mm</span>
+      <span class="spec-tag">Sterile</span>
+    </div>
+    <div class="product-actions">
+      <button class="btn btn-secondary product-details" data-product="PVDF Syringe Filters">
+        <i class="fas fa-info-circle"></i> Details
+      </button>
+      <button class="btn btn-primary add-to-quote" data-product="PVDF Syringe Filters">
+        <i class="fas fa-plus"></i> Add to Quote
+      </button>
+    </div>
+  </div>
+</div>
+
+<!-- Laboratory Filter Holder - Stainless Steel -->
+<div class="product-card" data-category="systems">
+  <div class="product-image">
+    <img src="https://via.placeholder.com/350x200?text=SS+Filter+Holder" alt="Laboratory Filter Holder - Stainless Steel"/>
+    <div class="product-overlay">
+      <button class="btn btn-primary quick-quote" data-product="Laboratory Filter Holder - Stainless Steel">
+        <i class="fas fa-calculator"></i> Quick Quote
+      </button>
+    </div>
+  </div>
+  <div class="product-info">
+    <h3 class="product-name">Laboratory Filter Holder - Stainless Steel</h3>
+    <p class="product-description">Reusable stainless steel filter support for pressure or vacuum filtration.</p>
+    <div class="product-specs">
+      <span class="spec-tag">Membrane Size: 47mm</span>
+      <span class="spec-tag">Material: SS316</span>
+      <span class="spec-tag">High corrosion resistance</span>
+    </div>
+    <div class="product-actions">
+      <button class="btn btn-secondary product-details" data-product="Laboratory Filter Holder - Stainless Steel">
+        <i class="fas fa-info-circle"></i> Details
+      </button>
+      <button class="btn btn-primary add-to-quote" data-product="Laboratory Filter Holder - Stainless Steel">
+        <i class="fas fa-plus"></i> Add to Quote
+      </button>
+    </div>
+  </div>
+</div>
+
+<!-- PES Membrane Filters -->
+<div class="product-card" data-category="membranes">
+  <div class="product-image">
+    <img src="https://via.placeholder.com/350x200?text=PES+Membrane" alt="PES Membrane Filters"/>
+    <div class="product-overlay">
+      <button class="btn btn-primary quick-quote" data-product="PES Membrane Filters">
+        <i class="fas fa-calculator"></i> Quick Quote
+      </button>
+    </div>
+  </div>
+  <div class="product-info">
+    <h3 class="product-name">PES Membrane Filters</h3>
+    <p class="product-description">Low extractable PES filters for cell culture media and buffer sterilization.</p>
+    <div class="product-specs">
+      <span class="spec-tag">Pore: 0.1µm</span>
+      <span class="spec-tag">47mm dia</span>
+      <span class="spec-tag">Sterile, 100 pcs</span>
+    </div>
+    <div class="product-actions">
+      <button class="btn btn-secondary product-details" data-product="PES Membrane Filters">
+        <i class="fas fa-info-circle"></i> Details
+      </button>
+      <button class="btn btn-primary add-to-quote" data-product="PES Membrane Filters">
+        <i class="fas fa-plus"></i> Add to Quote
+      </button>
+    </div>
+  </div>
+</div>
+
+<!-- Filtration Flask - Borosilicate -->
+<div class="product-card" data-category="systems">
+  <div class="product-image">
+    <img src="https://via.placeholder.com/350x200?text=Filtration+Flask" alt="Filtration Flask - Borosilicate"/>
+    <div class="product-overlay">
+      <button class="btn btn-primary quick-quote" data-product="Filtration Flask - Borosilicate">
+        <i class="fas fa-calculator"></i> Quick Quote
+      </button>
+    </div>
+  </div>
+  <div class="product-info">
+    <h3 class="product-name">Filtration Flask - Borosilicate</h3>
+    <p class="product-description">Heavy-duty borosilicate glass flask for vacuum filtration setups.</p>
+    <div class="product-specs">
+      <span class="spec-tag">Capacity: 1000mL</span>
+      <span class="spec-tag">Side arm outlet</span>
+      <span class="spec-tag">Graduated</span>
+    </div>
+    <div class="product-actions">
+      <button class="btn btn-secondary product-details" data-product="Filtration Flask - Borosilicate">
+        <i class="fas fa-info-circle"></i> Details
+      </button>
+      <button class="btn btn-primary add-to-quote" data-product="Filtration Flask - Borosilicate">
+        <i class="fas fa-plus"></i> Add to Quote
+      </button>
+    </div>
+  </div>
+</div>
+
+<!-- Glass Fiber Syringe Filters -->
+<div class="product-card" data-category="membranes">
+  <div class="product-image">
+    <img src="https://via.placeholder.com/350x200?text=Glass+Fiber+Syringe+Filters" alt="Glass Fiber Syringe Filters"/>
+    <div class="product-overlay">
+      <button class="btn btn-primary quick-quote" data-product="Glass Fiber Syringe Filters">
+        <i class="fas fa-calculator"></i> Quick Quote
+      </button>
+    </div>
+  </div>
+  <div class="product-info">
+    <h3 class="product-name">Glass Fiber Syringe Filters</h3>
+    <p class="product-description">Prefiltration syringe filters for high particulate content samples.</p>
+    <div class="product-specs">
+      <span class="spec-tag">Pore: 1.0µm</span>
+      <span class="spec-tag">25mm dia</span>
+      <span class="spec-tag">100 pcs</span>
+    </div>
+    <div class="product-actions">
+      <button class="btn btn-secondary product-details" data-product="Glass Fiber Syringe Filters">
+        <i class="fas fa-info-circle"></i> Details
+      </button>
+      <button class="btn btn-primary add-to-quote" data-product="Glass Fiber Syringe Filters">
+        <i class="fas fa-plus"></i> Add to Quote
+      </button>
+    </div>
+  </div>
+</div>
+
+<!-- Vacuum Trap - Glass -->
+<div class="product-card" data-category="systems">
+  <div class="product-image">
+    <img src="https://via.placeholder.com/350x200?text=Vacuum+Trap" alt="Vacuum Trap - Glass"/>
+    <div class="product-overlay">
+      <button class="btn btn-primary quick-quote" data-product="Vacuum Trap - Glass">
+        <i class="fas fa-calculator"></i> Quick Quote
+      </button>
+    </div>
+  </div>
+  <div class="product-info">
+    <h3 class="product-name">Vacuum Trap - Glass</h3>
+    <p class="product-description">Protects vacuum pump from liquid contamination during filtration.</p>
+    <div class="product-specs">
+      <span class="spec-tag">Material: Borosilicate Glass</span>
+      <span class="spec-tag">Capacity: 250mL</span>
+      <span class="spec-tag">Includes hose connectors</span>
+    </div>
+    <div class="product-actions">
+      <button class="btn btn-secondary product-details" data-product="Vacuum Trap - Glass">
+        <i class="fas fa-info-circle"></i> Details
+      </button>
+      <button class="btn btn-primary add-to-quote" data-product="Vacuum Trap - Glass">
+        <i class="fas fa-plus"></i> Add to Quote
+      </button>
+    </div>
+  </div>
+</div>
+
+<!-- Mixed Cellulose Ester Filters -->
+<div class="product-card" data-category="membranes">
+  <div class="product-image">
+    <img src="https://via.placeholder.com/350x200?text=Mixed+Cellulose+Ester+Filters" alt="Mixed Cellulose Ester Filters"/>
+    <div class="product-overlay">
+      <button class="btn btn-primary quick-quote" data-product="Mixed Cellulose Ester Filters">
+        <i class="fas fa-calculator"></i> Quick Quote
+      </button>
+    </div>
+  </div>
+  <div class="product-info">
+    <h3 class="product-name">Mixed Cellulose Ester Filters</h3>
+    <p class="product-description">Ideal for microbial analysis and air monitoring in filtration.</p>
+    <div class="product-specs">
+      <span class="spec-tag">Pore: 0.45µm</span>
+      <span class="spec-tag">47mm dia</span>
+      <span class="spec-tag">Gridded, white</span>
+    </div>
+    <div class="product-actions">
+      <button class="btn btn-secondary product-details" data-product="Mixed Cellulose Ester Filters">
+        <i class="fas fa-info-circle"></i> Details
+      </button>
+      <button class="btn btn-primary add-to-quote" data-product="Mixed Cellulose Ester Filters">
+        <i class="fas fa-plus"></i> Add to Quote
+      </button>
+    </div>
+  </div>
+</div>
+
+<!-- Filter Paper - Ashless, Grade 42 -->
+<div class="product-card" data-category="papers">
+  <div class="product-image">
+    <img src="https://via.placeholder.com/350x200?text=Ashless+Grade+42" alt="Filter Paper - Ashless, Grade 42"/>
+    <div class="product-overlay">
+      <button class="btn btn-primary quick-quote" data-product="Filter Paper - Ashless, Grade 42">
+        <i class="fas fa-calculator"></i> Quick Quote
+      </button>
+    </div>
+  </div>
+  <div class="product-info">
+    <h3 class="product-name">Filter Paper - Ashless, Grade 42</h3>
+    <p class="product-description">High-retention ashless filter paper for gravimetric analysis.</p>
+    <div class="product-specs">
+      <span class="spec-tag">Diameter: 110mm</span>
+      <span class="spec-tag">Ash content: &lt;0.007%</span>
+      <span class="spec-tag">Pack of 100</span>
+    </div>
+    <div class="product-actions">
+      <button class="btn btn-secondary product-details" data-product="Filter Paper - Ashless, Grade 42">
+        <i class="fas fa-info-circle"></i> Details
+      </button>
+      <button class="btn btn-primary add-to-quote" data-product="Filter Paper - Ashless, Grade 42">
+        <i class="fas fa-plus"></i> Add to Quote
+      </button>
+    </div>
+  </div>
+</div>
+
+<!-- Syringe Filter - PTFE -->
+<div class="product-card" data-category="membranes">
+  <div class="product-image">
+    <img src="https://via.placeholder.com/350x200?text=PTFE+Syringe+Filter" alt="Syringe Filter - PTFE"/>
+    <div class="product-overlay">
+      <button class="btn btn-primary quick-quote" data-product="Syringe Filter - PTFE">
+        <i class="fas fa-calculator"></i> Quick Quote
+      </button>
+    </div>
+  </div>
+  <div class="product-info">
+    <h3 class="product-name">Syringe Filter - PTFE</h3>
+    <p class="product-description">Hydrophobic PTFE syringe filters for aggressive solvents and gases.</p>
+    <div class="product-specs">
+      <span class="spec-tag">Pore: 0.45µm</span>
+      <span class="spec-tag">Diameter: 25mm</span>
+      <span class="spec-tag">Pack of 100</span>
+    </div>
+    <div class="product-actions">
+      <button class="btn btn-secondary product-details" data-product="Syringe Filter - PTFE">
+        <i class="fas fa-info-circle"></i> Details
+      </button>
+      <button class="btn btn-primary add-to-quote" data-product="Syringe Filter - PTFE">
+        <i class="fas fa-plus"></i> Add to Quote
+      </button>
+    </div>
+  </div>
+</div>
+
+<!-- Vacuum Filtration System - 1L Glass -->
+<div class="product-card" data-category="systems">
+  <div class="product-image">
+    <img src="https://via.placeholder.com/350x200?text=1L+Glass+Filtration+System" alt="Vacuum Filtration System - 1L Glass"/>
+    <div class="product-overlay">
+      <button class="btn btn-primary quick-quote" data-product="Vacuum Filtration System - 1L Glass">
+        <i class="fas fa-calculator"></i> Quick Quote
+      </button>
+    </div>
+  </div>
+  <div class="product-info">
+    <h3 class="product-name">Vacuum Filtration System - 1L Glass</h3>
+    <p class="product-description">Complete 1L borosilicate glass vacuum filtration set with fritted support.</p>
+    <div class="product-specs">
+      <span class="spec-tag">1000mL funnel</span>
+      <span class="spec-tag">47mm membrane</span>
+      <span class="spec-tag">Clamp + base</span>
+    </div>
+    <div class="product-actions">
+      <button class="btn btn-secondary product-details" data-product="Vacuum Filtration System - 1L Glass">
+        <i class="fas fa-info-circle"></i> Details
+      </button>
+      <button class="btn btn-primary add-to-quote" data-product="Vacuum Filtration System - 1L Glass">
+        <i class="fas fa-plus"></i> Add to Quote
+      </button>
+    </div>
+  </div>
+</div>
+
+<!-- Glass Microfiber Filters - Binder-Free -->
+<div class="product-card" data-category="membranes">
+  <div class="product-image">
+    <img src="https://via.placeholder.com/350x200?text=Glass+Microfiber+Binder-Free" alt="Glass Microfiber Filters - Binder-Free"/>
+    <div class="product-overlay">
+      <button class="btn btn-primary quick-quote" data-product="Glass Microfiber Filters - Binder-Free">
+        <i class="fas fa-calculator"></i> Quick Quote
+      </button>
+    </div>
+  </div>
+  <div class="product-info">
+    <h3 class="product-name">Glass Microfiber Filters - Binder-Free</h3>
+    <p class="product-description">High-purity filters for gravimetric and suspended solids analysis.</p>
+    <div class="product-specs">
+      <span class="spec-tag">0.7µm retention</span>
+      <span class="spec-tag">47mm dia</span>
+      <span class="spec-tag">Pack of 100</span>
+    </div>
+    <div class="product-actions">
+      <button class="btn btn-secondary product-details" data-product="Glass Microfiber Filters - Binder-Free">
+        <i class="fas fa-info-circle"></i> Details
+      </button>
+      <button class="btn btn-primary add-to-quote" data-product="Glass Microfiber Filters - Binder-Free">
+        <i class="fas fa-plus"></i> Add to Quote
+      </button>
+    </div>
+  </div>
+</div>
+
+<!-- Inline Disc Filter Housing - Reusable -->
+<div class="product-card" data-category="systems">
+  <div class="product-image">
+    <img src="https://via.placeholder.com/350x200?text=Inline+Disc+Housing" alt="Inline Disc Filter Housing - Reusable"/>
+    <div class="product-overlay">
+      <button class="btn btn-primary quick-quote" data-product="Inline Disc Filter Housing - Reusable">
+        <i class="fas fa-calculator"></i> Quick Quote
+      </button>
+    </div>
+  </div>
+  <div class="product-info">
+    <h3 class="product-name">Inline Disc Filter Housing - Reusable</h3>
+    <p class="product-description">Durable polypropylene disc holder for 47mm filter membranes.</p>
+    <div class="product-specs">
+      <span class="spec-tag">Reusable</span>
+      <span class="spec-tag">47mm membranes</span>
+      <span class="spec-tag">Includes O-ring seal</span>
+    </div>
+    <div class="product-actions">
+      <button class="btn btn-secondary product-details" data-product="Inline Disc Filter Housing - Reusable">
+        <i class="fas fa-info-circle"></i> Details
+      </button>
+      <button class="btn btn-primary add-to-quote" data-product="Inline Disc Filter Housing - Reusable">
+        <i class="fas fa-plus"></i> Add to Quote
+      </button>
+    </div>
+  </div>
+</div>
+
+<!-- Capsule Filter - PES -->
+<div class="product-card" data-category="membranes">
+  <div class="product-image">
+    <img src="https://via.placeholder.com/350x200?text=Capsule+Filter+PES" alt="Capsule Filter - PES"/>
+    <div class="product-overlay">
+      <button class="btn btn-primary quick-quote" data-product="Capsule Filter - PES">
+        <i class="fas fa-calculator"></i> Quick Quote
+      </button>
+    </div>
+  </div>
+  <div class="product-info">
+    <h3 class="product-name">Capsule Filter - PES</h3>
+    <p class="product-description">Ready-to-use sterile capsule filter for biopharma-grade filtration.</p>
+    <div class="product-specs">
+      <span class="spec-tag">Pore: 0.2µm</span>
+      <span class="spec-tag">Surface: 1000cm²</span>
+      <span class="spec-tag">Gamma sterilized</span>
+    </div>
+    <div class="product-actions">
+      <button class="btn btn-secondary product-details" data-product="Capsule Filter - PES">
+        <i class="fas fa-info-circle"></i> Details
+      </button>
+      <button class="btn btn-primary add-to-quote" data-product="Capsule Filter - PES">
+        <i class="fas fa-plus"></i> Add to Quote
+      </button>
+    </div>
+  </div>
+</div>
+
+<!-- Depth Filter Sheets - Cellulose Based -->
+<div class="product-card" data-category="sheets">
+  <div class="product-image">
+    <img src="https://via.placeholder.com/350x200?text=Depth+Filter+Sheets" alt="Depth Filter Sheets - Cellulose Based"/>
+    <div class="product-overlay">
+      <button class="btn btn-primary quick-quote" data-product="Depth Filter Sheets - Cellulose Based">
+        <i class="fas fa-calculator"></i> Quick Quote
+      </button>
+    </div>
+  </div>
+  <div class="product-info">
+    <h3 class="product-name">Depth Filter Sheets - Cellulose Based</h3>
+    <p class="product-description">High dirt-holding capacity filter sheets for coarse and polish filtration.</p>
+    <div class="product-specs">
+      <span class="spec-tag">Grade: K700</span>
+      <span class="spec-tag">Size: 400x400mm</span>
+      <span class="spec-tag">Pack of 50</span>
+    </div>
+    <div class="product-actions">
+      <button class="btn btn-secondary product-details" data-product="Depth Filter Sheets - Cellulose Based">
+        <i class="fas fa-info-circle"></i> Details
+      </button>
+      <button class="btn btn-primary add-to-quote" data-product="Depth Filter Sheets - Cellulose Based">
+        <i class="fas fa-plus"></i> Add to Quote
+      </button>
+    </div>
+  </div>
+</div>
+
+<!-- Stainless Steel Filter Discs -->
+<div class="product-card" data-category="membranes">
+  <div class="product-image">
+    <img src="https://via.placeholder.com/350x200?text=SS+Filter+Discs" alt="Stainless Steel Filter Discs"/>
+    <div class="product-overlay">
+      <button class="btn btn-primary quick-quote" data-product="Stainless Steel Filter Discs">
+        <i class="fas fa-calculator"></i> Quick Quote
+      </button>
+    </div>
+  </div>
+  <div class="product-info">
+    <h3 class="product-name">Stainless Steel Filter Discs</h3>
+    <p class="product-description">Reusable filter discs made of sintered stainless steel mesh for high-temp use.</p>
+    <div class="product-specs">
+      <span class="spec-tag">Pore: 10µm</span>
+      <span class="spec-tag">Diameter: 50mm</span>
+      <span class="spec-tag">Autoclavable</span>
+    </div>
+    <div class="product-actions">
+      <button class="btn btn-secondary product-details" data-product="Stainless Steel Filter Discs">
+        <i class="fas fa-info-circle"></i> Details
+      </button>
+      <button class="btn btn-primary add-to-quote" data-product="Stainless Steel Filter Discs">
+        <i class="fas fa-plus"></i> Add to Quote
+      </button>
+    </div>
+  </div>
+</div>
+
+<!-- Nylon Filter Membrane - Hydrophilic -->
+<div class="product-card" data-category="membranes">
+  <div class="product-image">
+    <img src="https://via.placeholder.com/350x200?text=Nylon+Membrane" alt="Nylon Filter Membrane - Hydrophilic"/>
+    <div class="product-overlay">
+      <button class="btn btn-primary quick-quote" data-product="Nylon Filter Membrane - Hydrophilic">
+        <i class="fas fa-calculator"></i> Quick Quote
+      </button>
+    </div>
+  </div>
+  <div class="product-info">
+    <h3 class="product-name">Nylon Filter Membrane - Hydrophilic</h3>
+    <p class="product-description">Hydrophilic membrane for aqueous and organic solvent filtration.</p>
+    <div class="product-specs">
+      <span class="spec-tag">Pore: 0.45µm</span>
+      <span class="spec-tag">47mm dia</span>
+      <span class="spec-tag">Pack of 100</span>
+    </div>
+    <div class="product-actions">
+      <button class="btn btn-secondary product-details" data-product="Nylon Filter Membrane - Hydrophilic">
+        <i class="fas fa-info-circle"></i> Details
+      </button>
+      <button class="btn btn-primary add-to-quote" data-product="Nylon Filter Membrane - Hydrophilic">
+        <i class="fas fa-plus"></i> Add to Quote
+      </button>
+    </div>
+  </div>
+</div>
+
+<!-- Vacuum Pump - Oil-Free Diaphragm -->
+<div class="product-card" data-category="equipment">
+  <div class="product-image">
+    <img src="https://via.placeholder.com/350x200?text=Diaphragm+Vacuum+Pump" alt="Vacuum Pump - Oil-Free Diaphragm"/>
+    <div class="product-overlay">
+      <button class="btn btn-primary quick-quote" data-product="Vacuum Pump - Oil-Free Diaphragm">
+        <i class="fas fa-calculator"></i> Quick Quote
+      </button>
+    </div>
+  </div>
+  <div class="product-info">
+    <h3 class="product-name">Vacuum Pump - Oil-Free Diaphragm</h3>
+    <p class="product-description">Quiet, oil-free diaphragm pump suitable for filtration and degassing.</p>
+    <div class="product-specs">
+      <span class="spec-tag">Flow Rate: 30L/min</span>
+      <span class="spec-tag">Vacuum: 100 mbar</span>
+      <span class="spec-tag">230V/50Hz</span>
+    </div>
+    <div class="product-actions">
+      <button class="btn btn-secondary product-details" data-product="Vacuum Pump - Oil-Free Diaphragm">
+        <i class="fas fa-info-circle"></i> Details
+      </button>
+      <button class="btn btn-primary add-to-quote" data-product="Vacuum Pump - Oil-Free Diaphragm">
+        <i class="fas fa-plus"></i> Add to Quote
+      </button>
+    </div>
+  </div>
+</div>
+
+<!-- Filter Funnels - Polypropylene -->
+<div class="product-card" data-category="equipment">
+  <div class="product-image">
+    <img src="https://via.placeholder.com/350x200?text=PP+Filter+Funnels" alt="Filter Funnels - Polypropylene"/>
+    <div class="product-overlay">
+      <button class="btn btn-primary quick-quote" data-product="Filter Funnels - Polypropylene">
+        <i class="fas fa-calculator"></i> Quick Quote
+      </button>
+    </div>
+  </div>
+  <div class="product-info">
+    <h3 class="product-name">Filter Funnels - Polypropylene</h3>
+    <p class="product-description">Durable autoclavable funnels ideal for vacuum filtration setups.</p>
+    <div class="product-specs">
+      <span class="spec-tag">Capacity: 500mL</span>
+      <span class="spec-tag">47mm support</span>
+      <span class="spec-tag">Pack of 10</span>
+    </div>
+    <div class="product-actions">
+      <button class="btn btn-secondary product-details" data-product="Filter Funnels - Polypropylene">
+        <i class="fas fa-info-circle"></i> Details
+      </button>
+      <button class="btn btn-primary add-to-quote" data-product="Filter Funnels - Polypropylene">
+        <i class="fas fa-plus"></i> Add to Quote
+      </button>
+    </div>
+  </div>
+</div>
+
+<!-- Cellulose Nitrate Membranes -->
+<div class="product-card" data-category="membranes">
+  <div class="product-image">
+    <img src="https://via.placeholder.com/350x200?text=Cellulose+Nitrate+Membranes" alt="Cellulose Nitrate Membranes"/>
+    <div class="product-overlay">
+      <button class="btn btn-primary quick-quote" data-product="Cellulose Nitrate Membranes">
+        <i class="fas fa-calculator"></i> Quick Quote
+      </button>
+    </div>
+  </div>
+  <div class="product-info">
+    <h3 class="product-name">Cellulose Nitrate Membranes</h3>
+    <p class="product-description">Hydrophilic membranes with uniform pore size for microbiology applications.</p>
+    <div class="product-specs">
+      <span class="spec-tag">Pore: 0.22µm</span>
+      <span class="spec-tag">Diameter: 47mm</span>
+      <span class="spec-tag">Pack of 100</span>
+    </div>
+    <div class="product-actions">
+      <button class="btn btn-secondary product-details" data-product="Cellulose Nitrate Membranes">
+        <i class="fas fa-info-circle"></i> Details
+      </button>
+      <button class="btn btn-primary add-to-quote" data-product="Cellulose Nitrate Membranes">
+        <i class="fas fa-plus"></i> Add to Quote
+      </button>
+    </div>
+  </div>
+</div>
+
+<!-- Filter Paper - Qualitative, Grade 5 -->
+<div class="product-card" data-category="papers">
+  <div class="product-image">
+    <img src="https://via.placeholder.com/350x200?text=Grade+5+Filter+Paper" alt="Filter Paper - Qualitative, Grade 5"/>
+    <div class="product-overlay">
+      <button class="btn btn-primary quick-quote" data-product="Filter Paper - Qualitative, Grade 5">
+        <i class="fas fa-calculator"></i> Quick Quote
+      </button>
+    </div>
+  </div>
+  <div class="product-info">
+    <h3 class="product-name">Filter Paper - Qualitative, Grade 5</h3>
+    <p class="product-description">Fine particle retention for qualitative analytical separations.</p>
+    <div class="product-specs">
+      <span class="spec-tag">Diameter: 125mm</span>
+      <span class="spec-tag">Pack of 100</span>
+      <span class="spec-tag">Medium flow rate</span>
+    </div>
+    <div class="product-actions">
+      <button class="btn btn-secondary product-details" data-product="Filter Paper - Qualitative, Grade 5">
+        <i class="fas fa-info-circle"></i> Details
+      </button>
+      <button class="btn btn-primary add-to-quote" data-product="Filter Paper - Qualitative, Grade 5">
+        <i class="fas fa-plus"></i> Add to Quote
+      </button>
+    </div>
+  </div>
+</div>
+
+<!-- Membrane Filter Holders - Stainless Steel -->
+<div class="product-card" data-category="systems">
+  <div class="product-image">
+    <img src="https://via.placeholder.com/350x200?text=SS+Filter+Holder" alt="Membrane Filter Holders - Stainless Steel"/>
+    <div class="product-overlay">
+      <button class="btn btn-primary quick-quote" data-product="Membrane Filter Holders - Stainless Steel">
+        <i class="fas fa-calculator"></i> Quick Quote
+      </button>
+    </div>
+  </div>
+  <div class="product-info">
+    <h3 class="product-name">Membrane Filter Holders - Stainless Steel</h3>
+    <p class="product-description">Durable metal holders for 47mm and 90mm membrane filters.</p>
+    <div class="product-specs">
+      <span class="spec-tag">Material: SS304</span>
+      <span class="spec-tag">Autoclavable</span>
+      <span class="spec-tag">Corrosion resistant</span>
+    </div>
+    <div class="product-actions">
+      <button class="btn btn-secondary product-details" data-product="Membrane Filter Holders - Stainless Steel">
+        <i class="fas fa-info-circle"></i> Details
+      </button>
+      <button class="btn btn-primary add-to-quote" data-product="Membrane Filter Holders - Stainless Steel">
+        <i class="fas fa-plus"></i> Add to Quote
+      </button>
+    </div>
+  </div>
+</div>
+
+<!-- Vacuum Filtration Set - Laboratory Starter Kit -->
+<div class="product-card" data-category="systems">
+  <div class="product-image">
+    <img src="https://via.placeholder.com/350x200?text=Filtration+Starter+Kit" alt="Vacuum Filtration Set - Laboratory Starter Kit"/>
+    <div class="product-overlay">
+      <button class="btn btn-primary quick-quote" data-product="Vacuum Filtration Set - Laboratory Starter Kit">
+        <i class="fas fa-calculator"></i> Quick Quote
+      </button>
+    </div>
+  </div>
+  <div class="product-info">
+    <h3 class="product-name">Vacuum Filtration Set - Laboratory Starter Kit</h3>
+    <p class="product-description">All-in-one lab filtration kit including pump, funnel, flask, and tubing.</p>
+    <div class="product-specs">
+      <span class="spec-tag">Complete System</span>
+      <span class="spec-tag">1L Flask</span>
+      <span class="spec-tag">47mm funnel</span>
+    </div>
+    <div class="product-actions">
+      <button class="btn btn-secondary product-details" data-product="Vacuum Filtration Set - Laboratory Starter Kit">
+        <i class="fas fa-info-circle"></i> Details
+      </button>
+      <button class="btn btn-primary add-to-quote" data-product="Vacuum Filtration Set - Laboratory Starter Kit">
+        <i class="fas fa-plus"></i> Add to Quote
+      </button>
+    </div>
+  </div>
+</div>
 
 
+      </div>
+      <div class="no-results" id="no-results" style="display: none;">
+        <div class="no-results-content">
+          <i class="fas fa-exclamation-circle"></i>
+          <h3>No products found matching your criteria.</h3>
+          <p>Please try adjusting your search or filters.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Quote Cart -->
+  <div class="quote-cart" id="quoteCart">
+    <div class="cart-header">
+      <h3><i class="fas fa-shopping-cart"></i> Quote Cart</h3>
+      <button class="cart-toggle" id="cartToggle">
+        <i class="fas fa-chevron-up"></i>
+      </button>
+    </div>
+    <div class="cart-content" id="cartContent">
+      <div class="cart-items" id="cartItems">
+        <p class="empty-cart">No items in quote cart</p>
+      </div>
+      <div class="cart-actions">
+        <button class="btn btn-secondary" id="clearCart"><i class="fas fa-trash"></i> Clear Cart</button>
+        <button class="btn btn-primary" id="requestQuote"><i class="fas fa-paper-plane"></i> Request Quote</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-section">
+          <div class="footer-logo">
+            <h3>MINABLE SCIENTIFIC</h3>
+            <p>Laboratory Excellence</p>
+          </div>
+          <p class="footer-description">Your trusted partner for laboratory equipment, chemicals, and consumables.</p>
+        </div>
+        <div class="footer-section">
+          <h4>Quick Links</h4>
+          <ul class="footer-links">
+            <li><a href="../index.html">Home</a></li>
+            <li><a href="../index.html#about">About Us</a></li>
+            <li><a href="../index.html#products">Products</a></li>
+            <li><a href="../index.html#contact">Contact</a></li>
+          </ul>
+        </div>
+        <div class="footer-section">
+          <h4>Product Categories</h4>
+          <ul class="footer-links">
+            <li><a href="glassware.html">Laboratory Glassware</a></li>
+            <li><a href="chemicals.html">Chemicals & Reagents</a></li>
+            <li><a href="apparatus.html">Laboratory Apparatus</a></li>
+            <li><a href="diagnostics.html">Diagnostic Equipment</a></li>
+            <li><a href="filtration.html">Filtration Products</a></li>
+          </ul>
+        </div>
+        <div class="footer-section">
+          <h4>Contact Info</h4>
+          <div class="footer-contact">
+            <p><i class="fas fa-map-marker-alt"></i> Bulawayo, Zimbabwe</p>
+            <p><i class="fas fa-phone"></i> 09-883033</p>
+            <p><i class="fas fa-envelope"></i> info@minablescientific.co.zw</p>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <div class="footer-copyright">
+          <p>&copy; 2024 Minable Scientific. All rights reserved.</p>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="../js/main.js"></script>
+  <script src="../js/products.js"></script>
+</body>
+</html>
