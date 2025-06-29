@@ -799,7 +799,7 @@ section {
     display: block;
     margin-bottom: 0.5rem;
     font-weight: 500;
-    color: var(--white);
+    color: var(--black);
 }
 
 .form-group input,
@@ -808,15 +808,15 @@ section {
     padding: 12px 16px;
     border: 1px solid rgba(255, 255, 255, 0.3);
     border-radius: var(--radius-small);
-    background: rgba(255, 255, 255, 0.1);
-    color: var(--white);
+    background: rgba(24, 142, 213, 0.1);
+    color: var(#1e1c1c);
     font-family: var(--font-primary);
     transition: border-color var(--transition-medium);
 }
 
 .form-group input::placeholder,
 .form-group textarea::placeholder {
-    color: rgba(255, 255, 255, 0.7);
+    color: rgba(19, 19, 20, 0.7);
 }
 
 .form-group input:focus,
