@@ -1804,8 +1804,8 @@ section {
 /* Responsive adjustments for smaller screens */
 @media (max-width: 768px) {
     .team-member-photo {
-        width: 90px;
-        height: 90px;
+        width: 70px;
+        height: 70px;
     }
 
     .team-list li {
