@@ -1,336 +1,1663 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Paper Products - Minable Scientific</title>
-    <link rel="stylesheet" href="../css/styles.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Paper Products - Minable Scientific</title>
+  <meta name="description" content="Browse our range of laboratory and hygiene paper products from Minable Scientific.">
+
+  <!-- Styles and Fonts -->
+  <link rel="stylesheet" href="../css/styles.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
-    <!-- Navigation -->
-    <nav class="navbar" id="navbar">
-        <div class="nav-container">
-            <div class="nav-logo">
-                <h2>MINABLE SCIENTIFIC</h2>
-                <span class="nav-tagline">Laboratory Excellence</span>
-            </div>
-            
-            <ul class="nav-menu" id="nav-menu">
-                <li class="nav-item">
-                    <a href="../index.html" class="nav-link">Home</a>
-                </li>
-                <li class="nav-item">
-                    <a href="../index.html#about" class="nav-link">About</a>
-                </li>
-                <li class="nav-item dropdown">
-                    <a href="#products" class="nav-link">Products <i class="fas fa-chevron-down"></i></a>
-                    <ul class="dropdown-menu">
-                        <li><a href="glassware.html">Glassware</a></li>
-                        <li><a href="apparatus.html">Apparatus</a></li>
-                        <li><a href="chemicals.html">Chemicals</a></li>
-                        <li><a href="diagnostics.html">Diagnostics</a></li>
-                        <li><a href="filtration.html">Filtration</a></li>
-                        <li><a href="lovibond.html">Lovibond</a></li>
-                        <li><a href="spilpak.html">Spilpak</a></li>
-                    </ul>
-                </li>
-                <li class="nav-item">
-                    <a href="../index.html#services" class="nav-link">Services</a>
-                </li>
-                <li class="nav-item">
-                    <a href="../index.html#industries" class="nav-link">Industries</a>
-                </li>
-                <li class="nav-item">
-                    <a href="../index.html#contact" class="nav-link">Contact</a>
-                </li>
-                <li class="nav-item">
-                    <a href="../index.html#quote" class="nav-link btn-quote">Request Quote</a>
-                </li>
-            </ul>
-            
-            <div class="hamburger" id="hamburger">
-                <span class="bar"></span>
-                <span class="bar"></span>
-                <span class="bar"></span>
-            </div>
-        </div>
-    </nav>
 
-    <main>
-        <section class="page-header">
-            <div class="container">
-                <div class="breadcrumb">
-                    <a href="../index.html">Home</a>
-                    <i class="fas fa-chevron-right"></i>
-                    <a href="../index.html#products">Products</a>
-                    <i class="fas fa-chevron-right"></i>
-                    <span>Paper Products</span>
-                </div>
-                <h1 class="page-title">Paper Products</h1>
-                <p class="page-description">Innovative and eco-friendly paper solutions for hygiene and spill management.</p>
-            </div>
-        </section>
-
-        <section class="product-filters">
-            <div class="container">
-                <div class="filter-bar">
-                    <div class="search-box">
-                        <i class="fas fa-search"></i>
-                        <input type="text" id="product-search" placeholder="Search products...">
-                    </div>
-                    <div class="filter-options">
-                        <select id="category-filter">
-                            <option value="all">All Categories</option>
-                            <option value="paper-towels">Paper Towels</option>
-                            <option value="dispenser">Dispenser</option>
-                            <option value="pos-stand">POS Display Stand</option>
-                        </select>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section class="products-grid">
-            <div class="container">
-                <div class="products-container" id="products-container">
-                    <!-- 70M Paper -->
-                    <div class="product-card" data-category="paper-towels">
-                        <div class="product-image">
-                            <img src="https://via.placeholder.com/350x200?text=70M+Paper+Towel" alt="70M Paper Towel">
-                            <div class="product-overlay">
-                                <button class="btn btn-primary" onclick="showProductDetails(\'70m-paper\')">Details</button>
-                            </div>
-                        </div>
-                        <div class="product-info">
-                            <h3 class="product-name">70M Paper Towel</h3>
-                            <p class="product-description">A highly absorbent 2-ply paper towel utilizing DESL technology for superior strength and absorbency.</p>                            <div class="product-specs">
-                                <span class="spec-tag">70 meters</span>
-                                <span class="spec-tag">2 Ply</span>
-                                <span class="spec-tag">Perforated</span>
-                                <span class="spec-tag">Eco Friendly</span>
-                            </div>
-                            <div class="product-actions">
-                                <button class="btn btn-secondary" onclick="addToQuote('Spilpak 70M Paper', 'spilpak-70m-paper')">Add to Quote</button>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- 100M Paper (Unperforated) -->
-                    <div class="product-card" data-category="paper-towels">
-                        <div class="product-image">
-                            <img src="https://via.placeholder.com/350x200?text=100M+Paper+Towel" alt="100M Paper Towel">
-                            <div class="product-overlay">
-                                <button class="btn btn-primary" onclick="showProductDetails(\'100m-paper\')">Details</button>
-                            </div>
-                        </div>
-                        <div class="product-info">
-                            <h3 class="product-name">100M Paper Towel (Unperforated)</h3>
-                            <p class="product-description">A highly absorbent 2-ply paper towel that gives the user full paper length control.</p>                           <div class="product-specs">
-                                <span class="spec-tag">100 meters</span>
-                                <span class="spec-tag">2 Ply</span>
-                                <span class="spec-tag">Unperforated</span>
-                                <span class="spec-tag">Eco Friendly</span>
-                            </div>
-                            <div class="product-actions">
-                                <button class="btn btn-secondary" onclick="addToQuote('Spilpak New 100M Paper', 'spilpak-100m-paper')">Add to Quote</button>
-                            </div>
-                        </div>
-                    <                    <!-- Dispenser -->
-                    <div class="product-card" data-category="dispenser">
-                        <div class="product-image">
-                            <img src="https://via.placeholder.com/350x200?text=Paper+Towel+Dispenser" alt="Paper Towel Dispenser">
-                            <div class="product-overlay">
-                                <button class="btn btn-primary" onclick="showProductDetails(\'dispenser\')">Details</button>
-                            </div>
-                        </div>
-                        <div class="product-info">
-                            <h3 class="product-name">Paper Towel Dispenser</h3>
-                            <p class="product-description">A durable, easy-to-use, and affordable wall-mounted dispenser specifically designed for paper towels. It is ideal for hygiene-sensitive environments.</p>                        <span class="spec-tag">Wall-mounted</span>
-                                <span class="spec-tag">Durable</span>
-                                <span class="spec-tag">Hygienic</span>
-                                <span class="spec-tag">Impact Resistant</span>
-                            </div>
-                            <div class="product-actions">
-                                <button class="btn btn-secondary" onclick="addToQuote('Spilpak Dispenser', 'spilpak-dispenser')">Add to Quote</button>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- Point of Sale Display Stand -->
-                    <div class="product-card" data-category="pos-stand">
-                        <div class="product-image">
-                            <img src="https://via.placeholder.com/350x200?text=POS+Display+Stand" alt="Point of Sale Display Stand">
-                            <div class="product-overlay">
-                                <button class="btn btn-primary" onclick="showProductDetails(\'pos-stand\')">Details</button>
-                            </div>
-                        </div>
-                        <div class="product-info">
-                            <h3 class="product-name">Point of Sale Display Stand</h3>
-                            <p class="product-description">A fully stocked point of sale display stand provided with the purchase.</p>                            <div class="product-specs">
-                                <span class="spec-tag">Includes Sample</span>
-                                <span class="spec-tag">Backup Stock</span>
-                                <span class="spec-tag">Promotional</span>
-                            </div>
-                            <div class="product-actions">
-                                <button class="btn btn-secondary" onclick="addToQuote('Spilpak POS Display Stand', 'spilpak-pos-stand')">Add to Quote</button>
-                            </div>
-                        </div>
-                    </div>
-
-                </div>
-                <div class="no-results" id="no-results" style="display: none;">
-                    <div class="no-results-content">
-                        <i class="fas fa-exclamation-circle"></i>
-                        <h3>No products found matching your criteria.</h3>
-                        <p>Please try adjusting your search or filters.</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-    </main>
-
-    <!-- Quote Cart (common to all product pages) -->
-    <div class="quote-cart" id="quote-cart">
-        <div class="cart-header" id="cart-header">
-            <h3><i class="fas fa-shopping-cart"></i> Quote Cart (<span id="cart-count">0</span>)</h3>
-            <button class="cart-toggle" id="cart-toggle"><i class="fas fa-chevron-up"></i></button>
-        </div>
-        <div class="cart-content" id="cart-content">
-            <div class="cart-items" id="cart-items">
-                <!-- Cart items will be dynamically added here -->
-                <p class="empty-cart" id="empty-cart">Your quote cart is empty.</p>
-            </div>
-            <div class="cart-actions">
-                <button class="btn btn-outline" id="clear-cart">Clear Cart</button>
-                <button class="btn btn-primary" id="request-quote">Request Quote</button>
-            </div>
-        </div>
+  <!-- Navbar -->
+  <nav class="navbar" id="navbar">
+    <div class="nav-container">
+      <div class="nav-logo">
+        <a href="../index.html">
+          <h2>MINABLE SCIENTIFIC</h2>
+          <span class="nav-tagline">Laboratory Excellence</span>
+        </a>
+      </div>
+      <ul class="nav-menu" id="nav-menu">
+        <li class="nav-item"><a href="../index.html" class="nav-link">Home</a></li>
+        <li class="nav-item"><a href="../index.html#about" class="nav-link">About</a></li>
+        <li class="nav-item dropdown">
+          <a href="../index.html#products" class="nav-link">Products <i class="fas fa-chevron-down"></i></a>
+          <ul class="dropdown-menu">
+            <li><a href="glassware.html">Glassware</a></li>
+            <li><a href="apparatus.html">Apparatus</a></li>
+            <li><a href="chemicals.html">Chemicals</a></li>
+            <li><a href="diagnostics.html">Diagnostics</a></li>
+            <li><a href="filtration.html">Filtration</a></li>
+            <li><a href="lovibond.html">Lovibond</a></li>
+            <li><a href="paper-products.html">Paper Products</a></li>
+          </ul>
+        </li>
+        <li class="nav-item"><a href="../index.html#services" class="nav-link">Services</a></li>
+        <li class="nav-item"><a href="../index.html#contact" class="nav-link">Contact</a></li>
+        <li class="nav-item"><a href="../index.html#quote" class="nav-link btn-quote">Request Quote</a></li>
+      </ul>
+      <div class="hamburger" id="hamburger">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+      </div>
     </div>
+  </nav>
 
-    <!-- Product Details Modal (common to all product pages) -->
-    <div class="modal-overlay" id="product-details-modal">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h2 id="modal-product-name">Product Name</h2>
-                <button class="modal-close" id="modal-close"><i class="fas fa-times"></i></button>
-            </div>
-            <div class="modal-body">
-                <div class="product-details-content">
-                    <p id="modal-product-description"></p>
-                    <div class="details-grid">
-                        <div class="detail-section">
-                            <h4>Features</h4>
-                            <ul id="modal-product-features"></ul>
-                        </div>
-                        <div class="detail-section">
-                            <h4>Specifications</h4>
-                            <ul id="modal-product-specs"></ul>
-                        </div>
-                    </div>
-                    <div class="detail-section" id="modal-product-applications-section" style="display: none;">
-                        <h4>Applications</h4>
-                        <ul id="modal-product-applications"></ul>
-                    </div>
-                    <div class="detail-section" id="modal-product-certifications-section" style="display: none;">
-                        <h4>Certifications</h4>
-                        <ul id="modal-product-certifications"></ul>
-                    </div>
-                    <div class="detail-section" id="modal-product-includes-section" style="display: none;">
-                        <h4>Includes</h4>
-                        <ul id="modal-product-includes"></ul>
-                    </div>
-                    <div class="detail-section" id="modal-product-promotion-section" style="display: none;">
-                        <h4>Promotion</h4>
-                        <p id="modal-product-promotion"></p>
-                    </div>
-                </div>
-            </div>
-            <div class="modal-footer">
-                <button class="btn btn-primary" id="modal-add-to-quote">Add to Quote</button>
-            </div>
-        </div>
+  <!-- Hero Section -->
+  <section class="page-header">
+    <div class="container">
+      <div class="breadcrumb">
+        <a href="../index.html">Home</a>
+        <i class="fas fa-chevron-right"></i>
+        <a href="../index.html#products">Products</a>
+        <i class="fas fa-chevron-right"></i>
+        <span>Paper Products</span>
+      </div>
+      <h1 class="page-title">Paper Products</h1>
+      <p class="page-description">Browse our range of laboratory, medical, and hygiene paper products.</p>
     </div>
+  </section>
 
-    <script src="../js/products.js"></script>
-    <script>
-        document.addEventListener('DOMContentLoaded', () => {
-            const p                {
-                    id: \'70m-paper\',
-                    name: \'70M Paper Towel\',
-                    description: \'A highly absorbent 2-ply paper towel. It utilizes DESL technology, making it one of the strongest and most absorbent paper towels and wiping solutions available. It has been a tried and trusted choice for professionals in the South African away-from-home market for over 10 years.\',
-                    features: [
-                        \'2 Ply Super Absorbent Paper\',
-                        \'Eco Friendly\',
-                        \'Perforated\',
-                        \'Hygienic\',
-                        \'One paper towel is equivalent to 6 standard towels.\'
-                    ],
-                    specs: [
-                        \'70 meters\',
-                        \'Sheet Size: 215mm x 350mm\',
-                        \'Perforated\',
-                        \'Laminated\',
-                        \'Embossed Paper\'
-                    ],
-                    certifications: [
-                        \'FSC certification ensures it conforms to internationally recognized environmental standards.\'
-                    ],
-                    category: \'paper-towels\'
-                },: \'100m-paper\',
-                    name: \'100M Paper Towel (Unperforated)\',
-                    description: \'A highly absorbent 2-ply paper towel that gives the user full paper length control.\',
-                    features: [
-                        \'2 Ply Super Absorbent Paper\',
-                        \'Eco Friendly\',
-                        \'Unperforated\',
-                        \'Hygienic\',
-                        \'The new 100m paper towel is equivalent to nine standard paper towels.\'
-                    ],
-                    specs: [
-                        \'100 meters\',
-                        \'Sheet Size: 215mm x 350mm\',
-                        \'Unperforated\',
-                        \'Laminated\',
-                        \'Embossed Paper\'
-                    ],
-                    certifications: [
-                        \'FSC certified.\'
-                    ],
-                    category                {
-                    id: \'dispenser\',
-                    name: \'Paper Towel Dispenser\',
-                    description: \'A durable, easy-to-use, and affordable wall-mounted dispenser specifically designed for paper towels. It is ideal for hygiene-sensitive environments.\',
-                    features: [
-                        \'Easy to Load\',
-                        \'Easy to Use\',
-                        \'Cost Effective\',
-                        \'Hygienic\',
-                        \'Impact Resistant\',
-                        \'Versatile Installation (can be wall-mounted or used as a counter-top unit).\'
-                    ],
-                    applications: [
-                        \'Suitable for high-traffic environments, workshops, production, restaurants, kitchens, and food preparation areas.\'
-                    ],
-                    category: \'dispenser\'
-                       {
-                    id: \'pos-stand\',
-                    name: \'Point of Sale Display Stand\',
-                    description: \'A fully stocked point of sale display stand provided with the purchase.\',
-                    includes: [
-                        \'A sample dispenser and backup stock.\'
-                    ],
-                    promotion: \'During a promotion, the first 10 customers who purchase 2 rolls of paper receive 10 free dispensers.\',
-                    category: \'pos-stand\'
-                }      ];
+  <!-- Filter Section -->
+  <section class="product-filters">
+    <div class="container">
+      <div class="filter-bar">
+        <div class="search-box">
+          <i class="fas fa-search"></i>
+          <input type="text" id="product-search" placeholder="Search products...">
+        </div>
+        <div class="filter-options">
+          <select id="category-filter">
+            <option value="all">All Categories</option>
+            <option value="paper-towels">Paper Towels</option>
+            <option value="lab-paper-products">Lab Paper Products</option>
+            <option value="filtration-paper">Filtration Paper</option>
+            <option value="test-paper">Test Paper & Strips</option>
+            <option value="hygiene-paper">Hygiene Paper</option>
+            <option value="food-service-paper">Food Service Paper</option>
+            <option value="medical-paper">Medical Paper</option>
+            <option value="lab-stationery">Lab Stationery</option>
+            <option value="dispenser">Dispensers & Accessories</option>
+            <option value="lab-accessories">Lab Accessories</option>
+            <option value="packaging-paper">Packaging Paper</option>
+          </select>
+        </div>
+      </div>
+    </div>
+  </section>
 
-            renderProducts(productsData);
-            setupSearchAndFilters(productsData);
-            setupQuoteCart();
-        });
-    </script>
+  <!-- Product Grid -->
+  <section class="products-grid">
+    <div class="container">
+      <div class="products-container" id="products-container">
+        <!-- Products -->
+<!-- 70M Paper Towel Roll -->
+<div class="product-card" data-category="paper-towels">
+  <div class="product-image">
+    <img src="https://via.placeholder.com/350x200?text=70M+Paper+Towel" alt="70M Paper Towel Roll">
+    <div class="product-overlay">
+      <button class="btn btn-primary quick-quote" data-product="70M Paper Towel Roll">
+        <i class="fas fa-calculator"></i> Quick Quote
+      </button>
+    </div>
+  </div>
+  <div class="product-info">
+    <h3 class="product-name">70M Paper Towel Roll</h3>
+    <p class="product-description">High-absorbency paper towel roll ideal for laboratory and clinical settings.</p>
+    <div class="product-specs">
+      <span class="spec-tag">70M Roll</span>
+      <span class="spec-tag">2-Ply</span>
+      <span class="spec-tag">Perforated</span>
+    </div>
+    <div class="product-actions">
+      <button class="btn btn-secondary product-details" data-product="70M Paper Towel Roll">
+        <i class="fas fa-info-circle"></i> Details
+      </button>
+      <button class="btn btn-primary add-to-quote" data-product="70M Paper Towel Roll">
+        <i class="fas fa-plus"></i> Add to Quote
+      </button>
+    </div>
+  </div>
+</div>
+
+<!-- Kimwipes Lab Wipes -->
+<div class="product-card" data-category="lab-paper-products">
+  <div class="product-image">
+    <img src="https://via.placeholder.com/350x200?text=Kimwipes" alt="Kimwipes Lab Wipes">
+    <div class="product-overlay">
+      <button class="btn btn-primary quick-quote" data-product="Kimwipes Lab Wipes">
+        <i class="fas fa-calculator"></i> Quick Quote
+      </button>
+    </div>
+  </div>
+  <div class="product-info">
+    <h3 class="product-name">Kimwipes Lab Wipes</h3>
+    <p class="product-description">Lint-free wipes ideal for cleaning lab instruments and delicate surfaces.</p>
+    <div class="product-specs">
+      <span class="spec-tag">4.4 x 8.4 in</span>
+      <span class="spec-tag">280 wipes/box</span>
+      <span class="spec-tag">Anti-static</span>
+    </div>
+    <div class="product-actions">
+      <button class="btn btn-secondary product-details" data-product="Kimwipes Lab Wipes">
+        <i class="fas fa-info-circle"></i> Details
+      </button>
+      <button class="btn btn-primary add-to-quote" data-product="Kimwipes Lab Wipes">
+        <i class="fas fa-plus"></i> Add to Quote
+      </button>
+    </div>
+  </div>
+</div>
+
+<!-- Filter Paper - Qualitative Grade 1 -->
+<div class="product-card" data-category="filtration-paper">
+  <div class="product-image">
+    <img src="https://via.placeholder.com/350x200?text=Qualitative+Filter+Paper" alt="Filter Paper - Grade 1">
+    <div class="product-overlay">
+      <button class="btn btn-primary quick-quote" data-product="Filter Paper - Qualitative Grade 1">
+        <i class="fas fa-calculator"></i> Quick Quote
+      </button>
+    </div>
+  </div>
+  <div class="product-info">
+    <h3 class="product-name">Filter Paper - Qualitative Grade 1</h3>
+    <p class="product-description">General-purpose lab filter paper for routine qualitative analysis.</p>
+    <div class="product-specs">
+      <span class="spec-tag">110mm</span>
+      <span class="spec-tag">Medium flow</span>
+      <span class="spec-tag">100 sheets/pack</span>
+    </div>
+    <div class="product-actions">
+      <button class="btn btn-secondary product-details" data-product="Filter Paper - Qualitative Grade 1">
+        <i class="fas fa-info-circle"></i> Details
+      </button>
+      <button class="btn btn-primary add-to-quote" data-product="Filter Paper - Qualitative Grade 1">
+        <i class="fas fa-plus"></i> Add to Quote
+      </button>
+    </div>
+  </div>
+</div>
+
+<!-- pH Test Paper Roll 0–14 -->
+<div class="product-card" data-category="test-paper">
+  <div class="product-image">
+    <img src="https://via.placeholder.com/350x200?text=pH+Test+Roll" alt="pH Test Paper Roll 0–14">
+    <div class="product-overlay">
+      <button class="btn btn-primary quick-quote" data-product="pH Test Paper Roll 0–14">
+        <i class="fas fa-calculator"></i> Quick Quote
+      </button>
+    </div>
+  </div>
+  <div class="product-info">
+    <h3 class="product-name">pH Test Paper Roll 0–14</h3>
+    <p class="product-description">Universal pH test paper in dispenser roll for fast and easy measurement.</p>
+    <div class="product-specs">
+      <span class="spec-tag">Range: 0–14</span>
+      <span class="spec-tag">5M Roll</span>
+      <span class="spec-tag">Color Chart Included</span>
+    </div>
+    <div class="product-actions">
+      <button class="btn btn-secondary product-details" data-product="pH Test Paper Roll 0–14">
+        <i class="fas fa-info-circle"></i> Details
+      </button>
+      <button class="btn btn-primary add-to-quote" data-product="pH Test Paper Roll 0–14">
+        <i class="fas fa-plus"></i> Add to Quote
+      </button>
+    </div>
+  </div>
+</div>
+
+<!-- Toilet Paper - Jumbo Roll 2-Ply -->
+<div class="product-card" data-category="hygiene-paper">
+  <div class="product-image">
+    <img src="https://via.placeholder.com/350x200?text=Jumbo+Toilet+Paper" alt="Toilet Paper - Jumbo Roll">
+    <div class="product-overlay">
+      <button class="btn btn-primary quick-quote" data-product="Toilet Paper - Jumbo Roll 2-Ply">
+        <i class="fas fa-calculator"></i> Quick Quote
+      </button>
+    </div>
+  </div>
+  <div class="product-info">
+    <h3 class="product-name">Toilet Paper - Jumbo Roll 2-Ply</h3>
+    <p class="product-description">Economical jumbo toilet rolls ideal for laboratories, clinics, and public restrooms.</p>
+    <div class="product-specs">
+      <span class="spec-tag">2-Ply</span>
+      <span class="spec-tag">300M Roll</span>
+      <span class="spec-tag">Core Size: 76mm</span>
+    </div>
+    <div class="product-actions">
+      <button class="btn btn-secondary product-details" data-product="Toilet Paper - Jumbo Roll 2-Ply">
+        <i class="fas fa-info-circle"></i> Details
+      </button>
+      <button class="btn btn-primary add-to-quote" data-product="Toilet Paper - Jumbo Roll 2-Ply">
+        <i class="fas fa-plus"></i> Add to Quote
+      </button>
+    </div>
+  </div>
+</div>
+<!-- Lab Notebook - Waterproof Paper -->
+<div class="product-card" data-category="lab-stationery">
+  <div class="product-image">
+    <img src="https://via.placeholder.com/350x200?text=Lab+Notebook" alt="Lab Notebook - Waterproof Paper">
+    <div class="product-overlay">
+      <button class="btn btn-primary quick-quote" data-product="Lab Notebook - Waterproof Paper">
+        <i class="fas fa-calculator"></i> Quick Quote
+      </button>
+    </div>
+  </div>
+  <div class="product-info">
+    <h3 class="product-name">Lab Notebook - Waterproof Paper</h3>
+    <p class="product-description">Durable, waterproof lab notebook for permanent record keeping in wet environments.</p>
+    <div class="product-specs">
+      <span class="spec-tag">100 pages</span>
+      <span class="spec-tag">A5 size</span>
+      <span class="spec-tag">Grid & lined format</span>
+    </div>
+    <div class="product-actions">
+      <button class="btn btn-secondary product-details" data-product="Lab Notebook - Waterproof Paper">
+        <i class="fas fa-info-circle"></i> Details
+      </button>
+      <button class="btn btn-primary add-to-quote" data-product="Lab Notebook - Waterproof Paper">
+        <i class="fas fa-plus"></i> Add to Quote
+      </button>
+    </div>
+  </div>
+</div>
+
+<!-- Sterilization Indicator Strips -->
+<div class="product-card" data-category="medical-paper">
+  <div class="product-image">
+    <img src="https://via.placeholder.com/350x200?text=Indicator+Strips" alt="Sterilization Indicator Strips">
+    <div class="product-overlay">
+      <button class="btn btn-primary quick-quote" data-product="Sterilization Indicator Strips">
+        <i class="fas fa-calculator"></i> Quick Quote
+      </button>
+    </div>
+  </div>
+  <div class="product-info">
+    <h3 class="product-name">Sterilization Indicator Strips</h3>
+    <p class="product-description">Chemical indicator strips for validating steam sterilization processes.</p>
+    <div class="product-specs">
+      <span class="spec-tag">Steam Class 6</span>
+      <span class="spec-tag">250/box</span>
+      <span class="spec-tag">Color change on exposure</span>
+    </div>
+    <div class="product-actions">
+      <button class="btn btn-secondary product-details" data-product="Sterilization Indicator Strips">
+        <i class="fas fa-info-circle"></i> Details
+      </button>
+      <button class="btn btn-primary add-to-quote" data-product="Sterilization Indicator Strips">
+        <i class="fas fa-plus"></i> Add to Quote
+      </button>
+    </div>
+  </div>
+</div>
+
+<!-- Filter Paper - Ashless Grade 42 -->
+<div class="product-card" data-category="filtration-paper">
+  <div class="product-image">
+    <img src="https://via.placeholder.com/350x200?text=Ashless+Filter+Paper" alt="Filter Paper - Ashless Grade 42">
+    <div class="product-overlay">
+      <button class="btn btn-primary quick-quote" data-product="Filter Paper - Ashless Grade 42">
+        <i class="fas fa-calculator"></i> Quick Quote
+      </button>
+    </div>
+  </div>
+  <div class="product-info">
+    <h3 class="product-name">Filter Paper - Ashless Grade 42</h3>
+    <p class="product-description">High-retention filter paper for gravimetric analysis and sample prep.</p>
+    <div class="product-specs">
+      <span class="spec-tag">Ash content: &lt;0.007%</span>
+      <span class="spec-tag">2.5 µm retention</span>
+      <span class="spec-tag">110mm</span>
+    </div>
+    <div class="product-actions">
+      <button class="btn btn-secondary product-details" data-product="Filter Paper - Ashless Grade 42">
+        <i class="fas fa-info-circle"></i> Details
+      </button>
+      <button class="btn btn-primary add-to-quote" data-product="Filter Paper - Ashless Grade 42">
+        <i class="fas fa-plus"></i> Add to Quote
+      </button>
+    </div>
+  </div>
+</div>
+
+<!-- Facial Tissues - Soft Touch -->
+<div class="product-card" data-category="hygiene-paper">
+  <div class="product-image">
+    <img src="https://via.placeholder.com/350x200?text=Facial+Tissues" alt="Facial Tissues - Soft Touch">
+    <div class="product-overlay">
+      <button class="btn btn-primary quick-quote" data-product="Facial Tissues - Soft Touch">
+        <i class="fas fa-calculator"></i> Quick Quote
+      </button>
+    </div>
+  </div>
+  <div class="product-info">
+    <h3 class="product-name">Facial Tissues - Soft Touch</h3>
+    <p class="product-description">Gentle 2-ply facial tissues suitable for labs, clinics, and patient rooms.</p>
+    <div class="product-specs">
+      <span class="spec-tag">100 tissues/box</span>
+      <span class="spec-tag">Soft & absorbent</span>
+      <span class="spec-tag">Boxed pack</span>
+    </div>
+    <div class="product-actions">
+      <button class="btn btn-secondary product-details" data-product="Facial Tissues - Soft Touch">
+        <i class="fas fa-info-circle"></i> Details
+      </button>
+      <button class="btn btn-primary add-to-quote" data-product="Facial Tissues - Soft Touch">
+        <i class="fas fa-plus"></i> Add to Quote
+      </button>
+    </div>
+  </div>
+</div>
+
+<!-- Paper Towel Dispenser - Wall Mount -->
+<div class="product-card" data-category="dispenser">
+  <div class="product-image">
+    <img src="https://via.placeholder.com/350x200?text=Paper+Towel+Dispenser" alt="Paper Towel Dispenser - Wall Mount">
+    <div class="product-overlay">
+      <button class="btn btn-primary quick-quote" data-product="Paper Towel Dispenser - Wall Mount">
+        <i class="fas fa-calculator"></i> Quick Quote
+      </button>
+    </div>
+  </div>
+  <div class="product-info">
+    <h3 class="product-name">Paper Towel Dispenser - Wall Mount</h3>
+    <p class="product-description">Durable dispenser for standard roll towels with easy-pull mechanism.</p>
+    <div class="product-specs">
+      <span class="spec-tag">ABS Plastic</span>
+      <span class="spec-tag">Key-lock cover</span>
+      <span class="spec-tag">Fits 200mm rolls</span>
+    </div>
+    <div class="product-actions">
+      <button class="btn btn-secondary product-details" data-product="Paper Towel Dispenser - Wall Mount">
+        <i class="fas fa-info-circle"></i> Details
+      </button>
+      <button class="btn btn-primary add-to-quote" data-product="Paper Towel Dispenser - Wall Mount">
+        <i class="fas fa-plus"></i> Add to Quote
+      </button>
+    </div>
+  </div>
+</div>
+<!-- Extraction Thimbles - Cellulose -->
+<div class="product-card" data-category="filtration-paper">
+  <div class="product-image">
+    <img src="https://via.placeholder.com/350x200?text=Extraction+Thimbles" alt="Extraction Thimbles - Cellulose">
+    <div class="product-overlay">
+      <button class="btn btn-primary quick-quote" data-product="Extraction Thimbles - Cellulose">
+        <i class="fas fa-calculator"></i> Quick Quote
+      </button>
+    </div>
+  </div>
+  <div class="product-info">
+    <h3 class="product-name">Extraction Thimbles - Cellulose</h3>
+    <p class="product-description">Cellulose thimbles for Soxhlet extraction and other solvent-based extractions.</p>
+    <div class="product-specs">
+      <span class="spec-tag">26 x 60 mm</span>
+      <span class="spec-tag">Pack of 25</span>
+      <span class="spec-tag">High purity cellulose</span>
+    </div>
+    <div class="product-actions">
+      <button class="btn btn-secondary product-details" data-product="Extraction Thimbles - Cellulose">
+        <i class="fas fa-info-circle"></i> Details
+      </button>
+      <button class="btn btn-primary add-to-quote" data-product="Extraction Thimbles - Cellulose">
+        <i class="fas fa-plus"></i> Add to Quote
+      </button>
+    </div>
+  </div>
+</div>
+
+<!-- Crepe Paper for Sterilization -->
+<div class="product-card" data-category="packaging-paper">
+  <div class="product-image">
+    <img src="https://via.placeholder.com/350x200?text=Crepe+Sterilization+Paper" alt="Crepe Paper for Sterilization">
+    <div class="product-overlay">
+      <button class="btn btn-primary quick-quote" data-product="Crepe Paper for Sterilization">
+        <i class="fas fa-calculator"></i> Quick Quote
+      </button>
+    </div>
+  </div>
+  <div class="product-info">
+    <h3 class="product-name">Crepe Paper for Sterilization</h3>
+    <p class="product-description">Medical-grade crepe paper for sterilization packaging with high bacterial barrier.</p>
+    <div class="product-specs">
+      <span class="spec-tag">500 x 500 mm</span>
+      <span class="spec-tag">Blue</span>
+      <span class="spec-tag">100 sheets/pack</span>
+    </div>
+    <div class="product-actions">
+      <button class="btn btn-secondary product-details" data-product="Crepe Paper for Sterilization">
+        <i class="fas fa-info-circle"></i> Details
+      </button>
+      <button class="btn btn-primary add-to-quote" data-product="Crepe Paper for Sterilization">
+        <i class="fas fa-plus"></i> Add to Quote
+      </button>
+    </div>
+  </div>
+</div>
+
+<!-- Lab Wipes - Lint Free -->
+<div class="product-card" data-category="lab-paper-products">
+  <div class="product-image">
+    <img src="https://via.placeholder.com/350x200?text=Lint-Free+Lab+Wipes" alt="Lab Wipes - Lint Free">
+    <div class="product-overlay">
+      <button class="btn btn-primary quick-quote" data-product="Lab Wipes - Lint Free">
+        <i class="fas fa-calculator"></i> Quick Quote
+      </button>
+    </div>
+  </div>
+  <div class="product-info">
+    <h3 class="product-name">Lab Wipes - Lint Free</h3>
+    <p class="product-description">Non-abrasive, lint-free wipes for cleaning sensitive lab surfaces and equipment.</p>
+    <div class="product-specs">
+      <span class="spec-tag">230 x 230 mm</span>
+      <span class="spec-tag">150 wipes/pack</span>
+      <span class="spec-tag">Polycellulose blend</span>
+    </div>
+    <div class="product-actions">
+      <button class="btn btn-secondary product-details" data-product="Lab Wipes - Lint Free">
+        <i class="fas fa-info-circle"></i> Details
+      </button>
+      <button class="btn btn-primary add-to-quote" data-product="Lab Wipes - Lint Free">
+        <i class="fas fa-plus"></i> Add to Quote
+      </button>
+    </div>
+  </div>
+</div>
+
+<!-- Napkins - 1-Ply White -->
+<div class="product-card" data-category="food-service-paper">
+  <div class="product-image">
+    <img src="https://via.placeholder.com/350x200?text=White+Napkins" alt="Napkins - 1-Ply White">
+    <div class="product-overlay">
+      <button class="btn btn-primary quick-quote" data-product="Napkins - 1-Ply White">
+        <i class="fas fa-calculator"></i> Quick Quote
+      </button>
+    </div>
+  </div>
+  <div class="product-info">
+    <h3 class="product-name">Napkins - 1-Ply White</h3>
+    <p class="product-description">Disposable 1-ply white napkins for general use in labs or cafeterias.</p>
+    <div class="product-specs">
+      <span class="spec-tag">300 x 300 mm</span>
+      <span class="spec-tag">1000/pack</span>
+      <span class="spec-tag">Recyclable</span>
+    </div>
+    <div class="product-actions">
+      <button class="btn btn-secondary product-details" data-product="Napkins - 1-Ply White">
+        <i class="fas fa-info-circle"></i> Details
+      </button>
+      <button class="btn btn-primary add-to-quote" data-product="Napkins - 1-Ply White">
+        <i class="fas fa-plus"></i> Add to Quote
+      </button>
+    </div>
+  </div>
+</div>
+
+<!-- Sterilization Wrap - SMS Material -->
+<div class="product-card" data-category="medical-paper">
+  <div class="product-image">
+    <img src="https://via.placeholder.com/350x200?text=SMS+Wrap" alt="Sterilization Wrap - SMS Material">
+    <div class="product-overlay">
+      <button class="btn btn-primary quick-quote" data-product="Sterilization Wrap - SMS Material">
+        <i class="fas fa-calculator"></i> Quick Quote
+      </button>
+    </div>
+  </div>
+  <div class="product-info">
+    <h3 class="product-name">Sterilization Wrap - SMS Material</h3>
+    <p class="product-description">Strong, fluid-repellent sterilization wrap for surgical instruments.</p>
+    <div class="product-specs">
+      <span class="spec-tag">600 x 600 mm</span>
+      <span class="spec-tag">Blue SMS</span>
+      <span class="spec-tag">50 sheets/pack</span>
+    </div>
+    <div class="product-actions">
+      <button class="btn btn-secondary product-details" data-product="Sterilization Wrap - SMS Material">
+        <i class="fas fa-info-circle"></i> Details
+      </button>
+      <button class="btn btn-primary add-to-quote" data-product="Sterilization Wrap - SMS Material">
+        <i class="fas fa-plus"></i> Add to Quote
+      </button>
+    </div>
+  </div>
+</div>
+
+<!-- Glucose Test Strips - Urine -->
+<div class="product-card" data-category="test-paper">
+  <div class="product-image">
+    <img src="https://via.placeholder.com/350x200?text=Glucose+Test+Strips" alt="Glucose Test Strips - Urine">
+    <div class="product-overlay">
+      <button class="btn btn-primary quick-quote" data-product="Glucose Test Strips - Urine">
+        <i class="fas fa-calculator"></i> Quick Quote
+      </button>
+    </div>
+  </div>
+  <div class="product-info">
+    <h3 class="product-name">Glucose Test Strips - Urine</h3>
+    <p class="product-description">Reagent strips for detecting glucose levels in urine samples.</p>
+    <div class="product-specs">
+      <span class="spec-tag">100 strips/bottle</span>
+      <span class="spec-tag">Visual color chart</span>
+      <span class="spec-tag">Shelf-stable</span>
+    </div>
+    <div class="product-actions">
+      <button class="btn btn-secondary product-details" data-product="Glucose Test Strips - Urine">
+        <i class="fas fa-info-circle"></i> Details
+      </button>
+      <button class="btn btn-primary add-to-quote" data-product="Glucose Test Strips - Urine">
+        <i class="fas fa-plus"></i> Add to Quote
+      </button>
+    </div>
+  </div>
+</div>
+
+<!-- pH Indicator Rolls - Wide Range -->
+<div class="product-card" data-category="test-paper">
+  <div class="product-image">
+    <img src="https://via.placeholder.com/350x200?text=pH+Indicator+Rolls" alt="pH Indicator Rolls - Wide Range">
+    <div class="product-overlay">
+      <button class="btn btn-primary quick-quote" data-product="pH Indicator Rolls - Wide Range">
+        <i class="fas fa-calculator"></i> Quick Quote
+      </button>
+    </div>
+  </div>
+  <div class="product-info">
+    <h3 class="product-name">pH Indicator Rolls - Wide Range</h3>
+    <p class="product-description">Universal pH paper roll for quick and economical pH testing.</p>
+    <div class="product-specs">
+      <span class="spec-tag">pH 1–14</span>
+      <span class="spec-tag">5m roll</span>
+      <span class="spec-tag">Includes color chart</span>
+    </div>
+    <div class="product-actions">
+      <button class="btn btn-secondary product-details" data-product="pH Indicator Rolls - Wide Range">
+        <i class="fas fa-info-circle"></i> Details
+      </button>
+      <button class="btn btn-primary add-to-quote" data-product="pH Indicator Rolls - Wide Range">
+        <i class="fas fa-plus"></i> Add to Quote
+      </button>
+    </div>
+  </div>
+</div>
+
+<!-- Toilet Tissue - 2 Ply White -->
+<div class="product-card" data-category="hygiene-paper">
+  <div class="product-image">
+    <img src="https://via.placeholder.com/350x200?text=Toilet+Tissue" alt="Toilet Tissue - 2 Ply White">
+    <div class="product-overlay">
+      <button class="btn btn-primary quick-quote" data-product="Toilet Tissue - 2 Ply White">
+        <i class="fas fa-calculator"></i> Quick Quote
+      </button>
+    </div>
+  </div>
+  <div class="product-info">
+    <h3 class="product-name">Toilet Tissue - 2 Ply White</h3>
+    <p class="product-description">Soft and strong 2-ply toilet paper ideal for labs, clinics, and offices.</p>
+    <div class="product-specs">
+      <span class="spec-tag">48 rolls/pack</span>
+      <span class="spec-tag">Recycled paper</span>
+      <span class="spec-tag">Septic safe</span>
+    </div>
+    <div class="product-actions">
+      <button class="btn btn-secondary product-details" data-product="Toilet Tissue - 2 Ply White">
+        <i class="fas fa-info-circle"></i> Details
+      </button>
+      <button class="btn btn-primary add-to-quote" data-product="Toilet Tissue - 2 Ply White">
+        <i class="fas fa-plus"></i> Add to Quote
+      </button>
+    </div>
+  </div>
+</div>
+
+<!-- Parafilm Dispenser - Bench Top -->
+<div class="product-card" data-category="lab-accessories">
+  <div class="product-image">
+    <img src="https://via.placeholder.com/350x200?text=Parafilm+Dispenser" alt="Parafilm Dispenser - Bench Top">
+    <div class="product-overlay">
+      <button class="btn btn-primary quick-quote" data-product="Parafilm Dispenser - Bench Top">
+        <i class="fas fa-calculator"></i> Quick Quote
+      </button>
+    </div>
+  </div>
+  <div class="product-info">
+    <h3 class="product-name">Parafilm Dispenser - Bench Top</h3>
+    <p class="product-description">Durable bench-top dispenser for safely storing and cutting parafilm rolls.</p>
+    <div class="product-specs">
+      <span class="spec-tag">Holds 100mm rolls</span>
+      <span class="spec-tag">Includes cutting blade</span>
+      <span class="spec-tag">Transparent acrylic</span>
+    </div>
+    <div class="product-actions">
+      <button class="btn btn-secondary product-details" data-product="Parafilm Dispenser - Bench Top">
+        <i class="fas fa-info-circle"></i> Details
+      </button>
+      <button class="btn btn-primary add-to-quote" data-product="Parafilm Dispenser - Bench Top">
+        <i class="fas fa-plus"></i> Add to Quote
+      </button>
+    </div>
+  </div>
+</div>
+
+<!-- Lab Notebook - Ruled Pages -->
+<div class="product-card" data-category="lab-stationery">
+  <div class="product-image">
+    <img src="https://via.placeholder.com/350x200?text=Lab+Notebook" alt="Lab Notebook - Ruled Pages">
+    <div class="product-overlay">
+      <button class="btn btn-primary quick-quote" data-product="Lab Notebook - Ruled Pages">
+        <i class="fas fa-calculator"></i> Quick Quote
+      </button>
+    </div>
+  </div>
+  <div class="product-info">
+    <h3 class="product-name">Lab Notebook - Ruled Pages</h3>
+    <p class="product-description">Hardcover lab notebook with numbered pages for documenting experiments.</p>
+    <div class="product-specs">
+      <span class="spec-tag">200 pages</span>
+      <span class="spec-tag">Acid-free paper</span>
+      <span class="spec-tag">Hardbound</span>
+    </div>
+    <div class="product-actions">
+      <button class="btn btn-secondary product-details" data-product="Lab Notebook - Ruled Pages">
+        <i class="fas fa-info-circle"></i> Details
+      </button>
+      <button class="btn btn-primary add-to-quote" data-product="Lab Notebook - Ruled Pages">
+        <i class="fas fa-plus"></i> Add to Quote
+      </button>
+    </div>
+  </div>
+</div>
+<!-- Exam Table Paper Rolls -->
+<div class="product-card" data-category="hygiene-paper">
+  <div class="product-image">
+    <img src="https://via.placeholder.com/350x200?text=Exam+Table+Paper" alt="Exam Table Paper Rolls">
+    <div class="product-overlay">
+      <button class="btn btn-primary quick-quote" data-product="Exam Table Paper Rolls">
+        <i class="fas fa-calculator"></i> Quick Quote
+      </button>
+    </div>
+  </div>
+  <div class="product-info">
+    <h3 class="product-name">Exam Table Paper Rolls</h3>
+    <p class="product-description">Durable crepe paper rolls for patient exam tables in clinical settings.</p>
+    <div class="product-specs">
+      <span class="spec-tag">21” x 125’</span>
+      <span class="spec-tag">Crepe texture</span>
+      <span class="spec-tag">Individually wrapped</span>
+    </div>
+    <div class="product-actions">
+      <button class="btn btn-secondary product-details" data-product="Exam Table Paper Rolls">
+        <i class="fas fa-info-circle"></i> Details
+      </button>
+      <button class="btn btn-primary add-to-quote" data-product="Exam Table Paper Rolls">
+        <i class="fas fa-plus"></i> Add to Quote
+      </button>
+    </div>
+  </div>
+</div>
+
+<!-- Sterilization Wrapping Paper -->
+<div class="product-card" data-category="medical-paper">
+  <div class="product-image">
+    <img src="https://via.placeholder.com/350x200?text=Sterilization+Paper" alt="Sterilization Wrapping Paper">
+    <div class="product-overlay">
+      <button class="btn btn-primary quick-quote" data-product="Sterilization Wrapping Paper">
+        <i class="fas fa-calculator"></i> Quick Quote
+      </button>
+    </div>
+  </div>
+  <div class="product-info">
+    <h3 class="product-name">Sterilization Wrapping Paper</h3>
+    <p class="product-description">High-grade medical paper for steam, EO, and gas sterilization processes.</p>
+    <div class="product-specs">
+      <span class="spec-tag">Crepe finish</span>
+      <span class="spec-tag">Various sizes</span>
+      <span class="spec-tag">Bacterial barrier</span>
+    </div>
+    <div class="product-actions">
+      <button class="btn btn-secondary product-details" data-product="Sterilization Wrapping Paper">
+        <i class="fas fa-info-circle"></i> Details
+      </button>
+      <button class="btn btn-primary add-to-quote" data-product="Sterilization Wrapping Paper">
+        <i class="fas fa-plus"></i> Add to Quote
+      </button>
+    </div>
+  </div>
+</div>
+
+<!-- Face Tissue Box - Soft White -->
+<div class="product-card" data-category="hygiene-paper">
+  <div class="product-image">
+    <img src="https://via.placeholder.com/350x200?text=Face+Tissue" alt="Face Tissue Box - Soft White">
+    <div class="product-overlay">
+      <button class="btn btn-primary quick-quote" data-product="Face Tissue Box - Soft White">
+        <i class="fas fa-calculator"></i> Quick Quote
+      </button>
+    </div>
+  </div>
+  <div class="product-info">
+    <h3 class="product-name">Face Tissue Box - Soft White</h3>
+    <p class="product-description">Two-ply facial tissues ideal for lab benches, clinics, and restrooms.</p>
+    <div class="product-specs">
+      <span class="spec-tag">2-ply</span>
+      <span class="spec-tag">100 sheets/box</span>
+      <span class="spec-tag">Hypoallergenic</span>
+    </div>
+    <div class="product-actions">
+      <button class="btn btn-secondary product-details" data-product="Face Tissue Box - Soft White">
+        <i class="fas fa-info-circle"></i> Details
+      </button>
+      <button class="btn btn-primary add-to-quote" data-product="Face Tissue Box - Soft White">
+        <i class="fas fa-plus"></i> Add to Quote
+      </button>
+    </div>
+  </div>
+</div>
+
+<!-- Crepe Paper - Colored Rolls -->
+<div class="product-card" data-category="packaging-paper">
+  <div class="product-image">
+    <img src="https://via.placeholder.com/350x200?text=Crepe+Paper+Rolls" alt="Crepe Paper - Colored Rolls">
+    <div class="product-overlay">
+      <button class="btn btn-primary quick-quote" data-product="Crepe Paper - Colored Rolls">
+        <i class="fas fa-calculator"></i> Quick Quote
+      </button>
+    </div>
+  </div>
+  <div class="product-info">
+    <h3 class="product-name">Crepe Paper - Colored Rolls</h3>
+    <p class="product-description">Versatile colored crepe paper rolls for wrapping, labeling, or packaging.</p>
+    <div class="product-specs">
+      <span class="spec-tag">25m x 50cm</span>
+      <span class="spec-tag">10 colors</span>
+      <span class="spec-tag">Tear-resistant</span>
+    </div>
+    <div class="product-actions">
+      <button class="btn btn-secondary product-details" data-product="Crepe Paper - Colored Rolls">
+        <i class="fas fa-info-circle"></i> Details
+      </button>
+      <button class="btn btn-primary add-to-quote" data-product="Crepe Paper - Colored Rolls">
+        <i class="fas fa-plus"></i> Add to Quote
+      </button>
+    </div>
+  </div>
+</div>
+
+<!-- Paper Cups - Disposable Lab Use -->
+<div class="product-card" data-category="food-service-paper">
+  <div class="product-image">
+    <img src="https://via.placeholder.com/350x200?text=Lab+Paper+Cups" alt="Paper Cups - Disposable Lab Use">
+    <div class="product-overlay">
+      <button class="btn btn-primary quick-quote" data-product="Paper Cups - Disposable Lab Use">
+        <i class="fas fa-calculator"></i> Quick Quote
+      </button>
+    </div>
+  </div>
+  <div class="product-info">
+    <h3 class="product-name">Paper Cups - Disposable Lab Use</h3>
+    <p class="product-description">Single-use paper cups for temporary specimen collection or lab rinsing.</p>
+    <div class="product-specs">
+      <span class="spec-tag">100 cups/sleeve</span>
+      <span class="spec-tag">Wax-coated</span>
+      <span class="spec-tag">Biodegradable</span>
+    </div>
+    <div class="product-actions">
+      <button class="btn btn-secondary product-details" data-product="Paper Cups - Disposable Lab Use">
+        <i class="fas fa-info-circle"></i> Details
+      </button>
+      <button class="btn btn-primary add-to-quote" data-product="Paper Cups - Disposable Lab Use">
+        <i class="fas fa-plus"></i> Add to Quote
+      </button>
+    </div>
+  </div>
+</div>
+
+<!-- Glove Box Tissue Wipes -->
+<div class="product-card" data-category="lab-paper-products">
+  <div class="product-image">
+    <img src="https://via.placeholder.com/350x200?text=Glove+Box+Wipes" alt="Glove Box Tissue Wipes">
+    <div class="product-overlay">
+      <button class="btn btn-primary quick-quote" data-product="Glove Box Tissue Wipes">
+        <i class="fas fa-calculator"></i> Quick Quote
+      </button>
+    </div>
+  </div>
+  <div class="product-info">
+    <h3 class="product-name">Glove Box Tissue Wipes</h3>
+    <p class="product-description">Lint-free tissue wipes ideal for use inside glove boxes and cleanrooms.</p>
+    <div class="product-specs">
+      <span class="spec-tag">Lint-free</span>
+      <span class="spec-tag">150 wipes/box</span>
+      <span class="spec-tag">Low particulate</span>
+    </div>
+    <div class="product-actions">
+      <button class="btn btn-secondary product-details" data-product="Glove Box Tissue Wipes">
+        <i class="fas fa-info-circle"></i> Details
+      </button>
+      <button class="btn btn-primary add-to-quote" data-product="Glove Box Tissue Wipes">
+        <i class="fas fa-plus"></i> Add to Quote
+      </button>
+    </div>
+  </div>
+</div>
+
+<!-- Indicator Strips for Sterilization -->
+<div class="product-card" data-category="medical-paper">
+  <div class="product-image">
+    <img src="https://via.placeholder.com/350x200?text=Sterilization+Indicator+Strips" alt="Indicator Strips for Sterilization">
+    <div class="product-overlay">
+      <button class="btn btn-primary quick-quote" data-product="Indicator Strips for Sterilization">
+        <i class="fas fa-calculator"></i> Quick Quote
+      </button>
+    </div>
+  </div>
+  <div class="product-info">
+    <h3 class="product-name">Indicator Strips for Sterilization</h3>
+    <p class="product-description">Paper indicator strips for monitoring sterilization cycles in autoclaves.</p>
+    <div class="product-specs">
+      <span class="spec-tag">Steam/EO compatible</span>
+      <span class="spec-tag">Type 4</span>
+      <span class="spec-tag">250 strips/box</span>
+    </div>
+    <div class="product-actions">
+      <button class="btn btn-secondary product-details" data-product="Indicator Strips for Sterilization">
+        <i class="fas fa-info-circle"></i> Details
+      </button>
+      <button class="btn btn-primary add-to-quote" data-product="Indicator Strips for Sterilization">
+        <i class="fas fa-plus"></i> Add to Quote
+      </button>
+    </div>
+  </div>
+</div>
+
+<!-- Laboratory Graph Paper - A4 Pad -->
+<div class="product-card" data-category="lab-stationery">
+  <div class="product-image">
+    <img src="https://via.placeholder.com/350x200?text=Graph+Paper+Pad" alt="Laboratory Graph Paper - A4 Pad">
+    <div class="product-overlay">
+      <button class="btn btn-primary quick-quote" data-product="Laboratory Graph Paper - A4 Pad">
+        <i class="fas fa-calculator"></i> Quick Quote
+      </button>
+    </div>
+  </div>
+  <div class="product-info">
+    <h3 class="product-name">Laboratory Graph Paper - A4 Pad</h3>
+    <p class="product-description">A4-size graph paper pad with 1mm x 1mm grid lines for lab plotting and analysis.</p>
+    <div class="product-specs">
+      <span class="spec-tag">50 sheets/pad</span>
+      <span class="spec-tag">1mm grid</span>
+      <span class="spec-tag">A4 size</span>
+    </div>
+    <div class="product-actions">
+      <button class="btn btn-secondary product-details" data-product="Laboratory Graph Paper - A4 Pad">
+        <i class="fas fa-info-circle"></i> Details
+      </button>
+      <button class="btn btn-primary add-to-quote" data-product="Laboratory Graph Paper - A4 Pad">
+        <i class="fas fa-plus"></i> Add to Quote
+      </button>
+    </div>
+  </div>
+</div>
+
+<!-- POS Paper Rolls - Thermal 57mm -->
+<div class="product-card" data-category="dispenser">
+  <div class="product-image">
+    <img src="https://via.placeholder.com/350x200?text=Thermal+POS+Rolls" alt="POS Paper Rolls - Thermal 57mm">
+    <div class="product-overlay">
+      <button class="btn btn-primary quick-quote" data-product="POS Paper Rolls - Thermal 57mm">
+        <i class="fas fa-calculator"></i> Quick Quote
+      </button>
+    </div>
+  </div>
+  <div class="product-info">
+    <h3 class="product-name">POS Paper Rolls - Thermal 57mm</h3>
+    <p class="product-description">Thermal paper rolls compatible with most lab label and POS printers.</p>
+    <div class="product-specs">
+      <span class="spec-tag">57mm x 40mm</span>
+      <span class="spec-tag">50 rolls/box</span>
+      <span class="spec-tag">BPA-free</span>
+    </div>
+    <div class="product-actions">
+      <button class="btn btn-secondary product-details" data-product="POS Paper Rolls - Thermal 57mm">
+        <i class="fas fa-info-circle"></i> Details
+      </button>
+      <button class="btn btn-primary add-to-quote" data-product="POS Paper Rolls - Thermal 57mm">
+        <i class="fas fa-plus"></i> Add to Quote
+      </button>
+    </div>
+  </div>
+</div>
+
+<!-- Paper Lab Coasters - Disposable -->
+<div class="product-card" data-category="lab-paper-products">
+  <div class="product-image">
+    <img src="https://via.placeholder.com/350x200?text=Paper+Lab+Coasters" alt="Paper Lab Coasters - Disposable">
+    <div class="product-overlay">
+      <button class="btn btn-primary quick-quote" data-product="Paper Lab Coasters - Disposable">
+        <i class="fas fa-calculator"></i> Quick Quote
+      </button>
+    </div>
+  </div>
+  <div class="product-info">
+    <h3 class="product-name">Paper Lab Coasters - Disposable</h3>
+    <p class="product-description">Absorbent disposable paper coasters for catching drips under beakers or flasks.</p>
+    <div class="product-specs">
+      <span class="spec-tag">3.5” round</span>
+      <span class="spec-tag">Absorbent paper</span>
+      <span class="spec-tag">500/pack</span>
+    </div>
+    <div class="product-actions">
+      <button class="btn btn-secondary product-details" data-product="Paper Lab Coasters - Disposable">
+        <i class="fas fa-info-circle"></i> Details
+      </button>
+      <button class="btn btn-primary add-to-quote" data-product="Paper Lab Coasters - Disposable">
+        <i class="fas fa-plus"></i> Add to Quote
+      </button>
+    </div>
+  </div>
+</div>
+
+<!-- Tissue Rolls - Jumbo -->
+<div class="product-card" data-category="hygiene-paper">
+  <div class="product-image">
+    <img src="https://via.placeholder.com/350x200?text=Jumbo+Tissue+Rolls" alt="Tissue Rolls - Jumbo">
+    <div class="product-overlay">
+      <button class="btn btn-primary quick-quote" data-product="Tissue Rolls - Jumbo">
+        <i class="fas fa-calculator"></i> Quick Quote
+      </button>
+    </div>
+  </div>
+  <div class="product-info">
+    <h3 class="product-name">Tissue Rolls - Jumbo</h3>
+    <p class="product-description">High-capacity jumbo toilet tissue rolls for lab and office bathrooms.</p>
+    <div class="product-specs">
+      <span class="spec-tag">1000 sheets/roll</span>
+      <span class="spec-tag">Recycled</span>
+      <span class="spec-tag">2-Ply</span>
+    </div>
+    <div class="product-actions">
+      <button class="btn btn-secondary product-details" data-product="Tissue Rolls - Jumbo">
+        <i class="fas fa-info-circle"></i> Details
+      </button>
+      <button class="btn btn-primary add-to-quote" data-product="Tissue Rolls - Jumbo">
+        <i class="fas fa-plus"></i> Add to Quote
+      </button>
+    </div>
+  </div>
+</div>
+
+<!-- Beaker Cover Papers -->
+<div class="product-card" data-category="lab-paper-products">
+  <div class="product-image">
+    <img src="https://via.placeholder.com/350x200?text=Beaker+Covers" alt="Beaker Cover Papers">
+    <div class="product-overlay">
+      <button class="btn btn-primary quick-quote" data-product="Beaker Cover Papers">
+        <i class="fas fa-calculator"></i> Quick Quote
+      </button>
+    </div>
+  </div>
+  <div class="product-info">
+    <h3 class="product-name">Beaker Cover Papers</h3>
+    <p class="product-description">Sterile disposable paper covers for beakers and glassware to avoid contamination.</p>
+    <div class="product-specs">
+      <span class="spec-tag">Sterile</span>
+      <span class="spec-tag">Pre-cut</span>
+      <span class="spec-tag">250/pack</span>
+    </div>
+    <div class="product-actions">
+      <button class="btn btn-secondary product-details" data-product="Beaker Cover Papers">
+        <i class="fas fa-info-circle"></i> Details
+      </button>
+      <button class="btn btn-primary add-to-quote" data-product="Beaker Cover Papers">
+        <i class="fas fa-plus"></i> Add to Quote
+      </button>
+    </div>
+  </div>
+</div>
+
+<!-- Exam Table Paper Rolls -->
+<div class="product-card" data-category="medical-paper">
+  <div class="product-image">
+    <img src="https://via.placeholder.com/350x200?text=Exam+Table+Rolls" alt="Exam Table Paper Rolls">
+    <div class="product-overlay">
+      <button class="btn btn-primary quick-quote" data-product="Exam Table Paper Rolls">
+        <i class="fas fa-calculator"></i> Quick Quote
+      </button>
+    </div>
+  </div>
+  <div class="product-info">
+    <h3 class="product-name">Exam Table Paper Rolls</h3>
+    <p class="product-description">Durable crepe paper rolls for medical examination tables in labs and clinics.</p>
+    <div class="product-specs">
+      <span class="spec-tag">Length: 50m</span>
+      <span class="spec-tag">Width: 50cm</span>
+      <span class="spec-tag">Crepe Finish</span>
+    </div>
+    <div class="product-actions">
+      <button class="btn btn-secondary product-details" data-product="Exam Table Paper Rolls">
+        <i class="fas fa-info-circle"></i> Details
+      </button>
+      <button class="btn btn-primary add-to-quote" data-product="Exam Table Paper Rolls">
+        <i class="fas fa-plus"></i> Add to Quote
+      </button>
+    </div>
+  </div>
+</div>
+
+<!-- Filter Paper Discs - Qualitative -->
+<div class="product-card" data-category="filtration-paper">
+  <div class="product-image">
+    <img src="https://via.placeholder.com/350x200?text=Filter+Paper+Discs" alt="Filter Paper Discs - Qualitative">
+    <div class="product-overlay">
+      <button class="btn btn-primary quick-quote" data-product="Filter Paper Discs - Qualitative">
+        <i class="fas fa-calculator"></i> Quick Quote
+      </button>
+    </div>
+  </div>
+  <div class="product-info">
+    <h3 class="product-name">Filter Paper Discs - Qualitative</h3>
+    <p class="product-description">Qualitative grade filter paper discs for routine lab filtration tasks.</p>
+    <div class="product-specs">
+      <span class="spec-tag">Diameter: 125mm</span>
+      <span class="spec-tag">Grade: 1</span>
+      <span class="spec-tag">100/disc pack</span>
+    </div>
+    <div class="product-actions">
+      <button class="btn btn-secondary product-details" data-product="Filter Paper Discs - Qualitative">
+        <i class="fas fa-info-circle"></i> Details
+      </button>
+      <button class="btn btn-primary add-to-quote" data-product="Filter Paper Discs - Qualitative">
+        <i class="fas fa-plus"></i> Add to Quote
+      </button>
+    </div>
+  </div>
+</div>
+
+<!-- Scientific Note Pads -->
+<div class="product-card" data-category="lab-stationery">
+  <div class="product-image">
+    <img src="https://via.placeholder.com/350x200?text=Scientific+Notepads" alt="Scientific Note Pads">
+    <div class="product-overlay">
+      <button class="btn btn-primary quick-quote" data-product="Scientific Note Pads">
+        <i class="fas fa-calculator"></i> Quick Quote
+      </button>
+    </div>
+  </div>
+  <div class="product-info">
+    <h3 class="product-name">Scientific Note Pads</h3>
+    <p class="product-description">Compact notepads designed for quick lab observations and note-taking.</p>
+    <div class="product-specs">
+      <span class="spec-tag">100 sheets</span>
+      <span class="spec-tag">Ruled</span>
+      <span class="spec-tag">A6 Size</span>
+    </div>
+    <div class="product-actions">
+      <button class="btn btn-secondary product-details" data-product="Scientific Note Pads">
+        <i class="fas fa-info-circle"></i> Details
+      </button>
+      <button class="btn btn-primary add-to-quote" data-product="Scientific Note Pads">
+        <i class="fas fa-plus"></i> Add to Quote
+      </button>
+    </div>
+  </div>
+</div>
+
+<!-- Paper Pipette Wrappers -->
+<div class="product-card" data-category="lab-paper-products">
+  <div class="product-image">
+    <img src="https://via.placeholder.com/350x200?text=Pipette+Wrappers" alt="Paper Pipette Wrappers">
+    <div class="product-overlay">
+      <button class="btn btn-primary quick-quote" data-product="Paper Pipette Wrappers">
+        <i class="fas fa-calculator"></i> Quick Quote
+      </button>
+    </div>
+  </div>
+  <div class="product-info">
+    <h3 class="product-name">Paper Pipette Wrappers</h3>
+    <p class="product-description">Sterile paper wrappers for safe pipette handling and autoclaving.</p>
+    <div class="product-specs">
+      <span class="spec-tag">Autoclavable</span>
+      <span class="spec-tag">Sterile</span>
+      <span class="spec-tag">100/pack</span>
+    </div>
+    <div class="product-actions">
+      <button class="btn btn-secondary product-details" data-product="Paper Pipette Wrappers">
+        <i class="fas fa-info-circle"></i> Details
+      </button>
+      <button class="btn btn-primary add-to-quote" data-product="Paper Pipette Wrappers">
+        <i class="fas fa-plus"></i> Add to Quote
+      </button>
+    </div>
+  </div>
+</div>
+
+<!-- Parafilm Dispenser Sheets -->
+<div class="product-card" data-category="lab-accessories">
+  <div class="product-image">
+    <img src="https://via.placeholder.com/350x200?text=Parafilm+Sheets" alt="Parafilm Dispenser Sheets">
+    <div class="product-overlay">
+      <button class="btn btn-primary quick-quote" data-product="Parafilm Dispenser Sheets">
+        <i class="fas fa-calculator"></i> Quick Quote
+      </button>
+    </div>
+  </div>
+  <div class="product-info">
+    <h3 class="product-name">Parafilm Dispenser Sheets</h3>
+    <p class="product-description">Pre-cut parafilm sheets for quick access and contamination-free sealing.</p>
+    <div class="product-specs">
+      <span class="spec-tag">5x5 cm Sheets</span>
+      <span class="spec-tag">Dispenser Box</span>
+      <span class="spec-tag">50 Sheets</span>
+    </div>
+    <div class="product-actions">
+      <button class="btn btn-secondary product-details" data-product="Parafilm Dispenser Sheets">
+        <i class="fas fa-info-circle"></i> Details
+      </button>
+      <button class="btn btn-primary add-to-quote" data-product="Parafilm Dispenser Sheets">
+        <i class="fas fa-plus"></i> Add to Quote
+      </button>
+    </div>
+  </div>
+</div>
+
+<!-- Lab Wipes - Large Sheets -->
+<div class="product-card" data-category="lab-paper-products">
+  <div class="product-image">
+    <img src="https://via.placeholder.com/350x200?text=Lab+Wipes+Large" alt="Lab Wipes - Large Sheets">
+    <div class="product-overlay">
+      <button class="btn btn-primary quick-quote" data-product="Lab Wipes - Large Sheets">
+        <i class="fas fa-calculator"></i> Quick Quote
+      </button>
+    </div>
+  </div>
+  <div class="product-info">
+    <h3 class="product-name">Lab Wipes - Large Sheets</h3>
+    <p class="product-description">Extra-large absorbent lab wipes for spill control and equipment cleaning.</p>
+    <div class="product-specs">
+      <span class="spec-tag">Size: 30x30 cm</span>
+      <span class="spec-tag">Low lint</span>
+      <span class="spec-tag">100 sheets</span>
+    </div>
+    <div class="product-actions">
+      <button class="btn btn-secondary product-details" data-product="Lab Wipes - Large Sheets">
+        <i class="fas fa-info-circle"></i> Details
+      </button>
+      <button class="btn btn-primary add-to-quote" data-product="Lab Wipes - Large Sheets">
+        <i class="fas fa-plus"></i> Add to Quote
+      </button>
+    </div>
+  </div>
+</div>
+
+<!-- Sterilization Indicator Strips -->
+<div class="product-card" data-category="medical-paper">
+  <div class="product-image">
+    <img src="https://via.placeholder.com/350x200?text=Sterilization+Indicators" alt="Sterilization Indicator Strips">
+    <div class="product-overlay">
+      <button class="btn btn-primary quick-quote" data-product="Sterilization Indicator Strips">
+        <i class="fas fa-calculator"></i> Quick Quote
+      </button>
+    </div>
+  </div>
+  <div class="product-info">
+    <h3 class="product-name">Sterilization Indicator Strips</h3>
+    <p class="product-description">Paper strips that change color to confirm steam sterilization success.</p>
+    <div class="product-specs">
+      <span class="spec-tag">Color-change</span>
+      <span class="spec-tag">Steam & EO</span>
+      <span class="spec-tag">250 Strips</span>
+    </div>
+    <div class="product-actions">
+      <button class="btn btn-secondary product-details" data-product="Sterilization Indicator Strips">
+        <i class="fas fa-info-circle"></i> Details
+      </button>
+      <button class="btn btn-primary add-to-quote" data-product="Sterilization Indicator Strips">
+        <i class="fas fa-plus"></i> Add to Quote
+      </button>
+    </div>
+  </div>
+</div>
+
+<!-- Sterile Filter Paper Discs -->
+<div class="product-card" data-category="filtration-paper">
+  <div class="product-image">
+    <img src="https://via.placeholder.com/350x200?text=Sterile+Filter+Discs" alt="Sterile Filter Paper Discs">
+    <div class="product-overlay">
+      <button class="btn btn-primary quick-quote" data-product="Sterile Filter Paper Discs">
+        <i class="fas fa-calculator"></i> Quick Quote
+      </button>
+    </div>
+  </div>
+  <div class="product-info">
+    <h3 class="product-name">Sterile Filter Paper Discs</h3>
+    <p class="product-description">Sterilized filter discs suitable for microbial and media testing applications.</p>
+    <div class="product-specs">
+      <span class="spec-tag">Sterile</span>
+      <span class="spec-tag">Diameter: 47 mm</span>
+      <span class="spec-tag">Pack of 100</span>
+    </div>
+    <div class="product-actions">
+      <button class="btn btn-secondary product-details" data-product="Sterile Filter Paper Discs">
+        <i class="fas fa-info-circle"></i> Details
+      </button>
+      <button class="btn btn-primary add-to-quote" data-product="Sterile Filter Paper Discs">
+        <i class="fas fa-plus"></i> Add to Quote
+      </button>
+    </div>
+  </div>
+</div>
+
+<!-- Sterile Wrapping Paper -->
+<div class="product-card" data-category="medical-paper">
+  <div class="product-image">
+    <img src="https://via.placeholder.com/350x200?text=Wrapping+Paper" alt="Sterile Wrapping Paper">
+    <div class="product-overlay">
+      <button class="btn btn-primary quick-quote" data-product="Sterile Wrapping Paper">
+        <i class="fas fa-calculator"></i> Quick Quote
+      </button>
+    </div>
+  </div>
+  <div class="product-info">
+    <h3 class="product-name">Sterile Wrapping Paper</h3>
+    <p class="product-description">Medical-grade wrapping paper used for instrument wrapping during sterilization.</p>
+    <div class="product-specs">
+      <span class="spec-tag">Autoclavable</span>
+      <span class="spec-tag">Large sheets</span>
+      <span class="spec-tag">100/pack</span>
+    </div>
+    <div class="product-actions">
+      <button class="btn btn-secondary product-details" data-product="Sterile Wrapping Paper">
+        <i class="fas fa-info-circle"></i> Details
+      </button>
+      <button class="btn btn-primary add-to-quote" data-product="Sterile Wrapping Paper">
+        <i class="fas fa-plus"></i> Add to Quote
+      </button>
+    </div>
+  </div>
+</div>
+
+<!-- Absorbent Bench Pads -->
+<div class="product-card" data-category="lab-paper-products">
+  <div class="product-image">
+    <img src="https://via.placeholder.com/350x200?text=Bench+Pads" alt="Absorbent Bench Pads">
+    <div class="product-overlay">
+      <button class="btn btn-primary quick-quote" data-product="Absorbent Bench Pads">
+        <i class="fas fa-calculator"></i> Quick Quote
+      </button>
+    </div>
+  </div>
+  <div class="product-info">
+    <h3 class="product-name">Absorbent Bench Pads</h3>
+    <p class="product-description">Leak-proof pads designed to protect lab benches from spills and contamination.</p>
+    <div class="product-specs">
+      <span class="spec-tag">Multi-layer</span>
+      <span class="spec-tag">Non-slip back</span>
+      <span class="spec-tag">50 sheets</span>
+    </div>
+    <div class="product-actions">
+      <button class="btn btn-secondary product-details" data-product="Absorbent Bench Pads">
+        <i class="fas fa-info-circle"></i> Details
+      </button>
+      <button class="btn btn-primary add-to-quote" data-product="Absorbent Bench Pads">
+        <i class="fas fa-plus"></i> Add to Quote
+      </button>
+    </div>
+  </div>
+</div>
+
+<!-- Lens Cleaning Tissue -->
+<div class="product-card" data-category="lab-paper-products">
+  <div class="product-image">
+    <img src="https://via.placeholder.com/350x200?text=Lens+Tissue" alt="Lens Cleaning Tissue">
+    <div class="product-overlay">
+      <button class="btn btn-primary quick-quote" data-product="Lens Cleaning Tissue">
+        <i class="fas fa-calculator"></i> Quick Quote
+      </button>
+    </div>
+  </div>
+  <div class="product-info">
+    <h3 class="product-name">Lens Cleaning Tissue</h3>
+    <p class="product-description">Soft, lint-free paper for cleaning microscope and optical lenses without scratching.</p>
+    <div class="product-specs">
+      <span class="spec-tag">Non-abrasive</span>
+      <span class="spec-tag">4x6 inch</span>
+      <span class="spec-tag">100 sheets/pack</span>
+    </div>
+    <div class="product-actions">
+      <button class="btn btn-secondary product-details" data-product="Lens Cleaning Tissue">
+        <i class="fas fa-info-circle"></i> Details
+      </button>
+      <button class="btn btn-primary add-to-quote" data-product="Lens Cleaning Tissue">
+        <i class="fas fa-plus"></i> Add to Quote
+      </button>
+    </div>
+  </div>
+</div>
+
+<!-- Printer Paper - Thermal Roll -->
+<div class="product-card" data-category="lab-stationery">
+  <div class="product-image">
+    <img src="https://via.placeholder.com/350x200?text=Thermal+Roll" alt="Printer Paper - Thermal Roll">
+    <div class="product-overlay">
+      <button class="btn btn-primary quick-quote" data-product="Printer Paper - Thermal Roll">
+        <i class="fas fa-calculator"></i> Quick Quote
+      </button>
+    </div>
+  </div>
+  <div class="product-info">
+    <h3 class="product-name">Printer Paper - Thermal Roll</h3>
+    <p class="product-description">High-quality thermal printer rolls used in lab instruments and medical equipment.</p>
+    <div class="product-specs">
+      <span class="spec-tag">57mm width</span>
+      <span class="spec-tag">Thermal coated</span>
+      <span class="spec-tag">10 rolls/pack</span>
+    </div>
+    <div class="product-actions">
+      <button class="btn btn-secondary product-details" data-product="Printer Paper - Thermal Roll">
+        <i class="fas fa-info-circle"></i> Details
+      </button>
+      <button class="btn btn-primary add-to-quote" data-product="Printer Paper - Thermal Roll">
+        <i class="fas fa-plus"></i> Add to Quote
+      </button>
+    </div>
+  </div>
+</div>
+
+<!-- POS Stand with Paper Roll Holder -->
+<div class="product-card" data-category="dispenser">
+  <div class="product-image">
+    <img src="https://via.placeholder.com/350x200?text=POS+Stand" alt="POS Stand with Paper Roll Holder">
+    <div class="product-overlay">
+      <button class="btn btn-primary quick-quote" data-product="POS Stand with Paper Roll Holder">
+        <i class="fas fa-calculator"></i> Quick Quote
+      </button>
+    </div>
+  </div>
+  <div class="product-info">
+    <h3 class="product-name">POS Stand with Paper Roll Holder</h3>
+    <p class="product-description">Compact POS stand for laboratory front desks with built-in roll holder.</p>
+    <div class="product-specs">
+      <span class="spec-tag">Stainless Steel</span>
+      <span class="spec-tag">Fits 57mm Rolls</span>
+      <span class="spec-tag">Stable Base</span>
+    </div>
+    <div class="product-actions">
+      <button class="btn btn-secondary product-details" data-product="POS Stand with Paper Roll Holder">
+        <i class="fas fa-info-circle"></i> Details
+      </button>
+      <button class="btn btn-primary add-to-quote" data-product="POS Stand with Paper Roll Holder">
+        <i class="fas fa-plus"></i> Add to Quote
+      </button>
+    </div>
+  </div>
+</div>
+
+<!-- Sticky Note Pads -->
+<div class="product-card" data-category="lab-stationery">
+  <div class="product-image">
+    <img src="https://via.placeholder.com/350x200?text=Sticky+Notes" alt="Sticky Note Pads">
+    <div class="product-overlay">
+      <button class="btn btn-primary quick-quote" data-product="Sticky Note Pads">
+        <i class="fas fa-calculator"></i> Quick Quote
+      </button>
+    </div>
+  </div>
+  <div class="product-info">
+    <h3 class="product-name">Sticky Note Pads</h3>
+    <p class="product-description">Adhesive paper pads for labeling lab samples or jotting quick notes.</p>
+    <div class="product-specs">
+      <span class="spec-tag">3x3 inch</span>
+      <span class="spec-tag">Yellow</span>
+      <span class="spec-tag">Pack of 12</span>
+    </div>
+    <div class="product-actions">
+      <button class="btn btn-secondary product-details" data-product="Sticky Note Pads">
+        <i class="fas fa-info-circle"></i> Details
+      </button>
+      <button class="btn btn-primary add-to-quote" data-product="Sticky Note Pads">
+        <i class="fas fa-plus"></i> Add to Quote
+      </button>
+    </div>
+  </div>
+</div>
+
+<!-- Medical Exam Table Rolls -->
+<div class="product-card" data-category="hygiene-paper">
+  <div class="product-image">
+    <img src="https://via.placeholder.com/350x200?text=Exam+Table+Rolls" alt="Medical Exam Table Rolls">
+    <div class="product-overlay">
+      <button class="btn btn-primary quick-quote" data-product="Medical Exam Table Rolls">
+        <i class="fas fa-calculator"></i> Quick Quote
+      </button>
+    </div>
+  </div>
+  <div class="product-info">
+    <h3 class="product-name">Medical Exam Table Rolls</h3>
+    <p class="product-description">Disposable paper rolls to protect exam tables and maintain hygiene.</p>
+    <div class="product-specs">
+      <span class="spec-tag">21" x 125'</span>
+      <span class="spec-tag">6 rolls</span>
+      <span class="spec-tag">White</span>
+    </div>
+    <div class="product-actions">
+      <button class="btn btn-secondary product-details" data-product="Medical Exam Table Rolls">
+        <i class="fas fa-info-circle"></i> Details
+      </button>
+      <button class="btn btn-primary add-to-quote" data-product="Medical Exam Table Rolls">
+        <i class="fas fa-plus"></i> Add to Quote
+      </button>
+    </div>
+  </div>
+</div>
+
+<!-- Parafilm Dispenser - Bench Mounted -->
+<div class="product-card" data-category="lab-accessories">
+  <div class="product-image">
+    <img src="https://via.placeholder.com/350x200?text=Parafilm+Dispenser" alt="Parafilm Dispenser - Bench Mounted">
+    <div class="product-overlay">
+      <button class="btn btn-primary quick-quote" data-product="Parafilm Dispenser - Bench Mounted">
+        <i class="fas fa-calculator"></i> Quick Quote
+      </button>
+    </div>
+  </div>
+  <div class="product-info">
+    <h3 class="product-name">Parafilm Dispenser - Bench Mounted</h3>
+    <p class="product-description">Dispenser designed to hold and cut Parafilm lab sealing film rolls easily.</p>
+    <div class="product-specs">
+      <span class="spec-tag">Steel frame</span>
+      <span class="spec-tag">Fits 2 rolls</span>
+      <span class="spec-tag">Anti-slip base</span>
+    </div>
+    <div class="product-actions">
+      <button class="btn btn-secondary product-details" data-product="Parafilm Dispenser - Bench Mounted">
+        <i class="fas fa-info-circle"></i> Details
+      </button>
+      <button class="btn btn-primary add-to-quote" data-product="Parafilm Dispenser - Bench Mounted">
+        <i class="fas fa-plus"></i> Add to Quote
+      </button>
+    </div>
+  </div>
+</div>
+
+<!-- White Bond Paper (A4) -->
+<div class="product-card" data-category="lab-stationery">
+  <div class="product-image">
+    <img src="https://via.placeholder.com/350x200?text=Bond+Paper+A4" alt="White Bond Paper (A4)">
+    <div class="product-overlay">
+      <button class="btn btn-primary quick-quote" data-product="White Bond Paper (A4)">
+        <i class="fas fa-calculator"></i> Quick Quote
+      </button>
+    </div>
+  </div>
+  <div class="product-info">
+    <h3 class="product-name">White Bond Paper (A4)</h3>
+    <p class="product-description">High-quality A4 paper for printing lab reports and test results.</p>
+    <div class="product-specs">
+      <span class="spec-tag">80 GSM</span>
+      <span class="spec-tag">500 sheets</span>
+      <span class="spec-tag">Bright White</span>
+    </div>
+    <div class="product-actions">
+      <button class="btn btn-secondary product-details" data-product="White Bond Paper (A4)">
+        <i class="fas fa-info-circle"></i> Details
+      </button>
+      <button class="btn btn-primary add-to-quote" data-product="White Bond Paper (A4)">
+        <i class="fas fa-plus"></i> Add to Quote
+      </button>
+    </div>
+  </div>
+</div>
+
+<!-- Packaging Crepe Paper - Medical Grade -->
+<div class="product-card" data-category="packaging-paper">
+  <div class="product-image">
+    <img src="https://via.placeholder.com/350x200?text=Crepe+Paper" alt="Packaging Crepe Paper - Medical Grade">
+    <div class="product-overlay">
+      <button class="btn btn-primary quick-quote" data-product="Packaging Crepe Paper - Medical Grade">
+        <i class="fas fa-calculator"></i> Quick Quote
+      </button>
+    </div>
+  </div>
+  <div class="product-info">
+    <h3 class="product-name">Packaging Crepe Paper - Medical Grade</h3>
+    <p class="product-description">Strong and flexible crepe paper for wrapping instruments before sterilization.</p>
+    <div class="product-specs">
+      <span class="spec-tag">Blue</span>
+      <span class="spec-tag">18" x 18"</span>
+      <span class="spec-tag">250 sheets</span>
+    </div>
+    <div class="product-actions">
+      <button class="btn btn-secondary product-details" data-product="Packaging Crepe Paper - Medical Grade">
+        <i class="fas fa-info-circle"></i> Details
+      </button>
+      <button class="btn btn-primary add-to-quote" data-product="Packaging Crepe Paper - Medical Grade">
+        <i class="fas fa-plus"></i> Add to Quote
+      </button>
+    </div>
+  </div>
+</div>
+
+<!-- Instruction Sheets - Lab Safety -->
+<div class="product-card" data-category="lab-stationery">
+  <div class="product-image">
+    <img src="https://via.placeholder.com/350x200?text=Lab+Safety+Sheets" alt="Instruction Sheets - Lab Safety">
+    <div class="product-overlay">
+      <button class="btn btn-primary quick-quote" data-product="Instruction Sheets - Lab Safety">
+        <i class="fas fa-calculator"></i> Quick Quote
+      </button>
+    </div>
+  </div>
+  <div class="product-info">
+    <h3 class="product-name">Instruction Sheets - Lab Safety</h3>
+    <p class="product-description">Printed safety procedure sheets for laboratory equipment and workflows.</p>
+    <div class="product-specs">
+      <span class="spec-tag">Laminated</span>
+      <span class="spec-tag">A3 size</span>
+      <span class="spec-tag">Full color</span>
+    </div>
+    <div class="product-actions">
+      <button class="btn btn-secondary product-details" data-product="Instruction Sheets - Lab Safety">
+        <i class="fas fa-info-circle"></i> Details
+      </button>
+      <button class="btn btn-primary add-to-quote" data-product="Instruction Sheets - Lab Safety">
+        <i class="fas fa-plus"></i> Add to Quote
+      </button>
+    </div>
+  </div>
+</div>
+
+
+      </div>
+
+      <div class="no-results" id="no-results" style="display: none;">
+        <div class="no-results-content">
+          <i class="fas fa-exclamation-circle"></i>
+          <h3>No products found matching your criteria.</h3>
+          <p>Please try adjusting your search or filters.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Quote Cart -->
+  <div class="quote-cart" id="quoteCart">
+    <div class="cart-header">
+      <h3><i class="fas fa-shopping-cart"></i> Quote Cart</h3>
+      <button class="cart-toggle" id="cartToggle">
+        <i class="fas fa-chevron-up"></i>
+      </button>
+    </div>
+    <div class="cart-content" id="cartContent">
+      <div class="cart-items" id="cartItems">
+        <p class="empty-cart">No items in quote cart</p>
+      </div>
+      <div class="cart-actions">
+        <button class="btn btn-secondary" id="clearCart"><i class="fas fa-trash"></i> Clear Cart</button>
+        <button class="btn btn-primary" id="requestQuote"><i class="fas fa-paper-plane"></i> Request Quote</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-section">
+          <div class="footer-logo">
+            <h3>MINABLE SCIENTIFIC</h3>
+            <p>Laboratory Excellence</p>
+          </div>
+          <p class="footer-description">Your trusted partner for laboratory equipment, chemicals, and consumables.</p>
+        </div>
+        <div class="footer-section">
+          <h4>Quick Links</h4>
+          <ul class="footer-links">
+            <li><a href="../index.html">Home</a></li>
+            <li><a href="../index.html#about">About Us</a></li>
+            <li><a href="../index.html#products">Products</a></li>
+            <li><a href="../index.html#contact">Contact</a></li>
+          </ul>
+        </div>
+        <div class="footer-section">
+          <h4>Product Categories</h4>
+          <ul class="footer-links">
+            <li><a href="glassware.html">Laboratory Glassware</a></li>
+            <li><a href="chemicals.html">Chemicals & Reagents</a></li>
+            <li><a href="apparatus.html">Laboratory Apparatus</a></li>
+            <li><a href="diagnostics.html">Diagnostic Equipment</a></li>
+            <li><a href="filtration.html">Filtration Products</a></li>
+            <li><a href="lovibond.html">Lovibond</a></li>
+            <li><a href="paper-products.html">Paper Products</a></li>
+          </ul>
+        </div>
+        <div class="footer-section">
+          <h4>Contact Info</h4>
+          <div class="footer-contact">
+            <p><i class="fas fa-map-marker-alt"></i> Bulawayo, Zimbabwe</p>
+            <p><i class="fas fa-phone"></i> 09-883033</p>
+            <p><i class="fas fa-envelope"></i> info@minablescientific.co.zw</p>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <div class="footer-copyright">
+          <p>&copy; 2024 Minable Scientific. All rights reserved.</p>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="../js/main.js"></script>
+  <script src="../js/products.js"></script>
 </body>
 </html>
-
