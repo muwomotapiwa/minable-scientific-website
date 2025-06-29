@@ -1,217 +1,1657 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Diagnostics - Minable Scientific</title>
-    <link rel="stylesheet" href="../css/styles.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Laboratory Apparatus - Minable Scientific</title>
+  <meta name="description" content="Explore our full range of precision laboratory apparatus, including microscopes, heating equipment, and safety gear.">
+  <link rel="stylesheet" href="../css/styles.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
-    <!-- Navigation -->
-    <nav class="navbar" id="navbar">
-        <div class="nav-container">
-            <div class="nav-logo">
-                <h2>MINABLE SCIENTIFIC</h2>
-                <span class="nav-tagline">Laboratory Excellence</span>
-            </div>
-            
-            <ul class="nav-menu" id="nav-menu">
-                <li class="nav-item">
-                    <a href="../index.html" class="nav-link">Home</a>
-                </li>
-                <li class="nav-item">
-                    <a href="../index.html#about" class="nav-link">About</a>
-                </li>
-                <li class="nav-item dropdown">
-                    <a href="#products" class="nav-link">Products <i class="fas fa-chevron-down"></i></a>
-                    <ul class="dropdown-menu">
-                        <li><a href="glassware.html">Glassware</a></li>
-                        <li><a href="apparatus.html">Apparatus</a></li>
-                        <li><a href="chemicals.html">Chemicals</a></li>
-                        <li><a href="diagnostics.html">Diagnostics</a></li>
-                        <li><a href="filtration.html">Filtration</a></li>
-                        <li><a href="lovibond.html">Lovibond</a></li>
-                        <li><a href="paper-products.html">Paper Products</a></li>
-                    </ul>
-                </li>
-                <li class="nav-item">
-                    <a href="../index.html#services" class="nav-link">Services</a>
-                </li>
-                <li class="nav-item">
-                    <a href="../index.html#industries" class="nav-link">Industries</a>
-                </li>
-                <li class="nav-item">
-                    <a href="../index.html#contact" class="nav-link">Contact</a>
-                </li>
-                <li class="nav-item">
-                    <a href="../index.html#quote" class="nav-link btn-quote">Request Quote</a>
-                </li>
-            </ul>
-            
-            <div class="hamburger" id="hamburger">
-                <span class="bar"></span>
-                <span class="bar"></span>
-                <span class="bar"></span>
-            </div>
-        </div>
-    </nav>
 
-    <main>
-        <section class="page-header">
-            <div class="container">
-                <div class="breadcrumb">
-                    <a href="../index.html">Home</a>
-                    <i class="fas fa-chevron-right"></i>
-                    <a href="../index.html#products">Products</a>
-                    <i class="fas fa-chevron-right"></i>
-                    <span>Diagnostics</span>
-                </div>
-                <h1 class="page-title">Diagnostic Equipment</h1>
-                <p class="page-description">Medical diagnostic reagents and equipment for healthcare and clinical laboratories.</p>
-            </div>
-        </section>
-
-        <section class="product-filters">
-            <div class="container">
-                <div class="filter-bar">
-                    <div class="search-box">
-                        <i class="fas fa-search"></i>
-                        <input type="text" id="product-search" placeholder="Search products...">
-                    </div>
-                    <div class="filter-options">
-                        <select id="category-filter">
-                            <option value="all">All Categories</option>
-                            <option value="reagents">Clinical Reagents</option>
-                            <option value="kits">Test Kits</option>
-                            <option value="instruments">Diagnostic Instruments</option>
-                        </select>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section class="products-grid">
-            <div class="container">
-                <div class="products-container" id="products-container">
-                    <!-- Products will be dynamically loaded here by JavaScript -->
-                </div>
-                <div class="no-results" id="no-results" style="display: none;">
-                    <div class="no-results-content">
-                        <i class="fas fa-exclamation-circle"></i>
-                        <h3>No products found matching your criteria.</h3>
-                        <p>Please try adjusting your search or filters.</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-    </main>
-
-    <!-- Quote Cart (common to all product pages) -->
-    <div class="quote-cart" id="quote-cart">
-        <div class="cart-header" id="cart-header">
-            <h3><i class="fas fa-shopping-cart"></i> Quote Cart (<span id="cart-count">0</span>)</h3>
-            <button class="cart-toggle" id="cart-toggle"><i class="fas fa-chevron-up"></i></button>
-        </div>
-        <div class="cart-content" id="cart-content">
-            <div class="cart-items" id="cart-items">
-                <!-- Cart items will be dynamically added here -->
-                <p class="empty-cart" id="empty-cart">Your quote cart is empty.</p>
-            </div>
-            <div class="cart-actions">
-                <button class="btn btn-outline" id="clear-cart">Clear Cart</button>
-                <button class="btn btn-primary" id="request-quote">Request Quote</button>
-            </div>
-        </div>
+  <!-- Navbar -->
+  <nav class="navbar" id="navbar">
+    <div class="nav-container">
+      <div class="nav-logo">
+        <a href="../index.html">
+          <h2>MINABLE SCIENTIFIC</h2>
+          <span class="nav-tagline">Laboratory Excellence</span>
+        </a>
+      </div>
+      <ul class="nav-menu" id="nav-menu">
+        <li class="nav-item"><a href="../index.html" class="nav-link">Home</a></li>
+        <li class="nav-item"><a href="../index.html#about" class="nav-link">About</a></li>
+        <li class="nav-item dropdown">
+          <a href="../index.html#products" class="nav-link">Products <i class="fas fa-chevron-down"></i></a>
+          <ul class="dropdown-menu">
+            <li><a href="glassware.html">Glassware</a></li>
+            <li><a href="apparatus.html">Apparatus</a></li>
+            <li><a href="chemicals.html">Chemicals</a></li>
+            <li><a href="diagnostics.html">Diagnostics</a></li>
+            <li><a href="filtration.html">Filtration</a></li>
+            <li><a href="lovibond.html">Lovibond</a></li>
+            <li><a href="paper-products.html">Paper Products</a></li>
+          </ul>
+        </li>
+        <li class="nav-item"><a href="../index.html#services" class="nav-link">Services</a></li>
+        <li class="nav-item"><a href="../index.html#contact" class="nav-link">Contact</a></li>
+        <li class="nav-item"><a href="../index.html#quote" class="nav-link btn-quote">Request Quote</a></li>
+      </ul>
+      <div class="hamburger" id="hamburger">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+      </div>
     </div>
+  </nav>
 
-    <!-- Product Details Modal (common to all product pages) -->
-    <div class="modal-overlay" id="product-details-modal">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h2 id="modal-product-name">Product Name</h2>
-                <button class="modal-close" id="modal-close"><i class="fas fa-times"></i></button>
-            </div>
-            <div class="modal-body">
-                <div class="product-details-content">
-                    <p id="modal-product-description"></p>
-                    <div class="details-grid">
-                        <div class="detail-section">
-                            <h4>Features</h4>
-                            <ul id="modal-product-features"></ul>
-                        </div>
-                        <div class="detail-section">
-                            <h4>Specifications</h4>
-                            <ul id="modal-product-specs"></ul>
-                        </div>
-                    </div>
-                    <div class="detail-section" id="modal-product-applications-section" style="display: none;">
-                        <h4>Applications</h4>
-                        <ul id="modal-product-applications"></ul>
-                    </div>
-                    <div class="detail-section" id="modal-product-certifications-section" style="display: none;">
-                        <h4>Certifications</h4>
-                        <ul id="modal-product-certifications"></ul>
-                    </div>
-                    <div class="detail-section" id="modal-product-includes-section" style="display: none;">
-                        <h4>Includes</h4>
-                        <ul id="modal-product-includes"></ul>
-                    </div>
-                    <div class="detail-section" id="modal-product-promotion-section" style="display: none;">
-                        <h4>Promotion</h4>
-                        <p id="modal-product-promotion"></p>
-                    </div>
-                </div>
-            </div>
-            <div class="modal-footer">
-                <button class="btn btn-primary" id="modal-add-to-quote">Add to Quote</button>
-            </div>
-        </div>
+  <!-- Hero / Page Banner -->
+  <section class="page-header">
+    <div class="container">
+      <div class="breadcrumb">
+        <a href="../index.html">Home</a>
+        <i class="fas fa-chevron-right"></i>
+        <a href="../index.html#products">Products</a>
+        <i class="fas fa-chevron-right"></i>
+        <span>Diagnostics</span>
+      </div>
+      <h1 class="page-title">Diagnostics</h1>
+      <p class="page-description">Explore high-quality diagnostics for rapid and accurate clinical testing.</p>
     </div>
+  </section>
 
-    <script src="../js/products.js"></script>
-    <script>
-        document.addEventListener(\'DOMContentLoaded\', () => {
-            const productsData = [
-                {
-                    id: \'blood-glucose-meter\',
-                    name: \'Blood Glucose Meter\',
-                    description: \'Compact and accurate device for monitoring blood glucose levels.\',
-                    image: \'https://via.placeholder.com/350x200?text=Blood+Glucose+Meter\',
-                    features: [\'Fast Results\', \'Small Blood Sample\', \'Memory Function\'],
-                    specs: [\'Measurement Range: 20-600 mg/dL\', \'Sample Size: 0.5 \u00b5L\', \'Test Time: 5 seconds\'],
-                    category: \'instruments\'
-                },
-                {
-                    id: \'urine-test-strips\',
-                    name: \'Urine Test Strips\',
-                    description: \'Multi-parameter test strips for rapid urinalysis.\',
-                    image: \'https://via.placeholder.com/350x200?text=Urine+Test+Strips\',
-                    features: [\'Rapid Results\', \'Multiple Parameters\', \'Easy to Use\'],
-                    specs: [\'Parameters: Glucose, Protein, pH, Ketones\', \'Strips per bottle: 100\'],
-                    category: \'reagents\'
-                }
-            ];
+  <!-- Filter Section -->
+  <section class="product-filters">
+    <div class="container">
+      <div class="filter-bar">
+        <div class="search-box">
+          <i class="fas fa-search"></i>
+          <input type="text" id="product-search" placeholder="Search products...">
+        </div>
+        <div class="filter-options">
+          <select id="category-filter">
+            <option value="all">All Categories</option>
+            <option value="reagents">Clinical Reagents</option>
+            <option value="kits">Test Kits</option>
+            <option value="instruments">Diagnostic Instruments</option>
+          </select>
+        </div>
+      </div>
+    </div>
+  </section>
 
-            renderProducts(productsData);
-            setupSearchAndFilters(productsData);
-            setupQuoteCart();
-        });
+  <!-- Product Grid -->
+  <section class="products-grid">
+    <div class="container">
+      <div class="products-container" id="products-container">
+        <!-- 1. Blood Glucose Meter -->
+<div class="product-card" data-category="instruments">
+  <div class="product-image">
+    <img src="https://via.placeholder.com/350x200?text=Blood+Glucose+Meter" alt="Blood Glucose Meter"/>
+    <div class="product-overlay">
+      <button class="btn btn-primary quick-quote" data-product="Blood Glucose Meter">
+        <i class="fas fa-calculator"></i> Quick Quote
+      </button>
+    </div>
+  </div>
+  <div class="product-info">
+    <h3 class="product-name">Blood Glucose Meter</h3>
+    <p class="product-description">Compact and accurate device for monitoring blood glucose levels.</p>
+    <div class="product-specs">
+      <span class="spec-tag">Fast Results</span>
+      <span class="spec-tag">Small Blood Sample</span>
+      <span class="spec-tag">Memory Function</span>
+    </div>
+    <div class="product-actions">
+      <button class="btn btn-secondary product-details" data-product="Blood Glucose Meter">
+        <i class="fas fa-info-circle"></i> Details
+      </button>
+      <button class="btn btn-primary add-to-quote" data-product="Blood Glucose Meter">
+        <i class="fas fa-plus"></i> Add to Quote
+      </button>
+    </div>
+  </div>
+</div>
 
-        // Helper function to escape single quotes for onclick attributes
-        function escapeHtml(text) {
-            var map = {
-                \'\\\': \'\\\\\\\'
-            };
-            return text.replace(/[\\\]/g, function(m) {
-                return map[m];
-            });
-        }
-    </script>
+<!-- 2. Urine Test Strips -->
+<div class="product-card" data-category="reagents">
+  <div class="product-image">
+    <img src="https://via.placeholder.com/350x200?text=Urine+Test+Strips" alt="Urine Test Strips"/>
+    <div class="product-overlay">
+      <button class="btn btn-primary quick-quote" data-product="Urine Test Strips">
+        <i class="fas fa-calculator"></i> Quick Quote
+      </button>
+    </div>
+  </div>
+  <div class="product-info">
+    <h3 class="product-name">Urine Test Strips</h3>
+    <p class="product-description">Multi-parameter test strips for rapid urinalysis.</p>
+    <div class="product-specs">
+      <span class="spec-tag">Glucose</span>
+      <span class="spec-tag">Protein</span>
+      <span class="spec-tag">Ketones</span>
+    </div>
+    <div class="product-actions">
+      <button class="btn btn-secondary product-details" data-product="Urine Test Strips">
+        <i class="fas fa-info-circle"></i> Details
+      </button>
+      <button class="btn btn-primary add-to-quote" data-product="Urine Test Strips">
+        <i class="fas fa-plus"></i> Add to Quote
+      </button>
+    </div>
+  </div>
+</div>
+
+<!-- 3. Digital Blood Pressure Monitor (Arm) -->
+<div class="product-card" data-category="instruments">
+  <div class="product-image">
+    <img src="https://via.placeholder.com/350x200?text=Arm+BP+Monitor" alt="Digital Blood Pressure Monitor (Arm)"/>
+    <div class="product-overlay">
+      <button class="btn btn-primary quick-quote" data-product="Digital Blood Pressure Monitor (Arm)">
+        <i class="fas fa-calculator"></i> Quick Quote
+      </button>
+    </div>
+  </div>
+  <div class="product-info">
+    <h3 class="product-name">Digital Blood Pressure Monitor (Arm)</h3>
+    <p class="product-description">Fully automatic arm blood pressure monitor for accurate home or clinic use.</p>
+    <div class="product-specs">
+      <span class="spec-tag">Oscillometric</span>
+      <span class="spec-tag">Large LCD</span>
+      <span class="spec-tag">Dual User</span>
+    </div>
+    <div class="product-actions">
+      <button class="btn btn-secondary product-details" data-product="Digital Blood Pressure Monitor (Arm)">
+        <i class="fas fa-info-circle"></i> Details
+      </button>
+      <button class="btn btn-primary add-to-quote" data-product="Digital Blood Pressure Monitor (Arm)">
+        <i class="fas fa-plus"></i> Add to Quote
+      </button>
+    </div>
+  </div>
+</div>
+
+<!-- 4. Rapid COVID-19 Antigen Test Kit -->
+<div class="product-card" data-category="kits">
+  <div class="product-image">
+    <img src="https://via.placeholder.com/350x200?text=COVID-19+Test+Kit" alt="Rapid COVID-19 Antigen Test Kit"/>
+    <div class="product-overlay">
+      <button class="btn btn-primary quick-quote" data-product="Rapid COVID-19 Antigen Test Kit">
+        <i class="fas fa-calculator"></i> Quick Quote
+      </button>
+    </div>
+  </div>
+  <div class="product-info">
+    <h3 class="product-name">Rapid COVID-19 Antigen Test Kit</h3>
+    <p class="product-description">Lateral flow test for SARS-CoV-2 antigen with results in 15 minutes.</p>
+    <div class="product-specs">
+      <span class="spec-tag">15 Min</span>
+      <span class="spec-tag">High Sensitivity</span>
+      <span class="spec-tag">Nasal Swab</span>
+    </div>
+    <div class="product-actions">
+      <button class="btn btn-secondary product-details" data-product="Rapid COVID-19 Antigen Test Kit">
+        <i class="fas fa-info-circle"></i> Details
+      </button>
+      <button class="btn btn-primary add-to-quote" data-product="Rapid COVID-19 Antigen Test Kit">
+        <i class="fas fa-plus"></i> Add to Quote
+      </button>
+    </div>
+  </div>
+</div>
+
+<!-- 5. Hemoglobin Meter - Portable -->
+<div class="product-card" data-category="instruments">
+  <div class="product-image">
+    <img src="https://via.placeholder.com/350x200?text=Hemoglobin+Meter" alt="Hemoglobin Meter - Portable"/>
+    <div class="product-overlay">
+      <button class="btn btn-primary quick-quote" data-product="Hemoglobin Meter - Portable">
+        <i class="fas fa-calculator"></i> Quick Quote
+      </button>
+    </div>
+  </div>
+  <div class="product-info">
+    <h3 class="product-name">Hemoglobin Meter - Portable</h3>
+    <p class="product-description">Handheld device for reliable measurement of hemoglobin levels.</p>
+    <div class="product-specs">
+      <span class="spec-tag">Capillary/Venous</span>
+      <span class="spec-tag">No Calibration</span>
+      <span class="spec-tag">< 3s Read Time</span>
+    </div>
+    <div class="product-actions">
+      <button class="btn btn-secondary product-details" data-product="Hemoglobin Meter - Portable">
+        <i class="fas fa-info-circle"></i> Details
+      </button>
+      <button class="btn btn-primary add-to-quote" data-product="Hemoglobin Meter - Portable">
+        <i class="fas fa-plus"></i> Add to Quote
+      </button>
+    </div>
+  </div>
+</div>
+
+<!-- 6. Electrolyte Reagent Kit -->
+<div class="product-card" data-category="reagents">
+  <div class="product-image">
+    <img src="https://via.placeholder.com/350x200?text=Electrolyte+Reagents" alt="Electrolyte Reagent Kit"/>
+    <div class="product-overlay">
+      <button class="btn btn-primary quick-quote" data-product="Electrolyte Reagent Kit">
+        <i class="fas fa-calculator"></i> Quick Quote
+      </button>
+    </div>
+  </div>
+  <div class="product-info">
+    <h3 class="product-name">Electrolyte Reagent Kit (Na, K, Cl)</h3>
+    <p class="product-description">Liquid stable reagent kit for sodium, potassium, and chloride testing.</p>
+    <div class="product-specs">
+      <span class="spec-tag">Na+</span>
+      <span class="spec-tag">K+</span>
+      <span class="spec-tag">Cl-</span>
+    </div>
+    <div class="product-actions">
+      <button class="btn btn-secondary product-details" data-product="Electrolyte Reagent Kit">
+        <i class="fas fa-info-circle"></i> Details
+      </button>
+      <button class="btn btn-primary add-to-quote" data-product="Electrolyte Reagent Kit">
+        <i class="fas fa-plus"></i> Add to Quote
+      </button>
+    </div>
+  </div>
+</div>
+
+<!-- 7. Urine Analyzer - Semi-Automated -->
+<div class="product-card" data-category="instruments">
+  <div class="product-image">
+    <img src="https://via.placeholder.com/350x200?text=Semi-Auto+Urine+Analyzer" alt="Urine Analyzer - Semi-Automated"/>
+    <div class="product-overlay">
+      <button class="btn btn-primary quick-quote" data-product="Urine Analyzer - Semi-Automated">
+        <i class="fas fa-calculator"></i> Quick Quote
+      </button>
+    </div>
+  </div>
+  <div class="product-info">
+    <h3 class="product-name">Urine Analyzer - Semi-Automated</h3>
+    <p class="product-description">Consistent and accurate reading of urine test strips with auto-calibration.</p>
+    <div class="product-specs">
+      <span class="spec-tag">LCD</span>
+      <span class="spec-tag">Printer</span>
+      <span class="spec-tag">60/hr</span>
+    </div>
+    <div class="product-actions">
+      <button class="btn btn-secondary product-details" data-product="Urine Analyzer - Semi-Automated">
+        <i class="fas fa-info-circle"></i> Details
+      </button>
+      <button class="btn btn-primary add-to-quote" data-product="Urine Analyzer - Semi-Automated">
+        <i class="fas fa-plus"></i> Add to Quote
+      </button>
+    </div>
+  </div>
+</div>
+
+<!-- 8. Pregnancy Test Strips (HCG) -->
+<div class="product-card" data-category="kits">
+  <div class="product-image">
+    <img src="https://via.placeholder.com/350x200?text=Pregnancy+Test" alt="Pregnancy Test Strips (HCG)"/>
+    <div class="product-overlay">
+      <button class="btn btn-primary quick-quote" data-product="Pregnancy Test Strips (HCG)">
+        <i class="fas fa-calculator"></i> Quick Quote
+      </button>
+    </div>
+  </div>
+  <div class="product-info">
+    <h3 class="product-name">Pregnancy Test Strips (HCG)</h3>
+    <p class="product-description">Highly sensitive strips for early detection of pregnancy.</p>
+    <div class="product-specs">
+      <span class="spec-tag">99% Accuracy</span>
+      <span class="spec-tag">Early Detection</span>
+      <span class="spec-tag">Strip Format</span>
+    </div>
+    <div class="product-actions">
+      <button class="btn btn-secondary product-details" data-product="Pregnancy Test Strips (HCG)">
+        <i class="fas fa-info-circle"></i> Details
+      </button>
+      <button class="btn btn-primary add-to-quote" data-product="Pregnancy Test Strips (HCG)">
+        <i class="fas fa-plus"></i> Add to Quote
+      </button>
+    </div>
+  </div>
+</div>
+
+<!-- 9. Cholesterol Test Kit - Total -->
+<div class="product-card" data-category="kits">
+  <div class="product-image">
+    <img src="https://via.placeholder.com/350x200?text=Cholesterol+Test" alt="Cholesterol Test Kit - Total"/>
+    <div class="product-overlay">
+      <button class="btn btn-primary quick-quote" data-product="Cholesterol Test Kit - Total">
+        <i class="fas fa-calculator"></i> Quick Quote
+      </button>
+    </div>
+  </div>
+  <div class="product-info">
+    <h3 class="product-name">Cholesterol Test Kit - Total</h3>
+    <p class="product-description">Quantitative test kit for total cholesterol measurement in blood.</p>
+    <div class="product-specs">
+      <span class="spec-tag">Finger-prick</span>
+      <span class="spec-tag">30s Read Time</span>
+      <span class="spec-tag">Compact Meter</span>
+    </div>
+    <div class="product-actions">
+      <button class="btn btn-secondary product-details" data-product="Cholesterol Test Kit - Total">
+        <i class="fas fa-info-circle"></i> Details
+      </button>
+      <button class="btn btn-primary add-to-quote" data-product="Cholesterol Test Kit - Total">
+        <i class="fas fa-plus"></i> Add to Quote
+      </button>
+    </div>
+  </div>
+</div>
+
+<!-- 10. Automated Hematology Analyzer (3-part Diff) -->
+<div class="product-card" data-category="instruments">
+  <div class="product-image">
+    <img src="https://via.placeholder.com/350x200?text=Hematology+Analyzer" alt="Automated Hematology Analyzer (3-part Diff)"/>
+    <div class="product-overlay">
+      <button class="btn btn-primary quick-quote" data-product="Automated Hematology Analyzer (3-part Diff)">
+        <i class="fas fa-calculator"></i> Quick Quote
+      </button>
+    </div>
+  </div>
+  <div class="product-info">
+    <h3 class="product-name">Automated Hematology Analyzer (3-part Diff)</h3>
+    <p class="product-description">Fully automated hematology analyzer with 3-part differential for CBC.</p>
+    <div class="product-specs">
+      <span class="spec-tag">Touchscreen</span>
+      <span class="spec-tag">Auto Dilution</span>
+      <span class="spec-tag">60/hr</span>
+    </div>
+    <div class="product-actions">
+      <button class="btn btn-secondary product-details" data-product="Automated Hematology Analyzer (3-part Diff)">
+        <i class="fas fa-info-circle"></i> Details
+      </button>
+      <button class="btn btn-primary add-to-quote" data-product="Automated Hematology Analyzer (3-part Diff)">
+        <i class="fas fa-plus"></i> Add to Quote
+      </button>
+    </div>
+  </div>
+</div>
+
+<!-- 11. Immunology Reagent - CRP -->
+<div class="product-card" data-category="reagents">
+  <div class="product-image">
+    <img src="https://via.placeholder.com/350x200?text=CRP+Reagent" alt="Immunology Reagent - CRP"/>
+    <div class="product-overlay">
+      <button class="btn btn-primary quick-quote" data-product="Immunology Reagent - CRP">
+        <i class="fas fa-calculator"></i> Quick Quote
+      </button>
+    </div>
+  </div>
+  <div class="product-info">
+    <h3 class="product-name">Immunology Reagent - CRP</h3>
+    <p class="product-description">Quantitative CRP determination via immunoturbidimetry.</p>
+    <div class="product-specs">
+      <span class="spec-tag">Liquid Stable</span>
+      <span class="spec-tag">High Linearity</span>
+      <span class="spec-tag">Analyzer Ready</span>
+    </div>
+    <div class="product-actions">
+      <button class="btn btn-secondary product-details" data-product="Immunology Reagent - CRP">
+        <i class="fas fa-info-circle"></i> Details
+      </button>
+      <button class="btn btn-primary add-to-quote" data-product="Immunology Reagent - CRP">
+        <i class="fas fa-plus"></i> Add to Quote
+      </button>
+    </div>
+  </div>
+</div>
+
+<!-- 12. Urinalysis Control Solution -->
+<div class="product-card" data-category="reagents">
+  <div class="product-image">
+    <img src="https://via.placeholder.com/350x200?text=Urinalysis+Control" alt="Urinalysis Control Solution"/>
+    <div class="product-overlay">
+      <button class="btn btn-primary quick-quote" data-product="Urinalysis Control Solution">
+        <i class="fas fa-calculator"></i> Quick Quote
+      </button>
+    </div>
+  </div>
+  <div class="product-info">
+    <h3 class="product-name">Urinalysis Control Solution</h3>
+    <p class="product-description">Daily QC for urine test strips and analyzers.</p>
+    <div class="product-specs">
+      <span class="spec-tag">Normal + Abnormal</span>
+      <span class="spec-tag">Long Stability</span>
+      <span class="spec-tag">Ready-to-Use</span>
+    </div>
+    <div class="product-actions">
+      <button class="btn btn-secondary product-details" data-product="Urinalysis Control Solution">
+        <i class="fas fa-info-circle"></i> Details
+      </button>
+      <button class="btn btn-primary add-to-quote" data-product="Urinalysis Control Solution">
+        <i class="fas fa-plus"></i> Add to Quote
+      </button>
+    </div>
+  </div>
+</div>
+
+<!-- 13. Coagulation Analyzer - Semi-Automated -->
+<div class="product-card" data-category="instruments">
+  <div class="product-image">
+    <img src="https://via.placeholder.com/350x200?text=Coagulation+Analyzer" alt="Coagulation Analyzer - Semi-Automated"/>
+    <div class="product-overlay">
+      <button class="btn btn-primary quick-quote" data-product="Coagulation Analyzer - Semi-Automated">
+        <i class="fas fa-calculator"></i> Quick Quote
+      </button>
+    </div>
+  </div>
+  <div class="product-info">
+    <h3 class="product-name">Coagulation Analyzer - Semi-Automated</h3>
+    <p class="product-description">Dual-channel analyzer for routine PT and aPTT testing.</p>
+    <div class="product-specs">
+      <span class="spec-tag">LCD Display</span>
+      <span class="spec-tag">Heated Block</span>
+      <span class="spec-tag">PT/aPTT/Fibrinogen</span>
+    </div>
+    <div class="product-actions">
+      <button class="btn btn-secondary product-details" data-product="Coagulation Analyzer - Semi-Automated">
+        <i class="fas fa-info-circle"></i> Details
+      </button>
+      <button class="btn btn-primary add-to-quote" data-product="Coagulation Analyzer - Semi-Automated">
+        <i class="fas fa-plus"></i> Add to Quote
+      </button>
+    </div>
+  </div>
+</div>
+
+<!-- 14. Blood Typing Reagents -->
+<div class="product-card" data-category="reagents">
+  <div class="product-image">
+    <img src="https://via.placeholder.com/350x200?text=Blood+Typing+Reagents" alt="Blood Typing Reagents"/>
+    <div class="product-overlay">
+      <button class="btn btn-primary quick-quote" data-product="Blood Typing Reagents">
+        <i class="fas fa-calculator"></i> Quick Quote
+      </button>
+    </div>
+  </div>
+  <div class="product-info">
+    <h3 class="product-name">Blood Typing Reagents (Anti-A, Anti-B, Anti-D)</h3>
+    <p class="product-description">Routine ABO and RhD blood grouping reagents.</p>
+    <div class="product-specs">
+      <span class="spec-tag">Anti-A</span>
+      <span class="spec-tag">Anti-B</span>
+      <span class="spec-tag">Anti-D</span>
+    </div>
+    <div class="product-actions">
+      <button class="btn btn-secondary product-details" data-product="Blood Typing Reagents">
+        <i class="fas fa-info-circle"></i> Details
+      </button>
+      <button class="btn btn-primary add-to-quote" data-product="Blood Typing Reagents">
+        <i class="fas fa-plus"></i> Add to Quote
+      </button>
+    </div>
+  </div>
+</div>
+
+<!-- 15. ESR Analyzer - Automated -->
+<div class="product-card" data-category="instruments">
+  <div class="product-image">
+    <img src="https://via.placeholder.com/350x200?text=ESR+Analyzer" alt="ESR Analyzer - Automated"/>
+    <div class="product-overlay">
+      <button class="btn btn-primary quick-quote" data-product="ESR Analyzer - Automated">
+        <i class="fas fa-calculator"></i> Quick Quote
+      </button>
+    </div>
+  </div>
+  <div class="product-info">
+    <h3 class="product-name">ESR Analyzer - Automated</h3>
+    <p class="product-description">Automated ESR testing with LIS connectivity and barcode reader.</p>
+    <div class="product-specs">
+      <span class="spec-tag">30/hr</span>
+      <span class="spec-tag">Infrared</span>
+      <span class="spec-tag">No Manual Steps</span>
+    </div>
+    <div class="product-actions">
+      <button class="btn btn-secondary product-details" data-product="ESR Analyzer - Automated">
+        <i class="fas fa-info-circle"></i> Details
+      </button>
+      <button class="btn btn-primary add-to-quote" data-product="ESR Analyzer - Automated">
+        <i class="fas fa-plus"></i> Add to Quote
+      </button>
+    </div>
+  </div>
+</div>
+
+<!-- 16. Glucose Reagent - Enzymatic -->
+<div class="product-card" data-category="reagents">
+  <div class="product-image">
+    <img src="https://via.placeholder.com/350x200?text=Glucose+Reagent" alt="Glucose Reagent - Enzymatic"/>
+    <div class="product-overlay">
+      <button class="btn btn-primary quick-quote" data-product="Glucose Reagent - Enzymatic">
+        <i class="fas fa-calculator"></i> Quick Quote
+      </button>
+    </div>
+  </div>
+  <div class="product-info">
+    <h3 class="product-name">Glucose Reagent - Enzymatic</h3>
+    <p class="product-description">Enzymatic glucose test reagent for serum, plasma, or urine.</p>
+    <div class="product-specs">
+      <span class="spec-tag">High Accuracy</span>
+      <span class="spec-tag">Liquid Stable</span>
+      <span class="spec-tag">Low Interference</span>
+    </div>
+    <div class="product-actions">
+      <button class="btn btn-secondary product-details" data-product="Glucose Reagent - Enzymatic">
+        <i class="fas fa-info-circle"></i> Details
+      </button>
+      <button class="btn btn-primary add-to-quote" data-product="Glucose Reagent - Enzymatic">
+        <i class="fas fa-plus"></i> Add to Quote
+      </button>
+    </div>
+  </div>
+</div>
+
+<!-- 17. Microscope Slides - Frosted -->
+<div class="product-card" data-category="consumables">
+  <div class="product-image">
+    <img src="https://via.placeholder.com/350x200?text=Frosted+Slides" alt="Microscope Slides - Frosted"/>
+    <div class="product-overlay">
+      <button class="btn btn-primary quick-quote" data-product="Microscope Slides - Frosted">
+        <i class="fas fa-calculator"></i> Quick Quote
+      </button>
+    </div>
+  </div>
+  <div class="product-info">
+    <h3 class="product-name">Microscope Slides - Frosted</h3>
+    <p class="product-description">High-quality glass slides with frosted labeling area.</p>
+    <div class="product-specs">
+      <span class="spec-tag">75x25mm</span>
+      <span class="spec-tag">Ground Edges</span>
+      <span class="spec-tag">Pre-cleaned</span>
+    </div>
+    <div class="product-actions">
+      <button class="btn btn-secondary product-details" data-product="Microscope Slides - Frosted">
+        <i class="fas fa-info-circle"></i> Details
+      </button>
+      <button class="btn btn-primary add-to-quote" data-product="Microscope Slides - Frosted">
+        <i class="fas fa-plus"></i> Add to Quote
+      </button>
+    </div>
+  </div>
+</div>
+
+<!-- 18. Specimen Containers - Sterile -->
+<div class="product-card" data-category="consumables">
+  <div class="product-image">
+    <img src="https://via.placeholder.com/350x200?text=Sterile+Containers" alt="Specimen Containers - Sterile"/>
+    <div class="product-overlay">
+      <button class="btn btn-primary quick-quote" data-product="Specimen Containers - Sterile">
+        <i class="fas fa-calculator"></i> Quick Quote
+      </button>
+    </div>
+  </div>
+  <div class="product-info">
+    <h3 class="product-name">Specimen Containers - Sterile</h3>
+    <p class="product-description">Leak-proof specimen containers, sterile and individually packed.</p>
+    <div class="product-specs">
+      <span class="spec-tag">120ml</span>
+      <span class="spec-tag">Gamma Sterile</span>
+      <span class="spec-tag">Graduated</span>
+    </div>
+    <div class="product-actions">
+      <button class="btn btn-secondary product-details" data-product="Specimen Containers - Sterile">
+        <i class="fas fa-info-circle"></i> Details
+      </button>
+      <button class="btn btn-primary add-to-quote" data-product="Specimen Containers - Sterile">
+        <i class="fas fa-plus"></i> Add to Quote
+      </button>
+    </div>
+  </div>
+</div>
+
+<!-- 19. Serology Reagents - ASO -->
+<div class="product-card" data-category="reagents">
+  <div class="product-image">
+    <img src="https://via.placeholder.com/350x200?text=ASO+Reagents" alt="Serology Reagents - ASO"/>
+    <div class="product-overlay">
+      <button class="btn btn-primary quick-quote" data-product="Serology Reagents - ASO">
+        <i class="fas fa-calculator"></i> Quick Quote
+      </button>
+    </div>
+  </div>
+  <div class="product-info">
+    <h3 class="product-name">Serology Reagents - ASO</h3>
+    <p class="product-description">Latex agglutination test kit for ASO detection.</p>
+    <div class="product-specs">
+      <span class="spec-tag">Latex Based</span>
+      <span class="spec-tag">Qualitative + Semi-quant</span>
+      <span class="spec-tag">100 Tests</span>
+    </div>
+    <div class="product-actions">
+      <button class="btn btn-secondary product-details" data-product="Serology Reagents - ASO">
+        <i class="fas fa-info-circle"></i> Details
+      </button>
+      <button class="btn btn-primary add-to-quote" data-product="Serology Reagents - ASO">
+        <i class="fas fa-plus"></i> Add to Quote
+      </button>
+    </div>
+  </div>
+</div>
+
+<!-- 20. Chemistry Analyzer - Automated -->
+<div class="product-card" data-category="instruments">
+  <div class="product-image">
+    <img src="https://via.placeholder.com/350x200?text=Automated+Chem+Analyzer" alt="Chemistry Analyzer - Automated"/>
+    <div class="product-overlay">
+      <button class="btn btn-primary quick-quote" data-product="Chemistry Analyzer - Automated">
+        <i class="fas fa-calculator"></i> Quick Quote
+      </button>
+    </div>
+  </div>
+  <div class="product-info">
+    <h3 class="product-name">Chemistry Analyzer - Automated</h3>
+    <p class="product-description">Benchtop chemistry analyzer with random access and 180 tests/hr throughput.</p>
+    <div class="product-specs">
+      <span class="spec-tag">40 Test Menu</span>
+      <span class="spec-tag">2-30µL Samples</span>
+      <span class="spec-tag">Refrigerated Tray</span>
+    </div>
+    <div class="product-actions">
+      <button class="btn btn-secondary product-details" data-product="Chemistry Analyzer - Automated">
+        <i class="fas fa-info-circle"></i> Details
+      </button>
+      <button class="btn btn-primary add-to-quote" data-product="Chemistry Analyzer - Automated">
+        <i class="fas fa-plus"></i> Add to Quote
+      </button>
+    </div>
+  </div>
+</div>
+
+<!-- 21. Blood Collection Tubes - EDTA -->
+<div class="product-card" data-category="consumables">
+  <div class="product-image">
+    <img src="https://via.placeholder.com/350x200?text=EDTA+Tubes" alt="Blood Collection Tubes - EDTA"/>
+    <div class="product-overlay">
+      <button class="btn btn-primary quick-quote" data-product="Blood Collection Tubes - EDTA">
+        <i class="fas fa-calculator"></i> Quick Quote
+      </button>
+    </div>
+  </div>
+  <div class="product-info">
+    <h3 class="product-name">Blood Collection Tubes - EDTA</h3>
+    <p class="product-description">Vacuum tubes with EDTA for hematology testing.</p>
+    <div class="product-specs">
+      <span class="spec-tag">3ml</span>
+      <span class="spec-tag">K2EDTA</span>
+      <span class="spec-tag">100/Pack</span>
+    </div>
+    <div class="product-actions">
+      <button class="btn btn-secondary product-details" data-product="Blood Collection Tubes - EDTA">
+        <i class="fas fa-info-circle"></i> Details
+      </button>
+      <button class="btn btn-primary add-to-quote" data-product="Blood Collection Tubes - EDTA">
+        <i class="fas fa-plus"></i> Add to Quote
+      </button>
+    </div>
+  </div>
+</div>
+
+<!-- 22. HIV Rapid Test Kit (1/2) -->
+<div class="product-card" data-category="kits">
+  <div class="product-image">
+    <img src="https://via.placeholder.com/350x200?text=HIV+Rapid+Test" alt="HIV Rapid Test Kit"/>
+    <div class="product-overlay">
+      <button class="btn btn-primary quick-quote" data-product="HIV Rapid Test Kit">
+        <i class="fas fa-calculator"></i> Quick Quote
+      </button>
+    </div>
+  </div>
+  <div class="product-info">
+    <h3 class="product-name">HIV Rapid Test Kit (1/2)</h3>
+    <p class="product-description">Rapid test for qualitative detection of HIV-1/2 antibodies.</p>
+    <div class="product-specs">
+      <span class="spec-tag">25 Tests/Box</span>
+      <span class="spec-tag">Whole Blood</span>
+      <span class="spec-tag">CE</span>
+    </div>
+    <div class="product-actions">
+      <button class="btn btn-secondary product-details" data-product="HIV Rapid Test Kit">
+        <i class="fas fa-info-circle"></i> Details
+      </button>
+      <button class="btn btn-primary add-to-quote" data-product="HIV Rapid Test Kit">
+        <i class="fas fa-plus"></i> Add to Quote
+      </button>
+    </div>
+  </div>
+</div>
+
+<!-- 23. Incubator - Laboratory (Benchtop) -->
+<div class="product-card" data-category="instruments">
+  <div class="product-image">
+    <img src="https://via.placeholder.com/350x200?text=Lab+Incubator" alt="Incubator - Laboratory"/>
+    <div class="product-overlay">
+      <button class="btn btn-primary quick-quote" data-product="Incubator - Laboratory">
+        <i class="fas fa-calculator"></i> Quick Quote
+      </button>
+    </div>
+  </div>
+  <div class="product-info">
+    <h3 class="product-name">Incubator - Laboratory (Benchtop)</h3>
+    <p class="product-description">Digital incubator for microbiology and diagnostics.</p>
+    <div class="product-specs">
+      <span class="spec-tag">20L Volume</span>
+      <span class="spec-tag">RT+5°C to 60°C</span>
+      <span class="spec-tag">Glass Door</span>
+    </div>
+    <div class="product-actions">
+      <button class="btn btn-secondary product-details" data-product="Incubator - Laboratory">
+        <i class="fas fa-info-circle"></i> Details
+      </button>
+      <button class="btn btn-primary add-to-quote" data-product="Incubator - Laboratory">
+        <i class="fas fa-plus"></i> Add to Quote
+      </button>
+    </div>
+  </div>
+</div>
+
+<!-- 24. Microscopy Stains - Gram Stain Kit -->
+<div class="product-card" data-category="reagents">
+  <div class="product-image">
+    <img src="https://via.placeholder.com/350x200?text=Gram+Stain+Kit" alt="Gram Stain Kit"/>
+    <div class="product-overlay">
+      <button class="btn btn-primary quick-quote" data-product="Gram Stain Kit">
+        <i class="fas fa-calculator"></i> Quick Quote
+      </button>
+    </div>
+  </div>
+  <div class="product-info">
+    <h3 class="product-name">Microscopy Stains - Gram Stain Kit</h3>
+    <p class="product-description">Differential stain kit for bacterial classification.</p>
+    <div class="product-specs">
+      <span class="spec-tag">4 Reagents</span>
+      <span class="spec-tag">250mL Each</span>
+      <span class="spec-tag">IVD Certified</span>
+    </div>
+    <div class="product-actions">
+      <button class="btn btn-secondary product-details" data-product="Gram Stain Kit">
+        <i class="fas fa-info-circle"></i> Details
+      </button>
+      <button class="btn btn-primary add-to-quote" data-product="Gram Stain Kit">
+        <i class="fas fa-plus"></i> Add to Quote
+      </button>
+    </div>
+  </div>
+</div>
+
+<!-- 25. Disposable Transfer Pipettes -->
+<div class="product-card" data-category="consumables">
+  <div class="product-image">
+    <img src="https://via.placeholder.com/350x200?text=Transfer+Pipettes" alt="Transfer Pipettes"/>
+    <div class="product-overlay">
+      <button class="btn btn-primary quick-quote" data-product="Disposable Transfer Pipettes">
+        <i class="fas fa-calculator"></i> Quick Quote
+      </button>
+    </div>
+  </div>
+  <div class="product-info">
+    <h3 class="product-name">Disposable Transfer Pipettes</h3>
+    <p class="product-description">Sterile pipettes for safe and accurate liquid transfer.</p>
+    <div class="product-specs">
+      <span class="spec-tag">3ml Volume</span>
+      <span class="spec-tag">500 Pack</span>
+      <span class="spec-tag">Sterile LDPE</span>
+    </div>
+    <div class="product-actions">
+      <button class="btn btn-secondary product-details" data-product="Disposable Transfer Pipettes">
+        <i class="fas fa-info-circle"></i> Details
+      </button>
+      <button class="btn btn-primary add-to-quote" data-product="Disposable Transfer Pipettes">
+        <i class="fas fa-plus"></i> Add to Quote
+      </button>
+    </div>
+  </div>
+</div>
+
+<!-- 26. Automated Plate Washer -->
+<div class="product-card" data-category="instruments">
+  <div class="product-image">
+    <img src="https://via.placeholder.com/350x200?text=Plate+Washer" alt="Automated Plate Washer"/>
+    <div class="product-overlay">
+      <button class="btn btn-primary quick-quote" data-product="Automated Plate Washer">
+        <i class="fas fa-calculator"></i> Quick Quote
+      </button>
+    </div>
+  </div>
+  <div class="product-info">
+    <h3 class="product-name">Automated Plate Washer</h3>
+    <p class="product-description">Efficient washing of 96-well plates with programmable cycles.</p>
+    <div class="product-specs">
+      <span class="spec-tag">96-Well</span>
+      <span class="spec-tag">50–400µL</span>
+      <span class="spec-tag">Liquid Sensors</span>
+    </div>
+    <div class="product-actions">
+      <button class="btn btn-secondary product-details" data-product="Automated Plate Washer">
+        <i class="fas fa-info-circle"></i> Details
+      </button>
+      <button class="btn btn-primary add-to-quote" data-product="Automated Plate Washer">
+        <i class="fas fa-plus"></i> Add to Quote
+      </button>
+    </div>
+  </div>
+</div>
+
+<!-- 27. Urinalysis Reagents - Dipstick Calibrators -->
+<div class="product-card" data-category="reagents">
+  <div class="product-image">
+    <img src="https://via.placeholder.com/350x200?text=Dipstick+Calibrators" alt="Dipstick Calibrators"/>
+    <div class="product-overlay">
+      <button class="btn btn-primary quick-quote" data-product="Dipstick Calibrators">
+        <i class="fas fa-calculator"></i> Quick Quote
+      </button>
+    </div>
+  </div>
+  <div class="product-info">
+    <h3 class="product-name">Urinalysis Reagents - Dipstick Calibrators</h3>
+    <p class="product-description">Low, mid, high calibrators for urine strip reader performance.</p>
+    <div class="product-specs">
+      <span class="spec-tag">3 x 10mL</span>
+      <span class="spec-tag">Assayed</span>
+      <span class="spec-tag">ISO 17025</span>
+    </div>
+    <div class="product-actions">
+      <button class="btn btn-secondary product-details" data-product="Dipstick Calibrators">
+        <i class="fas fa-info-circle"></i> Details
+      </button>
+      <button class="btn btn-primary add-to-quote" data-product="Dipstick Calibrators">
+        <i class="fas fa-plus"></i> Add to Quote
+      </button>
+    </div>
+  </div>
+</div>
+
+<!-- 28. Centrifuge Tubes - Conical -->
+<div class="product-card" data-category="consumables">
+  <div class="product-image">
+    <img src="https://via.placeholder.com/350x200?text=Conical+Centrifuge+Tubes" alt="Conical Centrifuge Tubes"/>
+    <div class="product-overlay">
+      <button class="btn btn-primary quick-quote" data-product="Centrifuge Tubes - Conical">
+        <i class="fas fa-calculator"></i> Quick Quote
+      </button>
+    </div>
+  </div>
+  <div class="product-info">
+    <h3 class="product-name">Centrifuge Tubes - Conical (Sterile)</h3>
+    <p class="product-description">15ml and 50ml sterile tubes for sample separation.</p>
+    <div class="product-specs">
+      <span class="spec-tag">500 Pack</span>
+      <span class="spec-tag">Gamma Sterile</span>
+      <span class="spec-tag">Leak-proof</span>
+    </div>
+    <div class="product-actions">
+      <button class="btn btn-secondary product-details" data-product="Centrifuge Tubes - Conical">
+        <i class="fas fa-info-circle"></i> Details
+      </button>
+      <button class="btn btn-primary add-to-quote" data-product="Centrifuge Tubes - Conical">
+        <i class="fas fa-plus"></i> Add to Quote
+      </button>
+    </div>
+  </div>
+</div>
+
+<!-- 29. Blood Collection Needles - Multi-sample -->
+<div class="product-card" data-category="consumables">
+  <div class="product-image">
+    <img src="https://via.placeholder.com/350x200?text=Blood+Needles" alt="Blood Collection Needles"/>
+    <div class="product-overlay">
+      <button class="btn btn-primary quick-quote" data-product="Blood Collection Needles">
+        <i class="fas fa-calculator"></i> Quick Quote
+      </button>
+    </div>
+  </div>
+  <div class="product-info">
+    <h3 class="product-name">Blood Collection Needles - Multi-sample</h3>
+    <p class="product-description">Siliconized, safety-sealed needles for venipuncture.</p>
+    <div class="product-specs">
+      <span class="spec-tag">21G & 22G</span>
+      <span class="spec-tag">100/Box</span>
+      <span class="spec-tag">Luer Adapter</span>
+    </div>
+    <div class="product-actions">
+      <button class="btn btn-secondary product-details" data-product="Blood Collection Needles">
+        <i class="fas fa-info-circle"></i> Details
+      </button>
+      <button class="btn btn-primary add-to-quote" data-product="Blood Collection Needles">
+        <i class="fas fa-plus"></i> Add to Quote
+      </button>
+    </div>
+  </div>
+</div>
+
+<!-- 30. ELISA Reader - Semi-Automated -->
+<div class="product-card" data-category="instruments">
+  <div class="product-image">
+    <img src="https://via.placeholder.com/350x200?text=ELISA+Reader" alt="ELISA Reader"/>
+    <div class="product-overlay">
+      <button class="btn btn-primary quick-quote" data-product="ELISA Reader - Semi-Automated">
+        <i class="fas fa-calculator"></i> Quick Quote
+      </button>
+    </div>
+  </div>
+  <div class="product-info">
+    <h3 class="product-name">ELISA Reader - Semi-Automated</h3>
+    <p class="product-description">Semi-automated 96-well plate ELISA absorbance reader.</p>
+    <div class="product-specs">
+      <span class="spec-tag">Dual Wavelength</span>
+      <span class="spec-tag">PC Software</span>
+      <span class="spec-tag">6 sec/plate</span>
+    </div>
+    <div class="product-actions">
+      <button class="btn btn-secondary product-details" data-product="ELISA Reader - Semi-Automated">
+        <i class="fas fa-info-circle"></i> Details
+      </button>
+      <button class="btn btn-primary add-to-quote" data-product="ELISA Reader - Semi-Automated">
+        <i class="fas fa-plus"></i> Add to Quote
+      </button>
+    </div>
+  </div>
+</div>
+
+<!-- 31. Blood Smear Slides - Pre-cleaned -->
+<div class="product-card" data-category="consumables">
+  <div class="product-image">
+    <img src="https://via.placeholder.com/350x200?text=Blood+Smear+Slides" alt="Blood Smear Slides"/>
+    <div class="product-overlay">
+      <button class="btn btn-primary quick-quote" data-product="Blood Smear Slides">
+        <i class="fas fa-calculator"></i> Quick Quote
+      </button>
+    </div>
+  </div>
+  <div class="product-info">
+    <h3 class="product-name">Blood Smear Slides - Pre-cleaned</h3>
+    <p class="product-description">Pre-cleaned glass slides for blood smears and microscopy.</p>
+    <div class="product-specs">
+      <span class="spec-tag">75x25mm</span>
+      <span class="spec-tag">100/Box</span>
+      <span class="spec-tag">Polished Edges</span>
+    </div>
+    <div class="product-actions">
+      <button class="btn btn-secondary product-details" data-product="Blood Smear Slides">
+        <i class="fas fa-info-circle"></i> Details
+      </button>
+      <button class="btn btn-primary add-to-quote" data-product="Blood Smear Slides">
+        <i class="fas fa-plus"></i> Add to Quote
+      </button>
+    </div>
+  </div>
+</div>
+
+<!-- 32. Glucose Control Solution -->
+<div class="product-card" data-category="reagents">
+  <div class="product-image">
+    <img src="https://via.placeholder.com/350x200?text=Glucose+Control" alt="Glucose Control Solution"/>
+    <div class="product-overlay">
+      <button class="btn btn-primary quick-quote" data-product="Glucose Control Solution">
+        <i class="fas fa-calculator"></i> Quick Quote
+      </button>
+    </div>
+  </div>
+  <div class="product-info">
+    <h3 class="product-name">Glucose Control Solution</h3>
+    <p class="product-description">Ready-to-use control solution for blood glucose meters.</p>
+    <div class="product-specs">
+      <span class="spec-tag">Low, Normal, High</span>
+      <span class="spec-tag">3x4mL</span>
+      <span class="spec-tag">CE</span>
+    </div>
+    <div class="product-actions">
+      <button class="btn btn-secondary product-details" data-product="Glucose Control Solution">
+        <i class="fas fa-info-circle"></i> Details
+      </button>
+      <button class="btn btn-primary add-to-quote" data-product="Glucose Control Solution">
+        <i class="fas fa-plus"></i> Add to Quote
+      </button>
+    </div>
+  </div>
+</div>
+
+<!-- 33. Digital Thermometer - Clinical -->
+<div class="product-card" data-category="instruments">
+  <div class="product-image">
+    <img src="https://via.placeholder.com/350x200?text=Clinical+Thermometer" alt="Digital Thermometer"/>
+    <div class="product-overlay">
+      <button class="btn btn-primary quick-quote" data-product="Digital Thermometer - Clinical">
+        <i class="fas fa-calculator"></i> Quick Quote
+      </button>
+    </div>
+  </div>
+  <div class="product-info">
+    <h3 class="product-name">Digital Thermometer - Clinical</h3>
+    <p class="product-description">Fast and accurate thermometer for clinical use.</p>
+    <div class="product-specs">
+      <span class="spec-tag">±0.1°C</span>
+      <span class="spec-tag">10s Read</span>
+      <span class="spec-tag">Flexible Tip</span>
+    </div>
+    <div class="product-actions">
+      <button class="btn btn-secondary product-details" data-product="Digital Thermometer - Clinical">
+        <i class="fas fa-info-circle"></i> Details
+      </button>
+      <button class="btn btn-primary add-to-quote" data-product="Digital Thermometer - Clinical">
+        <i class="fas fa-plus"></i> Add to Quote
+      </button>
+    </div>
+  </div>
+</div>
+
+<!-- 34. Sterilization Pouches - Self-Sealing -->
+<div class="product-card" data-category="consumables">
+  <div class="product-image">
+    <img src="https://via.placeholder.com/350x200?text=Sterilization+Pouches" alt="Sterilization Pouches"/>
+    <div class="product-overlay">
+      <button class="btn btn-primary quick-quote" data-product="Sterilization Pouches">
+        <i class="fas fa-calculator"></i> Quick Quote
+      </button>
+    </div>
+  </div>
+  <div class="product-info">
+    <h3 class="product-name">Sterilization Pouches - Self-Sealing</h3>
+    <p class="product-description">Triple-seal pouches for secure steam sterilization.</p>
+    <div class="product-specs">
+      <span class="spec-tag">200/Box</span>
+      <span class="spec-tag">90x260mm</span>
+      <span class="spec-tag">ISO 11140-1</span>
+    </div>
+    <div class="product-actions">
+      <button class="btn btn-secondary product-details" data-product="Sterilization Pouches">
+        <i class="fas fa-info-circle"></i> Details
+      </button>
+      <button class="btn btn-primary add-to-quote" data-product="Sterilization Pouches">
+        <i class="fas fa-plus"></i> Add to Quote
+      </button>
+    </div>
+  </div>
+</div>
+
+<!-- 35. Blood Lancets - Safety -->
+<div class="product-card" data-category="consumables">
+  <div class="product-image">
+    <img src="https://via.placeholder.com/350x200?text=Safety+Lancets" alt="Blood Lancets"/>
+    <div class="product-overlay">
+      <button class="btn btn-primary quick-quote" data-product="Blood Lancets - Safety">
+        <i class="fas fa-calculator"></i> Quick Quote
+      </button>
+    </div>
+  </div>
+  <div class="product-info">
+    <h3 class="product-name">Blood Lancets - Safety</h3>
+    <p class="product-description">Single-use safety lancets for blood sampling.</p>
+    <div class="product-specs">
+      <span class="spec-tag">28G</span>
+      <span class="spec-tag">200/Box</span>
+      <span class="spec-tag">1.8mm Depth</span>
+    </div>
+    <div class="product-actions">
+      <button class="btn btn-secondary product-details" data-product="Blood Lancets - Safety">
+        <i class="fas fa-info-circle"></i> Details
+      </button>
+      <button class="btn btn-primary add-to-quote" data-product="Blood Lancets - Safety">
+        <i class="fas fa-plus"></i> Add to Quote
+      </button>
+    </div>
+  </div>
+</div>
+
+<!-- 36. Pipette Tips - Filtered (Sterile) -->
+<div class="product-card" data-category="consumables">
+  <div class="product-image">
+    <img src="https://via.placeholder.com/350x200?text=Filtered+Pipette+Tips" alt="Pipette Tips"/>
+    <div class="product-overlay">
+      <button class="btn btn-primary quick-quote" data-product="Pipette Tips - Filtered">
+        <i class="fas fa-calculator"></i> Quick Quote
+      </button>
+    </div>
+  </div>
+  <div class="product-info">
+    <h3 class="product-name">Pipette Tips - Filtered (Sterile)</h3>
+    <p class="product-description">Filtered sterile pipette tips for contamination-free work.</p>
+    <div class="product-specs">
+      <span class="spec-tag">10–1000µL</span>
+      <span class="spec-tag">960/Pack</span>
+      <span class="spec-tag">Autoclavable</span>
+    </div>
+    <div class="product-actions">
+      <button class="btn btn-secondary product-details" data-product="Pipette Tips - Filtered">
+        <i class="fas fa-info-circle"></i> Details
+      </button>
+      <button class="btn btn-primary add-to-quote" data-product="Pipette Tips - Filtered">
+        <i class="fas fa-plus"></i> Add to Quote
+      </button>
+    </div>
+  </div>
+</div>
+
+<!-- 37. Refrigerator - Medical Grade -->
+<div class="product-card" data-category="instruments">
+  <div class="product-image">
+    <img src="https://via.placeholder.com/350x200?text=Medical+Refrigerator" alt="Medical Refrigerator"/>
+    <div class="product-overlay">
+      <button class="btn btn-primary quick-quote" data-product="Medical Grade Refrigerator">
+        <i class="fas fa-calculator"></i> Quick Quote
+      </button>
+    </div>
+  </div>
+  <div class="product-info">
+    <h3 class="product-name">Refrigerator - Medical Grade</h3>
+    <p class="product-description">Stable 2–8°C refrigerator for samples and reagents.</p>
+    <div class="product-specs">
+      <span class="spec-tag">120L</span>
+      <span class="spec-tag">2–8°C</span>
+      <span class="spec-tag">Digital Display</span>
+    </div>
+    <div class="product-actions">
+      <button class="btn btn-secondary product-details" data-product="Medical Grade Refrigerator">
+        <i class="fas fa-info-circle"></i> Details
+      </button>
+      <button class="btn btn-primary add-to-quote" data-product="Medical Grade Refrigerator">
+        <i class="fas fa-plus"></i> Add to Quote
+      </button>
+    </div>
+  </div>
+</div>
+
+<!-- 38. Urine Collection Cups - Sterile -->
+<div class="product-card" data-category="consumables">
+  <div class="product-image">
+    <img src="https://via.placeholder.com/350x200?text=Urine+Collection+Cups" alt="Urine Collection Cups"/>
+    <div class="product-overlay">
+      <button class="btn btn-primary quick-quote" data-product="Urine Collection Cups">
+        <i class="fas fa-calculator"></i> Quick Quote
+      </button>
+    </div>
+  </div>
+  <div class="product-info">
+    <h3 class="product-name">Urine Collection Cups - Sterile</h3>
+    <p class="product-description">Secure, individually wrapped urine sample cups.</p>
+    <div class="product-specs">
+      <span class="spec-tag">90ml</span>
+      <span class="spec-tag">50/Pack</span>
+      <span class="spec-tag">Leak-Proof</span>
+    </div>
+    <div class="product-actions">
+      <button class="btn btn-secondary product-details" data-product="Urine Collection Cups">
+        <i class="fas fa-info-circle"></i> Details
+      </button>
+      <button class="btn btn-primary add-to-quote" data-product="Urine Collection Cups">
+        <i class="fas fa-plus"></i> Add to Quote
+      </button>
+    </div>
+  </div>
+</div>
+
+<!-- 39. Automated Sample Processor -->
+<div class="product-card" data-category="instruments">
+  <div class="product-image">
+    <img src="https://via.placeholder.com/350x200?text=Automated+Sample+Processor" alt="Automated Sample Processor"/>
+    <div class="product-overlay">
+      <button class="btn btn-primary quick-quote" data-product="Automated Sample Processor">
+        <i class="fas fa-calculator"></i> Quick Quote
+      </button>
+    </div>
+  </div>
+  <div class="product-info">
+    <h3 class="product-name">Automated Sample Processor</h3>
+    <p class="product-description">High-throughput liquid handler for diagnostics and biobanking.</p>
+    <div class="product-specs">
+      <span class="spec-tag">400 Samples/Hr</span>
+      <span class="spec-tag">1–1000µL</span>
+      <span class="spec-tag">Robotic Arm</span>
+    </div>
+    <div class="product-actions">
+      <button class="btn btn-secondary product-details" data-product="Automated Sample Processor">
+        <i class="fas fa-info-circle"></i> Details
+      </button>
+      <button class="btn btn-primary add-to-quote" data-product="Automated Sample Processor">
+        <i class="fas fa-plus"></i> Add to Quote
+      </button>
+    </div>
+  </div>
+</div>
+
+<!-- 40. Blood Glucose Control Solution Level 1 -->
+<div class="product-card" data-category="reagents">
+  <div class="product-image">
+    <img src="https://via.placeholder.com/350x200?text=Glucose+Control+Low" alt="Glucose Control Level 1"/>
+    <div class="product-overlay">
+      <button class="btn btn-primary quick-quote" data-product="Blood Glucose Control Solution Level 1">
+        <i class="fas fa-calculator"></i> Quick Quote
+      </button>
+    </div>
+  </div>
+  <div class="product-info">
+    <h3 class="product-name">Blood Glucose Control Solution Level 1</h3>
+    <p class="product-description">Low-level glucose control for daily accuracy checks.</p>
+    <div class="product-specs">
+      <span class="spec-tag">4mL</span>
+      <span class="spec-tag">~50 mg/dL</span>
+      <span class="spec-tag">CE</span>
+    </div>
+    <div class="product-actions">
+      <button class="btn btn-secondary product-details" data-product="Blood Glucose Control Solution Level 1">
+        <i class="fas fa-info-circle"></i> Details
+      </button>
+      <button class="btn btn-primary add-to-quote" data-product="Blood Glucose Control Solution Level 1">
+        <i class="fas fa-plus"></i> Add to Quote
+      </button>
+    </div>
+  </div>
+</div>
+
+<!-- 41. Blood Glucose Control Solution Level 2 -->
+<div class="product-card" data-category="reagents">
+  <div class="product-image">
+    <img src="https://via.placeholder.com/350x200?text=Glucose+Control+High" alt="Glucose Control Level 2"/>
+    <div class="product-overlay">
+      <button class="btn btn-primary quick-quote" data-product="Blood Glucose Control Solution Level 2">
+        <i class="fas fa-calculator"></i> Quick Quote
+      </button>
+    </div>
+  </div>
+  <div class="product-info">
+    <h3 class="product-name">Blood Glucose Control Solution Level 2</h3>
+    <p class="product-description">High-level glucose control for verifying test accuracy.</p>
+    <div class="product-specs">
+      <span class="spec-tag">4 mL</span>
+      <span class="spec-tag">~200 mg/dL</span>
+      <span class="spec-tag">Ready-to-Use</span>
+    </div>
+    <div class="product-actions">
+      <button class="btn btn-secondary product-details" data-product="Blood Glucose Control Solution Level 2">
+        <i class="fas fa-info-circle"></i> Details
+      </button>
+      <button class="btn btn-primary add-to-quote" data-product="Blood Glucose Control Solution Level 2">
+        <i class="fas fa-plus"></i> Add to Quote
+      </button>
+    </div>
+  </div>
+</div>
+
+<!-- 42. Specimen Transport Bags - Biohazard -->
+<div class="product-card" data-category="consumables">
+  <div class="product-image">
+    <img src="https://via.placeholder.com/350x200?text=Biohazard+Bags" alt="Specimen Transport Bags"/>
+    <div class="product-overlay">
+      <button class="btn btn-primary quick-quote" data-product="Specimen Transport Bags - Biohazard">
+        <i class="fas fa-calculator"></i> Quick Quote
+      </button>
+    </div>
+  </div>
+  <div class="product-info">
+    <h3 class="product-name">Specimen Transport Bags - Biohazard</h3>
+    <p class="product-description">Leak-proof specimen transport with document pouch.</p>
+    <div class="product-specs">
+      <span class="spec-tag">6x9 inches</span>
+      <span class="spec-tag">1000 Bags</span>
+      <span class="spec-tag">DOT & IATA</span>
+    </div>
+    <div class="product-actions">
+      <button class="btn btn-secondary product-details" data-product="Specimen Transport Bags - Biohazard">
+        <i class="fas fa-info-circle"></i> Details
+      </button>
+      <button class="btn btn-primary add-to-quote" data-product="Specimen Transport Bags - Biohazard">
+        <i class="fas fa-plus"></i> Add to Quote
+      </button>
+    </div>
+  </div>
+</div>
+
+<!-- 43. Alcohol Prep Pads - Sterile -->
+<div class="product-card" data-category="consumables">
+  <div class="product-image">
+    <img src="https://via.placeholder.com/350x200?text=Alcohol+Pads" alt="Alcohol Prep Pads"/>
+    <div class="product-overlay">
+      <button class="btn btn-primary quick-quote" data-product="Alcohol Prep Pads - Sterile">
+        <i class="fas fa-calculator"></i> Quick Quote
+      </button>
+    </div>
+  </div>
+  <div class="product-info">
+    <h3 class="product-name">Alcohol Prep Pads - Sterile</h3>
+    <p class="product-description">70% alcohol pads for skin disinfection.</p>
+    <div class="product-specs">
+      <span class="spec-tag">200 Pads</span>
+      <span class="spec-tag">30x65mm</span>
+      <span class="spec-tag">FDA, CE</span>
+    </div>
+    <div class="product-actions">
+      <button class="btn btn-secondary product-details" data-product="Alcohol Prep Pads - Sterile">
+        <i class="fas fa-info-circle"></i> Details
+      </button>
+      <button class="btn btn-primary add-to-quote" data-product="Alcohol Prep Pads - Sterile">
+        <i class="fas fa-plus"></i> Add to Quote
+      </button>
+    </div>
+  </div>
+</div>
+
+<!-- 44. Tourniquets - Disposable -->
+<div class="product-card" data-category="consumables">
+  <div class="product-image">
+    <img src="https://via.placeholder.com/350x200?text=Disposable+Tourniquets" alt="Disposable Tourniquets"/>
+    <div class="product-overlay">
+      <button class="btn btn-primary quick-quote" data-product="Tourniquets - Disposable">
+        <i class="fas fa-calculator"></i> Quick Quote
+      </button>
+    </div>
+  </div>
+  <div class="product-info">
+    <h3 class="product-name">Tourniquets - Disposable</h3>
+    <p class="product-description">Latex-free single-use tourniquets for venipuncture.</p>
+    <div class="product-specs">
+      <span class="spec-tag">250/Box</span>
+      <span class="spec-tag">TPE Material</span>
+      <span class="spec-tag">Latex-Free</span>
+    </div>
+    <div class="product-actions">
+      <button class="btn btn-secondary product-details" data-product="Tourniquets - Disposable">
+        <i class="fas fa-info-circle"></i> Details
+      </button>
+      <button class="btn btn-primary add-to-quote" data-product="Tourniquets - Disposable">
+        <i class="fas fa-plus"></i> Add to Quote
+      </button>
+    </div>
+  </div>
+</div>
+
+<!-- 45. Medical Waste Bags - Biohazard -->
+<div class="product-card" data-category="consumables">
+  <div class="product-image">
+    <img src="https://via.placeholder.com/350x200?text=Medical+Waste+Bags" alt="Medical Waste Bags"/>
+    <div class="product-overlay">
+      <button class="btn btn-primary quick-quote" data-product="Medical Waste Bags - Biohazard">
+        <i class="fas fa-calculator"></i> Quick Quote
+      </button>
+    </div>
+  </div>
+  <div class="product-info">
+    <h3 class="product-name">Medical Waste Bags - Biohazard</h3>
+    <p class="product-description">Heavy-duty autoclavable bags for contaminated waste.</p>
+    <div class="product-specs">
+      <span class="spec-tag">30L</span>
+      <span class="spec-tag">100 Bags</span>
+      <span class="spec-tag">ASTM Rated</span>
+    </div>
+    <div class="product-actions">
+      <button class="btn btn-secondary product-details" data-product="Medical Waste Bags - Biohazard">
+        <i class="fas fa-info-circle"></i> Details
+      </button>
+      <button class="btn btn-primary add-to-quote" data-product="Medical Waste Bags - Biohazard">
+        <i class="fas fa-plus"></i> Add to Quote
+      </button>
+    </div>
+  </div>
+</div>
+
+<!-- 46. Blood Mixer/Rocker -->
+<div class="product-card" data-category="mixing">
+  <div class="product-image">
+    <img src="https://via.placeholder.com/350x200?text=Blood+Mixer" alt="Blood Mixer Rocker"/>
+    <div class="product-overlay">
+      <button class="btn btn-primary quick-quote" data-product="Blood Mixer/Rocker">
+        <i class="fas fa-calculator"></i> Quick Quote
+      </button>
+    </div>
+  </div>
+  <div class="product-info">
+    <h3 class="product-name">Blood Mixer/Rocker</h3>
+    <p class="product-description">Rocking platform for gentle mixing of blood samples.</p>
+    <div class="product-specs">
+      <span class="spec-tag">10–40 RPM</span>
+      <span class="spec-tag">10 Tubes</span>
+      <span class="spec-tag">Quiet Operation</span>
+    </div>
+    <div class="product-actions">
+      <button class="btn btn-secondary product-details" data-product="Blood Mixer/Rocker">
+        <i class="fas fa-info-circle"></i> Details
+      </button>
+      <button class="btn btn-primary add-to-quote" data-product="Blood Mixer/Rocker">
+        <i class="fas fa-plus"></i> Add to Quote
+      </button>
+    </div>
+  </div>
+</div>
+
+<!-- 47. Diagnostic Immunoassay Reagents - Thyroid Panel -->
+<div class="product-card" data-category="reagents">
+  <div class="product-image">
+    <img src="https://via.placeholder.com/350x200?text=Thyroid+Reagents" alt="Thyroid Panel Reagents"/>
+    <div class="product-overlay">
+      <button class="btn btn-primary quick-quote" data-product="Thyroid Panel Reagents">
+        <i class="fas fa-calculator"></i> Quick Quote
+      </button>
+    </div>
+  </div>
+  <div class="product-info">
+    <h3 class="product-name">Diagnostic Immunoassay Reagents - Thyroid Panel</h3>
+    <p class="product-description">Reagents for measuring TSH, T3, and T4 by immunoassay.</p>
+    <div class="product-specs">
+      <span class="spec-tag">100 Tests</span>
+      <span class="spec-tag">Automated Use</span>
+      <span class="spec-tag">CE</span>
+    </div>
+    <div class="product-actions">
+      <button class="btn btn-secondary product-details" data-product="Thyroid Panel Reagents">
+        <i class="fas fa-info-circle"></i> Details
+      </button>
+      <button class="btn btn-primary add-to-quote" data-product="Thyroid Panel Reagents">
+        <i class="fas fa-plus"></i> Add to Quote
+      </button>
+    </div>
+  </div>
+</div>
+
+<!-- 48. Reagent Bottles - HDPE -->
+<div class="product-card" data-category="labware-accessories">
+  <div class="product-image">
+    <img src="https://via.placeholder.com/350x200?text=HDPE+Reagent+Bottles" alt="Reagent Bottles HDPE"/>
+    <div class="product-overlay">
+      <button class="btn btn-primary quick-quote" data-product="Reagent Bottles - HDPE">
+        <i class="fas fa-calculator"></i> Quick Quote
+      </button>
+    </div>
+  </div>
+  <div class="product-info">
+    <h3 class="product-name">Reagent Bottles - HDPE</h3>
+    <p class="product-description">Chemical-resistant bottles for safe liquid reagent storage.</p>
+    <div class="product-specs">
+      <span class="spec-tag">100–500 mL</span>
+      <span class="spec-tag">12 Pack</span>
+      <span class="spec-tag">Wide Mouth</span>
+    </div>
+    <div class="product-actions">
+      <button class="btn btn-secondary product-details" data-product="Reagent Bottles - HDPE">
+        <i class="fas fa-info-circle"></i> Details
+      </button>
+      <button class="btn btn-primary add-to-quote" data-product="Reagent Bottles - HDPE">
+        <i class="fas fa-plus"></i> Add to Quote
+      </button>
+    </div>
+  </div>
+</div>
+
+<!-- 49. Urinalysis Analyzer - Fully Automated -->
+<div class="product-card" data-category="instruments">
+  <div class="product-image">
+    <img src="https://via.placeholder.com/350x200?text=Fully+Auto+Urine+Analyzer" alt="Automated Urinalysis Analyzer"/>
+    <div class="product-overlay">
+      <button class="btn btn-primary quick-quote" data-product="Urinalysis Analyzer - Fully Automated">
+        <i class="fas fa-calculator"></i> Quick Quote
+      </button>
+    </div>
+  </div>
+  <div class="product-info">
+    <h3 class="product-name">Urinalysis Analyzer - Fully Automated</h3>
+    <p class="product-description">High-throughput automated urinalysis analyzer for labs.</p>
+    <div class="product-specs">
+      <span class="spec-tag">120 Tests/Hr</span>
+      <span class="spec-tag">Chem + Micro</span>
+      <span class="spec-tag">CE</span>
+    </div>
+    <div class="product-actions">
+      <button class="btn btn-secondary product-details" data-product="Urinalysis Analyzer - Fully Automated">
+        <i class="fas fa-info-circle"></i> Details
+      </button>
+      <button class="btn btn-primary add-to-quote" data-product="Urinalysis Analyzer - Fully Automated">
+        <i class="fas fa-plus"></i> Add to Quote
+      </button>
+    </div>
+  </div>
+</div>
+
+<!-- 50. Blood Bank Reagents - Coombs Serum -->
+<div class="product-card" data-category="reagents">
+  <div class="product-image">
+    <img src="https://via.placeholder.com/350x200?text=Coombs+Serum" alt="Coombs Serum"/>
+    <div class="product-overlay">
+      <button class="btn btn-primary quick-quote" data-product="Blood Bank Reagents - Coombs Serum">
+        <i class="fas fa-calculator"></i> Quick Quote
+      </button>
+    </div>
+  </div>
+  <div class="product-info">
+    <h3 class="product-name">Blood Bank Reagents - Coombs Serum</h3>
+    <p class="product-description">Anti-Human Globulin for direct and indirect Coombs tests.</p>
+    <div class="product-specs">
+      <span class="spec-tag">5mL Dropper</span>
+      <span class="spec-tag">Polyspecific</span>
+      <span class="spec-tag">FDA, CE</span>
+    </div>
+    <div class="product-actions">
+      <button class="btn btn-secondary product-details" data-product="Blood Bank Reagents - Coombs Serum">
+        <i class="fas fa-info-circle"></i> Details
+      </button>
+      <button class="btn btn-primary add-to-quote" data-product="Blood Bank Reagents - Coombs Serum">
+        <i class="fas fa-plus"></i> Add to Quote
+      </button>
+    </div>
+  </div>
+</div>
+ 
+<!-- Chemistry Control Serum - Multi-analyte -->
+<div class="product-card" data-category="reagents">
+  <div class="product-image">
+    <img src="https://via.placeholder.com/350x200?text=Chemistry+Control+Serum" alt="Chemistry Control Serum"/>
+    <div class="product-overlay">
+      <button class="btn btn-primary quick-quote" data-product="Chemistry Control Serum - Multi-analyte">
+        <i class="fas fa-calculator"></i> Quick Quote
+      </button>
+    </div>
+  </div>
+  <div class="product-info">
+    <h3 class="product-name">Chemistry Control Serum - Multi-analyte</h3>
+    <p class="product-description">Lyophilized human serum-based control for daily quality control of clinical chemistry analytes.</p>
+    <div class="product-specs">
+      <span class="spec-tag">Level 1 & 2</span>
+      <span class="spec-tag">5 mL/vial</span>
+      <span class="spec-tag">IVD, CE</span>
+    </div>
+    <div class="product-actions">
+      <button class="btn btn-secondary product-details" data-product="Chemistry Control Serum - Multi-analyte">
+        <i class="fas fa-info-circle"></i> Details
+      </button>
+      <button class="btn btn-primary add-to-quote" data-product="Chemistry Control Serum - Multi-analyte">
+        <i class="fas fa-plus"></i> Add to Quote
+      </button>
+    </div>
+  </div>
+</div>
+
+
+        
+      </div>
+
+      <!-- No Results Message -->
+      <div class="no-results" id="no-results" style="display: none;">
+        <div class="no-results-content">
+          <i class="fas fa-exclamation-circle"></i>
+          <h3>No products found matching your criteria.</h3>
+          <p>Please try adjusting your search or filters.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+    <!-- QUOTE CART -->
+  <div class="quote-cart" id="quoteCart">
+    <div class="cart-header">
+      <h3><i class="fas fa-shopping-cart"></i> Quote Cart</h3>
+      <button class="cart-toggle" id="cartToggle">
+        <i class="fas fa-chevron-up"></i>
+      </button>
+    </div>
+    <div class="cart-content" id="cartContent">
+      <div class="cart-items" id="cartItems">
+        <p class="empty-cart">No items in quote cart</p>
+      </div>
+      <div class="cart-actions">
+        <button class="btn btn-secondary" id="clearCart"><i class="fas fa-trash"></i> Clear Cart</button>
+        <button class="btn btn-primary" id="requestQuote"><i class="fas fa-paper-plane"></i> Request Quote</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-section">
+          <div class="footer-logo">
+            <h3>MINABLE SCIENTIFIC</h3>
+            <p>Laboratory Excellence</p>
+          </div>
+          <p class="footer-description">Your trusted partner for laboratory equipment, chemicals, and consumables.</p>
+        </div>
+        <div class="footer-section">
+          <h4>Quick Links</h4>
+          <ul class="footer-links">
+            <li><a href="../index.html">Home</a></li>
+            <li><a href="../index.html#about">About Us</a></li>
+            <li><a href="../index.html#products">Products</a></li>
+            <li><a href="../index.html#contact">Contact</a></li>
+          </ul>
+        </div>
+        <div class="footer-section">
+          <h4>Product Categories</h4>
+          <ul class="footer-links">
+            <li><a href="pages/glassware.html">Glassware</a></li>
+                        <li><a href="pages/apparatus.html">Apparatus</a></li>
+                        <li><a href="pages/chemicals.html">Chemicals</a></li>
+                        <li><a href="pages/diagnostics.html">Diagnostics</a></li>
+                        <li><a href="pages/filtration.html">Filtration</a></li>
+                        <li><a href="pages/lovibond.html">Lovibond</a></li>
+                        <li><a href="pages/paper-products.html">Paper Products</a></li>
+          </ul>
+        </div>
+        <div class="footer-section">
+          <h4>Contact Info</h4>
+          <div class="footer-contact">
+            <p><i class="fas fa-map-marker-alt"></i> Bulawayo, Zimbabwe</p>
+            <p><i class="fas fa-phone"></i> 09-883033</p>
+            <p><i class="fas fa-envelope"></i> info@minablescientific.co.zw</p>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <div class="footer-copyright">
+          <p>&copy; 2024 Minable Scientific. All rights reserved.</p>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- SCRIPTS -->
+  <script src="../js/main.js"></script>
+  <script src="../js/products.js"></script>
 </body>
 </html>
-
-
