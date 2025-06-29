@@ -1,217 +1,1661 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Lovibond - Minable Scientific</title>
-    <link rel="stylesheet" href="../css/styles.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Lovibond Products - Minable Scientific</title>
+  <meta name="description" content="Explore Lovibond testing equipment and accessories for water analysis and color measurement.">
+  <link rel="stylesheet" href="../css/styles.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
-    <!-- Navigation -->
-    <nav class="navbar" id="navbar">
-        <div class="nav-container">
-            <div class="nav-logo">
-                <h2>MINABLE SCIENTIFIC</h2>
-                <span class="nav-tagline">Laboratory Excellence</span>
-            </div>
-            
-            <ul class="nav-menu" id="nav-menu">
-                <li class="nav-item">
-                    <a href="../index.html" class="nav-link">Home</a>
-                </li>
-                <li class="nav-item">
-                    <a href="../index.html#about" class="nav-link">About</a>
-                </li>
-                <li class="nav-item dropdown">
-                    <a href="#products" class="nav-link">Products <i class="fas fa-chevron-down"></i></a>
-                    <ul class="dropdown-menu">
-                        <li><a href="glassware.html">Glassware</a></li>
-                        <li><a href="apparatus.html">Apparatus</a></li>
-                        <li><a href="chemicals.html">Chemicals</a></li>
-                        <li><a href="diagnostics.html">Diagnostics</a></li>
-                        <li><a href="filtration.html">Filtration</a></li>
-                        <li><a href="lovibond.html">Lovibond</a></li>
-                        <li><a href="paper-products.html">Paper Products</a></li>
-                    </ul>
-                </li>
-                <li class="nav-item">
-                    <a href="../index.html#services" class="nav-link">Services</a>
-                </li>
-                <li class="nav-item">
-                    <a href="../index.html#industries" class="nav-link">Industries</a>
-                </li>
-                <li class="nav-item">
-                    <a href="../index.html#contact" class="nav-link">Contact</a>
-                </li>
-                <li class="nav-item">
-                    <a href="../index.html#quote" class="nav-link btn-quote">Request Quote</a>
-                </li>
-            </ul>
-            
-            <div class="hamburger" id="hamburger">
-                <span class="bar"></span>
-                <span class="bar"></span>
-                <span class="bar"></span>
-            </div>
-        </div>
-    </nav>
 
-    <main>
-        <section class="page-header">
-            <div class="container">
-                <div class="breadcrumb">
-                    <a href="../index.html">Home</a>
-                    <i class="fas fa-chevron-right"></i>
-                    <a href="../index.html#products">Products</a>
-                    <i class="fas fa-chevron-right"></i>
-                    <span>Lovibond</span>
-                </div>
-                <h1 class="page-title">Lovibond Products</h1>
-                <p class="page-description">Specialized testing equipment and reagents for water analysis and quality control.</p>
-            </div>
-        </section>
-
-        <section class="product-filters">
-            <div class="container">
-                <div class="filter-bar">
-                    <div class="search-box">
-                        <i class="fas fa-search"></i>
-                        <input type="text" id="product-search" placeholder="Search products...">
-                    </div>
-                    <div class="filter-options">
-                        <select id="category-filter">
-                            <option value="all">All Categories</option>
-                            <option value="water-testing">Water Testing Kits</option>
-                            <option value="colorimeters">Colorimeters</option>
-                            <option value="test-tablets">Test Tablets</option>
-                        </select>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section class="products-grid">
-            <div class="container">
-                <div class="products-container" id="products-container">
-                    <!-- Products will be dynamically loaded here by JavaScript -->
-                </div>
-                <div class="no-results" id="no-results" style="display: none;">
-                    <div class="no-results-content">
-                        <i class="fas fa-exclamation-circle"></i>
-                        <h3>No products found matching your criteria.</h3>
-                        <p>Please try adjusting your search or filters.</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-    </main>
-
-    <!-- Quote Cart (common to all product pages) -->
-    <div class="quote-cart" id="quote-cart">
-        <div class="cart-header" id="cart-header">
-            <h3><i class="fas fa-shopping-cart"></i> Quote Cart (<span id="cart-count">0</span>)</h3>
-            <button class="cart-toggle" id="cart-toggle"><i class="fas fa-chevron-up"></i></button>
-        </div>
-        <div class="cart-content" id="cart-content">
-            <div class="cart-items" id="cart-items">
-                <!-- Cart items will be dynamically added here -->
-                <p class="empty-cart" id="empty-cart">Your quote cart is empty.</p>
-            </div>
-            <div class="cart-actions">
-                <button class="btn btn-outline" id="clear-cart">Clear Cart</button>
-                <button class="btn btn-primary" id="request-quote">Request Quote</button>
-            </div>
-        </div>
+  <!-- Navbar -->
+  <nav class="navbar" id="navbar">
+    <div class="nav-container">
+      <div class="nav-logo">
+        <a href="../index.html">
+          <h2>MINABLE SCIENTIFIC</h2>
+          <span class="nav-tagline">Laboratory Excellence</span>
+        </a>
+      </div>
+      <ul class="nav-menu" id="nav-menu">
+        <li class="nav-item"><a href="../index.html" class="nav-link">Home</a></li>
+        <li class="nav-item"><a href="../index.html#about" class="nav-link">About</a></li>
+        <li class="nav-item dropdown">
+          <a href="../index.html#products" class="nav-link">Products <i class="fas fa-chevron-down"></i></a>
+          <ul class="dropdown-menu">
+            <li><a href="glassware.html">Glassware</a></li>
+            <li><a href="apparatus.html">Apparatus</a></li>
+            <li><a href="chemicals.html">Chemicals</a></li>
+            <li><a href="diagnostics.html">Diagnostics</a></li>
+            <li><a href="filtration.html">Filtration</a></li>
+            <li><a href="lovibond.html">Lovibond</a></li>
+            <li><a href="paper-products.html">Paper Products</a></li>
+          </ul>
+        </li>
+        <li class="nav-item"><a href="../index.html#services" class="nav-link">Services</a></li>
+        <li class="nav-item"><a href="../index.html#contact" class="nav-link">Contact</a></li>
+        <li class="nav-item"><a href="../index.html#quote" class="nav-link btn-quote">Request Quote</a></li>
+      </ul>
+      <div class="hamburger" id="hamburger">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+      </div>
     </div>
+  </nav>
 
-    <!-- Product Details Modal (common to all product pages) -->
-    <div class="modal-overlay" id="product-details-modal">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h2 id="modal-product-name">Product Name</h2>
-                <button class="modal-close" id="modal-close"><i class="fas fa-times"></i></button>
-            </div>
-            <div class="modal-body">
-                <div class="product-details-content">
-                    <p id="modal-product-description"></p>
-                    <div class="details-grid">
-                        <div class="detail-section">
-                            <h4>Features</h4>
-                            <ul id="modal-product-features"></ul>
-                        </div>
-                        <div class="detail-section">
-                            <h4>Specifications</h4>
-                            <ul id="modal-product-specs"></ul>
-                        </div>
-                    </div>
-                    <div class="detail-section" id="modal-product-applications-section" style="display: none;">
-                        <h4>Applications</h4>
-                        <ul id="modal-product-applications"></ul>
-                    </div>
-                    <div class="detail-section" id="modal-product-certifications-section" style="display: none;">
-                        <h4>Certifications</h4>
-                        <ul id="modal-product-certifications"></ul>
-                    </div>
-                    <div class="detail-section" id="modal-product-includes-section" style="display: none;">
-                        <h4>Includes</h4>
-                        <ul id="modal-product-includes"></ul>
-                    </div>
-                    <div class="detail-section" id="modal-product-promotion-section" style="display: none;">
-                        <h4>Promotion</h4>
-                        <p id="modal-product-promotion"></p>
-                    </div>
-                </div>
-            </div>
-            <div class="modal-footer">
-                <button class="btn btn-primary" id="modal-add-to-quote">Add to Quote</button>
-            </div>
-        </div>
+  <!-- Hero / Page Banner -->
+  <section class="page-header">
+    <div class="container">
+      <div class="breadcrumb">
+        <a href="../index.html">Home</a>
+        <i class="fas fa-chevron-right"></i>
+        <a href="../index.html#products">Products</a>
+        <i class="fas fa-chevron-right"></i>
+        <span>Lovibond</span>
+      </div>
+      <h1 class="page-title">Lovibond</h1>
+      <p class="page-description">High-quality water testing kits, colorimeters, and lab instruments by Lovibond.</p>
     </div>
+  </section>
 
-    <script src="../js/products.js"></script>
-    <script>
-        document.addEventListener(\'DOMContentLoaded\', () => {
-            const productsData = [
-                {
-                    id: \'water-testing-kit-ph\',
-                    name: \'pH Water Testing Kit\',
-                    description: \'Comprehensive kit for accurate pH measurement in water samples.\',
-                    image: \'https://via.placeholder.com/350x200?text=pH+Test+Kit\',
-                    features: [\'Wide pH Range\', \'Easy to Use\', \'Rapid Results\'],
-                    specs: [\'pH Range: 0-14\', \'Tests: 100\'],
-                    category: \'water-testing\'
-                },
-                {
-                    id: \'colorimeter-multi-parameter\',
-                    name: \'Multi-Parameter Colorimeter\',
-                    description: \'Portable colorimeter for precise measurement of various water quality parameters.\',
-                    image: \'https://via.placeholder.com/350x200?text=Colorimeter\',
-                    features: [\'Portable\', \'High Accuracy\', \'Multiple Parameters\'],
-                    specs: [\'Parameters: Chlorine, pH, Alkalinity\', \'Display: LCD\'],
-                    category: \'colorimeters\'
-                }
-            ];
+  <!-- Filter Section -->
+  <section class="product-filters">
+    <div class="container">
+      <div class="filter-bar">
+        <div class="search-box">
+          <i class="fas fa-search"></i>
+          <input type="text" id="product-search" placeholder="Search products...">
+        </div>
+        <div class="filter-options">
+          <select id="category-filter">
+            <option value="all">All Categories</option>
+            <option value="water-testing-kits">Water Testing Kits</option>
+            <option value="colorimeters">Colorimeters</option>
+            <option value="test-tablets">Test Tablets</option>
+            <option value="electrochemistry">Electrochemistry</option>
+            <option value="reagents">Reagents</option>
+            <option value="turbidity-meters">Turbidity Meters</option>
+            <option value="spectrophotometers">Spectrophotometers</option>
+            <option value="accessories">Accessories</option>
+            <option value="general-instruments">General Instruments</option>
+            <option value="laboratory-equipment">Laboratory Equipment</option>
+          </select>
+        </div>
+      </div>
+    </div>
+  </section>
 
-            renderProducts(productsData);
-            setupSearchAndFilters(productsData);
-            setupQuoteCart();
-        });
+  <!-- Product Grid -->
+  <section class="products-grid">
+    <div class="container">
+      <div class="products-container" id="products-container">
+        <!-- Lovibond MD 610 Photometer -->
+<div class="product-card" data-category="colorimeters">
+  <div class="product-image">
+    <img src="https://via.placeholder.com/350x200?text=MD+610+Photometer" alt="Lovibond MD 610 Photometer"/>
+    <div class="product-overlay">
+      <button class="btn btn-primary quick-quote" data-product="Lovibond MD 610 Photometer">
+        <i class="fas fa-calculator"></i> Quick Quote
+      </button>
+    </div>
+  </div>
+  <div class="product-info">
+    <h3 class="product-name">Lovibond MD 610 Photometer</h3>
+    <p class="product-description">Bluetooth-enabled photometer for precise water testing with over 120 methods.</p>
+    <div class="product-specs">
+      <span class="spec-tag">Bluetooth</span>
+      <span class="spec-tag">IP68 Waterproof</span>
+      <span class="spec-tag">Multi-Parameter</span>
+    </div>
+    <div class="product-actions">
+      <button class="btn btn-secondary product-details" data-product="Lovibond MD 610 Photometer">
+        <i class="fas fa-info-circle"></i> Details
+      </button>
+      <button class="btn btn-primary add-to-quote" data-product="Lovibond MD 610 Photometer">
+        <i class="fas fa-plus"></i> Add to Quote
+      </button>
+    </div>
+  </div>
+</div>
 
-        // Helper function to escape single quotes for onclick attributes
-        function escapeHtml(text) {
-            var map = {
-                \'\\\': \'\\\\\\\'
-            };
-            return text.replace(/[\\\\]/g, function(m) {
-                return map[m];
-            });
-        }
-    </script>
+<!-- Lovibond SD 50 TDS Meter -->
+<div class="product-card" data-category="electrochemistry">
+  <div class="product-image">
+    <img src="https://via.placeholder.com/350x200?text=SD+50+TDS+Meter" alt="Lovibond SD 50 TDS Meter"/>
+    <div class="product-overlay">
+      <button class="btn btn-primary quick-quote" data-product="Lovibond SD 50 TDS Meter">
+        <i class="fas fa-calculator"></i> Quick Quote
+      </button>
+    </div>
+  </div>
+  <div class="product-info">
+    <h3 class="product-name">Lovibond SD 50 TDS Meter</h3>
+    <p class="product-description">Compact digital meter for measuring total dissolved solids in water samples.</p>
+    <div class="product-specs">
+      <span class="spec-tag">Range: 0–2000 ppm</span>
+      <span class="spec-tag">Backlit Display</span>
+      <span class="spec-tag">IP67 Rated</span>
+    </div>
+    <div class="product-actions">
+      <button class="btn btn-secondary product-details" data-product="Lovibond SD 50 TDS Meter">
+        <i class="fas fa-info-circle"></i> Details
+      </button>
+      <button class="btn btn-primary add-to-quote" data-product="Lovibond SD 50 TDS Meter">
+        <i class="fas fa-plus"></i> Add to Quote
+      </button>
+    </div>
+  </div>
+</div>
+
+<!-- Lovibond Comparator 2000+ -->
+<div class="product-card" data-category="colorimeters">
+  <div class="product-image">
+    <img src="https://via.placeholder.com/350x200?text=Comparator+2000%2B" alt="Lovibond Comparator 2000+"/>
+    <div class="product-overlay">
+      <button class="btn btn-primary quick-quote" data-product="Lovibond Comparator 2000+">
+        <i class="fas fa-calculator"></i> Quick Quote
+      </button>
+    </div>
+  </div>
+  <div class="product-info">
+    <h3 class="product-name">Lovibond Comparator 2000+</h3>
+    <p class="product-description">Visual colorimetric comparator with a wide range of test discs and reagents.</p>
+    <div class="product-specs">
+      <span class="spec-tag">Manual Method</span>
+      <span class="spec-tag">Disc System</span>
+      <span class="spec-tag">Chlorine, pH, etc.</span>
+    </div>
+    <div class="product-actions">
+      <button class="btn btn-secondary product-details" data-product="Lovibond Comparator 2000+">
+        <i class="fas fa-info-circle"></i> Details
+      </button>
+      <button class="btn btn-primary add-to-quote" data-product="Lovibond Comparator 2000+">
+        <i class="fas fa-plus"></i> Add to Quote
+      </button>
+    </div>
+  </div>
+</div>
+
+<!-- Lovibond TurbiCheck Turbidity Meter -->
+<div class="product-card" data-category="turbidity-meters">
+  <div class="product-image">
+    <img src="https://via.placeholder.com/350x200?text=TurbiCheck+Meter" alt="Lovibond TurbiCheck Turbidity Meter"/>
+    <div class="product-overlay">
+      <button class="btn btn-primary quick-quote" data-product="Lovibond TurbiCheck Turbidity Meter">
+        <i class="fas fa-calculator"></i> Quick Quote
+      </button>
+    </div>
+  </div>
+  <div class="product-info">
+    <h3 class="product-name">Lovibond TurbiCheck Turbidity Meter</h3>
+    <p class="product-description">Portable nephelometric turbidity meter compliant with ISO 7027 standards.</p>
+    <div class="product-specs">
+      <span class="spec-tag">Range: 0–1100 NTU</span>
+      <span class="spec-tag">Battery Powered</span>
+      <span class="spec-tag">ISO 7027</span>
+    </div>
+    <div class="product-actions">
+      <button class="btn btn-secondary product-details" data-product="Lovibond TurbiCheck Turbidity Meter">
+        <i class="fas fa-info-circle"></i> Details
+      </button>
+      <button class="btn btn-primary add-to-quote" data-product="Lovibond TurbiCheck Turbidity Meter">
+        <i class="fas fa-plus"></i> Add to Quote
+      </button>
+    </div>
+  </div>
+</div>
+
+<!-- Lovibond Test Tablets - DPD No.1 -->
+<div class="product-card" data-category="test-tablets">
+  <div class="product-image">
+    <img src="https://via.placeholder.com/350x200?text=DPD+1+Tablets" alt="Lovibond Test Tablets - DPD No.1"/>
+    <div class="product-overlay">
+      <button class="btn btn-primary quick-quote" data-product="Lovibond Test Tablets - DPD No.1">
+        <i class="fas fa-calculator"></i> Quick Quote
+      </button>
+    </div>
+  </div>
+  <div class="product-info">
+    <h3 class="product-name">Lovibond Test Tablets - DPD No.1</h3>
+    <p class="product-description">Reagent tablets for free chlorine determination in pool and potable water.</p>
+    <div class="product-specs">
+      <span class="spec-tag">250 tablets</span>
+      <span class="spec-tag">Foil-wrapped</span>
+      <span class="spec-tag">Rapid dissolve</span>
+    </div>
+    <div class="product-actions">
+      <button class="btn btn-secondary product-details" data-product="Lovibond Test Tablets - DPD No.1">
+        <i class="fas fa-info-circle"></i> Details
+      </button>
+      <button class="btn btn-primary add-to-quote" data-product="Lovibond Test Tablets - DPD No.1">
+        <i class="fas fa-plus"></i> Add to Quote
+      </button>
+    </div>
+  </div>
+</div>
+
+<!-- Lovibond ET 99711 pH Meter -->
+<div class="product-card" data-category="electrochemistry">
+  <div class="product-image">
+    <img src="https://via.placeholder.com/350x200?text=ET+99711+pH+Meter" alt="Lovibond ET 99711 pH Meter"/>
+    <div class="product-overlay">
+      <button class="btn btn-primary quick-quote" data-product="Lovibond ET 99711 pH Meter">
+        <i class="fas fa-calculator"></i> Quick Quote
+      </button>
+    </div>
+  </div>
+  <div class="product-info">
+    <h3 class="product-name">Lovibond ET 99711 pH Meter</h3>
+    <p class="product-description">Pocket pH meter for quick and accurate pH measurements in the field or lab.</p>
+    <div class="product-specs">
+      <span class="spec-tag">Range: 0–14 pH</span>
+      <span class="spec-tag">Waterproof</span>
+      <span class="spec-tag">Auto Calibration</span>
+    </div>
+    <div class="product-actions">
+      <button class="btn btn-secondary product-details" data-product="Lovibond ET 99711 pH Meter">
+        <i class="fas fa-info-circle"></i> Details
+      </button>
+      <button class="btn btn-primary add-to-quote" data-product="Lovibond ET 99711 pH Meter">
+        <i class="fas fa-plus"></i> Add to Quote
+      </button>
+    </div>
+  </div>
+</div>
+
+<!-- Lovibond Checkit Comparator -->
+<div class="product-card" data-category="colorimeters">
+  <div class="product-image">
+    <img src="https://via.placeholder.com/350x200?text=Checkit+Comparator" alt="Lovibond Checkit Comparator"/>
+    <div class="product-overlay">
+      <button class="btn btn-primary quick-quote" data-product="Lovibond Checkit Comparator">
+        <i class="fas fa-calculator"></i> Quick Quote
+      </button>
+    </div>
+  </div>
+  <div class="product-info">
+    <h3 class="product-name">Lovibond Checkit Comparator</h3>
+    <p class="product-description">Compact visual colorimeter for fast on-site water analysis.</p>
+    <div class="product-specs">
+      <span class="spec-tag">Robust Design</span>
+      <span class="spec-tag">Range of Disc Options</span>
+      <span class="spec-tag">Portable</span>
+    </div>
+    <div class="product-actions">
+      <button class="btn btn-secondary product-details" data-product="Lovibond Checkit Comparator">
+        <i class="fas fa-info-circle"></i> Details
+      </button>
+      <button class="btn btn-primary add-to-quote" data-product="Lovibond Checkit Comparator">
+        <i class="fas fa-plus"></i> Add to Quote
+      </button>
+    </div>
+  </div>
+</div>
+
+<!-- Lovibond Water Testing Kit - PoolCheck 5-in-1 -->
+<div class="product-card" data-category="water-testing-kits">
+  <div class="product-image">
+    <img src="https://via.placeholder.com/350x200?text=PoolCheck+5-in-1" alt="Lovibond Water Testing Kit - PoolCheck 5-in-1"/>
+    <div class="product-overlay">
+      <button class="btn btn-primary quick-quote" data-product="Lovibond Water Testing Kit - PoolCheck 5-in-1">
+        <i class="fas fa-calculator"></i> Quick Quote
+      </button>
+    </div>
+  </div>
+  <div class="product-info">
+    <h3 class="product-name">Lovibond Water Testing Kit - PoolCheck 5-in-1</h3>
+    <p class="product-description">5-parameter water test kit with dip strips for pool and spa water balance.</p>
+    <div class="product-specs">
+      <span class="spec-tag">50 strips</span>
+      <span class="spec-tag">Free/Total Chlorine</span>
+      <span class="spec-tag">Alkalinity, Hardness, pH</span>
+    </div>
+    <div class="product-actions">
+      <button class="btn btn-secondary product-details" data-product="Lovibond Water Testing Kit - PoolCheck 5-in-1">
+        <i class="fas fa-info-circle"></i> Details
+      </button>
+      <button class="btn btn-primary add-to-quote" data-product="Lovibond Water Testing Kit - PoolCheck 5-in-1">
+        <i class="fas fa-plus"></i> Add to Quote
+      </button>
+    </div>
+  </div>
+</div>
+
+<!-- Lovibond Reagent Powder Pillows - pH 7.0 -->
+<div class="product-card" data-category="reagents">
+  <div class="product-image">
+    <img src="https://via.placeholder.com/350x200?text=pH+7+Pillows" alt="Lovibond Reagent Powder Pillows - pH 7.0"/>
+    <div class="product-overlay">
+      <button class="btn btn-primary quick-quote" data-product="Lovibond Reagent Powder Pillows - pH 7.0">
+        <i class="fas fa-calculator"></i> Quick Quote
+      </button>
+    </div>
+  </div>
+  <div class="product-info">
+    <h3 class="product-name">Lovibond Reagent Powder Pillows - pH 7.0</h3>
+    <p class="product-description">Stabilized powder reagents for pH 7.0 calibration and measurement.</p>
+    <div class="product-specs">
+      <span class="spec-tag">25 pillows/box</span>
+      <span class="spec-tag">Stable Powder</span>
+      <span class="spec-tag">For Colorimeters</span>
+    </div>
+    <div class="product-actions">
+      <button class="btn btn-secondary product-details" data-product="Lovibond Reagent Powder Pillows - pH 7.0">
+        <i class="fas fa-info-circle"></i> Details
+      </button>
+      <button class="btn btn-primary add-to-quote" data-product="Lovibond Reagent Powder Pillows - pH 7.0">
+        <i class="fas fa-plus"></i> Add to Quote
+      </button>
+    </div>
+  </div>
+</div>
+
+<!-- Lovibond SD 60 ORP Meter -->
+<div class="product-card" data-category="electrochemistry">
+  <div class="product-image">
+    <img src="https://via.placeholder.com/350x200?text=SD+60+ORP+Meter" alt="Lovibond SD 60 ORP Meter"/>
+    <div class="product-overlay">
+      <button class="btn btn-primary quick-quote" data-product="Lovibond SD 60 ORP Meter">
+        <i class="fas fa-calculator"></i> Quick Quote
+      </button>
+    </div>
+  </div>
+  <div class="product-info">
+    <h3 class="product-name">Lovibond SD 60 ORP Meter</h3>
+    <p class="product-description">Handheld ORP meter with platinum sensor for oxidation-reduction potential testing.</p>
+    <div class="product-specs">
+      <span class="spec-tag">ORP Range: ±1000 mV</span>
+      <span class="spec-tag">Waterproof IP67</span>
+      <span class="spec-tag">LCD Display</span>
+    </div>
+    <div class="product-actions">
+      <button class="btn btn-secondary product-details" data-product="Lovibond SD 60 ORP Meter">
+        <i class="fas fa-info-circle"></i> Details
+      </button>
+      <button class="btn btn-primary add-to-quote" data-product="Lovibond SD 60 ORP Meter">
+        <i class="fas fa-plus"></i> Add to Quote
+      </button>
+    </div>
+  </div>
+</div>
+
+<!-- Lovibond PM 630 Photometer -->
+<div class="product-card" data-category="colorimeters">
+  <div class="product-image">
+    <img src="https://via.placeholder.com/350x200?text=PM+630+Photometer" alt="Lovibond PM 630 Photometer"/>
+    <div class="product-overlay">
+      <button class="btn btn-primary quick-quote" data-product="Lovibond PM 630 Photometer">
+        <i class="fas fa-calculator"></i> Quick Quote
+      </button>
+    </div>
+  </div>
+  <div class="product-info">
+    <h3 class="product-name">Lovibond PM 630 Photometer</h3>
+    <p class="product-description">Advanced photometer with Bluetooth and multi-parameter testing capability.</p>
+    <div class="product-specs">
+      <span class="spec-tag">120 Methods</span>
+      <span class="spec-tag">Bluetooth</span>
+      <span class="spec-tag">Battery + Mains</span>
+    </div>
+    <div class="product-actions">
+      <button class="btn btn-secondary product-details" data-product="Lovibond PM 630 Photometer">
+        <i class="fas fa-info-circle"></i> Details
+      </button>
+      <button class="btn btn-primary add-to-quote" data-product="Lovibond PM 630 Photometer">
+        <i class="fas fa-plus"></i> Add to Quote
+      </button>
+    </div>
+  </div>
+</div>
+
+<!-- Lovibond Checkit Comparator Kit – Chlorine -->
+<div class="product-card" data-category="colorimeters">
+  <div class="product-image">
+    <img src="https://via.placeholder.com/350x200?text=Checkit+Comparator+Kit" alt="Lovibond Checkit Comparator Kit – Chlorine"/>
+    <div class="product-overlay">
+      <button class="btn btn-primary quick-quote" data-product="Lovibond Checkit Comparator Kit – Chlorine">
+        <i class="fas fa-calculator"></i> Quick Quote
+      </button>
+    </div>
+  </div>
+  <div class="product-info">
+    <h3 class="product-name">Lovibond Checkit Comparator Kit – Chlorine</h3>
+    <p class="product-description">Complete colorimetric kit for chlorine measurement in water samples.</p>
+    <div class="product-specs">
+      <span class="spec-tag">Free & Total Chlorine</span>
+      <span class="spec-tag">Discs & Tablets</span>
+      <span class="spec-tag">Portable Kit</span>
+    </div>
+    <div class="product-actions">
+      <button class="btn btn-secondary product-details" data-product="Lovibond Checkit Comparator Kit – Chlorine">
+        <i class="fas fa-info-circle"></i> Details
+      </button>
+      <button class="btn btn-primary add-to-quote" data-product="Lovibond Checkit Comparator Kit – Chlorine">
+        <i class="fas fa-plus"></i> Add to Quote
+      </button>
+    </div>
+  </div>
+</div>
+
+<!-- Lovibond TB 350 IR Turbidity Meter -->
+<div class="product-card" data-category="turbidity-meters">
+  <div class="product-image">
+    <img src="https://via.placeholder.com/350x200?text=TB+350+IR" alt="Lovibond TB 350 IR Turbidity Meter"/>
+    <div class="product-overlay">
+      <button class="btn btn-primary quick-quote" data-product="Lovibond TB 350 IR Turbidity Meter">
+        <i class="fas fa-calculator"></i> Quick Quote
+      </button>
+    </div>
+  </div>
+  <div class="product-info">
+    <h3 class="product-name">Lovibond TB 350 IR Turbidity Meter</h3>
+    <p class="product-description">Infrared turbidity meter for drinking water and wastewater analysis.</p>
+    <div class="product-specs">
+      <span class="spec-tag">ISO 7027</span>
+      <span class="spec-tag">0–1100 NTU</span>
+      <span class="spec-tag">USB Data Transfer</span>
+    </div>
+    <div class="product-actions">
+      <button class="btn btn-secondary product-details" data-product="Lovibond TB 350 IR Turbidity Meter">
+        <i class="fas fa-info-circle"></i> Details
+      </button>
+      <button class="btn btn-primary add-to-quote" data-product="Lovibond TB 350 IR Turbidity Meter">
+        <i class="fas fa-plus"></i> Add to Quote
+      </button>
+    </div>
+  </div>
+</div>
+
+<!-- Lovibond SpectroDirect Spectrophotometer -->
+<div class="product-card" data-category="spectrophotometers">
+  <div class="product-image">
+    <img src="https://via.placeholder.com/350x200?text=SpectroDirect" alt="Lovibond SpectroDirect Spectrophotometer"/>
+    <div class="product-overlay">
+      <button class="btn btn-primary quick-quote" data-product="Lovibond SpectroDirect Spectrophotometer">
+        <i class="fas fa-calculator"></i> Quick Quote
+      </button>
+    </div>
+  </div>
+  <div class="product-info">
+    <h3 class="product-name">Lovibond SpectroDirect Spectrophotometer</h3>
+    <p class="product-description">High-precision spectrophotometer for professional water analysis.</p>
+    <div class="product-specs">
+      <span class="spec-tag">Wavelength: 330–900 nm</span>
+      <span class="spec-tag">100 Methods</span>
+      <span class="spec-tag">Touch Interface</span>
+    </div>
+    <div class="product-actions">
+      <button class="btn btn-secondary product-details" data-product="Lovibond SpectroDirect Spectrophotometer">
+        <i class="fas fa-info-circle"></i> Details
+      </button>
+      <button class="btn btn-primary add-to-quote" data-product="Lovibond SpectroDirect Spectrophotometer">
+        <i class="fas fa-plus"></i> Add to Quote
+      </button>
+    </div>
+  </div>
+</div>
+
+<!-- Lovibond Reagent Test Kit – Nitrite -->
+<div class="product-card" data-category="reagents">
+  <div class="product-image">
+    <img src="https://via.placeholder.com/350x200?text=Nitrite+Test+Kit" alt="Lovibond Reagent Test Kit – Nitrite"/>
+    <div class="product-overlay">
+      <button class="btn btn-primary quick-quote" data-product="Lovibond Reagent Test Kit – Nitrite">
+        <i class="fas fa-calculator"></i> Quick Quote
+      </button>
+    </div>
+  </div>
+  <div class="product-info">
+    <h3 class="product-name">Lovibond Reagent Test Kit – Nitrite</h3>
+    <p class="product-description">Colorimetric reagent kit for testing nitrite concentrations in water.</p>
+    <div class="product-specs">
+      <span class="spec-tag">30 Tests</span>
+      <span class="spec-tag">Tablet Reagents</span>
+      <span class="spec-tag">Color Disc</span>
+    </div>
+    <div class="product-actions">
+      <button class="btn btn-secondary product-details" data-product="Lovibond Reagent Test Kit – Nitrite">
+        <i class="fas fa-info-circle"></i> Details
+      </button>
+      <button class="btn btn-primary add-to-quote" data-product="Lovibond Reagent Test Kit – Nitrite">
+        <i class="fas fa-plus"></i> Add to Quote
+      </button>
+    </div>
+  </div>
+</div>
+
+<!-- Lovibond ET 810 pH Meter -->
+<div class="product-card" data-category="electrochemistry">
+  <div class="product-image">
+    <img src="https://via.placeholder.com/350x200?text=ET+810+pH+Meter" alt="Lovibond ET 810 pH Meter"/>
+    <div class="product-overlay">
+      <button class="btn btn-primary quick-quote" data-product="Lovibond ET 810 pH Meter">
+        <i class="fas fa-calculator"></i> Quick Quote
+      </button>
+    </div>
+  </div>
+  <div class="product-info">
+    <h3 class="product-name">Lovibond ET 810 pH Meter</h3>
+    <p class="product-description">Portable pH meter with automatic temperature compensation and waterproof housing.</p>
+    <div class="product-specs">
+      <span class="spec-tag">Range: 0–14 pH</span>
+      <span class="spec-tag">ATC Function</span>
+      <span class="spec-tag">Waterproof IP67</span>
+    </div>
+    <div class="product-actions">
+      <button class="btn btn-secondary product-details" data-product="Lovibond ET 810 pH Meter">
+        <i class="fas fa-info-circle"></i> Details
+      </button>
+      <button class="btn btn-primary add-to-quote" data-product="Lovibond ET 810 pH Meter">
+        <i class="fas fa-plus"></i> Add to Quote
+      </button>
+    </div>
+  </div>
+</div>
+
+<!-- Lovibond COD Vario Tube Test Kit -->
+<div class="product-card" data-category="reagents">
+  <div class="product-image">
+    <img src="https://via.placeholder.com/350x200?text=COD+Tube+Test" alt="Lovibond COD Vario Tube Test Kit"/>
+    <div class="product-overlay">
+      <button class="btn btn-primary quick-quote" data-product="Lovibond COD Vario Tube Test Kit">
+        <i class="fas fa-calculator"></i> Quick Quote
+      </button>
+    </div>
+  </div>
+  <div class="product-info">
+    <h3 class="product-name">Lovibond COD Vario Tube Test Kit</h3>
+    <p class="product-description">Reagent vials for Chemical Oxygen Demand testing in wastewater samples.</p>
+    <div class="product-specs">
+      <span class="spec-tag">Range: 0–1500 mg/L</span>
+      <span class="spec-tag">25 Tests</span>
+      <span class="spec-tag">ISO 15705</span>
+    </div>
+    <div class="product-actions">
+      <button class="btn btn-secondary product-details" data-product="Lovibond COD Vario Tube Test Kit">
+        <i class="fas fa-info-circle"></i> Details
+      </button>
+      <button class="btn btn-primary add-to-quote" data-product="Lovibond COD Vario Tube Test Kit">
+        <i class="fas fa-plus"></i> Add to Quote
+      </button>
+    </div>
+  </div>
+</div>
+
+<!-- Lovibond Photometer Carry Case -->
+<div class="product-card" data-category="accessories">
+  <div class="product-image">
+    <img src="https://via.placeholder.com/350x200?text=Photometer+Case" alt="Lovibond Photometer Carry Case"/>
+    <div class="product-overlay">
+      <button class="btn btn-primary quick-quote" data-product="Lovibond Photometer Carry Case">
+        <i class="fas fa-calculator"></i> Quick Quote
+      </button>
+    </div>
+  </div>
+  <div class="product-info">
+    <h3 class="product-name">Lovibond Photometer Carry Case</h3>
+    <p class="product-description">Padded carry case for safe transport and storage of Lovibond photometers.</p>
+    <div class="product-specs">
+      <span class="spec-tag">Foam Compartments</span>
+      <span class="spec-tag">Zipper Closure</span>
+      <span class="spec-tag">Durable Shell</span>
+    </div>
+    <div class="product-actions">
+      <button class="btn btn-secondary product-details" data-product="Lovibond Photometer Carry Case">
+        <i class="fas fa-info-circle"></i> Details
+      </button>
+      <button class="btn btn-primary add-to-quote" data-product="Lovibond Photometer Carry Case">
+        <i class="fas fa-plus"></i> Add to Quote
+      </button>
+    </div>
+  </div>
+</div>
+
+<!-- Lovibond Powder Pillows – Iron -->
+<div class="product-card" data-category="reagents">
+  <div class="product-image">
+    <img src="https://via.placeholder.com/350x200?text=Iron+Pillows" alt="Lovibond Powder Pillows – Iron"/>
+    <div class="product-overlay">
+      <button class="btn btn-primary quick-quote" data-product="Lovibond Powder Pillows – Iron">
+        <i class="fas fa-calculator"></i> Quick Quote
+      </button>
+    </div>
+  </div>
+  <div class="product-info">
+    <h3 class="product-name">Lovibond Powder Pillows – Iron</h3>
+    <p class="product-description">Single-dose powder reagent pillows for colorimetric iron testing.</p>
+    <div class="product-specs">
+      <span class="spec-tag">100 Pillows</span>
+      <span class="spec-tag">Compatible with MD/PM Meters</span>
+      <span class="spec-tag">Range: 0–5 mg/L</span>
+    </div>
+    <div class="product-actions">
+      <button class="btn btn-secondary product-details" data-product="Lovibond Powder Pillows – Iron">
+        <i class="fas fa-info-circle"></i> Details
+      </button>
+      <button class="btn btn-primary add-to-quote" data-product="Lovibond Powder Pillows – Iron">
+        <i class="fas fa-plus"></i> Add to Quote
+      </button>
+    </div>
+  </div>
+</div>
+
+<!-- Lovibond Syringe – 10mL for Sample Prep -->
+<div class="product-card" data-category="accessories">
+  <div class="product-image">
+    <img src="https://via.placeholder.com/350x200?text=10ml+Syringe" alt="Lovibond Syringe – 10mL for Sample Prep"/>
+    <div class="product-overlay">
+      <button class="btn btn-primary quick-quote" data-product="Lovibond Syringe – 10mL for Sample Prep">
+        <i class="fas fa-calculator"></i> Quick Quote
+      </button>
+    </div>
+  </div>
+  <div class="product-info">
+    <h3 class="product-name">Lovibond Syringe – 10mL for Sample Prep</h3>
+    <p class="product-description">Precision syringe for sample collection and dilution during water testing.</p>
+    <div class="product-specs">
+      <span class="spec-tag">Volume: 10mL</span>
+      <span class="spec-tag">Luer Lock Tip</span>
+      <span class="spec-tag">Reusable</span>
+    </div>
+    <div class="product-actions">
+      <button class="btn btn-secondary product-details" data-product="Lovibond Syringe – 10mL for Sample Prep">
+        <i class="fas fa-info-circle"></i> Details
+      </button>
+      <button class="btn btn-primary add-to-quote" data-product="Lovibond Syringe – 10mL for Sample Prep">
+        <i class="fas fa-plus"></i> Add to Quote
+      </button>
+    </div>
+  </div>
+</div>
+
+<!-- Lovibond MD 100 Pool Control Photometer -->
+<div class="product-card" data-category="colorimeters">
+  <div class="product-image">
+    <img src="https://via.placeholder.com/350x200?text=MD+100+Pool+Photometer" alt="Lovibond MD 100 Pool Control Photometer"/>
+    <div class="product-overlay">
+      <button class="btn btn-primary quick-quote" data-product="Lovibond MD 100 Pool Control Photometer">
+        <i class="fas fa-calculator"></i> Quick Quote
+      </button>
+    </div>
+  </div>
+  <div class="product-info">
+    <h3 class="product-name">Lovibond MD 100 Pool Control Photometer</h3>
+    <p class="product-description">Compact photometer for pool and spa water testing with pre-programmed parameters.</p>
+    <div class="product-specs">
+      <span class="spec-tag">Chlorine, pH, Alkalinity</span>
+      <span class="spec-tag">Battery Operated</span>
+      <span class="spec-tag">Waterproof</span>
+    </div>
+    <div class="product-actions">
+      <button class="btn btn-secondary product-details" data-product="Lovibond MD 100 Pool Control Photometer">
+        <i class="fas fa-info-circle"></i> Details
+      </button>
+      <button class="btn btn-primary add-to-quote" data-product="Lovibond MD 100 Pool Control Photometer">
+        <i class="fas fa-plus"></i> Add to Quote
+      </button>
+    </div>
+  </div>
+</div>
+
+<!-- Lovibond SpectroDirect Spectrophotometer -->
+<div class="product-card" data-category="spectrophotometers">
+  <div class="product-image">
+    <img src="https://via.placeholder.com/350x200?text=SpectroDirect" alt="Lovibond SpectroDirect Spectrophotometer"/>
+    <div class="product-overlay">
+      <button class="btn btn-primary quick-quote" data-product="Lovibond SpectroDirect Spectrophotometer">
+        <i class="fas fa-calculator"></i> Quick Quote
+      </button>
+    </div>
+  </div>
+  <div class="product-info">
+    <h3 class="product-name">Lovibond SpectroDirect Spectrophotometer</h3>
+    <p class="product-description">Benchtop spectrophotometer for high-precision water and wastewater analysis.</p>
+    <div class="product-specs">
+      <span class="spec-tag">Wavelength: 330–900 nm</span>
+      <span class="spec-tag">Automatic Calibration</span>
+      <span class="spec-tag">USB Output</span>
+    </div>
+    <div class="product-actions">
+      <button class="btn btn-secondary product-details" data-product="Lovibond SpectroDirect Spectrophotometer">
+        <i class="fas fa-info-circle"></i> Details
+      </button>
+      <button class="btn btn-primary add-to-quote" data-product="Lovibond SpectroDirect Spectrophotometer">
+        <i class="fas fa-plus"></i> Add to Quote
+      </button>
+    </div>
+  </div>
+</div>
+
+<!-- Lovibond Water Testing Kit - Pool Basic -->
+<div class="product-card" data-category="water-testing-kits">
+  <div class="product-image">
+    <img src="https://via.placeholder.com/350x200?text=Pool+Basic+Kit" alt="Lovibond Water Testing Kit - Pool Basic"/>
+    <div class="product-overlay">
+      <button class="btn btn-primary quick-quote" data-product="Lovibond Water Testing Kit - Pool Basic">
+        <i class="fas fa-calculator"></i> Quick Quote
+      </button>
+    </div>
+  </div>
+  <div class="product-info">
+    <h3 class="product-name">Lovibond Water Testing Kit - Pool Basic</h3>
+    <p class="product-description">Starter kit for pool water testing using comparators and tablets.</p>
+    <div class="product-specs">
+      <span class="spec-tag">Chlorine & pH</span>
+      <span class="spec-tag">DPD Tablets</span>
+      <span class="spec-tag">Carry Case</span>
+    </div>
+    <div class="product-actions">
+      <button class="btn btn-secondary product-details" data-product="Lovibond Water Testing Kit - Pool Basic">
+        <i class="fas fa-info-circle"></i> Details
+      </button>
+      <button class="btn btn-primary add-to-quote" data-product="Lovibond Water Testing Kit - Pool Basic">
+        <i class="fas fa-plus"></i> Add to Quote
+      </button>
+    </div>
+  </div>
+</div>
+
+<!-- Lovibond Tablet Crusher Tool -->
+<div class="product-card" data-category="accessories">
+  <div class="product-image">
+    <img src="https://via.placeholder.com/350x200?text=Tablet+Crusher" alt="Lovibond Tablet Crusher Tool"/>
+    <div class="product-overlay">
+      <button class="btn btn-primary quick-quote" data-product="Lovibond Tablet Crusher Tool">
+        <i class="fas fa-calculator"></i> Quick Quote
+      </button>
+    </div>
+  </div>
+  <div class="product-info">
+    <h3 class="product-name">Lovibond Tablet Crusher Tool</h3>
+    <p class="product-description">Accessory for efficiently crushing reagent tablets into powder for manual tests.</p>
+    <div class="product-specs">
+      <span class="spec-tag">Ergonomic Grip</span>
+      <span class="spec-tag">Compact</span>
+      <span class="spec-tag">Easy Clean</span>
+    </div>
+    <div class="product-actions">
+      <button class="btn btn-secondary product-details" data-product="Lovibond Tablet Crusher Tool">
+        <i class="fas fa-info-circle"></i> Details
+      </button>
+      <button class="btn btn-primary add-to-quote" data-product="Lovibond Tablet Crusher Tool">
+        <i class="fas fa-plus"></i> Add to Quote
+      </button>
+    </div>
+  </div>
+</div>
+
+<!-- Lovibond DPD No.3 Tablets -->
+<div class="product-card" data-category="test-tablets">
+  <div class="product-image">
+    <img src="https://via.placeholder.com/350x200?text=DPD+3+Tablets" alt="Lovibond DPD No.3 Tablets"/>
+    <div class="product-overlay">
+      <button class="btn btn-primary quick-quote" data-product="Lovibond DPD No.3 Tablets">
+        <i class="fas fa-calculator"></i> Quick Quote
+      </button>
+    </div>
+  </div>
+  <div class="product-info">
+    <h3 class="product-name">Lovibond DPD No.3 Tablets</h3>
+    <p class="product-description">Reagent tablets for measuring total chlorine (free + combined) in water.</p>
+    <div class="product-specs">
+      <span class="spec-tag">250 tablets</span>
+      <span class="spec-tag">Use after DPD No.1</span>
+      <span class="spec-tag">Foil Packaged</span>
+    </div>
+    <div class="product-actions">
+      <button class="btn btn-secondary product-details" data-product="Lovibond DPD No.3 Tablets">
+        <i class="fas fa-info-circle"></i> Details
+      </button>
+      <button class="btn btn-primary add-to-quote" data-product="Lovibond DPD No.3 Tablets">
+        <i class="fas fa-plus"></i> Add to Quote
+      </button>
+    </div>
+  </div>
+</div>
+
+<!-- Lovibond Aqua Comparator Kit -->
+<div class="product-card" data-category="colorimeters">
+  <div class="product-image">
+    <img src="https://via.placeholder.com/350x200?text=Aqua+Comparator+Kit" alt="Lovibond Aqua Comparator Kit"/>
+    <div class="product-overlay">
+      <button class="btn btn-primary quick-quote" data-product="Lovibond Aqua Comparator Kit">
+        <i class="fas fa-calculator"></i> Quick Quote
+      </button>
+    </div>
+  </div>
+  <div class="product-info">
+    <h3 class="product-name">Lovibond Aqua Comparator Kit</h3>
+    <p class="product-description">Portable visual comparator kit for field testing water quality in remote areas.</p>
+    <div class="product-specs">
+      <span class="spec-tag">Multiple Discs</span>
+      <span class="spec-tag">Tablet Reagents</span>
+      <span class="spec-tag">Rugged Case</span>
+    </div>
+    <div class="product-actions">
+      <button class="btn btn-secondary product-details" data-product="Lovibond Aqua Comparator Kit">
+        <i class="fas fa-info-circle"></i> Details
+      </button>
+      <button class="btn btn-primary add-to-quote" data-product="Lovibond Aqua Comparator Kit">
+        <i class="fas fa-plus"></i> Add to Quote
+      </button>
+    </div>
+  </div>
+</div>
+
+<!-- Lovibond Turbidity Calibration Standards -->
+<div class="product-card" data-category="turbidity-meters">
+  <div class="product-image">
+    <img src="https://via.placeholder.com/350x200?text=Turbidity+Standards" alt="Lovibond Turbidity Calibration Standards"/>
+    <div class="product-overlay">
+      <button class="btn btn-primary quick-quote" data-product="Lovibond Turbidity Calibration Standards">
+        <i class="fas fa-calculator"></i> Quick Quote
+      </button>
+    </div>
+  </div>
+  <div class="product-info">
+    <h3 class="product-name">Lovibond Turbidity Calibration Standards</h3>
+    <p class="product-description">Stable calibration standards for validating turbidity meters to ISO 7027.</p>
+    <div class="product-specs">
+      <span class="spec-tag">0–1000 NTU</span>
+      <span class="spec-tag">6 Bottle Set</span>
+      <span class="spec-tag">ISO Certified</span>
+    </div>
+    <div class="product-actions">
+      <button class="btn btn-secondary product-details" data-product="Lovibond Turbidity Calibration Standards">
+        <i class="fas fa-info-circle"></i> Details
+      </button>
+      <button class="btn btn-primary add-to-quote" data-product="Lovibond Turbidity Calibration Standards">
+        <i class="fas fa-plus"></i> Add to Quote
+      </button>
+    </div>
+  </div>
+</div>
+
+<!-- Lovibond Checkit Comparator -->
+<div class="product-card" data-category="colorimeters">
+  <div class="product-image">
+    <img src="https://via.placeholder.com/350x200?text=Checkit+Comparator" alt="Lovibond Checkit Comparator"/>
+    <div class="product-overlay">
+      <button class="btn btn-primary quick-quote" data-product="Lovibond Checkit Comparator">
+        <i class="fas fa-calculator"></i> Quick Quote
+      </button>
+    </div>
+  </div>
+  <div class="product-info">
+    <h3 class="product-name">Lovibond Checkit Comparator</h3>
+    <p class="product-description">Manual colorimetric testing unit with wide range of test discs and applications.</p>
+    <div class="product-specs">
+      <span class="spec-tag">Wide Test Range</span>
+      <span class="spec-tag">Durable Housing</span>
+      <span class="spec-tag">Foil Tablets</span>
+    </div>
+    <div class="product-actions">
+      <button class="btn btn-secondary product-details" data-product="Lovibond Checkit Comparator">
+        <i class="fas fa-info-circle"></i> Details
+      </button>
+      <button class="btn btn-primary add-to-quote" data-product="Lovibond Checkit Comparator">
+        <i class="fas fa-plus"></i> Add to Quote
+      </button>
+    </div>
+  </div>
+</div>
+
+<!-- Lovibond ET 730 pH Meter -->
+<div class="product-card" data-category="electrochemistry">
+  <div class="product-image">
+    <img src="https://via.placeholder.com/350x200?text=ET+730+pH+Meter" alt="Lovibond ET 730 pH Meter"/>
+    <div class="product-overlay">
+      <button class="btn btn-primary quick-quote" data-product="Lovibond ET 730 pH Meter">
+        <i class="fas fa-calculator"></i> Quick Quote
+      </button>
+    </div>
+  </div>
+  <div class="product-info">
+    <h3 class="product-name">Lovibond ET 730 pH Meter</h3>
+    <p class="product-description">Advanced digital pH meter with backlit screen and automatic temperature compensation.</p>
+    <div class="product-specs">
+      <span class="spec-tag">pH 0–14</span>
+      <span class="spec-tag">Auto-Temp Comp</span>
+      <span class="spec-tag">USB Output</span>
+    </div>
+    <div class="product-actions">
+      <button class="btn btn-secondary product-details" data-product="Lovibond ET 730 pH Meter">
+        <i class="fas fa-info-circle"></i> Details
+      </button>
+      <button class="btn btn-primary add-to-quote" data-product="Lovibond ET 730 pH Meter">
+        <i class="fas fa-plus"></i> Add to Quote
+      </button>
+    </div>
+  </div>
+</div>
+
+<!-- Lovibond Phenol Red Tablets -->
+<div class="product-card" data-category="test-tablets">
+  <div class="product-image">
+    <img src="https://via.placeholder.com/350x200?text=Phenol+Red+Tablets" alt="Lovibond Phenol Red Tablets"/>
+    <div class="product-overlay">
+      <button class="btn btn-primary quick-quote" data-product="Lovibond Phenol Red Tablets">
+        <i class="fas fa-calculator"></i> Quick Quote
+      </button>
+    </div>
+  </div>
+  <div class="product-info">
+    <h3 class="product-name">Lovibond Phenol Red Tablets</h3>
+    <p class="product-description">Colorimetric reagent tablets for measuring pH in pool, spa, and drinking water.</p>
+    <div class="product-specs">
+      <span class="spec-tag">250 tablets</span>
+      <span class="spec-tag">Use with Comparator</span>
+      <span class="spec-tag">Rapid dissolve</span>
+    </div>
+    <div class="product-actions">
+      <button class="btn btn-secondary product-details" data-product="Lovibond Phenol Red Tablets">
+        <i class="fas fa-info-circle"></i> Details
+      </button>
+      <button class="btn btn-primary add-to-quote" data-product="Lovibond Phenol Red Tablets">
+        <i class="fas fa-plus"></i> Add to Quote
+      </button>
+    </div>
+  </div>
+</div>
+
+<!-- Lovibond DPD No.3 Tablets -->
+<div class="product-card" data-category="test-tablets">
+  <div class="product-image">
+    <img src="https://via.placeholder.com/350x200?text=DPD+No.3+Tablets" alt="Lovibond DPD No.3 Tablets"/>
+    <div class="product-overlay">
+      <button class="btn btn-primary quick-quote" data-product="Lovibond DPD No.3 Tablets">
+        <i class="fas fa-calculator"></i> Quick Quote
+      </button>
+    </div>
+  </div>
+  <div class="product-info">
+    <h3 class="product-name">Lovibond DPD No.3 Tablets</h3>
+    <p class="product-description">Reagent tablets for combined chlorine testing in water treatment applications.</p>
+    <div class="product-specs">
+      <span class="spec-tag">250 tablets</span>
+      <span class="spec-tag">Blister Pack</span>
+      <span class="spec-tag">Rapid Reaction</span>
+    </div>
+    <div class="product-actions">
+      <button class="btn btn-secondary product-details" data-product="Lovibond DPD No.3 Tablets">
+        <i class="fas fa-info-circle"></i> Details
+      </button>
+      <button class="btn btn-primary add-to-quote" data-product="Lovibond DPD No.3 Tablets">
+        <i class="fas fa-plus"></i> Add to Quote
+      </button>
+    </div>
+  </div>
+</div>
+
+<!-- Lovibond MD 100 Photometer - Ammonia -->
+<div class="product-card" data-category="colorimeters">
+  <div class="product-image">
+    <img src="https://via.placeholder.com/350x200?text=MD+100+Ammonia" alt="Lovibond MD 100 Photometer - Ammonia"/>
+    <div class="product-overlay">
+      <button class="btn btn-primary quick-quote" data-product="Lovibond MD 100 Photometer - Ammonia">
+        <i class="fas fa-calculator"></i> Quick Quote
+      </button>
+    </div>
+  </div>
+  <div class="product-info">
+    <h3 class="product-name">Lovibond MD 100 Photometer - Ammonia</h3>
+    <p class="product-description">Single-parameter photometer for accurate ammonia nitrogen determination.</p>
+    <div class="product-specs">
+      <span class="spec-tag">Range: 0.02–3.0 mg/L</span>
+      <span class="spec-tag">Portable</span>
+      <span class="spec-tag">Field Use</span>
+    </div>
+    <div class="product-actions">
+      <button class="btn btn-secondary product-details" data-product="Lovibond MD 100 Photometer - Ammonia">
+        <i class="fas fa-info-circle"></i> Details
+      </button>
+      <button class="btn btn-primary add-to-quote" data-product="Lovibond MD 100 Photometer - Ammonia">
+        <i class="fas fa-plus"></i> Add to Quote
+      </button>
+    </div>
+  </div>
+</div>
+
+<!-- Lovibond COD Vario Tube Test Kit -->
+<div class="product-card" data-category="reagents">
+  <div class="product-image">
+    <img src="https://via.placeholder.com/350x200?text=COD+Tube+Test+Kit" alt="Lovibond COD Vario Tube Test Kit"/>
+    <div class="product-overlay">
+      <button class="btn btn-primary quick-quote" data-product="Lovibond COD Vario Tube Test Kit">
+        <i class="fas fa-calculator"></i> Quick Quote
+      </button>
+    </div>
+  </div>
+  <div class="product-info">
+    <h3 class="product-name">Lovibond COD Vario Tube Test Kit</h3>
+    <p class="product-description">Ready-to-use tube test kit for chemical oxygen demand (COD) analysis.</p>
+    <div class="product-specs">
+      <span class="spec-tag">Range: 15–1500 mg/L</span>
+      <span class="spec-tag">25 Tests</span>
+      <span class="spec-tag">Pre-measured</span>
+    </div>
+    <div class="product-actions">
+      <button class="btn btn-secondary product-details" data-product="Lovibond COD Vario Tube Test Kit">
+        <i class="fas fa-info-circle"></i> Details
+      </button>
+      <button class="btn btn-primary add-to-quote" data-product="Lovibond COD Vario Tube Test Kit">
+        <i class="fas fa-plus"></i> Add to Quote
+      </button>
+    </div>
+  </div>
+</div>
+
+<!-- Lovibond PM 600 Pool Photometer -->
+<div class="product-card" data-category="colorimeters">
+  <div class="product-image">
+    <img src="https://via.placeholder.com/350x200?text=PM+600+Photometer" alt="Lovibond PM 600 Pool Photometer"/>
+    <div class="product-overlay">
+      <button class="btn btn-primary quick-quote" data-product="Lovibond PM 600 Pool Photometer">
+        <i class="fas fa-calculator"></i> Quick Quote
+      </button>
+    </div>
+  </div>
+  <div class="product-info">
+    <h3 class="product-name">Lovibond PM 600 Pool Photometer</h3>
+    <p class="product-description">Robust photometer for pool professionals with 34 pre-programmed test methods.</p>
+    <div class="product-specs">
+      <span class="spec-tag">Multi-Parameter</span>
+      <span class="spec-tag">Large LCD</span>
+      <span class="spec-tag">Battery Powered</span>
+    </div>
+    <div class="product-actions">
+      <button class="btn btn-secondary product-details" data-product="Lovibond PM 600 Pool Photometer">
+        <i class="fas fa-info-circle"></i> Details
+      </button>
+      <button class="btn btn-primary add-to-quote" data-product="Lovibond PM 600 Pool Photometer">
+        <i class="fas fa-plus"></i> Add to Quote
+      </button>
+    </div>
+  </div>
+</div>
+
+<!-- Lovibond Chlorine Reagent Powder Pillow -->
+<div class="product-card" data-category="reagents">
+  <div class="product-image">
+    <img src="https://via.placeholder.com/350x200?text=Chlorine+Powder+Pillow" alt="Lovibond Chlorine Reagent Powder Pillow"/>
+    <div class="product-overlay">
+      <button class="btn btn-primary quick-quote" data-product="Lovibond Chlorine Reagent Powder Pillow">
+        <i class="fas fa-calculator"></i> Quick Quote
+      </button>
+    </div>
+  </div>
+  <div class="product-info">
+    <h3 class="product-name">Lovibond Chlorine Reagent Powder Pillow</h3>
+    <p class="product-description">Single-dose powder pillows for free and total chlorine determination in water samples.</p>
+    <div class="product-specs">
+      <span class="spec-tag">100 sachets</span>
+      <span class="spec-tag">Accurate dosing</span>
+      <span class="spec-tag">Rapid dissolve</span>
+    </div>
+    <div class="product-actions">
+      <button class="btn btn-secondary product-details" data-product="Lovibond Chlorine Reagent Powder Pillow">
+        <i class="fas fa-info-circle"></i> Details
+      </button>
+      <button class="btn btn-primary add-to-quote" data-product="Lovibond Chlorine Reagent Powder Pillow">
+        <i class="fas fa-plus"></i> Add to Quote
+      </button>
+    </div>
+  </div>
+</div>
+
+<!-- Lovibond SpectroDirect Spectrophotometer -->
+<div class="product-card" data-category="spectrophotometers">
+  <div class="product-image">
+    <img src="https://via.placeholder.com/350x200?text=SpectroDirect" alt="Lovibond SpectroDirect Spectrophotometer"/>
+    <div class="product-overlay">
+      <button class="btn btn-primary quick-quote" data-product="Lovibond SpectroDirect Spectrophotometer">
+        <i class="fas fa-calculator"></i> Quick Quote
+      </button>
+    </div>
+  </div>
+  <div class="product-info">
+    <h3 class="product-name">Lovibond SpectroDirect Spectrophotometer</h3>
+    <p class="product-description">Advanced spectrophotometer with over 120 pre-programmed methods and user calibration.</p>
+    <div class="product-specs">
+      <span class="spec-tag">Wavelength Range: 330–900 nm</span>
+      <span class="spec-tag">USB & Printer Interface</span>
+      <span class="spec-tag">Built-in Timer</span>
+    </div>
+    <div class="product-actions">
+      <button class="btn btn-secondary product-details" data-product="Lovibond SpectroDirect Spectrophotometer">
+        <i class="fas fa-info-circle"></i> Details
+      </button>
+      <button class="btn btn-primary add-to-quote" data-product="Lovibond SpectroDirect Spectrophotometer">
+        <i class="fas fa-plus"></i> Add to Quote
+      </button>
+    </div>
+  </div>
+</div>
+
+<!-- Lovibond DPD No.4 Test Tablets -->
+<div class="product-card" data-category="test-tablets">
+  <div class="product-image">
+    <img src="https://via.placeholder.com/350x200?text=DPD+No.4+Tablets" alt="Lovibond DPD No.4 Test Tablets"/>
+    <div class="product-overlay">
+      <button class="btn btn-primary quick-quote" data-product="Lovibond DPD No.4 Test Tablets">
+        <i class="fas fa-calculator"></i> Quick Quote
+      </button>
+    </div>
+  </div>
+  <div class="product-info">
+    <h3 class="product-name">Lovibond DPD No.4 Test Tablets</h3>
+    <p class="product-description">Tablets for total chlorine measurement in pool and drinking water testing.</p>
+    <div class="product-specs">
+      <span class="spec-tag">250 Tablets</span>
+      <span class="spec-tag">Foil-Wrapped</span>
+      <span class="spec-tag">Color Stable</span>
+    </div>
+    <div class="product-actions">
+      <button class="btn btn-secondary product-details" data-product="Lovibond DPD No.4 Test Tablets">
+        <i class="fas fa-info-circle"></i> Details
+      </button>
+      <button class="btn btn-primary add-to-quote" data-product="Lovibond DPD No.4 Test Tablets">
+        <i class="fas fa-plus"></i> Add to Quote
+      </button>
+    </div>
+  </div>
+</div>
+
+<!-- Lovibond ET 730 Turbidity Meter -->
+<div class="product-card" data-category="turbidity-meters">
+  <div class="product-image">
+    <img src="https://via.placeholder.com/350x200?text=ET+730+Turbidity+Meter" alt="Lovibond ET 730 Turbidity Meter"/>
+    <div class="product-overlay">
+      <button class="btn btn-primary quick-quote" data-product="Lovibond ET 730 Turbidity Meter">
+        <i class="fas fa-calculator"></i> Quick Quote
+      </button>
+    </div>
+  </div>
+  <div class="product-info">
+    <h3 class="product-name">Lovibond ET 730 Turbidity Meter</h3>
+    <p class="product-description">High-precision turbidity meter for low-range water analysis, ISO 7027 compliant.</p>
+    <div class="product-specs">
+      <span class="spec-tag">Range: 0.01–1000 NTU</span>
+      <span class="spec-tag">USB Interface</span>
+      <span class="spec-tag">Battery & AC Power</span>
+    </div>
+    <div class="product-actions">
+      <button class="btn btn-secondary product-details" data-product="Lovibond ET 730 Turbidity Meter">
+        <i class="fas fa-info-circle"></i> Details
+      </button>
+      <button class="btn btn-primary add-to-quote" data-product="Lovibond ET 730 Turbidity Meter">
+        <i class="fas fa-plus"></i> Add to Quote
+      </button>
+    </div>
+  </div>
+</div>
+
+<!-- Lovibond Langelier Index Slide Rule -->
+<div class="product-card" data-category="accessories">
+  <div class="product-image">
+    <img src="https://via.placeholder.com/350x200?text=Langelier+Slide+Rule" alt="Lovibond Langelier Index Slide Rule"/>
+    <div class="product-overlay">
+      <button class="btn btn-primary quick-quote" data-product="Lovibond Langelier Index Slide Rule">
+        <i class="fas fa-calculator"></i> Quick Quote
+      </button>
+    </div>
+  </div>
+  <div class="product-info">
+    <h3 class="product-name">Lovibond Langelier Index Slide Rule</h3>
+    <p class="product-description">Handheld tool for quick calculation of water stability using the Langelier Saturation Index.</p>
+    <div class="product-specs">
+      <span class="spec-tag">Manual Use</span>
+      <span class="spec-tag">Portable</span>
+      <span class="spec-tag">Quick Reference</span>
+    </div>
+    <div class="product-actions">
+      <button class="btn btn-secondary product-details" data-product="Lovibond Langelier Index Slide Rule">
+        <i class="fas fa-info-circle"></i> Details
+      </button>
+      <button class="btn btn-primary add-to-quote" data-product="Lovibond Langelier Index Slide Rule">
+        <i class="fas fa-plus"></i> Add to Quote
+      </button>
+    </div>
+  </div>
+</div>
+
+<!-- Lovibond Vario Powder Reagents - Ammonium HR -->
+<div class="product-card" data-category="reagents">
+  <div class="product-image">
+    <img src="https://via.placeholder.com/350x200?text=Ammonium+HR+Powder" alt="Lovibond Vario Powder Reagents - Ammonium HR"/>
+    <div class="product-overlay">
+      <button class="btn btn-primary quick-quote" data-product="Lovibond Vario Powder Reagents - Ammonium HR">
+        <i class="fas fa-calculator"></i> Quick Quote
+      </button>
+    </div>
+  </div>
+  <div class="product-info">
+    <h3 class="product-name">Lovibond Vario Powder Reagents - Ammonium HR</h3>
+    <p class="product-description">Powder reagents for high-range ammonium testing in environmental and wastewater samples.</p>
+    <div class="product-specs">
+      <span class="spec-tag">100 Tests</span>
+      <span class="spec-tag">High Sensitivity</span>
+      <span class="spec-tag">Foil-Sachets</span>
+    </div>
+    <div class="product-actions">
+      <button class="btn btn-secondary product-details" data-product="Lovibond Vario Powder Reagents - Ammonium HR">
+        <i class="fas fa-info-circle"></i> Details
+      </button>
+      <button class="btn btn-primary add-to-quote" data-product="Lovibond Vario Powder Reagents - Ammonium HR">
+        <i class="fas fa-plus"></i> Add to Quote
+      </button>
+    </div>
+  </div>
+</div>
+
+<!-- Lovibond MD 100 Photometer - pH/Chlorine -->
+<div class="product-card" data-category="colorimeters">
+  <div class="product-image">
+    <img src="https://via.placeholder.com/350x200?text=MD+100+Photometer" alt="Lovibond MD 100 Photometer - pH/Chlorine"/>
+    <div class="product-overlay">
+      <button class="btn btn-primary quick-quote" data-product="Lovibond MD 100 Photometer - pH/Chlorine">
+        <i class="fas fa-calculator"></i> Quick Quote
+      </button>
+    </div>
+  </div>
+  <div class="product-info">
+    <h3 class="product-name">Lovibond MD 100 Photometer - pH/Chlorine</h3>
+    <p class="product-description">Robust handheld photometer designed to test pH and chlorine in pools and drinking water.</p>
+    <div class="product-specs">
+      <span class="spec-tag">Cl & pH Dual-Mode</span>
+      <span class="spec-tag">Battery Powered</span>
+      <span class="spec-tag">Backlit LCD</span>
+    </div>
+    <div class="product-actions">
+      <button class="btn btn-secondary product-details" data-product="Lovibond MD 100 Photometer - pH/Chlorine">
+        <i class="fas fa-info-circle"></i> Details
+      </button>
+      <button class="btn btn-primary add-to-quote" data-product="Lovibond MD 100 Photometer - pH/Chlorine">
+        <i class="fas fa-plus"></i> Add to Quote
+      </button>
+    </div>
+  </div>
+</div>
+
+<!-- Lovibond SD 60 pH Meter -->
+<div class="product-card" data-category="electrochemistry">
+  <div class="product-image">
+    <img src="https://via.placeholder.com/350x200?text=SD+60+pH+Meter" alt="Lovibond SD 60 pH Meter"/>
+    <div class="product-overlay">
+      <button class="btn btn-primary quick-quote" data-product="Lovibond SD 60 pH Meter">
+        <i class="fas fa-calculator"></i> Quick Quote
+      </button>
+    </div>
+  </div>
+  <div class="product-info">
+    <h3 class="product-name">Lovibond SD 60 pH Meter</h3>
+    <p class="product-description">Pocket-sized digital pH meter with automatic calibration and IP67 rating.</p>
+    <div class="product-specs">
+      <span class="spec-tag">pH Range: 0–14</span>
+      <span class="spec-tag">Auto Cal</span>
+      <span class="spec-tag">Waterproof</span>
+    </div>
+    <div class="product-actions">
+      <button class="btn btn-secondary product-details" data-product="Lovibond SD 60 pH Meter">
+        <i class="fas fa-info-circle"></i> Details
+      </button>
+      <button class="btn btn-primary add-to-quote" data-product="Lovibond SD 60 pH Meter">
+        <i class="fas fa-plus"></i> Add to Quote
+      </button>
+    </div>
+  </div>
+</div>
+
+<!-- Lovibond Water Sampling Bottle -->
+<div class="product-card" data-category="accessories">
+  <div class="product-image">
+    <img src="https://via.placeholder.com/350x200?text=Sampling+Bottle" alt="Lovibond Water Sampling Bottle"/>
+    <div class="product-overlay">
+      <button class="btn btn-primary quick-quote" data-product="Lovibond Water Sampling Bottle">
+        <i class="fas fa-calculator"></i> Quick Quote
+      </button>
+    </div>
+  </div>
+  <div class="product-info">
+    <h3 class="product-name">Lovibond Water Sampling Bottle</h3>
+    <p class="product-description">Sterile HDPE bottles for safe and reliable water sample collection in field testing.</p>
+    <div class="product-specs">
+      <span class="spec-tag">500 mL Capacity</span>
+      <span class="spec-tag">Sterile</span>
+      <span class="spec-tag">Leakproof Cap</span>
+    </div>
+    <div class="product-actions">
+      <button class="btn btn-secondary product-details" data-product="Lovibond Water Sampling Bottle">
+        <i class="fas fa-info-circle"></i> Details
+      </button>
+      <button class="btn btn-primary add-to-quote" data-product="Lovibond Water Sampling Bottle">
+        <i class="fas fa-plus"></i> Add to Quote
+      </button>
+    </div>
+  </div>
+</div>
+
+<!-- Lovibond Checkit Comparator Kit -->
+<div class="product-card" data-category="colorimeters">
+  <div class="product-image">
+    <img src="https://via.placeholder.com/350x200?text=Checkit+Kit" alt="Lovibond Checkit Comparator Kit"/>
+    <div class="product-overlay">
+      <button class="btn btn-primary quick-quote" data-product="Lovibond Checkit Comparator Kit">
+        <i class="fas fa-calculator"></i> Quick Quote
+      </button>
+    </div>
+  </div>
+  <div class="product-info">
+    <h3 class="product-name">Lovibond Checkit Comparator Kit</h3>
+    <p class="product-description">Field kit with comparator block, reagents, and discs for visual water analysis.</p>
+    <div class="product-specs">
+      <span class="spec-tag">Portable Kit</span>
+      <span class="spec-tag">Multiple Parameters</span>
+      <span class="spec-tag">Hard Case</span>
+    </div>
+    <div class="product-actions">
+      <button class="btn btn-secondary product-details" data-product="Lovibond Checkit Comparator Kit">
+        <i class="fas fa-info-circle"></i> Details
+      </button>
+      <button class="btn btn-primary add-to-quote" data-product="Lovibond Checkit Comparator Kit">
+        <i class="fas fa-plus"></i> Add to Quote
+      </button>
+    </div>
+  </div>
+</div>
+
+<!-- Lovibond Vario Cuvettes - 16 mm -->
+<div class="product-card" data-category="accessories">
+  <div class="product-image">
+    <img src="https://via.placeholder.com/350x200?text=16mm+Cuvettes" alt="Lovibond Vario Cuvettes - 16 mm"/>
+    <div class="product-overlay">
+      <button class="btn btn-primary quick-quote" data-product="Lovibond Vario Cuvettes - 16 mm">
+        <i class="fas fa-calculator"></i> Quick Quote
+      </button>
+    </div>
+  </div>
+  <div class="product-info">
+    <h3 class="product-name">Lovibond Vario Cuvettes - 16 mm</h3>
+    <p class="product-description">Durable optical glass cuvettes for photometric and spectrophotometric testing.</p>
+    <div class="product-specs">
+      <span class="spec-tag">16mm Diameter</span>
+      <span class="spec-tag">Glass</span>
+      <span class="spec-tag">10-pack</span>
+    </div>
+    <div class="product-actions">
+      <button class="btn btn-secondary product-details" data-product="Lovibond Vario Cuvettes - 16 mm">
+        <i class="fas fa-info-circle"></i> Details
+      </button>
+      <button class="btn btn-primary add-to-quote" data-product="Lovibond Vario Cuvettes - 16 mm">
+        <i class="fas fa-plus"></i> Add to Quote
+      </button>
+    </div>
+  </div>
+</div>
+
+<!-- Lovibond SpectroDirect Spectrophotometer -->
+<div class="product-card" data-category="spectrophotometers">
+  <div class="product-image">
+    <img src="https://via.placeholder.com/350x200?text=SpectroDirect" alt="Lovibond SpectroDirect Spectrophotometer"/>
+    <div class="product-overlay">
+      <button class="btn btn-primary quick-quote" data-product="Lovibond SpectroDirect Spectrophotometer">
+        <i class="fas fa-calculator"></i> Quick Quote
+      </button>
+    </div>
+  </div>
+  <div class="product-info">
+    <h3 class="product-name">Lovibond SpectroDirect Spectrophotometer</h3>
+    <p class="product-description">Bench-top spectrophotometer for versatile water testing in the lab environment.</p>
+    <div class="product-specs">
+      <span class="spec-tag">Wavelength: 330–900 nm</span>
+      <span class="spec-tag">Bench-top</span>
+      <span class="spec-tag">Large LCD</span>
+    </div>
+    <div class="product-actions">
+      <button class="btn btn-secondary product-details" data-product="Lovibond SpectroDirect Spectrophotometer">
+        <i class="fas fa-info-circle"></i> Details
+      </button>
+      <button class="btn btn-primary add-to-quote" data-product="Lovibond SpectroDirect Spectrophotometer">
+        <i class="fas fa-plus"></i> Add to Quote
+      </button>
+    </div>
+  </div>
+</div>
+
+<!-- Lovibond VARIO Powder Reagents - Ammonia -->
+<div class="product-card" data-category="reagents">
+  <div class="product-image">
+    <img src="https://via.placeholder.com/350x200?text=Ammonia+Powder+Reagents" alt="Lovibond VARIO Powder Reagents - Ammonia"/>
+    <div class="product-overlay">
+      <button class="btn btn-primary quick-quote" data-product="Lovibond VARIO Powder Reagents - Ammonia">
+        <i class="fas fa-calculator"></i> Quick Quote
+      </button>
+    </div>
+  </div>
+  <div class="product-info">
+    <h3 class="product-name">Lovibond VARIO Powder Reagents - Ammonia</h3>
+    <p class="product-description">High-purity powder reagents for ammonia measurement using photometers.</p>
+    <div class="product-specs">
+      <span class="spec-tag">Ammonia Test</span>
+      <span class="spec-tag">100 Tests</span>
+      <span class="spec-tag">Photometer Grade</span>
+    </div>
+    <div class="product-actions">
+      <button class="btn btn-secondary product-details" data-product="Lovibond VARIO Powder Reagents - Ammonia">
+        <i class="fas fa-info-circle"></i> Details
+      </button>
+      <button class="btn btn-primary add-to-quote" data-product="Lovibond VARIO Powder Reagents - Ammonia">
+        <i class="fas fa-plus"></i> Add to Quote
+      </button>
+    </div>
+  </div>
+</div>
+
+<!-- Lovibond MultiDirect Spectrophotometer -->
+<div class="product-card" data-category="spectrophotometers">
+  <div class="product-image">
+    <img src="https://via.placeholder.com/350x200?text=MultiDirect" alt="Lovibond MultiDirect Spectrophotometer"/>
+    <div class="product-overlay">
+      <button class="btn btn-primary quick-quote" data-product="Lovibond MultiDirect Spectrophotometer">
+        <i class="fas fa-calculator"></i> Quick Quote
+      </button>
+    </div>
+  </div>
+  <div class="product-info">
+    <h3 class="product-name">Lovibond MultiDirect Spectrophotometer</h3>
+    <p class="product-description">Flexible handheld spectrophotometer with rechargeable battery and USB output.</p>
+    <div class="product-specs">
+      <span class="spec-tag">Rechargeable</span>
+      <span class="spec-tag">USB Export</span>
+      <span class="spec-tag">LED Light Source</span>
+    </div>
+    <div class="product-actions">
+      <button class="btn btn-secondary product-details" data-product="Lovibond MultiDirect Spectrophotometer">
+        <i class="fas fa-info-circle"></i> Details
+      </button>
+      <button class="btn btn-primary add-to-quote" data-product="Lovibond MultiDirect Spectrophotometer">
+        <i class="fas fa-plus"></i> Add to Quote
+      </button>
+    </div>
+  </div>
+</div>
+
+<!-- Lovibond Test Strips - Nitrate/Nitrite -->
+<div class="product-card" data-category="test-tablets">
+  <div class="product-image">
+    <img src="https://via.placeholder.com/350x200?text=Nitrate+Nitrite+Strips" alt="Lovibond Test Strips - Nitrate/Nitrite"/>
+    <div class="product-overlay">
+      <button class="btn btn-primary quick-quote" data-product="Lovibond Test Strips - Nitrate/Nitrite">
+        <i class="fas fa-calculator"></i> Quick Quote
+      </button>
+    </div>
+  </div>
+  <div class="product-info">
+    <h3 class="product-name">Lovibond Test Strips - Nitrate/Nitrite</h3>
+    <p class="product-description">Quick visual test strips for nitrate and nitrite levels in water samples.</p>
+    <div class="product-specs">
+      <span class="spec-tag">Color-coded Scale</span>
+      <span class="spec-tag">50 Strips</span>
+      <span class="spec-tag">Fast Reaction</span>
+    </div>
+    <div class="product-actions">
+      <button class="btn btn-secondary product-details" data-product="Lovibond Test Strips - Nitrate/Nitrite">
+        <i class="fas fa-info-circle"></i> Details
+      </button>
+      <button class="btn btn-primary add-to-quote" data-product="Lovibond Test Strips - Nitrate/Nitrite">
+        <i class="fas fa-plus"></i> Add to Quote
+      </button>
+    </div>
+  </div>
+</div>
+
+<!-- Lovibond SD 80 ORP Meter -->
+<div class="product-card" data-category="electrochemistry">
+  <div class="product-image">
+    <img src="https://via.placeholder.com/350x200?text=SD+80+ORP+Meter" alt="Lovibond SD 80 ORP Meter"/>
+    <div class="product-overlay">
+      <button class="btn btn-primary quick-quote" data-product="Lovibond SD 80 ORP Meter">
+        <i class="fas fa-calculator"></i> Quick Quote
+      </button>
+    </div>
+  </div>
+  <div class="product-info">
+    <h3 class="product-name">Lovibond SD 80 ORP Meter</h3>
+    <p class="product-description">Reliable redox potential meter with platinum electrode for water quality control.</p>
+    <div class="product-specs">
+      <span class="spec-tag">ORP Range: ±1000 mV</span>
+      <span class="spec-tag">Platinum Sensor</span>
+      <span class="spec-tag">Field Ready</span>
+    </div>
+    <div class="product-actions">
+      <button class="btn btn-secondary product-details" data-product="Lovibond SD 80 ORP Meter">
+        <i class="fas fa-info-circle"></i> Details
+      </button>
+      <button class="btn btn-primary add-to-quote" data-product="Lovibond SD 80 ORP Meter">
+        <i class="fas fa-plus"></i> Add to Quote
+      </button>
+    </div>
+  </div>
+</div>
+
+<!-- Manganese Test Kit (Photometer) -->
+<div class="product-card" data-category="reagents">
+  <div class="product-image">
+    <img src="https://via.placeholder.com/350x200?text=Manganese+Test+Kit" alt="Manganese Test Kit (Photometer)"/>
+    <div class="product-overlay">
+      <button class="btn btn-primary quick-quote" data-product="Manganese Test Kit (Photometer)">
+        <i class="fas fa-calculator"></i> Quick Quote
+      </button>
+    </div>
+  </div>
+  <div class="product-info">
+    <h3 class="product-name">Manganese Test Kit (Photometer)</h3>
+    <p class="product-description">A precise photometric test kit for the determination of manganese in water samples.</p>
+    <div class="product-specs">
+      <span class="spec-tag">Range: 0.01–0.7 mg/L Mn</span>
+      <span class="spec-tag">100 Tests</span>
+      <span class="spec-tag">EPA Compliant</span>
+    </div>
+    <div class="product-actions">
+      <button class="btn btn-secondary product-details" data-product="Manganese Test Kit (Photometer)">
+        <i class="fas fa-info-circle"></i> Details
+      </button>
+      <button class="btn btn-primary add-to-quote" data-product="Manganese Test Kit (Photometer)">
+        <i class="fas fa-plus"></i> Add to Quote
+      </button>
+    </div>
+  </div>
+</div>
+
+      </div>
+
+      <!-- No Results Message -->
+      <div class="no-results" id="no-results" style="display: none;">
+        <div class="no-results-content">
+          <i class="fas fa-exclamation-circle"></i>
+          <h3>No products found matching your criteria.</h3>
+          <p>Please try adjusting your search or filters.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Quote Cart -->
+  <div class="quote-cart" id="quoteCart">
+    <div class="cart-header">
+      <h3><i class="fas fa-shopping-cart"></i> Quote Cart</h3>
+      <button class="cart-toggle" id="cartToggle">
+        <i class="fas fa-chevron-up"></i>
+      </button>
+    </div>
+    <div class="cart-content" id="cartContent">
+      <div class="cart-items" id="cartItems">
+        <p class="empty-cart">No items in quote cart</p>
+      </div>
+      <div class="cart-actions">
+        <button class="btn btn-secondary" id="clearCart"><i class="fas fa-trash"></i> Clear Cart</button>
+        <button class="btn btn-primary" id="requestQuote"><i class="fas fa-paper-plane"></i> Request Quote</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-section">
+          <div class="footer-logo">
+            <h3>MINABLE SCIENTIFIC</h3>
+            <p>Laboratory Excellence</p>
+          </div>
+          <p class="footer-description">Your trusted partner for laboratory equipment, chemicals, and consumables.</p>
+        </div>
+        <div class="footer-section">
+          <h4>Quick Links</h4>
+          <ul class="footer-links">
+            <li><a href="../index.html">Home</a></li>
+            <li><a href="../index.html#about">About Us</a></li>
+            <li><a href="../index.html#products">Products</a></li>
+            <li><a href="../index.html#contact">Contact</a></li>
+          </ul>
+        </div>
+        <div class="footer-section">
+          <h4>Product Categories</h4>
+          <ul class="footer-links">
+            <li><a href="glassware.html">Laboratory Glassware</a></li>
+            <li><a href="chemicals.html">Chemicals & Reagents</a></li>
+            <li><a href="apparatus.html">Laboratory Apparatus</a></li>
+            <li><a href="diagnostics.html">Diagnostic Equipment</a></li>
+            <li><a href="filtration.html">Filtration Products</a></li>
+            <li><a href="lovibond.html">Lovibond Instruments</a></li>
+          </ul>
+        </div>
+        <div class="footer-section">
+          <h4>Contact Info</h4>
+          <div class="footer-contact">
+            <p><i class="fas fa-map-marker-alt"></i> Bulawayo, Zimbabwe</p>
+            <p><i class="fas fa-phone"></i> 09-883033</p>
+            <p><i class="fas fa-envelope"></i> info@minablescientific.co.zw</p>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <div class="footer-copyright">
+          <p>&copy; 2024 Minable Scientific. All rights reserved.</p>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="../js/main.js"></script>
+  <script src="../js/products.js"></script>
 </body>
 </html>
-
-
