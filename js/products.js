@@ -320,103 +320,79 @@ function showProductDetailsModal(productName) {
 // ======================
 // Quick Quote Submission (Single Product)
 // ======================
-function showQuickQuoteModal(productName) {
-    const modal = createModal('Quick Quote', `
-        <form id="quickQuoteForm">
-            <!-- Honeypot (hidden spam trap) -->
-            <input type="checkbox" name="botcheck" style="display:none">
-            
-            <h3>Quick Quote: ${productName}</h3>
-            
-            <div class="form-group">
-                <label>Your Name *</label>
-                <input type="text" name="name" required>
-            </div>
-            
-            <div class="form-group">
-                <label>Email *</label>
-                <input type="email" name="email" required>
-            </div>
-            
-            <div class="form-group">
-                <label>Quantity Needed</label>
-                <input type="number" name="quantity" min="1" value="1">
-            </div>
-            
-            <div class="form-group">
-                <label>Message (Optional)</label>
-                <textarea name="message" rows="3"></textarea>
-            </div>
-            
-            <input type="hidden" name="product" value="${productName}">
-            
-            <div class="modal-actions">
-                <button type="submit" class="btn btn-primary">
-                    <i class="fas fa-paper-plane"></i> Send Request
-                </button>
-            </div>
-        </form>
-    `);
+function handleQuickQuoteSubmission(productName) {
+    const form = document.getElementById('quickQuoteForm');
+    const submitBtn = form.querySelector('button[type="submit"]');
+    const originalText = submitBtn.innerHTML;
     
-    document.body.appendChild(modal);
-    modal.querySelector('form').addEventListener('submit', (e) => {
-        e.preventDefault();
-        handleQuickQuoteSubmission(productName);
+    submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Sending...';
+    submitBtn.disabled = true;
+
+    // Prepare form data
+    const formData = new FormData(form);
+    formData.append('access_key', 'af31cdca-fdb5-4fd7-81bd-762838f8e47f');
+    formData.append('product', productName);
+    formData.append('form_type', 'Quick Quote');
+
+    fetch('https://api.web3forms.com/submit', {
+        method: 'POST',
+        body: formData
+    })
+    .then(response => response.json())
+    .then(data => {
+        if (data.success) {
+            showNotification(`Quote request sent for ${productName}!`, 'success');
+            closeModal();
+        } else {
+            showNotification('Error: ' + (data.message || 'Submission failed'), 'error');
+        }
+    })
+    .finally(() => {
+        submitBtn.innerHTML = originalText;
+        submitBtn.disabled = false;
     });
 }
 
 // ======================
 // Full Quote Submission (Cart)
 // ======================
-function showQuoteRequestModal() {
+function handleQuoteRequestSubmission() {
+    const form = document.getElementById('quoteRequestForm');
+    const submitBtn = form.querySelector('button[type="submit"]');
+    const originalText = submitBtn.innerHTML;
+    
+    submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Sending...';
+    submitBtn.disabled = true;
+
+    // Get cart items
     const cart = JSON.parse(localStorage.getItem('quoteCart')) || [];
-    
-    const modal = createModal('Request Quote', `
-        <form id="quoteRequestForm">
-            <!-- Honeypot -->
-            <input type="checkbox" name="botcheck" style="display:none">
-            
-            <h3>Quote for ${cart.length} Items</h3>
-            
-            <div class="form-row">
-                <div class="form-group">
-                    <label>Full Name *</label>
-                    <input type="text" name="name" required>
-                </div>
-                <div class="form-group">
-                    <label>Company</label>
-                    <input type="text" name="company">
-                </div>
-            </div>
-            
-            <div class="form-row">
-                <div class="form-group">
-                    <label>Email *</label>
-                    <input type="email" name="email" required>
-                </div>
-                <div class="form-group">
-                    <label>Phone *</label>
-                    <input type="tel" name="phone" required>
-                </div>
-            </div>
-            
-            <div class="form-group">
-                <label>Additional Notes</label>
-                <textarea name="message" rows="4"></textarea>
-            </div>
-            
-            <div class="modal-actions">
-                <button type="submit" class="btn btn-primary">
-                    <i class="fas fa-paper-plane"></i> Submit Quote Request
-                </button>
-            </div>
-        </form>
-    `);
-    
-    document.body.appendChild(modal);
-    modal.querySelector('form').addEventListener('submit', (e) => {
-        e.preventDefault();
-        handleQuoteRequestSubmission();
+    const cartText = cart.map(item => `• ${item.name} (Qty: ${item.quantity})`).join('\n');
+
+    // Prepare form data
+    const formData = new FormData(form);
+    formData.append('access_key', 'af31cdca-fdb5-4fd7-81bd-762838f8e47f');
+    formData.append('cart_items', cartText);
+    formData.append('form_type', 'Full Quote');
+    formData.append('botcheck', ''); // Honeypot
+
+    fetch('https://api.web3forms.com/submit', {
+        method: 'POST',
+        body: formData
+    })
+    .then(response => response.json())
+    .then(data => {
+        if (data.success) {
+            showNotification('Quote request sent successfully!', 'success');
+            localStorage.removeItem('quoteCart'); // Clear cart
+            updateCartDisplay(); // Refresh cart UI
+            closeModal();
+        } else {
+            showNotification('Error: ' + (data.message || 'Submission failed'), 'error');
+        }
+    })
+    .finally(() => {
+        submitBtn.innerHTML = originalText;
+        submitBtn.disabled = false;
     });
 }
 
