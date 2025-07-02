@@ -426,44 +426,59 @@ Mrs. A Kawadza (Director )
             </div>
             
             <div class="quote-form-container">
-                <form class="quote-form" id="quoteForm">
-                    <div class="form-row">
-                        <div class="form-group">
-                            <label for="fullName">Full Name *</label>
-                            <input type="text" id="fullName" name="fullName" required>
-                        </div>
-                        <div class="form-group">
-                            <label for="company">Company Name</label>
-                            <input type="text" id="company" name="company">
-                        </div>
-                    </div>
-                    
-                    <div class="form-row">
-                        <div class="form-group">
-                            <label for="email">Email Address *</label>
-                            <input type="email" id="email" name="email" required>
-                        </div>
-                        <div class="form-group">
-                            <label for="phone">Phone Number *</label>
-                            <input type="tel" id="phone" name="phone" required>
-                        </div>
-                    </div>
-                    
-                    <div class="form-group">
-                        <label for="products">Products Needed</label>
-                        <textarea id="products" name="products" rows="4" placeholder="Please list the products you need with quantities..."></textarea>
-                    </div>
-                    
-                    <div class="form-group">
-                        <label for="message">Additional Requirements</label>
-                        <textarea id="message" name="message" rows="3" placeholder="Any special requirements or additional information..."></textarea>
-                    </div>
-                    
-                    <button type="submit" class="btn btn-primary btn-submit">
-                        <i class="fas fa-paper-plane"></i>
-                        Submit Quote Request
-                    </button>
-                </form>
+                <form class="quote-form" id="quoteForm" action="https://api.web3forms.com/submit" method="POST">
+
+    <!-- Web3Forms Access Key -->
+    <input type="hidden" name="access_key" value="624ae037-af53-4041-8b6c-1bdf96b89ae4">
+
+    <!-- Email Subject -->
+    <input type="hidden" name="subject" value="📦 New Quote Request from Minable Scientific Website">
+
+    <!-- Email Context Metadata -->
+    <input type="hidden" name="formSource" value="Minable Scientific Quote Request Form">
+    <input type="hidden" name="emailContext" value="This quote was submitted from the Quote Request page on the Minable Scientific website.">
+
+    <!-- Honeypot Anti-Spam -->
+    <input type="checkbox" name="botcheck" class="hidden" style="display:none;">
+
+    <div class="form-row">
+        <div class="form-group">
+            <label for="fullName">Full Name *</label>
+            <input type="text" id="fullName" name="fullName" required>
+        </div>
+        <div class="form-group">
+            <label for="company">Company Name</label>
+            <input type="text" id="company" name="company">
+        </div>
+    </div>
+
+    <div class="form-row">
+        <div class="form-group">
+            <label for="email">Email Address *</label>
+            <input type="email" id="email" name="email" required>
+        </div>
+        <div class="form-group">
+            <label for="phone">Phone Number *</label>
+            <input type="tel" id="phone" name="phone" required>
+        </div>
+    </div>
+
+    <div class="form-group">
+        <label for="products">Products Needed</label>
+        <textarea id="products" name="products" rows="4" placeholder="Please list the products you need with quantities..."></textarea>
+    </div>
+
+    <div class="form-group">
+        <label for="message">Additional Requirements</label>
+        <textarea id="message" name="message" rows="3" placeholder="Any special requirements or additional information..."></textarea>
+    </div>
+
+    <button type="submit" class="btn btn-primary btn-submit">
+        <i class="fas fa-paper-plane"></i>
+        Submit Quote Request
+    </button>
+</form>
+
             </div>
         </div>
     </section>
@@ -637,30 +652,38 @@ Mrs. A Kawadza (Director )
 
     <script src="js/main.js"></script>
     <script>
-    document.getElementById("contactForm").addEventListener("submit", function(e) {
-        e.preventDefault();
+    const forms = ["contactForm", "quoteForm"];
 
-        const form = e.target;
-        const formData = new FormData(form);
+    forms.forEach(function(formId) {
+        const formEl = document.getElementById(formId);
+        if (!formEl) return;
 
-        fetch("https://api.web3forms.com/submit", {
-            method: "POST",
-            body: formData
-        })
-        .then(response => response.json())
-        .then(data => {
-            if (data.success) {
-                alert("✅ Your message has been sent successfully!");
-                form.reset();
-            } else {
-                alert("❌ There was an error sending your message.");
-            }
-        })
-        .catch(error => {
-            alert("❌ An unexpected error occurred while submitting the form.");
+        formEl.addEventListener("submit", function(e) {
+            e.preventDefault();
+
+            const form = e.target;
+            const formData = new FormData(form);
+
+            fetch("https://api.web3forms.com/submit", {
+                method: "POST",
+                body: formData
+            })
+            .then(response => response.json())
+            .then(data => {
+                if (data.success) {
+                    alert("✅ Your message has been sent successfully!");
+                    form.reset();
+                } else {
+                    alert("❌ There was an error sending your message.");
+                }
+            })
+            .catch(error => {
+                alert("❌ An unexpected error occurred while submitting the form.");
+            });
         });
     });
-    </script>
+</script>
+
 
 </body>
 </html>
