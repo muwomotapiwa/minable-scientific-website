@@ -321,31 +321,45 @@ function showQuickQuoteModal(productName) {
     const modal = createModal('Quick Quote Request', `
         <div class="quick-quote-content">
             <h3>Request Quote for ${productName}</h3>
-            <form id="quickQuoteForm">
-                <div class="form-group">
-                    <label for="quickName">Your Name *</label>
-                    <input type="text" id="quickName" required>
-                </div>
-                <div class="form-group">
-                    <label for="quickEmail">Email Address *</label>
-                    <input type="email" id="quickEmail" required>
-                </div>
-                <div class="form-group">
-                    <label for="quickQuantity">Quantity Needed</label>
-                    <input type="number" id="quickQuantity" min="1" value="1">
-                </div>
-                <div class="form-group">
-                    <label for="quickMessage">Additional Notes</label>
-                    <textarea id="quickMessage" rows="3"></textarea>
-                </div>
-                <div class="modal-actions">
-                    <button type="button" class="btn btn-secondary" onclick="closeModal()">Cancel</button>
-                    <button type="submit" class="btn btn-primary">
-                        <i class="fas fa-paper-plane"></i>
-                        Send Quote Request
-                    </button>
-                </div>
-            </form>
+            <form id="quickQuoteForm" action="https://api.web3forms.com/submit" method="POST">
+  <!-- Access Key -->
+  <input type="hidden" name="access_key" value="624ae037-af53-4041-8b6c-1bdf96b89ae4">
+
+  <!-- Metadata -->
+  <input type="hidden" name="subject" value="🔬 New Quick Quote Request from Minable Scientific Website">
+  <input type="hidden" name="formSource" value="Minable Scientific Quick Quote Modal">
+  <input type="hidden" name="emailContext" value="This message was submitted from the Quick Quote modal on the Minable Scientific website.">
+  <input type="hidden" name="product" id="productNameField">
+
+  <!-- Honeypot -->
+  <input type="checkbox" name="botcheck" style="display:none;" class="hidden">
+
+  <!-- Fields -->
+  <div class="form-group">
+    <label for="quoteName">Your Name *</label>
+    <input type="text" id="quoteName" name="name" required>
+  </div>
+
+  <div class="form-group">
+    <label for="quoteEmail">Email Address *</label>
+    <input type="email" id="quoteEmail" name="email" required>
+  </div>
+
+  <div class="form-group">
+    <label for="quoteQty">Quantity Needed</label>
+    <input type="text" id="quoteQty" name="quantity">
+  </div>
+
+  <div class="form-group">
+    <label for="quoteNotes">Additional Notes</label>
+    <textarea id="quoteNotes" name="message" rows="4"></textarea>
+  </div>
+
+  <button type="submit" class="btn btn-primary">
+    <i class="fas fa-paper-plane"></i> Send Quote Request
+  </button>
+</form>
+
         </div>
     `);
     
@@ -376,39 +390,49 @@ function showQuoteRequestModal() {
                 <h4>Selected Products:</h4>
                 ${cartItemsHTML}
             </div>
-            <form id="quoteRequestForm">
-                <div class="form-row">
-                    <div class="form-group">
-                        <label for="quoteName">Full Name *</label>
-                        <input type="text" id="quoteName" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="quoteCompany">Company Name</label>
-                        <input type="text" id="quoteCompany">
-                    </div>
-                </div>
-                <div class="form-row">
-                    <div class="form-group">
-                        <label for="quoteEmail">Email Address *</label>
-                        <input type="email" id="quoteEmail" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="quotePhone">Phone Number *</label>
-                        <input type="tel" id="quotePhone" required>
-                    </div>
-                </div>
-                <div class="form-group">
-                    <label for="quoteMessage">Additional Requirements</label>
-                    <textarea id="quoteMessage" rows="4" placeholder="Any special requirements or additional information..."></textarea>
-                </div>
-                <div class="modal-actions">
-                    <button type="button" class="btn btn-secondary" onclick="closeModal()">Cancel</button>
-                    <button type="submit" class="btn btn-primary">
-                        <i class="fas fa-paper-plane"></i>
-                        Submit Quote Request
-                    </button>
-                </div>
-            </form>
+            <form id="quoteCartForm" action="https://api.web3forms.com/submit" method="POST">
+  <!-- Access Key -->
+  <input type="hidden" name="access_key" value="624ae037-af53-4041-8b6c-1bdf96b89ae4">
+
+  <!-- Metadata -->
+  <input type="hidden" name="subject" value="🧪 New Bulk Quote Request from Minable Scientific Website">
+  <input type="hidden" name="formSource" value="Minable Scientific Bulk Quote Modal">
+  <input type="hidden" name="emailContext" value="This message was submitted from the Bulk Quote cart modal on the Minable Scientific website.">
+  <input type="hidden" name="selectedProducts" id="selectedProductsField">
+
+  <!-- Honeypot -->
+  <input type="checkbox" name="botcheck" style="display:none;" class="hidden">
+
+  <!-- Fields -->
+  <div class="form-group">
+    <label for="fullName">Full Name *</label>
+    <input type="text" id="fullName" name="name" required>
+  </div>
+
+  <div class="form-group">
+    <label for="company">Company Name</label>
+    <input type="text" id="company" name="company">
+  </div>
+
+  <div class="form-group">
+    <label for="email">Email Address *</label>
+    <input type="email" id="email" name="email" required>
+  </div>
+
+  <div class="form-group">
+    <label for="phone">Phone Number *</label>
+    <input type="tel" id="phone" name="phone" required>
+  </div>
+
+  <div class="form-group">
+    <label for="bulkNotes">Additional Requirements</label>
+    <textarea id="bulkNotes" name="message" rows="4"></textarea>
+  </div>
+
+  <button type="submit" class="btn btn-primary">
+    <i class="fas fa-paper-plane"></i> Submit Quote Request
+  </button>
+</form>
         </div>
     `);
     
