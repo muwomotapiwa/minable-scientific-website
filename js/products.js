@@ -317,100 +317,109 @@ function showProductDetailsModal(productName) {
     setTimeout(() => modal.classList.add('show'), 10);
 }
 
-// ======================
-// Quick Quote Submission (Single Product)
-// ======================
 function showQuickQuoteModal(productName) {
-    const modal = createModal('Quick Quote', `
-        <form id="quickQuoteForm">
-            <!-- Honeypot -->
-            <input type="checkbox" name="botcheck" style="display:none">
-            
-            <div class="form-group">
-                <label>Your Name *</label>
-                <input type="text" name="name" required id="quickName">
-            </div>
-            
-            <div class="form-group">
-                <label>Email *</label>
-                <input type="email" name="email" required id="quickEmail">
-            </div>
-            
-            <div class="form-group">
-                <label>Quantity</label>
-                <input type="number" name="quantity" min="1" value="1" id="quickQuantity">
-            </div>
-            
-            <div class="form-group">
-                <label>Message</label>
-                <textarea name="message" rows="3" id="quickMessage"></textarea>
-            </div>
-            
-            <input type="hidden" name="product" value="${productName}">
-            
-            <div class="modal-actions">
-                <button type="submit" class="btn btn-primary">
-                    <i class="fas fa-paper-plane"></i> Send Request
-                </button>
-            </div>
-        </form>
+    const modal = createModal('Quick Quote Request', `
+        <div class="quick-quote-content">
+            <h3>Request Quote for ${productName}</h3>
+            <form id="quickQuoteForm">
+                <div class="form-group">
+                    <label for="quickName">Your Name *</label>
+                    <input type="text" id="quickName" required>
+                </div>
+                <div class="form-group">
+                    <label for="quickEmail">Email Address *</label>
+                    <input type="email" id="quickEmail" required>
+                </div>
+                <div class="form-group">
+                    <label for="quickQuantity">Quantity Needed</label>
+                    <input type="number" id="quickQuantity" min="1" value="1">
+                </div>
+                <div class="form-group">
+                    <label for="quickMessage">Additional Notes</label>
+                    <textarea id="quickMessage" rows="3"></textarea>
+                </div>
+                <div class="modal-actions">
+                    <button type="button" class="btn btn-secondary" onclick="closeModal()">Cancel</button>
+                    <button type="submit" class="btn btn-primary">
+                        <i class="fas fa-paper-plane"></i>
+                        Send Quote Request
+                    </button>
+                </div>
+            </form>
+        </div>
     `);
     
-    // Proper event listener attachment
+    document.body.appendChild(modal);
+    setTimeout(() => modal.classList.add('show'), 10);
+
+    // Handle form submission
     const form = modal.querySelector('#quickQuoteForm');
-    form.addEventListener('submit', (e) => {
+    form.addEventListener('submit', function(e) {
         e.preventDefault();
         handleQuickQuoteSubmission(productName);
     });
-    
-    document.body.appendChild(modal);
 }
 
-// ======================
-// Full Quote Submission (Cart)
-// ======================
-// Updated Quick Quote Submission
-function handleQuickQuoteSubmission(productName) {
-    const form = document.getElementById('quickQuoteForm');
-    if (!form) {
-        console.error('Quick quote form not found!');
-        return;
-    }
+function showQuoteRequestModal() {
+    const cart = JSON.parse(localStorage.getItem('quoteCart')) || [];
+    const cartItemsHTML = cart.map(item => `
+        <div class="quote-item">
+            <span class="item-name">${item.name}</span>
+            <span class="item-quantity">Qty: ${item.quantity}</span>
+        </div>
+    `).join('');
 
-    const submitBtn = form.querySelector('button[type="submit"]');
-    const originalText = submitBtn.innerHTML;
+    const modal = createModal('Request Quote', `
+        <div class="quote-request-content">
+            <h3>Request Quote for Selected Items</h3>
+            <div class="quote-items-summary">
+                <h4>Selected Products:</h4>
+                ${cartItemsHTML}
+            </div>
+            <form id="quoteRequestForm">
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="quoteName">Full Name *</label>
+                        <input type="text" id="quoteName" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="quoteCompany">Company Name</label>
+                        <input type="text" id="quoteCompany">
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="quoteEmail">Email Address *</label>
+                        <input type="email" id="quoteEmail" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="quotePhone">Phone Number *</label>
+                        <input type="tel" id="quotePhone" required>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="quoteMessage">Additional Requirements</label>
+                    <textarea id="quoteMessage" rows="4" placeholder="Any special requirements or additional information..."></textarea>
+                </div>
+                <div class="modal-actions">
+                    <button type="button" class="btn btn-secondary" onclick="closeModal()">Cancel</button>
+                    <button type="submit" class="btn btn-primary">
+                        <i class="fas fa-paper-plane"></i>
+                        Submit Quote Request
+                    </button>
+                </div>
+            </form>
+        </div>
+    `);
     
-    submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Sending...';
-    submitBtn.disabled = true;
+    document.body.appendChild(modal);
+    setTimeout(() => modal.classList.add('show'), 10);
 
-    const formData = new FormData(form);
-    formData.append('access_key', 'af31cdca-fdb5-4fd7-81bd-762838f8e47f');
-    formData.append('product', productName);
-    formData.append('form_type', 'Quick Quote');
-
-    fetch('https://api.web3forms.com/submit', {
-        method: 'POST',
-        body: formData
-    })
-    .then(async response => {
-        if (!response.ok) throw new Error('Network response was not ok');
-        return response.json();
-    })
-    .then(data => {
-        if (data.success) {
-            showNotification(`Quote request sent!`, 'success');
-            closeModal();
-        } else {
-            throw new Error(data.message || 'Unknown error occurred');
-        }
-    })
-    .catch(error => {
-        console.error('Submission error:', error);
-        showNotification(`Failed to send: ${error.message}`, 'error');
-    })
-    .finally(() => {
-        submitBtn.innerHTML = originalText;
-        submitBtn.disabled = false;
+    // Handle form submission
+    const form = modal.querySelector('#quoteRequestForm');
+    form.addEventListener('submit', function(e) {
+        e.preventDefault();
+        handleQuoteRequestSubmission();
     });
 }
 

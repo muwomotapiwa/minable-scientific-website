@@ -1250,30 +1250,6 @@
   <!-- SCRIPTS -->
   <script src="../js/main.js"></script>
   <script src="../js/products.js"></script>
-  <script>
-  document.addEventListener("DOMContentLoaded", function () {
-    // QUICK QUOTE FORM: Fill in product name from title
-    const quickForm = document.getElementById("quickQuoteForm");
-    const quickProductInput = document.getElementById("productNameField");
-    const quickTitle = document.querySelector(".quick-quote-title"); // Title element containing product name
-
-    if (quickForm && quickProductInput && quickTitle) {
-      const match = quickTitle.textContent.match(/for (.+)$/);
-      if (match) {
-        quickProductInput.value = match[1];
-      }
-    }
-
-    // BULK QUOTE FORM: Fill in product list
-    const bulkForm = document.getElementById("quoteCartForm");
-    const productList = document.getElementById("selectedProductsList");
-    const selectedProductsField = document.getElementById("selectedProductsField");
-
-    if (bulkForm && productList && selectedProductsField) {
-      selectedProductsField.value = productList.innerText.trim();
-    }
-  });
-</script>
-
+  
 </body>
 </html>
