@@ -1,4 +1,4 @@
-// Products page functionality
+// Products page functionality with Web3Forms integration
 document.addEventListener('DOMContentLoaded', function() {
     initProductFilters();
     initQuoteCart();
@@ -88,8 +88,6 @@ function initProductFilters() {
 
     filterProducts();
 }
-
-
 
 // Quote cart functionality
 function initQuoteCart() {
@@ -278,6 +276,42 @@ function initProductInteractions() {
     });
 }
 
+// Get current page information
+function getCurrentPageInfo() {
+    const pageTitle = document.title || 'Minable Scientific Product Page';
+    const currentUrl = window.location.href;
+    const pageName = document.querySelector('.page-title')?.textContent || 'Product Page';
+    
+    return {
+        pageTitle,
+        currentUrl,
+        pageName
+    };
+}
+
+// Get product details from the page
+function getProductDetails(productName) {
+    const productCards = document.querySelectorAll('.product-card');
+    let productDetails = {};
+    
+    productCards.forEach(card => {
+        const cardProductName = card.querySelector('.product-name')?.textContent;
+        if (cardProductName === productName) {
+            productDetails = {
+                name: productName,
+                description: card.querySelector('.product-description')?.textContent || '',
+                specs: Array.from(card.querySelectorAll('.spec-tag')).map(tag => tag.textContent).join(', '),
+                category: card.dataset.category || '',
+                type: card.dataset.type || '',
+                volume: card.dataset.volume || '',
+                material: card.dataset.material || ''
+            };
+        }
+    });
+    
+    return productDetails;
+}
+
 // Modal functions
 function showProductDetailsModal(productName) {
     const modal = createModal('Product Details', `
@@ -318,25 +352,53 @@ function showProductDetailsModal(productName) {
 }
 
 function showQuickQuoteModal(productName) {
+    const pageInfo = getCurrentPageInfo();
+    const productDetails = getProductDetails(productName);
+    
     const modal = createModal('Quick Quote Request', `
         <div class="quick-quote-content">
             <h3>Request Quote for ${productName}</h3>
-            <form id="quickQuoteForm">
+            <form id="quickQuoteForm" action="https://api.web3forms.com/submit" method="POST">
+                <!-- Web3Forms Access Key -->
+                <input type="hidden" name="access_key" value="af31cdca-fdb5-4fd7-81bd-762838f8e47f">
+                
+                <!-- Email Subject -->
+                <input type="hidden" name="subject" value="🔬 Quick Quote Request for ${productName} - Minable Scientific">
+                
+                <!-- Page and Product Context -->
+                <input type="hidden" name="pageTitle" value="${pageInfo.pageTitle}">
+                <input type="hidden" name="pageUrl" value="${pageInfo.currentUrl}">
+                <input type="hidden" name="pageName" value="${pageInfo.pageName}">
+                <input type="hidden" name="productName" value="${productDetails.name}">
+                <input type="hidden" name="productDescription" value="${productDetails.description}">
+                <input type="hidden" name="productSpecs" value="${productDetails.specs}">
+                <input type="hidden" name="productCategory" value="${productDetails.category}">
+                <input type="hidden" name="productType" value="${productDetails.type}">
+                <input type="hidden" name="productVolume" value="${productDetails.volume}">
+                <input type="hidden" name="productMaterial" value="${productDetails.material}">
+                
+                <!-- Form Source Context -->
+                <input type="hidden" name="formSource" value="Quick Quote Modal - Product Page">
+                <input type="hidden" name="emailContext" value="This is a quick quote request submitted from a product page on the Minable Scientific website.">
+                
+                <!-- Honeypot Spam Protection -->
+                <input type="checkbox" name="botcheck" class="hidden" style="display:none;">
+                
                 <div class="form-group">
                     <label for="quickName">Your Name *</label>
-                    <input type="text" id="quickName" required>
+                    <input type="text" id="quickName" name="customerName" required>
                 </div>
                 <div class="form-group">
                     <label for="quickEmail">Email Address *</label>
-                    <input type="email" id="quickEmail" required>
+                    <input type="email" id="quickEmail" name="customerEmail" required>
                 </div>
                 <div class="form-group">
                     <label for="quickQuantity">Quantity Needed</label>
-                    <input type="number" id="quickQuantity" min="1" value="1">
+                    <input type="number" id="quickQuantity" name="quantityNeeded" min="1" value="1">
                 </div>
                 <div class="form-group">
                     <label for="quickMessage">Additional Notes</label>
-                    <textarea id="quickMessage" rows="3"></textarea>
+                    <textarea id="quickMessage" name="additionalNotes" rows="3"></textarea>
                 </div>
                 <div class="modal-actions">
                     <button type="button" class="btn btn-secondary" onclick="closeModal()">Cancel</button>
@@ -356,18 +418,26 @@ function showQuickQuoteModal(productName) {
     const form = modal.querySelector('#quickQuoteForm');
     form.addEventListener('submit', function(e) {
         e.preventDefault();
-        handleQuickQuoteSubmission(productName);
+        handleQuickQuoteSubmission(form, productName);
     });
 }
 
 function showQuoteRequestModal() {
     const cart = JSON.parse(localStorage.getItem('quoteCart')) || [];
+    const pageInfo = getCurrentPageInfo();
+    
     const cartItemsHTML = cart.map(item => `
         <div class="quote-item">
             <span class="item-name">${item.name}</span>
             <span class="item-quantity">Qty: ${item.quantity}</span>
         </div>
     `).join('');
+
+    // Prepare detailed product information for email
+    const detailedProductList = cart.map(item => {
+        const details = getProductDetails(item.name);
+        return `${item.name} (Qty: ${item.quantity}) - ${details.description} - Specs: ${details.specs}`;
+    }).join('\n');
 
     const modal = createModal('Request Quote', `
         <div class="quote-request-content">
@@ -376,30 +446,50 @@ function showQuoteRequestModal() {
                 <h4>Selected Products:</h4>
                 ${cartItemsHTML}
             </div>
-            <form id="quoteRequestForm">
+            <form id="quoteRequestForm" action="https://api.web3forms.com/submit" method="POST">
+                <!-- Web3Forms Access Key -->
+                <input type="hidden" name="access_key" value="af31cdca-fdb5-4fd7-81bd-762838f8e47f">
+                
+                <!-- Email Subject -->
+                <input type="hidden" name="subject" value="📦 Multiple Product Quote Request - Minable Scientific">
+                
+                <!-- Page and Product Context -->
+                <input type="hidden" name="pageTitle" value="${pageInfo.pageTitle}">
+                <input type="hidden" name="pageUrl" value="${pageInfo.currentUrl}">
+                <input type="hidden" name="pageName" value="${pageInfo.pageName}">
+                <input type="hidden" name="selectedProducts" value="${detailedProductList}">
+                <input type="hidden" name="totalItems" value="${cart.length}">
+                
+                <!-- Form Source Context -->
+                <input type="hidden" name="formSource" value="Quote Request Modal - Product Page Cart">
+                <input type="hidden" name="emailContext" value="This is a quote request for multiple products submitted from the quote cart on a product page of the Minable Scientific website.">
+                
+                <!-- Honeypot Spam Protection -->
+                <input type="checkbox" name="botcheck" class="hidden" style="display:none;">
+                
                 <div class="form-row">
                     <div class="form-group">
                         <label for="quoteName">Full Name *</label>
-                        <input type="text" id="quoteName" required>
+                        <input type="text" id="quoteName" name="customerName" required>
                     </div>
                     <div class="form-group">
                         <label for="quoteCompany">Company Name</label>
-                        <input type="text" id="quoteCompany">
+                        <input type="text" id="quoteCompany" name="companyName">
                     </div>
                 </div>
                 <div class="form-row">
                     <div class="form-group">
                         <label for="quoteEmail">Email Address *</label>
-                        <input type="email" id="quoteEmail" required>
+                        <input type="email" id="quoteEmail" name="customerEmail" required>
                     </div>
                     <div class="form-group">
                         <label for="quotePhone">Phone Number *</label>
-                        <input type="tel" id="quotePhone" required>
+                        <input type="tel" id="quotePhone" name="phoneNumber" required>
                     </div>
                 </div>
                 <div class="form-group">
                     <label for="quoteMessage">Additional Requirements</label>
-                    <textarea id="quoteMessage" rows="4" placeholder="Any special requirements or additional information..."></textarea>
+                    <textarea id="quoteMessage" name="additionalRequirements" rows="4" placeholder="Any special requirements or additional information..."></textarea>
                 </div>
                 <div class="modal-actions">
                     <button type="button" class="btn btn-secondary" onclick="closeModal()">Cancel</button>
@@ -419,7 +509,7 @@ function showQuoteRequestModal() {
     const form = modal.querySelector('#quoteRequestForm');
     form.addEventListener('submit', function(e) {
         e.preventDefault();
-        handleQuoteRequestSubmission();
+        handleQuoteRequestSubmission(form);
     });
 }
 
@@ -463,47 +553,77 @@ function closeModal() {
     }
 }
 
-// Form submission handlers
-function handleQuickQuoteSubmission(productName) {
-    const form = document.getElementById('quickQuoteForm');
+// Form submission handlers with Web3Forms integration
+function handleQuickQuoteSubmission(form, productName) {
     const submitBtn = form.querySelector('button[type="submit"]');
     const originalText = submitBtn.innerHTML;
     
     submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Sending...';
     submitBtn.disabled = true;
     
-    // Simulate form submission
-    setTimeout(() => {
-        showNotification(`Quote request for ${productName} submitted successfully!`, 'success');
-        closeModal();
+    const formData = new FormData(form);
+    
+    fetch("https://api.web3forms.com/submit", {
+        method: "POST",
+        body: formData
+    })
+    .then(response => response.json())
+    .then(data => {
+        if (data.success) {
+            showNotification(`Quote request for ${productName} submitted successfully!`, 'success');
+            closeModal();
+        } else {
+            showNotification('There was an error sending your quote request. Please try again.', 'error');
+        }
         submitBtn.innerHTML = originalText;
         submitBtn.disabled = false;
-    }, 2000);
+    })
+    .catch(error => {
+        console.error('Error:', error);
+        showNotification('An unexpected error occurred. Please try again.', 'error');
+        submitBtn.innerHTML = originalText;
+        submitBtn.disabled = false;
+    });
 }
 
-function handleQuoteRequestSubmission() {
-    const form = document.getElementById('quoteRequestForm');
+function handleQuoteRequestSubmission(form) {
     const submitBtn = form.querySelector('button[type="submit"]');
     const originalText = submitBtn.innerHTML;
     
     submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Sending...';
     submitBtn.disabled = true;
     
-    // Simulate form submission
-    setTimeout(() => {
-        showNotification('Quote request submitted successfully! We will contact you soon.', 'success');
-        
-        // Clear cart after successful submission
-        localStorage.removeItem('quoteCart');
-        const cartItems = document.getElementById('cartItems');
-        if (cartItems) {
-            cartItems.innerHTML = '<p class="empty-cart">No items in quote cart</p>';
+    const formData = new FormData(form);
+    
+    fetch("https://api.web3forms.com/submit", {
+        method: "POST",
+        body: formData
+    })
+    .then(response => response.json())
+    .then(data => {
+        if (data.success) {
+            showNotification('Quote request submitted successfully! We will contact you soon.', 'success');
+            
+            // Clear cart after successful submission
+            localStorage.removeItem('quoteCart');
+            const cartItems = document.getElementById('cartItems');
+            if (cartItems) {
+                cartItems.innerHTML = '<p class="empty-cart">No items in quote cart</p>';
+            }
+            
+            closeModal();
+        } else {
+            showNotification('There was an error sending your quote request. Please try again.', 'error');
         }
-        
-        closeModal();
         submitBtn.innerHTML = originalText;
         submitBtn.disabled = false;
-    }, 2000);
+    })
+    .catch(error => {
+        console.error('Error:', error);
+        showNotification('An unexpected error occurred. Please try again.', 'error');
+        submitBtn.innerHTML = originalText;
+        submitBtn.disabled = false;
+    });
 }
 
 function addToCartFromModal(productName) {
@@ -551,5 +671,111 @@ function debounce(func, wait) {
         clearTimeout(timeout);
         timeout = setTimeout(later, wait);
     };
+}
+
+// Notification function (if not already defined in main.js)
+function showNotification(message, type = 'info') {
+    const notification = document.createElement('div');
+    notification.className = `notification notification-${type}`;
+    notification.innerHTML = `
+        <div class="notification-content">
+            <i class="fas ${type === 'success' ? 'fa-check-circle' : type === 'error' ? 'fa-exclamation-circle' : 'fa-info-circle'}"></i>
+            <span>${message}</span>
+        </div>
+        <button class="notification-close">
+            <i class="fas fa-times"></i>
+        </button>
+    `;
+    
+    // Add notification styles if not already added
+    if (!document.querySelector('#notification-styles')) {
+        const styles = document.createElement('style');
+        styles.id = 'notification-styles';
+        styles.textContent = `
+            .notification {
+                position: fixed;
+                top: 100px;
+                right: 20px;
+                background: white;
+                border-radius: 8px;
+                box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+                padding: 1rem;
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                gap: 1rem;
+                min-width: 300px;
+                z-index: 10000;
+                transform: translateX(100%);
+                transition: transform 0.3s ease;
+            }
+            
+            .notification.show {
+                transform: translateX(0);
+            }
+            
+            .notification-success {
+                border-left: 4px solid #10b981;
+            }
+            
+            .notification-error {
+                border-left: 4px solid #ef4444;
+            }
+            
+            .notification-info {
+                border-left: 4px solid #3b82f6;
+            }
+            
+            .notification-content {
+                display: flex;
+                align-items: center;
+                gap: 0.5rem;
+            }
+            
+            .notification-content i {
+                color: ${type === 'success' ? '#10b981' : type === 'error' ? '#ef4444' : '#3b82f6'};
+            }
+            
+            .notification-close {
+                background: none;
+                border: none;
+                cursor: pointer;
+                color: #64748b;
+                padding: 0.25rem;
+            }
+            
+            .notification-close:hover {
+                color: #334155;
+            }
+        `;
+        document.head.appendChild(styles);
+    }
+    
+    document.body.appendChild(notification);
+    
+    // Show notification
+    setTimeout(() => {
+        notification.classList.add('show');
+    }, 100);
+    
+    // Close button functionality
+    const closeBtn = notification.querySelector('.notification-close');
+    closeBtn.addEventListener('click', () => {
+        hideNotification(notification);
+    });
+    
+    // Auto hide after 5 seconds
+    setTimeout(() => {
+        hideNotification(notification);
+    }, 5000);
+}
+
+function hideNotification(notification) {
+    notification.classList.remove('show');
+    setTimeout(() => {
+        if (notification.parentNode) {
+            notification.parentNode.removeChild(notification);
+        }
+    }, 300);
 }
 
