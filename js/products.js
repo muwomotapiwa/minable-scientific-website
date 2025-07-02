@@ -320,15 +320,69 @@ function showProductDetailsModal(productName) {
 // ======================
 // Quick Quote Submission (Single Product)
 // ======================
+function showQuickQuoteModal(productName) {
+    const modal = createModal('Quick Quote', `
+        <form id="quickQuoteForm">
+            <!-- Honeypot -->
+            <input type="checkbox" name="botcheck" style="display:none">
+            
+            <div class="form-group">
+                <label>Your Name *</label>
+                <input type="text" name="name" required id="quickName">
+            </div>
+            
+            <div class="form-group">
+                <label>Email *</label>
+                <input type="email" name="email" required id="quickEmail">
+            </div>
+            
+            <div class="form-group">
+                <label>Quantity</label>
+                <input type="number" name="quantity" min="1" value="1" id="quickQuantity">
+            </div>
+            
+            <div class="form-group">
+                <label>Message</label>
+                <textarea name="message" rows="3" id="quickMessage"></textarea>
+            </div>
+            
+            <input type="hidden" name="product" value="${productName}">
+            
+            <div class="modal-actions">
+                <button type="submit" class="btn btn-primary">
+                    <i class="fas fa-paper-plane"></i> Send Request
+                </button>
+            </div>
+        </form>
+    `);
+    
+    // Proper event listener attachment
+    const form = modal.querySelector('#quickQuoteForm');
+    form.addEventListener('submit', (e) => {
+        e.preventDefault();
+        handleQuickQuoteSubmission(productName);
+    });
+    
+    document.body.appendChild(modal);
+}
+
+// ======================
+// Full Quote Submission (Cart)
+// ======================
+// Updated Quick Quote Submission
 function handleQuickQuoteSubmission(productName) {
     const form = document.getElementById('quickQuoteForm');
+    if (!form) {
+        console.error('Quick quote form not found!');
+        return;
+    }
+
     const submitBtn = form.querySelector('button[type="submit"]');
     const originalText = submitBtn.innerHTML;
     
     submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Sending...';
     submitBtn.disabled = true;
 
-    // Prepare form data
     const formData = new FormData(form);
     formData.append('access_key', 'af31cdca-fdb5-4fd7-81bd-762838f8e47f');
     formData.append('product', productName);
@@ -338,57 +392,21 @@ function handleQuickQuoteSubmission(productName) {
         method: 'POST',
         body: formData
     })
-    .then(response => response.json())
+    .then(async response => {
+        if (!response.ok) throw new Error('Network response was not ok');
+        return response.json();
+    })
     .then(data => {
         if (data.success) {
-            showNotification(`Quote request sent for ${productName}!`, 'success');
+            showNotification(`Quote request sent!`, 'success');
             closeModal();
         } else {
-            showNotification('Error: ' + (data.message || 'Submission failed'), 'error');
+            throw new Error(data.message || 'Unknown error occurred');
         }
     })
-    .finally(() => {
-        submitBtn.innerHTML = originalText;
-        submitBtn.disabled = false;
-    });
-}
-
-// ======================
-// Full Quote Submission (Cart)
-// ======================
-function handleQuoteRequestSubmission() {
-    const form = document.getElementById('quoteRequestForm');
-    const submitBtn = form.querySelector('button[type="submit"]');
-    const originalText = submitBtn.innerHTML;
-    
-    submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Sending...';
-    submitBtn.disabled = true;
-
-    // Get cart items
-    const cart = JSON.parse(localStorage.getItem('quoteCart')) || [];
-    const cartText = cart.map(item => `• ${item.name} (Qty: ${item.quantity})`).join('\n');
-
-    // Prepare form data
-    const formData = new FormData(form);
-    formData.append('access_key', 'af31cdca-fdb5-4fd7-81bd-762838f8e47f');
-    formData.append('cart_items', cartText);
-    formData.append('form_type', 'Full Quote');
-    formData.append('botcheck', ''); // Honeypot
-
-    fetch('https://api.web3forms.com/submit', {
-        method: 'POST',
-        body: formData
-    })
-    .then(response => response.json())
-    .then(data => {
-        if (data.success) {
-            showNotification('Quote request sent successfully!', 'success');
-            localStorage.removeItem('quoteCart'); // Clear cart
-            updateCartDisplay(); // Refresh cart UI
-            closeModal();
-        } else {
-            showNotification('Error: ' + (data.message || 'Submission failed'), 'error');
-        }
+    .catch(error => {
+        console.error('Submission error:', error);
+        showNotification(`Failed to send: ${error.message}`, 'error');
     })
     .finally(() => {
         submitBtn.innerHTML = originalText;
