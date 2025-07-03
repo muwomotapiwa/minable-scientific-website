@@ -448,7 +448,7 @@ function showQuoteRequestModal() {
             </div>
             <form id="quoteRequestForm" action="https://api.web3forms.com/submit" method="POST">
                 <!-- Web3Forms Access Key -->
-                <input type="hidden" name="access_key" value="af31cdca-fdb5-4fd7-81bd-762838f8e47f">
+                <input type="hidden" name="access_key" value="624ae037-af53-4041-8b6c-1bdf96b89ae4">
                 
                 <!-- Email Subject -->
                 <input type="hidden" name="subject" value="📦 Multiple Product Quote Request - Minable Scientific">
